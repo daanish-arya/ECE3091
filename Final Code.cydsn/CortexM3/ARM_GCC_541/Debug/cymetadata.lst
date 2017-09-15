@@ -1,0 +1,4511 @@
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 3804
+  28              	cy_meta_configecc:
+  29 0000 02       		.byte	2
+  30 0001 4F       		.byte	79
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 04       		.byte	4
+  34 0005 52       		.byte	82
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 05       		.byte	5
+  38 0009 64       		.byte	100
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 04       		.byte	4
+  42 000d 65       		.byte	101
+  43 000e 00       		.byte	0
+  44 000f 40       		.byte	64
+  45 0010 60       		.byte	96
+  46 0011 00       		.byte	0
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 36       		.byte	54
+  50 0015 01       		.byte	1
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 45       		.byte	69
+  54 0019 02       		.byte	2
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 43       		.byte	67
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 2
+
+
+  58 001d 03       		.byte	3
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 45       		.byte	69
+  62 0021 04       		.byte	4
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 4C       		.byte	76
+  66 0025 05       		.byte	5
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 50       		.byte	80
+  70 0029 06       		.byte	6
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 46       		.byte	70
+  74 002d 07       		.byte	7
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 66       		.byte	102
+  78 0031 08       		.byte	8
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 4F       		.byte	79
+  82 0035 09       		.byte	9
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 5D       		.byte	93
+  86 0039 0A       		.byte	10
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 47       		.byte	71
+  90 003d 0B       		.byte	11
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 3F       		.byte	63
+  94 0041 0C       		.byte	12
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 34       		.byte	52
+  98 0045 0D       		.byte	13
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 04       		.byte	4
+ 102 0049 0E       		.byte	14
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 02       		.byte	2
+ 106 004d 0F       		.byte	15
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 3E       		.byte	62
+ 110 0051 14       		.byte	20
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 3F       		.byte	63
+ 114 0055 15       		.byte	21
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 5E       		.byte	94
+ 118 0059 16       		.byte	22
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 51       		.byte	81
+ 122 005d 17       		.byte	23
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 10       		.byte	16
+ 126 0061 18       		.byte	24
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 49       		.byte	73
+ 130 0065 19       		.byte	25
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 1D       		.byte	29
+ 134 0069 1A       		.byte	26
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 49       		.byte	73
+ 138 006d 1B       		.byte	27
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 03       		.byte	3
+ 142 0071 40       		.byte	64
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 0F       		.byte	15
+ 146 0075 41       		.byte	65
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 10       		.byte	16
+ 150 0079 42       		.byte	66
+ 151 007a 01       		.byte	1
+ 152 007b 40       		.byte	64
+ 153 007c 0A       		.byte	10
+ 154 007d 43       		.byte	67
+ 155 007e 01       		.byte	1
+ 156 007f 40       		.byte	64
+ 157 0080 04       		.byte	4
+ 158 0081 44       		.byte	68
+ 159 0082 01       		.byte	1
+ 160 0083 40       		.byte	64
+ 161 0084 03       		.byte	3
+ 162 0085 46       		.byte	70
+ 163 0086 01       		.byte	1
+ 164 0087 40       		.byte	64
+ 165 0088 02       		.byte	2
+ 166 0089 47       		.byte	71
+ 167 008a 01       		.byte	1
+ 168 008b 40       		.byte	64
+ 169 008c 0C       		.byte	12
+ 170 008d 48       		.byte	72
+ 171 008e 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 4
+
+
+ 172 008f 40       		.byte	64
+ 173 0090 0F       		.byte	15
+ 174 0091 49       		.byte	73
+ 175 0092 01       		.byte	1
+ 176 0093 40       		.byte	64
+ 177 0094 08       		.byte	8
+ 178 0095 4C       		.byte	76
+ 179 0096 01       		.byte	1
+ 180 0097 40       		.byte	64
+ 181 0098 09       		.byte	9
+ 182 0099 4D       		.byte	77
+ 183 009a 01       		.byte	1
+ 184 009b 40       		.byte	64
+ 185 009c 0C       		.byte	12
+ 186 009d 50       		.byte	80
+ 187 009e 01       		.byte	1
+ 188 009f 40       		.byte	64
+ 189 00a0 01       		.byte	1
+ 190 00a1 20       		.byte	32
+ 191 00a2 0A       		.byte	10
+ 192 00a3 87       		.byte	-121
+ 193 00a4 00       		.byte	0
+ 194 00a5 10       		.byte	16
+ 195 00a6 08       		.byte	8
+ 196 00a7 60       		.byte	96
+ 197 00a8 09       		.byte	9
+ 198 00a9 50       		.byte	80
+ 199 00aa 19       		.byte	25
+ 200 00ab 11       		.byte	17
+ 201 00ac 83       		.byte	-125
+ 202 00ad 0F       		.byte	15
+ 203 00ae 84       		.byte	-124
+ 204 00af 0F       		.byte	15
+ 205 00b0 87       		.byte	-121
+ 206 00b1 0F       		.byte	15
+ 207 00b2 8A       		.byte	-118
+ 208 00b3 0D       		.byte	13
+ 209 00b4 8C       		.byte	-116
+ 210 00b5 6F       		.byte	111
+ 211 00b6 84       		.byte	-124
+ 212 00b7 72       		.byte	114
+ 213 00b8 87       		.byte	-121
+ 214 00b9 6F       		.byte	111
+ 215 00ba 88       		.byte	-120
+ 216 00bb 38       		.byte	56
+ 217 00bc 8B       		.byte	-117
+ 218 00bd 0D       		.byte	13
+ 219 00be 02       		.byte	2
+ 220 00bf 08       		.byte	8
+ 221 00c0 04       		.byte	4
+ 222 00c1 03       		.byte	3
+ 223 00c2 06       		.byte	6
+ 224 00c3 04       		.byte	4
+ 225 00c4 07       		.byte	7
+ 226 00c5 01       		.byte	1
+ 227 00c6 0B       		.byte	11
+ 228 00c7 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 5
+
+
+ 229 00c8 0C       		.byte	12
+ 230 00c9 03       		.byte	3
+ 231 00ca 0E       		.byte	14
+ 232 00cb 0C       		.byte	12
+ 233 00cc 13       		.byte	19
+ 234 00cd 06       		.byte	6
+ 235 00ce 15       		.byte	21
+ 236 00cf 19       		.byte	25
+ 237 00d0 17       		.byte	23
+ 238 00d1 22       		.byte	34
+ 239 00d2 19       		.byte	25
+ 240 00d3 38       		.byte	56
+ 241 00d4 1A       		.byte	26
+ 242 00d5 05       		.byte	5
+ 243 00d6 1B       		.byte	27
+ 244 00d7 05       		.byte	5
+ 245 00d8 1D       		.byte	29
+ 246 00d9 20       		.byte	32
+ 247 00da 21       		.byte	33
+ 248 00db 12       		.byte	18
+ 249 00dc 23       		.byte	35
+ 250 00dd 20       		.byte	32
+ 251 00de 24       		.byte	36
+ 252 00df 0A       		.byte	10
+ 253 00e0 25       		.byte	37
+ 254 00e1 28       		.byte	40
+ 255 00e2 26       		.byte	38
+ 256 00e3 04       		.byte	4
+ 257 00e4 28       		.byte	40
+ 258 00e5 03       		.byte	3
+ 259 00e6 2A       		.byte	42
+ 260 00e7 04       		.byte	4
+ 261 00e8 2D       		.byte	45
+ 262 00e9 21       		.byte	33
+ 263 00ea 2F       		.byte	47
+ 264 00eb 18       		.byte	24
+ 265 00ec 31       		.byte	49
+ 266 00ed 3E       		.byte	62
+ 267 00ee 35       		.byte	53
+ 268 00ef 01       		.byte	1
+ 269 00f0 36       		.byte	54
+ 270 00f1 0F       		.byte	15
+ 271 00f2 3A       		.byte	58
+ 272 00f3 80       		.byte	-128
+ 273 00f4 3F       		.byte	63
+ 274 00f5 10       		.byte	16
+ 275 00f6 40       		.byte	64
+ 276 00f7 12       		.byte	18
+ 277 00f8 41       		.byte	65
+ 278 00f9 03       		.byte	3
+ 279 00fa 45       		.byte	69
+ 280 00fb EB       		.byte	-21
+ 281 00fc 46       		.byte	70
+ 282 00fd C0       		.byte	-64
+ 283 00fe 47       		.byte	71
+ 284 00ff 0E       		.byte	14
+ 285 0100 48       		.byte	72
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 6
+
+
+ 286 0101 1B       		.byte	27
+ 287 0102 49       		.byte	73
+ 288 0103 FF       		.byte	-1
+ 289 0104 4A       		.byte	74
+ 290 0105 FF       		.byte	-1
+ 291 0106 4B       		.byte	75
+ 292 0107 FF       		.byte	-1
+ 293 0108 4E       		.byte	78
+ 294 0109 F0       		.byte	-16
+ 295 010a 4F       		.byte	79
+ 296 010b 44       		.byte	68
+ 297 010c 50       		.byte	80
+ 298 010d 0C       		.byte	12
+ 299 010e 58       		.byte	88
+ 300 010f 04       		.byte	4
+ 301 0110 59       		.byte	89
+ 302 0111 04       		.byte	4
+ 303 0112 5A       		.byte	90
+ 304 0113 04       		.byte	4
+ 305 0114 5C       		.byte	92
+ 306 0115 33       		.byte	51
+ 307 0116 5D       		.byte	93
+ 308 0117 03       		.byte	3
+ 309 0118 5F       		.byte	95
+ 310 0119 01       		.byte	1
+ 311 011a 66       		.byte	102
+ 312 011b C0       		.byte	-64
+ 313 011c 6A       		.byte	106
+ 314 011d 40       		.byte	64
+ 315 011e 6B       		.byte	107
+ 316 011f 02       		.byte	2
+ 317 0120 81       		.byte	-127
+ 318 0121 01       		.byte	1
+ 319 0122 82       		.byte	-126
+ 320 0123 01       		.byte	1
+ 321 0124 83       		.byte	-125
+ 322 0125 06       		.byte	6
+ 323 0126 87       		.byte	-121
+ 324 0127 03       		.byte	3
+ 325 0128 88       		.byte	-120
+ 326 0129 06       		.byte	6
+ 327 012a 8C       		.byte	-116
+ 328 012b 01       		.byte	1
+ 329 012c 8F       		.byte	-113
+ 330 012d 10       		.byte	16
+ 331 012e 91       		.byte	-111
+ 332 012f 10       		.byte	16
+ 333 0130 95       		.byte	-107
+ 334 0131 01       		.byte	1
+ 335 0132 97       		.byte	-105
+ 336 0133 0E       		.byte	14
+ 337 0134 99       		.byte	-103
+ 338 0135 0C       		.byte	12
+ 339 0136 9A       		.byte	-102
+ 340 0137 02       		.byte	2
+ 341 0138 9B       		.byte	-101
+ 342 0139 03       		.byte	3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 7
+
+
+ 343 013a 9C       		.byte	-100
+ 344 013b 06       		.byte	6
+ 345 013c 9F       		.byte	-97
+ 346 013d 08       		.byte	8
+ 347 013e A3       		.byte	-93
+ 348 013f 0C       		.byte	12
+ 349 0140 A4       		.byte	-92
+ 350 0141 04       		.byte	4
+ 351 0142 A9       		.byte	-87
+ 352 0143 10       		.byte	16
+ 353 0144 AA       		.byte	-86
+ 354 0145 01       		.byte	1
+ 355 0146 B0       		.byte	-80
+ 356 0147 01       		.byte	1
+ 357 0148 B1       		.byte	-79
+ 358 0149 10       		.byte	16
+ 359 014a B4       		.byte	-76
+ 360 014b 06       		.byte	6
+ 361 014c B5       		.byte	-75
+ 362 014d 0F       		.byte	15
+ 363 014e B8       		.byte	-72
+ 364 014f 20       		.byte	32
+ 365 0150 BB       		.byte	-69
+ 366 0151 20       		.byte	32
+ 367 0152 BE       		.byte	-66
+ 368 0153 11       		.byte	17
+ 369 0154 BF       		.byte	-65
+ 370 0155 01       		.byte	1
+ 371 0156 C0       		.byte	-64
+ 372 0157 02       		.byte	2
+ 373 0158 C5       		.byte	-59
+ 374 0159 40       		.byte	64
+ 375 015a C9       		.byte	-55
+ 376 015b FF       		.byte	-1
+ 377 015c CA       		.byte	-54
+ 378 015d 07       		.byte	7
+ 379 015e CB       		.byte	-53
+ 380 015f FF       		.byte	-1
+ 381 0160 CC       		.byte	-52
+ 382 0161 40       		.byte	64
+ 383 0162 CD       		.byte	-51
+ 384 0163 20       		.byte	32
+ 385 0164 CE       		.byte	-50
+ 386 0165 F0       		.byte	-16
+ 387 0166 CF       		.byte	-49
+ 388 0167 05       		.byte	5
+ 389 0168 D0       		.byte	-48
+ 390 0169 08       		.byte	8
+ 391 016a D8       		.byte	-40
+ 392 016b 04       		.byte	4
+ 393 016c D9       		.byte	-39
+ 394 016d 04       		.byte	4
+ 395 016e DA       		.byte	-38
+ 396 016f 04       		.byte	4
+ 397 0170 DC       		.byte	-36
+ 398 0171 30       		.byte	48
+ 399 0172 DD       		.byte	-35
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 8
+
+
+ 400 0173 03       		.byte	3
+ 401 0174 DF       		.byte	-33
+ 402 0175 01       		.byte	1
+ 403 0176 E0       		.byte	-32
+ 404 0177 40       		.byte	64
+ 405 0178 E1       		.byte	-31
+ 406 0179 A8       		.byte	-88
+ 407 017a E2       		.byte	-30
+ 408 017b 40       		.byte	64
+ 409 017c E3       		.byte	-29
+ 410 017d 20       		.byte	32
+ 411 017e 01       		.byte	1
+ 412 017f 80       		.byte	-128
+ 413 0180 02       		.byte	2
+ 414 0181 10       		.byte	16
+ 415 0182 03       		.byte	3
+ 416 0183 90       		.byte	-112
+ 417 0184 06       		.byte	6
+ 418 0185 84       		.byte	-124
+ 419 0186 07       		.byte	7
+ 420 0187 05       		.byte	5
+ 421 0188 0B       		.byte	11
+ 422 0189 04       		.byte	4
+ 423 018a 0E       		.byte	14
+ 424 018b 01       		.byte	1
+ 425 018c 0F       		.byte	15
+ 426 018d 04       		.byte	4
+ 427 018e 12       		.byte	18
+ 428 018f 04       		.byte	4
+ 429 0190 13       		.byte	19
+ 430 0191 08       		.byte	8
+ 431 0192 15       		.byte	21
+ 432 0193 10       		.byte	16
+ 433 0194 17       		.byte	23
+ 434 0195 08       		.byte	8
+ 435 0196 19       		.byte	25
+ 436 0197 C0       		.byte	-64
+ 437 0198 1A       		.byte	26
+ 438 0199 01       		.byte	1
+ 439 019a 1C       		.byte	28
+ 440 019b 80       		.byte	-128
+ 441 019c 1D       		.byte	29
+ 442 019d 20       		.byte	32
+ 443 019e 20       		.byte	32
+ 444 019f 08       		.byte	8
+ 445 01a0 21       		.byte	33
+ 446 01a1 02       		.byte	2
+ 447 01a2 26       		.byte	38
+ 448 01a3 21       		.byte	33
+ 449 01a4 27       		.byte	39
+ 450 01a5 08       		.byte	8
+ 451 01a6 29       		.byte	41
+ 452 01a7 44       		.byte	68
+ 453 01a8 2B       		.byte	43
+ 454 01a9 80       		.byte	-128
+ 455 01aa 2D       		.byte	45
+ 456 01ab 10       		.byte	16
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 9
+
+
+ 457 01ac 2F       		.byte	47
+ 458 01ad 80       		.byte	-128
+ 459 01ae 31       		.byte	49
+ 460 01af 02       		.byte	2
+ 461 01b0 32       		.byte	50
+ 462 01b1 A0       		.byte	-96
+ 463 01b2 33       		.byte	51
+ 464 01b3 04       		.byte	4
+ 465 01b4 36       		.byte	54
+ 466 01b5 A0       		.byte	-96
+ 467 01b6 37       		.byte	55
+ 468 01b7 05       		.byte	5
+ 469 01b8 38       		.byte	56
+ 470 01b9 24       		.byte	36
+ 471 01ba 3B       		.byte	59
+ 472 01bb 04       		.byte	4
+ 473 01bc 3D       		.byte	61
+ 474 01bd 80       		.byte	-128
+ 475 01be 3E       		.byte	62
+ 476 01bf 81       		.byte	-127
+ 477 01c0 3F       		.byte	63
+ 478 01c1 04       		.byte	4
+ 479 01c2 40       		.byte	64
+ 480 01c3 04       		.byte	4
+ 481 01c4 42       		.byte	66
+ 482 01c5 01       		.byte	1
+ 483 01c6 43       		.byte	67
+ 484 01c7 04       		.byte	4
+ 485 01c8 45       		.byte	69
+ 486 01c9 20       		.byte	32
+ 487 01ca 49       		.byte	73
+ 488 01cb 06       		.byte	6
+ 489 01cc 4E       		.byte	78
+ 490 01cd 80       		.byte	-128
+ 491 01ce 4F       		.byte	79
+ 492 01cf 04       		.byte	4
+ 493 01d0 50       		.byte	80
+ 494 01d1 10       		.byte	16
+ 495 01d2 52       		.byte	82
+ 496 01d3 10       		.byte	16
+ 497 01d4 53       		.byte	83
+ 498 01d5 04       		.byte	4
+ 499 01d6 82       		.byte	-126
+ 500 01d7 01       		.byte	1
+ 501 01d8 88       		.byte	-120
+ 502 01d9 40       		.byte	64
+ 503 01da C0       		.byte	-64
+ 504 01db DD       		.byte	-35
+ 505 01dc C2       		.byte	-62
+ 506 01dd C2       		.byte	-62
+ 507 01de C4       		.byte	-60
+ 508 01df 66       		.byte	102
+ 509 01e0 CA       		.byte	-54
+ 510 01e1 AB       		.byte	-85
+ 511 01e2 CC       		.byte	-52
+ 512 01e3 FF       		.byte	-1
+ 513 01e4 CE       		.byte	-50
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 10
+
+
+ 514 01e5 D6       		.byte	-42
+ 515 01e6 D0       		.byte	-48
+ 516 01e7 2E       		.byte	46
+ 517 01e8 E6       		.byte	-26
+ 518 01e9 20       		.byte	32
+ 519 01ea 03       		.byte	3
+ 520 01eb 50       		.byte	80
+ 521 01ec 04       		.byte	4
+ 522 01ed 02       		.byte	2
+ 523 01ee 07       		.byte	7
+ 524 01ef 10       		.byte	16
+ 525 01f0 09       		.byte	9
+ 526 01f1 03       		.byte	3
+ 527 01f2 0A       		.byte	10
+ 528 01f3 01       		.byte	1
+ 529 01f4 0B       		.byte	11
+ 530 01f5 0C       		.byte	12
+ 531 01f6 0F       		.byte	15
+ 532 01f7 01       		.byte	1
+ 533 01f8 11       		.byte	17
+ 534 01f9 05       		.byte	5
+ 535 01fa 13       		.byte	19
+ 536 01fb 0A       		.byte	10
+ 537 01fc 17       		.byte	23
+ 538 01fd 30       		.byte	48
+ 539 01fe 19       		.byte	25
+ 540 01ff 60       		.byte	96
+ 541 0200 1B       		.byte	27
+ 542 0201 10       		.byte	16
+ 543 0202 1C       		.byte	28
+ 544 0203 01       		.byte	1
+ 545 0204 1F       		.byte	31
+ 546 0205 20       		.byte	32
+ 547 0206 23       		.byte	35
+ 548 0207 60       		.byte	96
+ 549 0208 24       		.byte	36
+ 550 0209 01       		.byte	1
+ 551 020a 27       		.byte	39
+ 552 020b 08       		.byte	8
+ 553 020c 2B       		.byte	43
+ 554 020d 04       		.byte	4
+ 555 020e 2F       		.byte	47
+ 556 020f 02       		.byte	2
+ 557 0210 33       		.byte	51
+ 558 0211 0F       		.byte	15
+ 559 0212 35       		.byte	53
+ 560 0213 70       		.byte	112
+ 561 0214 36       		.byte	54
+ 562 0215 03       		.byte	3
+ 563 0216 38       		.byte	56
+ 564 0217 80       		.byte	-128
+ 565 0218 3B       		.byte	59
+ 566 0219 20       		.byte	32
+ 567 021a 3F       		.byte	63
+ 568 021b 04       		.byte	4
+ 569 021c 58       		.byte	88
+ 570 021d 04       		.byte	4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 11
+
+
+ 571 021e 59       		.byte	89
+ 572 021f 04       		.byte	4
+ 573 0220 5B       		.byte	91
+ 574 0221 04       		.byte	4
+ 575 0222 5C       		.byte	92
+ 576 0223 33       		.byte	51
+ 577 0224 5F       		.byte	95
+ 578 0225 01       		.byte	1
+ 579 0226 84       		.byte	-124
+ 580 0227 0C       		.byte	12
+ 581 0228 85       		.byte	-123
+ 582 0229 30       		.byte	48
+ 583 022a 86       		.byte	-122
+ 584 022b 01       		.byte	1
+ 585 022c 89       		.byte	-119
+ 586 022d 02       		.byte	2
+ 587 022e 8B       		.byte	-117
+ 588 022f 01       		.byte	1
+ 589 0230 8C       		.byte	-116
+ 590 0231 0C       		.byte	12
+ 591 0232 8D       		.byte	-115
+ 592 0233 28       		.byte	40
+ 593 0234 8E       		.byte	-114
+ 594 0235 02       		.byte	2
+ 595 0236 95       		.byte	-107
+ 596 0237 18       		.byte	24
+ 597 0238 99       		.byte	-103
+ 598 0239 01       		.byte	1
+ 599 023a 9A       		.byte	-102
+ 600 023b 10       		.byte	16
+ 601 023c 9B       		.byte	-101
+ 602 023d 06       		.byte	6
+ 603 023e 9D       		.byte	-99
+ 604 023f 01       		.byte	1
+ 605 0240 9E       		.byte	-98
+ 606 0241 20       		.byte	32
+ 607 0242 9F       		.byte	-97
+ 608 0243 02       		.byte	2
+ 609 0244 A0       		.byte	-96
+ 610 0245 08       		.byte	8
+ 611 0246 A2       		.byte	-94
+ 612 0247 01       		.byte	1
+ 613 0248 A5       		.byte	-91
+ 614 0249 01       		.byte	1
+ 615 024a A6       		.byte	-90
+ 616 024b 0F       		.byte	15
+ 617 024c A7       		.byte	-89
+ 618 024d 02       		.byte	2
+ 619 024e A8       		.byte	-88
+ 620 024f 07       		.byte	7
+ 621 0250 AC       		.byte	-84
+ 622 0251 0B       		.byte	11
+ 623 0252 AD       		.byte	-83
+ 624 0253 30       		.byte	48
+ 625 0254 AE       		.byte	-82
+ 626 0255 04       		.byte	4
+ 627 0256 B2       		.byte	-78
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 12
+
+
+ 628 0257 10       		.byte	16
+ 629 0258 B3       		.byte	-77
+ 630 0259 38       		.byte	56
+ 631 025a B4       		.byte	-76
+ 632 025b 20       		.byte	32
+ 633 025c B5       		.byte	-75
+ 634 025d 03       		.byte	3
+ 635 025e B6       		.byte	-74
+ 636 025f 0F       		.byte	15
+ 637 0260 B7       		.byte	-73
+ 638 0261 04       		.byte	4
+ 639 0262 B9       		.byte	-71
+ 640 0263 08       		.byte	8
+ 641 0264 BB       		.byte	-69
+ 642 0265 20       		.byte	32
+ 643 0266 D4       		.byte	-44
+ 644 0267 01       		.byte	1
+ 645 0268 D8       		.byte	-40
+ 646 0269 04       		.byte	4
+ 647 026a D9       		.byte	-39
+ 648 026b 04       		.byte	4
+ 649 026c DB       		.byte	-37
+ 650 026d 04       		.byte	4
+ 651 026e DC       		.byte	-36
+ 652 026f 11       		.byte	17
+ 653 0270 DD       		.byte	-35
+ 654 0271 30       		.byte	48
+ 655 0272 DF       		.byte	-33
+ 656 0273 01       		.byte	1
+ 657 0274 01       		.byte	1
+ 658 0275 84       		.byte	-124
+ 659 0276 04       		.byte	4
+ 660 0277 04       		.byte	4
+ 661 0278 07       		.byte	7
+ 662 0279 08       		.byte	8
+ 663 027a 0A       		.byte	10
+ 664 027b 04       		.byte	4
+ 665 027c 0B       		.byte	11
+ 666 027d 02       		.byte	2
+ 667 027e 0E       		.byte	14
+ 668 027f 01       		.byte	1
+ 669 0280 11       		.byte	17
+ 670 0281 42       		.byte	66
+ 671 0282 12       		.byte	18
+ 672 0283 08       		.byte	8
+ 673 0284 13       		.byte	19
+ 674 0285 04       		.byte	4
+ 675 0286 17       		.byte	23
+ 676 0287 04       		.byte	4
+ 677 0288 19       		.byte	25
+ 678 0289 80       		.byte	-128
+ 679 028a 1A       		.byte	26
+ 680 028b 24       		.byte	36
+ 681 028c 1B       		.byte	27
+ 682 028d 10       		.byte	16
+ 683 028e 1F       		.byte	31
+ 684 028f 80       		.byte	-128
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 13
+
+
+ 685 0290 20       		.byte	32
+ 686 0291 20       		.byte	32
+ 687 0292 21       		.byte	33
+ 688 0293 10       		.byte	16
+ 689 0294 22       		.byte	34
+ 690 0295 48       		.byte	72
+ 691 0296 23       		.byte	35
+ 692 0297 04       		.byte	4
+ 693 0298 25       		.byte	37
+ 694 0299 08       		.byte	8
+ 695 029a 27       		.byte	39
+ 696 029b 04       		.byte	4
+ 697 029c 29       		.byte	41
+ 698 029d 80       		.byte	-128
+ 699 029e 2B       		.byte	43
+ 700 029f 10       		.byte	16
+ 701 02a0 2C       		.byte	44
+ 702 02a1 12       		.byte	18
+ 703 02a2 2D       		.byte	45
+ 704 02a3 20       		.byte	32
+ 705 02a4 2F       		.byte	47
+ 706 02a5 80       		.byte	-128
+ 707 02a6 32       		.byte	50
+ 708 02a7 58       		.byte	88
+ 709 02a8 36       		.byte	54
+ 710 02a9 A1       		.byte	-95
+ 711 02aa 37       		.byte	55
+ 712 02ab 05       		.byte	5
+ 713 02ac 38       		.byte	56
+ 714 02ad 88       		.byte	-120
+ 715 02ae 39       		.byte	57
+ 716 02af 64       		.byte	100
+ 717 02b0 3C       		.byte	60
+ 718 02b1 84       		.byte	-124
+ 719 02b2 3D       		.byte	61
+ 720 02b3 10       		.byte	16
+ 721 02b4 3E       		.byte	62
+ 722 02b5 01       		.byte	1
+ 723 02b6 58       		.byte	88
+ 724 02b7 80       		.byte	-128
+ 725 02b8 59       		.byte	89
+ 726 02b9 02       		.byte	2
+ 727 02ba 5A       		.byte	90
+ 728 02bb 08       		.byte	8
+ 729 02bc 5B       		.byte	91
+ 730 02bd 10       		.byte	16
+ 731 02be 5F       		.byte	95
+ 732 02bf 80       		.byte	-128
+ 733 02c0 6D       		.byte	109
+ 734 02c1 10       		.byte	16
+ 735 02c2 6F       		.byte	111
+ 736 02c3 01       		.byte	1
+ 737 02c4 84       		.byte	-124
+ 738 02c5 42       		.byte	66
+ 739 02c6 88       		.byte	-120
+ 740 02c7 70       		.byte	112
+ 741 02c8 8A       		.byte	-118
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 14
+
+
+ 742 02c9 02       		.byte	2
+ 743 02ca 8D       		.byte	-115
+ 744 02cb 08       		.byte	8
+ 745 02cc 8F       		.byte	-113
+ 746 02cd 80       		.byte	-128
+ 747 02ce 90       		.byte	-112
+ 748 02cf 04       		.byte	4
+ 749 02d0 92       		.byte	-110
+ 750 02d1 01       		.byte	1
+ 751 02d2 93       		.byte	-109
+ 752 02d3 08       		.byte	8
+ 753 02d4 95       		.byte	-107
+ 754 02d5 10       		.byte	16
+ 755 02d6 98       		.byte	-104
+ 756 02d7 80       		.byte	-128
+ 757 02d8 99       		.byte	-103
+ 758 02d9 02       		.byte	2
+ 759 02da 9B       		.byte	-101
+ 760 02db 18       		.byte	24
+ 761 02dc 9F       		.byte	-97
+ 762 02dd 05       		.byte	5
+ 763 02de A1       		.byte	-95
+ 764 02df 02       		.byte	2
+ 765 02e0 A2       		.byte	-94
+ 766 02e1 A0       		.byte	-96
+ 767 02e2 A5       		.byte	-91
+ 768 02e3 40       		.byte	64
+ 769 02e4 A7       		.byte	-89
+ 770 02e5 80       		.byte	-128
+ 771 02e6 AC       		.byte	-84
+ 772 02e7 84       		.byte	-124
+ 773 02e8 C0       		.byte	-64
+ 774 02e9 65       		.byte	101
+ 775 02ea C2       		.byte	-62
+ 776 02eb 83       		.byte	-125
+ 777 02ec C4       		.byte	-60
+ 778 02ed 2F       		.byte	47
+ 779 02ee CA       		.byte	-54
+ 780 02ef FA       		.byte	-6
+ 781 02f0 CC       		.byte	-52
+ 782 02f1 FE       		.byte	-2
+ 783 02f2 CE       		.byte	-50
+ 784 02f3 FE       		.byte	-2
+ 785 02f4 D6       		.byte	-42
+ 786 02f5 1F       		.byte	31
+ 787 02f6 E0       		.byte	-32
+ 788 02f7 20       		.byte	32
+ 789 02f8 E6       		.byte	-26
+ 790 02f9 10       		.byte	16
+ 791 02fa 02       		.byte	2
+ 792 02fb 04       		.byte	4
+ 793 02fc 04       		.byte	4
+ 794 02fd 10       		.byte	16
+ 795 02fe 05       		.byte	5
+ 796 02ff 08       		.byte	8
+ 797 0300 09       		.byte	9
+ 798 0301 02       		.byte	2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 15
+
+
+ 799 0302 0A       		.byte	10
+ 800 0303 02       		.byte	2
+ 801 0304 0B       		.byte	11
+ 802 0305 04       		.byte	4
+ 803 0306 0D       		.byte	13
+ 804 0307 04       		.byte	4
+ 805 0308 0E       		.byte	14
+ 806 0309 10       		.byte	16
+ 807 030a 0F       		.byte	15
+ 808 030b 02       		.byte	2
+ 809 030c 10       		.byte	16
+ 810 030d 01       		.byte	1
+ 811 030e 13       		.byte	19
+ 812 030f 01       		.byte	1
+ 813 0310 14       		.byte	20
+ 814 0311 01       		.byte	1
+ 815 0312 15       		.byte	21
+ 816 0313 02       		.byte	2
+ 817 0314 17       		.byte	23
+ 818 0315 04       		.byte	4
+ 819 0316 19       		.byte	25
+ 820 0317 01       		.byte	1
+ 821 0318 1A       		.byte	26
+ 822 0319 08       		.byte	8
+ 823 031a 1E       		.byte	30
+ 824 031b 10       		.byte	16
+ 825 031c 20       		.byte	32
+ 826 031d 01       		.byte	1
+ 827 031e 21       		.byte	33
+ 828 031f 02       		.byte	2
+ 829 0320 23       		.byte	35
+ 830 0321 04       		.byte	4
+ 831 0322 25       		.byte	37
+ 832 0323 01       		.byte	1
+ 833 0324 26       		.byte	38
+ 834 0325 01       		.byte	1
+ 835 0326 2C       		.byte	44
+ 836 0327 01       		.byte	1
+ 837 0328 30       		.byte	48
+ 838 0329 10       		.byte	16
+ 839 032a 32       		.byte	50
+ 840 032b 04       		.byte	4
+ 841 032c 33       		.byte	51
+ 842 032d 08       		.byte	8
+ 843 032e 34       		.byte	52
+ 844 032f 03       		.byte	3
+ 845 0330 35       		.byte	53
+ 846 0331 01       		.byte	1
+ 847 0332 36       		.byte	54
+ 848 0333 08       		.byte	8
+ 849 0334 37       		.byte	55
+ 850 0335 06       		.byte	6
+ 851 0336 3B       		.byte	59
+ 852 0337 80       		.byte	-128
+ 853 0338 3E       		.byte	62
+ 854 0339 01       		.byte	1
+ 855 033a 3F       		.byte	63
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 16
+
+
+ 856 033b 14       		.byte	20
+ 857 033c 54       		.byte	84
+ 858 033d 0F       		.byte	15
+ 859 033e 58       		.byte	88
+ 860 033f 04       		.byte	4
+ 861 0340 59       		.byte	89
+ 862 0341 04       		.byte	4
+ 863 0342 5B       		.byte	91
+ 864 0343 04       		.byte	4
+ 865 0344 5C       		.byte	92
+ 866 0345 11       		.byte	17
+ 867 0346 5D       		.byte	93
+ 868 0347 10       		.byte	16
+ 869 0348 5F       		.byte	95
+ 870 0349 01       		.byte	1
+ 871 034a 83       		.byte	-125
+ 872 034b 04       		.byte	4
+ 873 034c 88       		.byte	-120
+ 874 034d 01       		.byte	1
+ 875 034e 8A       		.byte	-118
+ 876 034f 02       		.byte	2
+ 877 0350 8B       		.byte	-117
+ 878 0351 04       		.byte	4
+ 879 0352 8F       		.byte	-113
+ 880 0353 04       		.byte	4
+ 881 0354 90       		.byte	-112
+ 882 0355 01       		.byte	1
+ 883 0356 92       		.byte	-110
+ 884 0357 02       		.byte	2
+ 885 0358 94       		.byte	-108
+ 886 0359 02       		.byte	2
+ 887 035a 96       		.byte	-106
+ 888 035b 01       		.byte	1
+ 889 035c 97       		.byte	-105
+ 890 035d 02       		.byte	2
+ 891 035e 98       		.byte	-104
+ 892 035f 01       		.byte	1
+ 893 0360 9A       		.byte	-102
+ 894 0361 02       		.byte	2
+ 895 0362 9E       		.byte	-98
+ 896 0363 04       		.byte	4
+ 897 0364 A2       		.byte	-94
+ 898 0365 04       		.byte	4
+ 899 0366 A8       		.byte	-88
+ 900 0367 04       		.byte	4
+ 901 0368 AF       		.byte	-81
+ 902 0369 01       		.byte	1
+ 903 036a B0       		.byte	-80
+ 904 036b 04       		.byte	4
+ 905 036c B2       		.byte	-78
+ 906 036d 03       		.byte	3
+ 907 036e B3       		.byte	-77
+ 908 036f 02       		.byte	2
+ 909 0370 B5       		.byte	-75
+ 910 0371 01       		.byte	1
+ 911 0372 B7       		.byte	-73
+ 912 0373 04       		.byte	4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 17
+
+
+ 913 0374 BA       		.byte	-70
+ 914 0375 08       		.byte	8
+ 915 0376 BE       		.byte	-66
+ 916 0377 01       		.byte	1
+ 917 0378 BF       		.byte	-65
+ 918 0379 40       		.byte	64
+ 919 037a D8       		.byte	-40
+ 920 037b 04       		.byte	4
+ 921 037c D9       		.byte	-39
+ 922 037d 04       		.byte	4
+ 923 037e DB       		.byte	-37
+ 924 037f 04       		.byte	4
+ 925 0380 DC       		.byte	-36
+ 926 0381 11       		.byte	17
+ 927 0382 DF       		.byte	-33
+ 928 0383 01       		.byte	1
+ 929 0384 01       		.byte	1
+ 930 0385 08       		.byte	8
+ 931 0386 02       		.byte	2
+ 932 0387 06       		.byte	6
+ 933 0388 03       		.byte	3
+ 934 0389 80       		.byte	-128
+ 935 038a 07       		.byte	7
+ 936 038b 08       		.byte	8
+ 937 038c 08       		.byte	8
+ 938 038d 20       		.byte	32
+ 939 038e 0A       		.byte	10
+ 940 038f 42       		.byte	66
+ 941 0390 0B       		.byte	11
+ 942 0391 10       		.byte	16
+ 943 0392 0C       		.byte	12
+ 944 0393 02       		.byte	2
+ 945 0394 0D       		.byte	13
+ 946 0395 08       		.byte	8
+ 947 0396 0E       		.byte	14
+ 948 0397 0A       		.byte	10
+ 949 0398 0F       		.byte	15
+ 950 0399 01       		.byte	1
+ 951 039a 11       		.byte	17
+ 952 039b 02       		.byte	2
+ 953 039c 12       		.byte	18
+ 954 039d 01       		.byte	1
+ 955 039e 13       		.byte	19
+ 956 039f 04       		.byte	4
+ 957 03a0 15       		.byte	21
+ 958 03a1 10       		.byte	16
+ 959 03a2 17       		.byte	23
+ 960 03a3 01       		.byte	1
+ 961 03a4 18       		.byte	24
+ 962 03a5 20       		.byte	32
+ 963 03a6 1A       		.byte	26
+ 964 03a7 80       		.byte	-128
+ 965 03a8 1B       		.byte	27
+ 966 03a9 90       		.byte	-112
+ 967 03aa 1C       		.byte	28
+ 968 03ab 40       		.byte	64
+ 969 03ac 1D       		.byte	29
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 18
+
+
+ 970 03ad 08       		.byte	8
+ 971 03ae 21       		.byte	33
+ 972 03af 40       		.byte	64
+ 973 03b0 22       		.byte	34
+ 974 03b1 14       		.byte	20
+ 975 03b2 26       		.byte	38
+ 976 03b3 84       		.byte	-124
+ 977 03b4 27       		.byte	39
+ 978 03b5 08       		.byte	8
+ 979 03b6 29       		.byte	41
+ 980 03b7 08       		.byte	8
+ 981 03b8 2B       		.byte	43
+ 982 03b9 80       		.byte	-128
+ 983 03ba 2C       		.byte	44
+ 984 03bb 02       		.byte	2
+ 985 03bc 2F       		.byte	47
+ 986 03bd 01       		.byte	1
+ 987 03be 30       		.byte	48
+ 988 03bf 20       		.byte	32
+ 989 03c0 32       		.byte	50
+ 990 03c1 01       		.byte	1
+ 991 03c2 33       		.byte	51
+ 992 03c3 08       		.byte	8
+ 993 03c4 37       		.byte	55
+ 994 03c5 08       		.byte	8
+ 995 03c6 38       		.byte	56
+ 996 03c7 20       		.byte	32
+ 997 03c8 39       		.byte	57
+ 998 03c9 80       		.byte	-128
+ 999 03ca 3B       		.byte	59
+ 1000 03cb 08       		.byte	8
+ 1001 03cc 3D       		.byte	61
+ 1002 03cd 90       		.byte	-112
+ 1003 03ce 3F       		.byte	63
+ 1004 03cf 01       		.byte	1
+ 1005 03d0 40       		.byte	64
+ 1006 03d1 20       		.byte	32
+ 1007 03d2 43       		.byte	67
+ 1008 03d3 08       		.byte	8
+ 1009 03d4 4C       		.byte	76
+ 1010 03d5 04       		.byte	4
+ 1011 03d6 4F       		.byte	79
+ 1012 03d7 10       		.byte	16
+ 1013 03d8 58       		.byte	88
+ 1014 03d9 08       		.byte	8
+ 1015 03da 59       		.byte	89
+ 1016 03db 02       		.byte	2
+ 1017 03dc 5A       		.byte	90
+ 1018 03dd A0       		.byte	-96
+ 1019 03de 6D       		.byte	109
+ 1020 03df 80       		.byte	-128
+ 1021 03e0 6F       		.byte	111
+ 1022 03e1 01       		.byte	1
+ 1023 03e2 81       		.byte	-127
+ 1024 03e3 40       		.byte	64
+ 1025 03e4 82       		.byte	-126
+ 1026 03e5 80       		.byte	-128
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 19
+
+
+ 1027 03e6 85       		.byte	-123
+ 1028 03e7 02       		.byte	2
+ 1029 03e8 8F       		.byte	-113
+ 1030 03e9 10       		.byte	16
+ 1031 03ea 91       		.byte	-111
+ 1032 03eb 10       		.byte	16
+ 1033 03ec 93       		.byte	-109
+ 1034 03ed 0C       		.byte	12
+ 1035 03ee 94       		.byte	-108
+ 1036 03ef 88       		.byte	-120
+ 1037 03f0 96       		.byte	-106
+ 1038 03f1 08       		.byte	8
+ 1039 03f2 98       		.byte	-104
+ 1040 03f3 40       		.byte	64
+ 1041 03f4 9A       		.byte	-102
+ 1042 03f5 01       		.byte	1
+ 1043 03f6 9D       		.byte	-99
+ 1044 03f7 20       		.byte	32
+ 1045 03f8 A0       		.byte	-96
+ 1046 03f9 20       		.byte	32
+ 1047 03fa A1       		.byte	-95
+ 1048 03fb 02       		.byte	2
+ 1049 03fc A2       		.byte	-94
+ 1050 03fd 0B       		.byte	11
+ 1051 03fe A5       		.byte	-91
+ 1052 03ff 41       		.byte	65
+ 1053 0400 AB       		.byte	-85
+ 1054 0401 01       		.byte	1
+ 1055 0402 B0       		.byte	-80
+ 1056 0403 10       		.byte	16
+ 1057 0404 B1       		.byte	-79
+ 1058 0405 10       		.byte	16
+ 1059 0406 B5       		.byte	-75
+ 1060 0407 80       		.byte	-128
+ 1061 0408 B6       		.byte	-74
+ 1062 0409 01       		.byte	1
+ 1063 040a C0       		.byte	-64
+ 1064 040b 4F       		.byte	79
+ 1065 040c C2       		.byte	-62
+ 1066 040d FF       		.byte	-1
+ 1067 040e C4       		.byte	-60
+ 1068 040f 5D       		.byte	93
+ 1069 0410 CA       		.byte	-54
+ 1070 0411 13       		.byte	19
+ 1071 0412 CC       		.byte	-52
+ 1072 0413 47       		.byte	71
+ 1073 0414 CE       		.byte	-50
+ 1074 0415 BE       		.byte	-66
+ 1075 0416 D6       		.byte	-42
+ 1076 0417 0F       		.byte	15
+ 1077 0418 E0       		.byte	-32
+ 1078 0419 03       		.byte	3
+ 1079 041a E6       		.byte	-26
+ 1080 041b 08       		.byte	8
+ 1081 041c 02       		.byte	2
+ 1082 041d 04       		.byte	4
+ 1083 041e 0B       		.byte	11
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 20
+
+
+ 1084 041f 02       		.byte	2
+ 1085 0420 13       		.byte	19
+ 1086 0421 02       		.byte	2
+ 1087 0422 15       		.byte	21
+ 1088 0423 02       		.byte	2
+ 1089 0424 16       		.byte	22
+ 1090 0425 01       		.byte	1
+ 1091 0426 1F       		.byte	31
+ 1092 0427 01       		.byte	1
+ 1093 0428 22       		.byte	34
+ 1094 0429 04       		.byte	4
+ 1095 042a 28       		.byte	40
+ 1096 042b 04       		.byte	4
+ 1097 042c 2E       		.byte	46
+ 1098 042d 02       		.byte	2
+ 1099 042e 30       		.byte	48
+ 1100 042f 02       		.byte	2
+ 1101 0430 32       		.byte	50
+ 1102 0431 04       		.byte	4
+ 1103 0432 33       		.byte	51
+ 1104 0433 01       		.byte	1
+ 1105 0434 34       		.byte	52
+ 1106 0435 01       		.byte	1
+ 1107 0436 35       		.byte	53
+ 1108 0437 02       		.byte	2
+ 1109 0438 3E       		.byte	62
+ 1110 0439 04       		.byte	4
+ 1111 043a 3F       		.byte	63
+ 1112 043b 10       		.byte	16
+ 1113 043c 52       		.byte	82
+ 1114 043d 80       		.byte	-128
+ 1115 043e 58       		.byte	88
+ 1116 043f 04       		.byte	4
+ 1117 0440 59       		.byte	89
+ 1118 0441 04       		.byte	4
+ 1119 0442 5B       		.byte	91
+ 1120 0443 04       		.byte	4
+ 1121 0444 5C       		.byte	92
+ 1122 0445 11       		.byte	17
+ 1123 0446 5D       		.byte	93
+ 1124 0447 10       		.byte	16
+ 1125 0448 5F       		.byte	95
+ 1126 0449 01       		.byte	1
+ 1127 044a 84       		.byte	-124
+ 1128 044b 0C       		.byte	12
+ 1129 044c 85       		.byte	-123
+ 1130 044d 04       		.byte	4
+ 1131 044e 86       		.byte	-122
+ 1132 044f 02       		.byte	2
+ 1133 0450 88       		.byte	-120
+ 1134 0451 20       		.byte	32
+ 1135 0452 8E       		.byte	-114
+ 1136 0453 10       		.byte	16
+ 1137 0454 8F       		.byte	-113
+ 1138 0455 02       		.byte	2
+ 1139 0456 92       		.byte	-110
+ 1140 0457 10       		.byte	16
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 21
+
+
+ 1141 0458 94       		.byte	-108
+ 1142 0459 0B       		.byte	11
+ 1143 045a 96       		.byte	-106
+ 1144 045b 04       		.byte	4
+ 1145 045c 97       		.byte	-105
+ 1146 045d 01       		.byte	1
+ 1147 045e 98       		.byte	-104
+ 1148 045f 08       		.byte	8
+ 1149 0460 99       		.byte	-103
+ 1150 0461 02       		.byte	2
+ 1151 0462 9A       		.byte	-102
+ 1152 0463 01       		.byte	1
+ 1153 0464 9C       		.byte	-100
+ 1154 0465 20       		.byte	32
+ 1155 0466 9D       		.byte	-99
+ 1156 0467 04       		.byte	4
+ 1157 0468 A2       		.byte	-94
+ 1158 0469 0F       		.byte	15
+ 1159 046a A4       		.byte	-92
+ 1160 046b 10       		.byte	16
+ 1161 046c A5       		.byte	-91
+ 1162 046d 02       		.byte	2
+ 1163 046e A8       		.byte	-88
+ 1164 046f 07       		.byte	7
+ 1165 0470 AC       		.byte	-84
+ 1166 0471 0C       		.byte	12
+ 1167 0472 AE       		.byte	-82
+ 1168 0473 01       		.byte	1
+ 1169 0474 B0       		.byte	-80
+ 1170 0475 10       		.byte	16
+ 1171 0476 B1       		.byte	-79
+ 1172 0477 04       		.byte	4
+ 1173 0478 B3       		.byte	-77
+ 1174 0479 02       		.byte	2
+ 1175 047a B4       		.byte	-76
+ 1176 047b 0F       		.byte	15
+ 1177 047c B6       		.byte	-74
+ 1178 047d 20       		.byte	32
+ 1179 047e B7       		.byte	-73
+ 1180 047f 01       		.byte	1
+ 1181 0480 B8       		.byte	-72
+ 1182 0481 80       		.byte	-128
+ 1183 0482 B9       		.byte	-71
+ 1184 0483 02       		.byte	2
+ 1185 0484 BE       		.byte	-66
+ 1186 0485 01       		.byte	1
+ 1187 0486 BF       		.byte	-65
+ 1188 0487 04       		.byte	4
+ 1189 0488 C0       		.byte	-64
+ 1190 0489 36       		.byte	54
+ 1191 048a C1       		.byte	-63
+ 1192 048b 05       		.byte	5
+ 1193 048c C9       		.byte	-55
+ 1194 048d FF       		.byte	-1
+ 1195 048e CA       		.byte	-54
+ 1196 048f FF       		.byte	-1
+ 1197 0490 CB       		.byte	-53
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 22
+
+
+ 1198 0491 FF       		.byte	-1
+ 1199 0492 CD       		.byte	-51
+ 1200 0493 A0       		.byte	-96
+ 1201 0494 CF       		.byte	-49
+ 1202 0495 01       		.byte	1
+ 1203 0496 D0       		.byte	-48
+ 1204 0497 18       		.byte	24
+ 1205 0498 D4       		.byte	-44
+ 1206 0499 0F       		.byte	15
+ 1207 049a D8       		.byte	-40
+ 1208 049b 04       		.byte	4
+ 1209 049c D9       		.byte	-39
+ 1210 049d 04       		.byte	4
+ 1211 049e DA       		.byte	-38
+ 1212 049f 04       		.byte	4
+ 1213 04a0 DB       		.byte	-37
+ 1214 04a1 04       		.byte	4
+ 1215 04a2 DC       		.byte	-36
+ 1216 04a3 11       		.byte	17
+ 1217 04a4 DD       		.byte	-35
+ 1218 04a5 11       		.byte	17
+ 1219 04a6 DF       		.byte	-33
+ 1220 04a7 01       		.byte	1
+ 1221 04a8 E0       		.byte	-32
+ 1222 04a9 40       		.byte	64
+ 1223 04aa E2       		.byte	-30
+ 1224 04ab 80       		.byte	-128
+ 1225 04ac E4       		.byte	-28
+ 1226 04ad 40       		.byte	64
+ 1227 04ae E5       		.byte	-27
+ 1228 04af 40       		.byte	64
+ 1229 04b0 E6       		.byte	-26
+ 1230 04b1 80       		.byte	-128
+ 1231 04b2 E8       		.byte	-24
+ 1232 04b3 40       		.byte	64
+ 1233 04b4 EA       		.byte	-22
+ 1234 04b5 80       		.byte	-128
+ 1235 04b6 EC       		.byte	-20
+ 1236 04b7 40       		.byte	64
+ 1237 04b8 ED       		.byte	-19
+ 1238 04b9 20       		.byte	32
+ 1239 04ba EE       		.byte	-18
+ 1240 04bb 80       		.byte	-128
+ 1241 04bc 00       		.byte	0
+ 1242 04bd A4       		.byte	-92
+ 1243 04be 07       		.byte	7
+ 1244 04bf 40       		.byte	64
+ 1245 04c0 09       		.byte	9
+ 1246 04c1 80       		.byte	-128
+ 1247 04c2 0B       		.byte	11
+ 1248 04c3 94       		.byte	-108
+ 1249 04c4 0F       		.byte	15
+ 1250 04c5 20       		.byte	32
+ 1251 04c6 10       		.byte	16
+ 1252 04c7 14       		.byte	20
+ 1253 04c8 11       		.byte	17
+ 1254 04c9 02       		.byte	2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 23
+
+
+ 1255 04ca 12       		.byte	18
+ 1256 04cb 09       		.byte	9
+ 1257 04cc 14       		.byte	20
+ 1258 04cd 40       		.byte	64
+ 1259 04ce 16       		.byte	22
+ 1260 04cf 02       		.byte	2
+ 1261 04d0 17       		.byte	23
+ 1262 04d1 10       		.byte	16
+ 1263 04d2 18       		.byte	24
+ 1264 04d3 0C       		.byte	12
+ 1265 04d4 1A       		.byte	26
+ 1266 04d5 82       		.byte	-126
+ 1267 04d6 1D       		.byte	29
+ 1268 04d7 08       		.byte	8
+ 1269 04d8 1E       		.byte	30
+ 1270 04d9 08       		.byte	8
+ 1271 04da 1F       		.byte	31
+ 1272 04db 01       		.byte	1
+ 1273 04dc 20       		.byte	32
+ 1274 04dd 80       		.byte	-128
+ 1275 04de 21       		.byte	33
+ 1276 04df 40       		.byte	64
+ 1277 04e0 23       		.byte	35
+ 1278 04e1 60       		.byte	96
+ 1279 04e2 27       		.byte	39
+ 1280 04e3 14       		.byte	20
+ 1281 04e4 28       		.byte	40
+ 1282 04e5 10       		.byte	16
+ 1283 04e6 31       		.byte	49
+ 1284 04e7 04       		.byte	4
+ 1285 04e8 32       		.byte	50
+ 1286 04e9 A0       		.byte	-96
+ 1287 04ea 34       		.byte	52
+ 1288 04eb 40       		.byte	64
+ 1289 04ec 35       		.byte	53
+ 1290 04ed 02       		.byte	2
+ 1291 04ee 36       		.byte	54
+ 1292 04ef 04       		.byte	4
+ 1293 04f0 3B       		.byte	59
+ 1294 04f1 48       		.byte	72
+ 1295 04f2 3F       		.byte	63
+ 1296 04f3 20       		.byte	32
+ 1297 04f4 43       		.byte	67
+ 1298 04f5 04       		.byte	4
+ 1299 04f6 48       		.byte	72
+ 1300 04f7 08       		.byte	8
+ 1301 04f8 4A       		.byte	74
+ 1302 04f9 01       		.byte	1
+ 1303 04fa 4B       		.byte	75
+ 1304 04fb 80       		.byte	-128
+ 1305 04fc 58       		.byte	88
+ 1306 04fd 04       		.byte	4
+ 1307 04fe 59       		.byte	89
+ 1308 04ff 01       		.byte	1
+ 1309 0500 5A       		.byte	90
+ 1310 0501 80       		.byte	-128
+ 1311 0502 5B       		.byte	91
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 24
+
+
+ 1312 0503 20       		.byte	32
+ 1313 0504 75       		.byte	117
+ 1314 0505 02       		.byte	2
+ 1315 0506 80       		.byte	-128
+ 1316 0507 08       		.byte	8
+ 1317 0508 87       		.byte	-121
+ 1318 0509 04       		.byte	4
+ 1319 050a 8F       		.byte	-113
+ 1320 050b 04       		.byte	4
+ 1321 050c 93       		.byte	-109
+ 1322 050d 04       		.byte	4
+ 1323 050e 94       		.byte	-108
+ 1324 050f 88       		.byte	-120
+ 1325 0510 96       		.byte	-106
+ 1326 0511 42       		.byte	66
+ 1327 0512 97       		.byte	-105
+ 1328 0513 02       		.byte	2
+ 1329 0514 98       		.byte	-104
+ 1330 0515 40       		.byte	64
+ 1331 0516 9A       		.byte	-102
+ 1332 0517 01       		.byte	1
+ 1333 0518 9B       		.byte	-101
+ 1334 0519 01       		.byte	1
+ 1335 051a 9C       		.byte	-100
+ 1336 051b 08       		.byte	8
+ 1337 051c 9D       		.byte	-99
+ 1338 051d 08       		.byte	8
+ 1339 051e A1       		.byte	-95
+ 1340 051f 02       		.byte	2
+ 1341 0520 A2       		.byte	-94
+ 1342 0521 0A       		.byte	10
+ 1343 0522 A3       		.byte	-93
+ 1344 0523 10       		.byte	16
+ 1345 0524 A5       		.byte	-91
+ 1346 0525 01       		.byte	1
+ 1347 0526 A7       		.byte	-89
+ 1348 0527 08       		.byte	8
+ 1349 0528 A9       		.byte	-87
+ 1350 0529 20       		.byte	32
+ 1351 052a AA       		.byte	-86
+ 1352 052b 04       		.byte	4
+ 1353 052c B1       		.byte	-79
+ 1354 052d 08       		.byte	8
+ 1355 052e B4       		.byte	-76
+ 1356 052f 40       		.byte	64
+ 1357 0530 C0       		.byte	-64
+ 1358 0531 17       		.byte	23
+ 1359 0532 C2       		.byte	-62
+ 1360 0533 2F       		.byte	47
+ 1361 0534 C4       		.byte	-60
+ 1362 0535 DF       		.byte	-33
+ 1363 0536 CA       		.byte	-54
+ 1364 0537 02       		.byte	2
+ 1365 0538 CC       		.byte	-52
+ 1366 0539 DE       		.byte	-34
+ 1367 053a CE       		.byte	-50
+ 1368 053b 2A       		.byte	42
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 25
+
+
+ 1369 053c D0       		.byte	-48
+ 1370 053d 02       		.byte	2
+ 1371 053e D2       		.byte	-46
+ 1372 053f 0C       		.byte	12
+ 1373 0540 D6       		.byte	-42
+ 1374 0541 0F       		.byte	15
+ 1375 0542 E2       		.byte	-30
+ 1376 0543 01       		.byte	1
+ 1377 0544 E6       		.byte	-26
+ 1378 0545 08       		.byte	8
+ 1379 0546 EA       		.byte	-22
+ 1380 0547 41       		.byte	65
+ 1381 0548 00       		.byte	0
+ 1382 0549 CF       		.byte	-49
+ 1383 054a 01       		.byte	1
+ 1384 054b 04       		.byte	4
+ 1385 054c 02       		.byte	2
+ 1386 054d 30       		.byte	48
+ 1387 054e 0B       		.byte	11
+ 1388 054f 02       		.byte	2
+ 1389 0550 0E       		.byte	14
+ 1390 0551 0F       		.byte	15
+ 1391 0552 13       		.byte	19
+ 1392 0553 01       		.byte	1
+ 1393 0554 18       		.byte	24
+ 1394 0555 30       		.byte	48
+ 1395 0556 1A       		.byte	26
+ 1396 0557 C9       		.byte	-55
+ 1397 0558 1D       		.byte	29
+ 1398 0559 04       		.byte	4
+ 1399 055a 20       		.byte	32
+ 1400 055b 73       		.byte	115
+ 1401 055c 21       		.byte	33
+ 1402 055d 04       		.byte	4
+ 1403 055e 24       		.byte	36
+ 1404 055f FD       		.byte	-3
+ 1405 0560 26       		.byte	38
+ 1406 0561 02       		.byte	2
+ 1407 0562 28       		.byte	40
+ 1408 0563 9E       		.byte	-98
+ 1409 0564 2A       		.byte	42
+ 1410 0565 60       		.byte	96
+ 1411 0566 2C       		.byte	44
+ 1412 0567 94       		.byte	-108
+ 1413 0568 2E       		.byte	46
+ 1414 0569 60       		.byte	96
+ 1415 056a 30       		.byte	48
+ 1416 056b FF       		.byte	-1
+ 1417 056c 33       		.byte	51
+ 1418 056d 01       		.byte	1
+ 1419 056e 35       		.byte	53
+ 1420 056f 04       		.byte	4
+ 1421 0570 37       		.byte	55
+ 1422 0571 02       		.byte	2
+ 1423 0572 39       		.byte	57
+ 1424 0573 20       		.byte	32
+ 1425 0574 3E       		.byte	62
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 26
+
+
+ 1426 0575 01       		.byte	1
+ 1427 0576 3F       		.byte	63
+ 1428 0577 10       		.byte	16
+ 1429 0578 40       		.byte	64
+ 1430 0579 63       		.byte	99
+ 1431 057a 41       		.byte	65
+ 1432 057b 04       		.byte	4
+ 1433 057c 45       		.byte	69
+ 1434 057d 2C       		.byte	44
+ 1435 057e 46       		.byte	70
+ 1436 057f 40       		.byte	64
+ 1437 0580 47       		.byte	71
+ 1438 0581 3E       		.byte	62
+ 1439 0582 48       		.byte	72
+ 1440 0583 3B       		.byte	59
+ 1441 0584 49       		.byte	73
+ 1442 0585 FF       		.byte	-1
+ 1443 0586 4A       		.byte	74
+ 1444 0587 FF       		.byte	-1
+ 1445 0588 4B       		.byte	75
+ 1446 0589 FF       		.byte	-1
+ 1447 058a 4D       		.byte	77
+ 1448 058b AF       		.byte	-81
+ 1449 058c 4E       		.byte	78
+ 1450 058d 07       		.byte	7
+ 1451 058e 4F       		.byte	79
+ 1452 058f 01       		.byte	1
+ 1453 0590 50       		.byte	80
+ 1454 0591 18       		.byte	24
+ 1455 0592 52       		.byte	82
+ 1456 0593 80       		.byte	-128
+ 1457 0594 58       		.byte	88
+ 1458 0595 04       		.byte	4
+ 1459 0596 59       		.byte	89
+ 1460 0597 04       		.byte	4
+ 1461 0598 5A       		.byte	90
+ 1462 0599 04       		.byte	4
+ 1463 059a 5B       		.byte	91
+ 1464 059b 04       		.byte	4
+ 1465 059c 5C       		.byte	92
+ 1466 059d 10       		.byte	16
+ 1467 059e 5D       		.byte	93
+ 1468 059f 11       		.byte	17
+ 1469 05a0 5F       		.byte	95
+ 1470 05a1 01       		.byte	1
+ 1471 05a2 60       		.byte	96
+ 1472 05a3 40       		.byte	64
+ 1473 05a4 62       		.byte	98
+ 1474 05a5 80       		.byte	-128
+ 1475 05a6 64       		.byte	100
+ 1476 05a7 40       		.byte	64
+ 1477 05a8 65       		.byte	101
+ 1478 05a9 40       		.byte	64
+ 1479 05aa 66       		.byte	102
+ 1480 05ab 80       		.byte	-128
+ 1481 05ac 68       		.byte	104
+ 1482 05ad 40       		.byte	64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 27
+
+
+ 1483 05ae 6A       		.byte	106
+ 1484 05af 80       		.byte	-128
+ 1485 05b0 6C       		.byte	108
+ 1486 05b1 40       		.byte	64
+ 1487 05b2 6D       		.byte	109
+ 1488 05b3 20       		.byte	32
+ 1489 05b4 6E       		.byte	110
+ 1490 05b5 80       		.byte	-128
+ 1491 05b6 82       		.byte	-126
+ 1492 05b7 20       		.byte	32
+ 1493 05b8 84       		.byte	-124
+ 1494 05b9 18       		.byte	24
+ 1495 05ba 88       		.byte	-120
+ 1496 05bb 0C       		.byte	12
+ 1497 05bc 8C       		.byte	-116
+ 1498 05bd 18       		.byte	24
+ 1499 05be 8D       		.byte	-115
+ 1500 05bf 02       		.byte	2
+ 1501 05c0 92       		.byte	-110
+ 1502 05c1 01       		.byte	1
+ 1503 05c2 96       		.byte	-106
+ 1504 05c3 01       		.byte	1
+ 1505 05c4 97       		.byte	-105
+ 1506 05c5 01       		.byte	1
+ 1507 05c6 9A       		.byte	-102
+ 1508 05c7 20       		.byte	32
+ 1509 05c8 9B       		.byte	-101
+ 1510 05c9 02       		.byte	2
+ 1511 05ca A3       		.byte	-93
+ 1512 05cb 01       		.byte	1
+ 1513 05cc A8       		.byte	-88
+ 1514 05cd 14       		.byte	20
+ 1515 05ce AE       		.byte	-82
+ 1516 05cf 02       		.byte	2
+ 1517 05d0 B0       		.byte	-80
+ 1518 05d1 02       		.byte	2
+ 1519 05d2 B2       		.byte	-78
+ 1520 05d3 1C       		.byte	28
+ 1521 05d4 B4       		.byte	-76
+ 1522 05d5 01       		.byte	1
+ 1523 05d6 B5       		.byte	-75
+ 1524 05d7 01       		.byte	1
+ 1525 05d8 B6       		.byte	-74
+ 1526 05d9 20       		.byte	32
+ 1527 05da B7       		.byte	-73
+ 1528 05db 02       		.byte	2
+ 1529 05dc B8       		.byte	-72
+ 1530 05dd 08       		.byte	8
+ 1531 05de BE       		.byte	-66
+ 1532 05df 50       		.byte	80
+ 1533 05e0 BF       		.byte	-65
+ 1534 05e1 40       		.byte	64
+ 1535 05e2 C0       		.byte	-64
+ 1536 05e3 40       		.byte	64
+ 1537 05e4 C1       		.byte	-63
+ 1538 05e5 03       		.byte	3
+ 1539 05e6 C9       		.byte	-55
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 28
+
+
+ 1540 05e7 FF       		.byte	-1
+ 1541 05e8 CA       		.byte	-54
+ 1542 05e9 FF       		.byte	-1
+ 1543 05ea CB       		.byte	-53
+ 1544 05eb FF       		.byte	-1
+ 1545 05ec CD       		.byte	-51
+ 1546 05ed A0       		.byte	-96
+ 1547 05ee CF       		.byte	-49
+ 1548 05ef 04       		.byte	4
+ 1549 05f0 D0       		.byte	-48
+ 1550 05f1 18       		.byte	24
+ 1551 05f2 D2       		.byte	-46
+ 1552 05f3 80       		.byte	-128
+ 1553 05f4 D8       		.byte	-40
+ 1554 05f5 04       		.byte	4
+ 1555 05f6 D9       		.byte	-39
+ 1556 05f7 04       		.byte	4
+ 1557 05f8 DA       		.byte	-38
+ 1558 05f9 04       		.byte	4
+ 1559 05fa DB       		.byte	-37
+ 1560 05fb 04       		.byte	4
+ 1561 05fc DC       		.byte	-36
+ 1562 05fd 11       		.byte	17
+ 1563 05fe DD       		.byte	-35
+ 1564 05ff 11       		.byte	17
+ 1565 0600 DF       		.byte	-33
+ 1566 0601 01       		.byte	1
+ 1567 0602 E0       		.byte	-32
+ 1568 0603 40       		.byte	64
+ 1569 0604 E2       		.byte	-30
+ 1570 0605 C0       		.byte	-64
+ 1571 0606 E4       		.byte	-28
+ 1572 0607 40       		.byte	64
+ 1573 0608 E5       		.byte	-27
+ 1574 0609 40       		.byte	64
+ 1575 060a E6       		.byte	-26
+ 1576 060b C0       		.byte	-64
+ 1577 060c E8       		.byte	-24
+ 1578 060d C0       		.byte	-64
+ 1579 060e EA       		.byte	-22
+ 1580 060f C0       		.byte	-64
+ 1581 0610 EC       		.byte	-20
+ 1582 0611 C0       		.byte	-64
+ 1583 0612 EE       		.byte	-18
+ 1584 0613 C0       		.byte	-64
+ 1585 0614 00       		.byte	0
+ 1586 0615 54       		.byte	84
+ 1587 0616 02       		.byte	2
+ 1588 0617 40       		.byte	64
+ 1589 0618 04       		.byte	4
+ 1590 0619 80       		.byte	-128
+ 1591 061a 07       		.byte	7
+ 1592 061b 40       		.byte	64
+ 1593 061c 08       		.byte	8
+ 1594 061d 10       		.byte	16
+ 1595 061e 09       		.byte	9
+ 1596 061f 08       		.byte	8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 29
+
+
+ 1597 0620 0A       		.byte	10
+ 1598 0621 40       		.byte	64
+ 1599 0622 0C       		.byte	12
+ 1600 0623 20       		.byte	32
+ 1601 0624 10       		.byte	16
+ 1602 0625 04       		.byte	4
+ 1603 0626 13       		.byte	19
+ 1604 0627 40       		.byte	64
+ 1605 0628 14       		.byte	20
+ 1606 0629 02       		.byte	2
+ 1607 062a 15       		.byte	21
+ 1608 062b 01       		.byte	1
+ 1609 062c 17       		.byte	23
+ 1610 062d 18       		.byte	24
+ 1611 062e 18       		.byte	24
+ 1612 062f 12       		.byte	18
+ 1613 0630 19       		.byte	25
+ 1614 0631 01       		.byte	1
+ 1615 0632 1A       		.byte	26
+ 1616 0633 48       		.byte	72
+ 1617 0634 1B       		.byte	27
+ 1618 0635 04       		.byte	4
+ 1619 0636 1C       		.byte	28
+ 1620 0637 80       		.byte	-128
+ 1621 0638 21       		.byte	33
+ 1622 0639 40       		.byte	64
+ 1623 063a 22       		.byte	34
+ 1624 063b 10       		.byte	16
+ 1625 063c 26       		.byte	38
+ 1626 063d 48       		.byte	72
+ 1627 063e 27       		.byte	39
+ 1628 063f 06       		.byte	6
+ 1629 0640 29       		.byte	41
+ 1630 0641 01       		.byte	1
+ 1631 0642 2C       		.byte	44
+ 1632 0643 80       		.byte	-128
+ 1633 0644 2E       		.byte	46
+ 1634 0645 02       		.byte	2
+ 1635 0646 30       		.byte	48
+ 1636 0647 10       		.byte	16
+ 1637 0648 31       		.byte	49
+ 1638 0649 04       		.byte	4
+ 1639 064a 32       		.byte	50
+ 1640 064b 10       		.byte	16
+ 1641 064c 35       		.byte	53
+ 1642 064d 02       		.byte	2
+ 1643 064e 36       		.byte	54
+ 1644 064f 80       		.byte	-128
+ 1645 0650 39       		.byte	57
+ 1646 0651 40       		.byte	64
+ 1647 0652 3A       		.byte	58
+ 1648 0653 40       		.byte	64
+ 1649 0654 3D       		.byte	61
+ 1650 0655 01       		.byte	1
+ 1651 0656 3E       		.byte	62
+ 1652 0657 20       		.byte	32
+ 1653 0658 41       		.byte	65
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 30
+
+
+ 1654 0659 08       		.byte	8
+ 1655 065a 42       		.byte	66
+ 1656 065b 40       		.byte	64
+ 1657 065c 45       		.byte	69
+ 1658 065d 01       		.byte	1
+ 1659 065e 47       		.byte	71
+ 1660 065f 04       		.byte	4
+ 1661 0660 4C       		.byte	76
+ 1662 0661 08       		.byte	8
+ 1663 0662 4E       		.byte	78
+ 1664 0663 80       		.byte	-128
+ 1665 0664 4F       		.byte	79
+ 1666 0665 04       		.byte	4
+ 1667 0666 56       		.byte	86
+ 1668 0667 2A       		.byte	42
+ 1669 0668 73       		.byte	115
+ 1670 0669 40       		.byte	64
+ 1671 066a 75       		.byte	117
+ 1672 066b 02       		.byte	2
+ 1673 066c 83       		.byte	-125
+ 1674 066d 04       		.byte	4
+ 1675 066e 85       		.byte	-123
+ 1676 066f 10       		.byte	16
+ 1677 0670 86       		.byte	-122
+ 1678 0671 80       		.byte	-128
+ 1679 0672 8C       		.byte	-116
+ 1680 0673 09       		.byte	9
+ 1681 0674 90       		.byte	-112
+ 1682 0675 44       		.byte	68
+ 1683 0676 91       		.byte	-111
+ 1684 0677 01       		.byte	1
+ 1685 0678 94       		.byte	-108
+ 1686 0679 10       		.byte	16
+ 1687 067a 95       		.byte	-107
+ 1688 067b 10       		.byte	16
+ 1689 067c 96       		.byte	-106
+ 1690 067d 48       		.byte	72
+ 1691 067e 97       		.byte	-105
+ 1692 067f 84       		.byte	-124
+ 1693 0680 98       		.byte	-104
+ 1694 0681 04       		.byte	4
+ 1695 0682 99       		.byte	-103
+ 1696 0683 04       		.byte	4
+ 1697 0684 9B       		.byte	-101
+ 1698 0685 10       		.byte	16
+ 1699 0686 9C       		.byte	-100
+ 1700 0687 02       		.byte	2
+ 1701 0688 9E       		.byte	-98
+ 1702 0689 2A       		.byte	42
+ 1703 068a 9F       		.byte	-97
+ 1704 068b 02       		.byte	2
+ 1705 068c A0       		.byte	-96
+ 1706 068d 20       		.byte	32
+ 1707 068e A1       		.byte	-95
+ 1708 068f 08       		.byte	8
+ 1709 0690 A4       		.byte	-92
+ 1710 0691 80       		.byte	-128
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 31
+
+
+ 1711 0692 A6       		.byte	-90
+ 1712 0693 80       		.byte	-128
+ 1713 0694 A7       		.byte	-89
+ 1714 0695 08       		.byte	8
+ 1715 0696 AB       		.byte	-85
+ 1716 0697 04       		.byte	4
+ 1717 0698 B0       		.byte	-80
+ 1718 0699 08       		.byte	8
+ 1719 069a B1       		.byte	-79
+ 1720 069b 10       		.byte	16
+ 1721 069c B2       		.byte	-78
+ 1722 069d 04       		.byte	4
+ 1723 069e C0       		.byte	-64
+ 1724 069f 9F       		.byte	-97
+ 1725 06a0 C2       		.byte	-62
+ 1726 06a1 4E       		.byte	78
+ 1727 06a2 C4       		.byte	-60
+ 1728 06a3 F3       		.byte	-13
+ 1729 06a4 CA       		.byte	-54
+ 1730 06a5 81       		.byte	-127
+ 1731 06a6 CC       		.byte	-52
+ 1732 06a7 96       		.byte	-106
+ 1733 06a8 CE       		.byte	-50
+ 1734 06a9 A8       		.byte	-88
+ 1735 06aa D0       		.byte	-48
+ 1736 06ab C3       		.byte	-61
+ 1737 06ac D2       		.byte	-46
+ 1738 06ad 20       		.byte	32
+ 1739 06ae E4       		.byte	-28
+ 1740 06af 10       		.byte	16
+ 1741 06b0 EC       		.byte	-20
+ 1742 06b1 20       		.byte	32
+ 1743 06b2 04       		.byte	4
+ 1744 06b3 30       		.byte	48
+ 1745 06b4 05       		.byte	5
+ 1746 06b5 16       		.byte	22
+ 1747 06b6 06       		.byte	6
+ 1748 06b7 08       		.byte	8
+ 1749 06b8 07       		.byte	7
+ 1750 06b9 08       		.byte	8
+ 1751 06ba 09       		.byte	9
+ 1752 06bb 0E       		.byte	14
+ 1753 06bc 0A       		.byte	10
+ 1754 06bd 01       		.byte	1
+ 1755 06be 0C       		.byte	12
+ 1756 06bf 30       		.byte	48
+ 1757 06c0 0D       		.byte	13
+ 1758 06c1 18       		.byte	24
+ 1759 06c2 0E       		.byte	14
+ 1760 06c3 04       		.byte	4
+ 1761 06c4 0F       		.byte	15
+ 1762 06c5 04       		.byte	4
+ 1763 06c6 11       		.byte	17
+ 1764 06c7 10       		.byte	16
+ 1765 06c8 12       		.byte	18
+ 1766 06c9 3C       		.byte	60
+ 1767 06ca 13       		.byte	19
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 32
+
+
+ 1768 06cb 02       		.byte	2
+ 1769 06cc 14       		.byte	20
+ 1770 06cd 2C       		.byte	44
+ 1771 06ce 16       		.byte	22
+ 1772 06cf 10       		.byte	16
+ 1773 06d0 17       		.byte	23
+ 1774 06d1 1E       		.byte	30
+ 1775 06d2 18       		.byte	24
+ 1776 06d3 20       		.byte	32
+ 1777 06d4 1A       		.byte	26
+ 1778 06d5 04       		.byte	4
+ 1779 06d6 1C       		.byte	28
+ 1780 06d7 02       		.byte	2
+ 1781 06d8 1F       		.byte	31
+ 1782 06d9 01       		.byte	1
+ 1783 06da 22       		.byte	34
+ 1784 06db 02       		.byte	2
+ 1785 06dc 24       		.byte	36
+ 1786 06dd 1C       		.byte	28
+ 1787 06de 27       		.byte	39
+ 1788 06df 20       		.byte	32
+ 1789 06e0 28       		.byte	40
+ 1790 06e1 01       		.byte	1
+ 1791 06e2 29       		.byte	41
+ 1792 06e3 18       		.byte	24
+ 1793 06e4 2B       		.byte	43
+ 1794 06e5 02       		.byte	2
+ 1795 06e6 30       		.byte	48
+ 1796 06e7 02       		.byte	2
+ 1797 06e8 31       		.byte	49
+ 1798 06e9 1E       		.byte	30
+ 1799 06ea 33       		.byte	51
+ 1800 06eb 20       		.byte	32
+ 1801 06ec 34       		.byte	52
+ 1802 06ed 3C       		.byte	60
+ 1803 06ee 36       		.byte	54
+ 1804 06ef 01       		.byte	1
+ 1805 06f0 37       		.byte	55
+ 1806 06f1 01       		.byte	1
+ 1807 06f2 3E       		.byte	62
+ 1808 06f3 01       		.byte	1
+ 1809 06f4 40       		.byte	64
+ 1810 06f5 40       		.byte	64
+ 1811 06f6 41       		.byte	65
+ 1812 06f7 03       		.byte	3
+ 1813 06f8 45       		.byte	69
+ 1814 06f9 D1       		.byte	-47
+ 1815 06fa 47       		.byte	71
+ 1816 06fb 02       		.byte	2
+ 1817 06fc 48       		.byte	72
+ 1818 06fd 13       		.byte	19
+ 1819 06fe 49       		.byte	73
+ 1820 06ff FF       		.byte	-1
+ 1821 0700 4A       		.byte	74
+ 1822 0701 FF       		.byte	-1
+ 1823 0702 4B       		.byte	75
+ 1824 0703 FF       		.byte	-1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 33
+
+
+ 1825 0704 4D       		.byte	77
+ 1826 0705 AF       		.byte	-81
+ 1827 0706 4E       		.byte	78
+ 1828 0707 0F       		.byte	15
+ 1829 0708 4F       		.byte	79
+ 1830 0709 04       		.byte	4
+ 1831 070a 50       		.byte	80
+ 1832 070b 18       		.byte	24
+ 1833 070c 54       		.byte	84
+ 1834 070d 05       		.byte	5
+ 1835 070e 58       		.byte	88
+ 1836 070f 04       		.byte	4
+ 1837 0710 59       		.byte	89
+ 1838 0711 04       		.byte	4
+ 1839 0712 5A       		.byte	90
+ 1840 0713 04       		.byte	4
+ 1841 0714 5B       		.byte	91
+ 1842 0715 04       		.byte	4
+ 1843 0716 5C       		.byte	92
+ 1844 0717 11       		.byte	17
+ 1845 0718 5D       		.byte	93
+ 1846 0719 11       		.byte	17
+ 1847 071a 5F       		.byte	95
+ 1848 071b 01       		.byte	1
+ 1849 071c 60       		.byte	96
+ 1850 071d 40       		.byte	64
+ 1851 071e 62       		.byte	98
+ 1852 071f C0       		.byte	-64
+ 1853 0720 64       		.byte	100
+ 1854 0721 40       		.byte	64
+ 1855 0722 65       		.byte	101
+ 1856 0723 40       		.byte	64
+ 1857 0724 66       		.byte	102
+ 1858 0725 C0       		.byte	-64
+ 1859 0726 68       		.byte	104
+ 1860 0727 C0       		.byte	-64
+ 1861 0728 6A       		.byte	106
+ 1862 0729 C0       		.byte	-64
+ 1863 072a 6C       		.byte	108
+ 1864 072b C0       		.byte	-64
+ 1865 072c 6E       		.byte	110
+ 1866 072d C0       		.byte	-64
+ 1867 072e 81       		.byte	-127
+ 1868 072f 7F       		.byte	127
+ 1869 0730 84       		.byte	-124
+ 1870 0731 CF       		.byte	-49
+ 1871 0732 86       		.byte	-122
+ 1872 0733 30       		.byte	48
+ 1873 0734 88       		.byte	-120
+ 1874 0735 73       		.byte	115
+ 1875 0736 8C       		.byte	-116
+ 1876 0737 94       		.byte	-108
+ 1877 0738 8E       		.byte	-114
+ 1878 0739 60       		.byte	96
+ 1879 073a 91       		.byte	-111
+ 1880 073b 0E       		.byte	14
+ 1881 073c 93       		.byte	-109
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 34
+
+
+ 1882 073d F0       		.byte	-16
+ 1883 073e 94       		.byte	-108
+ 1884 073f FD       		.byte	-3
+ 1885 0740 95       		.byte	-107
+ 1886 0741 C5       		.byte	-59
+ 1887 0742 96       		.byte	-106
+ 1888 0743 02       		.byte	2
+ 1889 0744 97       		.byte	-105
+ 1890 0745 3A       		.byte	58
+ 1891 0746 98       		.byte	-104
+ 1892 0747 30       		.byte	48
+ 1893 0748 9A       		.byte	-102
+ 1894 0749 C9       		.byte	-55
+ 1895 074a 9F       		.byte	-97
+ 1896 074b 01       		.byte	1
+ 1897 074c A0       		.byte	-96
+ 1898 074d 9E       		.byte	-98
+ 1899 074e A1       		.byte	-95
+ 1900 074f FE       		.byte	-2
+ 1901 0750 A2       		.byte	-94
+ 1902 0751 60       		.byte	96
+ 1903 0752 A3       		.byte	-93
+ 1904 0753 01       		.byte	1
+ 1905 0754 A5       		.byte	-91
+ 1906 0755 96       		.byte	-106
+ 1907 0756 A7       		.byte	-89
+ 1908 0757 68       		.byte	104
+ 1909 0758 A9       		.byte	-87
+ 1910 0759 A3       		.byte	-93
+ 1911 075a AA       		.byte	-86
+ 1912 075b 0F       		.byte	15
+ 1913 075c AB       		.byte	-85
+ 1914 075d 5C       		.byte	92
+ 1915 075e B2       		.byte	-78
+ 1916 075f FF       		.byte	-1
+ 1917 0760 B5       		.byte	-75
+ 1918 0761 FF       		.byte	-1
+ 1919 0762 BE       		.byte	-66
+ 1920 0763 04       		.byte	4
+ 1921 0764 BF       		.byte	-65
+ 1922 0765 10       		.byte	16
+ 1923 0766 D8       		.byte	-40
+ 1924 0767 04       		.byte	4
+ 1925 0768 D9       		.byte	-39
+ 1926 0769 04       		.byte	4
+ 1927 076a DF       		.byte	-33
+ 1928 076b 01       		.byte	1
+ 1929 076c 00       		.byte	0
+ 1930 076d 64       		.byte	100
+ 1931 076e 04       		.byte	4
+ 1932 076f 94       		.byte	-108
+ 1933 0770 08       		.byte	8
+ 1934 0771 04       		.byte	4
+ 1935 0772 09       		.byte	9
+ 1936 0773 82       		.byte	-126
+ 1937 0774 0A       		.byte	10
+ 1938 0775 04       		.byte	4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 35
+
+
+ 1939 0776 0C       		.byte	12
+ 1940 0777 04       		.byte	4
+ 1941 0778 0D       		.byte	13
+ 1942 0779 04       		.byte	4
+ 1943 077a 0E       		.byte	14
+ 1944 077b 24       		.byte	36
+ 1945 077c 12       		.byte	18
+ 1946 077d 90       		.byte	-112
+ 1947 077e 13       		.byte	19
+ 1948 077f 10       		.byte	16
+ 1949 0780 15       		.byte	21
+ 1950 0781 02       		.byte	2
+ 1951 0782 17       		.byte	23
+ 1952 0783 20       		.byte	32
+ 1953 0784 18       		.byte	24
+ 1954 0785 04       		.byte	4
+ 1955 0786 19       		.byte	25
+ 1956 0787 52       		.byte	82
+ 1957 0788 1F       		.byte	31
+ 1958 0789 04       		.byte	4
+ 1959 078a 20       		.byte	32
+ 1960 078b 40       		.byte	64
+ 1961 078c 21       		.byte	33
+ 1962 078d 81       		.byte	-127
+ 1963 078e 23       		.byte	35
+ 1964 078f 10       		.byte	16
+ 1965 0790 27       		.byte	39
+ 1966 0791 04       		.byte	4
+ 1967 0792 29       		.byte	41
+ 1968 0793 14       		.byte	20
+ 1969 0794 2C       		.byte	44
+ 1970 0795 20       		.byte	32
+ 1971 0796 2F       		.byte	47
+ 1972 0797 48       		.byte	72
+ 1973 0798 30       		.byte	48
+ 1974 0799 08       		.byte	8
+ 1975 079a 31       		.byte	49
+ 1976 079b 02       		.byte	2
+ 1977 079c 32       		.byte	50
+ 1978 079d 80       		.byte	-128
+ 1979 079e 34       		.byte	52
+ 1980 079f 02       		.byte	2
+ 1981 07a0 36       		.byte	54
+ 1982 07a1 08       		.byte	8
+ 1983 07a2 37       		.byte	55
+ 1984 07a3 40       		.byte	64
+ 1985 07a4 38       		.byte	56
+ 1986 07a5 50       		.byte	80
+ 1987 07a6 39       		.byte	57
+ 1988 07a7 08       		.byte	8
+ 1989 07a8 3A       		.byte	58
+ 1990 07a9 10       		.byte	16
+ 1991 07aa 3D       		.byte	61
+ 1992 07ab 01       		.byte	1
+ 1993 07ac 41       		.byte	65
+ 1994 07ad 08       		.byte	8
+ 1995 07ae 42       		.byte	66
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 36
+
+
+ 1996 07af 40       		.byte	64
+ 1997 07b0 48       		.byte	72
+ 1998 07b1 10       		.byte	16
+ 1999 07b2 49       		.byte	73
+ 2000 07b3 05       		.byte	5
+ 2001 07b4 51       		.byte	81
+ 2002 07b5 08       		.byte	8
+ 2003 07b6 59       		.byte	89
+ 2004 07b7 41       		.byte	65
+ 2005 07b8 5A       		.byte	90
+ 2006 07b9 08       		.byte	8
+ 2007 07ba 80       		.byte	-128
+ 2008 07bb 40       		.byte	64
+ 2009 07bc 81       		.byte	-127
+ 2010 07bd 12       		.byte	18
+ 2011 07be 82       		.byte	-126
+ 2012 07bf 04       		.byte	4
+ 2013 07c0 86       		.byte	-122
+ 2014 07c1 10       		.byte	16
+ 2015 07c2 8F       		.byte	-113
+ 2016 07c3 40       		.byte	64
+ 2017 07c4 91       		.byte	-111
+ 2018 07c5 01       		.byte	1
+ 2019 07c6 94       		.byte	-108
+ 2020 07c7 54       		.byte	84
+ 2021 07c8 95       		.byte	-107
+ 2022 07c9 32       		.byte	50
+ 2023 07ca 96       		.byte	-106
+ 2024 07cb 04       		.byte	4
+ 2025 07cc 97       		.byte	-105
+ 2026 07cd 0C       		.byte	12
+ 2027 07ce 9B       		.byte	-101
+ 2028 07cf 30       		.byte	48
+ 2029 07d0 9D       		.byte	-99
+ 2030 07d1 02       		.byte	2
+ 2031 07d2 9E       		.byte	-98
+ 2032 07d3 2E       		.byte	46
+ 2033 07d4 9F       		.byte	-97
+ 2034 07d5 02       		.byte	2
+ 2035 07d6 A0       		.byte	-96
+ 2036 07d7 20       		.byte	32
+ 2037 07d8 A2       		.byte	-94
+ 2038 07d9 18       		.byte	24
+ 2039 07da A4       		.byte	-92
+ 2040 07db 80       		.byte	-128
+ 2041 07dc A5       		.byte	-91
+ 2042 07dd 10       		.byte	16
+ 2043 07de B0       		.byte	-80
+ 2044 07df 20       		.byte	32
+ 2045 07e0 B1       		.byte	-79
+ 2046 07e1 01       		.byte	1
+ 2047 07e2 B6       		.byte	-74
+ 2048 07e3 08       		.byte	8
+ 2049 07e4 B7       		.byte	-73
+ 2050 07e5 10       		.byte	16
+ 2051 07e6 C0       		.byte	-64
+ 2052 07e7 E7       		.byte	-25
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 37
+
+
+ 2053 07e8 C2       		.byte	-62
+ 2054 07e9 6F       		.byte	111
+ 2055 07ea C4       		.byte	-60
+ 2056 07eb 5E       		.byte	94
+ 2057 07ec CA       		.byte	-54
+ 2058 07ed E6       		.byte	-26
+ 2059 07ee CC       		.byte	-52
+ 2060 07ef DB       		.byte	-37
+ 2061 07f0 CE       		.byte	-50
+ 2062 07f1 8E       		.byte	-114
+ 2063 07f2 D0       		.byte	-48
+ 2064 07f3 03       		.byte	3
+ 2065 07f4 D6       		.byte	-42
+ 2066 07f5 0B       		.byte	11
+ 2067 07f6 E0       		.byte	-32
+ 2068 07f7 12       		.byte	18
+ 2069 07f8 EC       		.byte	-20
+ 2070 07f9 E0       		.byte	-32
+ 2071 07fa 03       		.byte	3
+ 2072 07fb 01       		.byte	1
+ 2073 07fc 05       		.byte	5
+ 2074 07fd 08       		.byte	8
+ 2075 07fe 06       		.byte	6
+ 2076 07ff 01       		.byte	1
+ 2077 0800 08       		.byte	8
+ 2078 0801 0E       		.byte	14
+ 2079 0802 09       		.byte	9
+ 2080 0803 02       		.byte	2
+ 2081 0804 0B       		.byte	11
+ 2082 0805 04       		.byte	4
+ 2083 0806 0D       		.byte	13
+ 2084 0807 02       		.byte	2
+ 2085 0808 0F       		.byte	15
+ 2086 0809 04       		.byte	4
+ 2087 080a 10       		.byte	16
+ 2088 080b 14       		.byte	20
+ 2089 080c 12       		.byte	18
+ 2090 080d 0A       		.byte	10
+ 2091 080e 13       		.byte	19
+ 2092 080f 0E       		.byte	14
+ 2093 0810 14       		.byte	20
+ 2094 0811 1E       		.byte	30
+ 2095 0812 15       		.byte	21
+ 2096 0813 0E       		.byte	14
+ 2097 0814 18       		.byte	24
+ 2098 0815 0A       		.byte	10
+ 2099 0816 19       		.byte	25
+ 2100 0817 0E       		.byte	14
+ 2101 0818 1A       		.byte	26
+ 2102 0819 14       		.byte	20
+ 2103 081a 1E       		.byte	30
+ 2104 081b 20       		.byte	32
+ 2105 081c 20       		.byte	32
+ 2106 081d 01       		.byte	1
+ 2107 081e 24       		.byte	36
+ 2108 081f 18       		.byte	24
+ 2109 0820 26       		.byte	38
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 38
+
+
+ 2110 0821 06       		.byte	6
+ 2111 0822 27       		.byte	39
+ 2112 0823 08       		.byte	8
+ 2113 0824 28       		.byte	40
+ 2114 0825 06       		.byte	6
+ 2115 0826 2A       		.byte	42
+ 2116 0827 18       		.byte	24
+ 2117 0828 2B       		.byte	43
+ 2118 0829 10       		.byte	16
+ 2119 082a 2C       		.byte	44
+ 2120 082b 20       		.byte	32
+ 2121 082c 30       		.byte	48
+ 2122 082d 01       		.byte	1
+ 2123 082e 31       		.byte	49
+ 2124 082f 01       		.byte	1
+ 2125 0830 32       		.byte	50
+ 2126 0831 1E       		.byte	30
+ 2127 0832 33       		.byte	51
+ 2128 0833 1E       		.byte	30
+ 2129 0834 34       		.byte	52
+ 2130 0835 20       		.byte	32
+ 2131 0836 3E       		.byte	62
+ 2132 0837 11       		.byte	17
+ 2133 0838 54       		.byte	84
+ 2134 0839 0F       		.byte	15
+ 2135 083a 58       		.byte	88
+ 2136 083b 04       		.byte	4
+ 2137 083c 59       		.byte	89
+ 2138 083d 04       		.byte	4
+ 2139 083e 5B       		.byte	91
+ 2140 083f 04       		.byte	4
+ 2141 0840 5C       		.byte	92
+ 2142 0841 11       		.byte	17
+ 2143 0842 5D       		.byte	93
+ 2144 0843 10       		.byte	16
+ 2145 0844 5F       		.byte	95
+ 2146 0845 05       		.byte	5
+ 2147 0846 84       		.byte	-124
+ 2148 0847 A3       		.byte	-93
+ 2149 0848 85       		.byte	-123
+ 2150 0849 01       		.byte	1
+ 2151 084a 86       		.byte	-122
+ 2152 084b 5C       		.byte	92
+ 2153 084c 88       		.byte	-120
+ 2154 084d 7F       		.byte	127
+ 2155 084e 8B       		.byte	-117
+ 2156 084f 01       		.byte	1
+ 2157 0850 8C       		.byte	-116
+ 2158 0851 C5       		.byte	-59
+ 2159 0852 8D       		.byte	-115
+ 2160 0853 01       		.byte	1
+ 2161 0854 8E       		.byte	-114
+ 2162 0855 3A       		.byte	58
+ 2163 0856 94       		.byte	-108
+ 2164 0857 FE       		.byte	-2
+ 2165 0858 95       		.byte	-107
+ 2166 0859 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 39
+
+
+ 2167 085a 96       		.byte	-106
+ 2168 085b 01       		.byte	1
+ 2169 085c 98       		.byte	-104
+ 2170 085d 96       		.byte	-106
+ 2171 085e 9A       		.byte	-102
+ 2172 085f 68       		.byte	104
+ 2173 0860 A2       		.byte	-94
+ 2174 0861 01       		.byte	1
+ 2175 0862 A3       		.byte	-93
+ 2176 0863 02       		.byte	2
+ 2177 0864 A8       		.byte	-88
+ 2178 0865 0E       		.byte	14
+ 2179 0866 A9       		.byte	-87
+ 2180 0867 01       		.byte	1
+ 2181 0868 AA       		.byte	-86
+ 2182 0869 F0       		.byte	-16
+ 2183 086a B0       		.byte	-80
+ 2184 086b FF       		.byte	-1
+ 2185 086c B7       		.byte	-73
+ 2186 086d 03       		.byte	3
+ 2187 086e BE       		.byte	-66
+ 2188 086f 01       		.byte	1
+ 2189 0870 D8       		.byte	-40
+ 2190 0871 04       		.byte	4
+ 2191 0872 D9       		.byte	-39
+ 2192 0873 04       		.byte	4
+ 2193 0874 DC       		.byte	-36
+ 2194 0875 10       		.byte	16
+ 2195 0876 DF       		.byte	-33
+ 2196 0877 01       		.byte	1
+ 2197 0878 00       		.byte	0
+ 2198 0879 54       		.byte	84
+ 2199 087a 01       		.byte	1
+ 2200 087b 24       		.byte	36
+ 2201 087c 02       		.byte	2
+ 2202 087d 10       		.byte	16
+ 2203 087e 04       		.byte	4
+ 2204 087f 10       		.byte	16
+ 2205 0880 06       		.byte	6
+ 2206 0881 20       		.byte	32
+ 2207 0882 09       		.byte	9
+ 2208 0883 08       		.byte	8
+ 2209 0884 0A       		.byte	10
+ 2210 0885 04       		.byte	4
+ 2211 0886 0C       		.byte	12
+ 2212 0887 80       		.byte	-128
+ 2213 0888 0D       		.byte	13
+ 2214 0889 01       		.byte	1
+ 2215 088a 0E       		.byte	14
+ 2216 088b 24       		.byte	36
+ 2217 088c 11       		.byte	17
+ 2218 088d 20       		.byte	32
+ 2219 088e 12       		.byte	18
+ 2220 088f 80       		.byte	-128
+ 2221 0890 15       		.byte	21
+ 2222 0891 04       		.byte	4
+ 2223 0892 16       		.byte	22
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 40
+
+
+ 2224 0893 04       		.byte	4
+ 2225 0894 17       		.byte	23
+ 2226 0895 42       		.byte	66
+ 2227 0896 19       		.byte	25
+ 2228 0897 01       		.byte	1
+ 2229 0898 1D       		.byte	29
+ 2230 0899 0C       		.byte	12
+ 2231 089a 1E       		.byte	30
+ 2232 089b 68       		.byte	104
+ 2233 089c 20       		.byte	32
+ 2234 089d 02       		.byte	2
+ 2235 089e 22       		.byte	34
+ 2236 089f 80       		.byte	-128
+ 2237 08a0 27       		.byte	39
+ 2238 08a1 60       		.byte	96
+ 2239 08a2 29       		.byte	41
+ 2240 08a3 01       		.byte	1
+ 2241 08a4 2A       		.byte	42
+ 2242 08a5 10       		.byte	16
+ 2243 08a6 2D       		.byte	45
+ 2244 08a7 04       		.byte	4
+ 2245 08a8 2F       		.byte	47
+ 2246 08a9 04       		.byte	4
+ 2247 08aa 31       		.byte	49
+ 2248 08ab 08       		.byte	8
+ 2249 08ac 35       		.byte	53
+ 2250 08ad 24       		.byte	36
+ 2251 08ae 37       		.byte	55
+ 2252 08af 01       		.byte	1
+ 2253 08b0 38       		.byte	56
+ 2254 08b1 40       		.byte	64
+ 2255 08b2 39       		.byte	57
+ 2256 08b3 20       		.byte	32
+ 2257 08b4 3A       		.byte	58
+ 2258 08b5 04       		.byte	4
+ 2259 08b6 3C       		.byte	60
+ 2260 08b7 40       		.byte	64
+ 2261 08b8 3D       		.byte	61
+ 2262 08b9 20       		.byte	32
+ 2263 08ba 3E       		.byte	62
+ 2264 08bb 06       		.byte	6
+ 2265 08bc 5D       		.byte	93
+ 2266 08bd 12       		.byte	18
+ 2267 08be 5E       		.byte	94
+ 2268 08bf 48       		.byte	72
+ 2269 08c0 66       		.byte	102
+ 2270 08c1 08       		.byte	8
+ 2271 08c2 67       		.byte	103
+ 2272 08c3 04       		.byte	4
+ 2273 08c4 7D       		.byte	125
+ 2274 08c5 01       		.byte	1
+ 2275 08c6 88       		.byte	-120
+ 2276 08c7 01       		.byte	1
+ 2277 08c8 8B       		.byte	-117
+ 2278 08c9 21       		.byte	33
+ 2279 08ca C0       		.byte	-64
+ 2280 08cb 67       		.byte	103
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 41
+
+
+ 2281 08cc C2       		.byte	-62
+ 2282 08cd F6       		.byte	-10
+ 2283 08ce C4       		.byte	-60
+ 2284 08cf FA       		.byte	-6
+ 2285 08d0 CA       		.byte	-54
+ 2286 08d1 65       		.byte	101
+ 2287 08d2 CC       		.byte	-52
+ 2288 08d3 E2       		.byte	-30
+ 2289 08d4 CE       		.byte	-50
+ 2290 08d5 FE       		.byte	-2
+ 2291 08d6 D6       		.byte	-42
+ 2292 08d7 F0       		.byte	-16
+ 2293 08d8 D8       		.byte	-40
+ 2294 08d9 60       		.byte	96
+ 2295 08da DE       		.byte	-34
+ 2296 08db 80       		.byte	-128
+ 2297 08dc E2       		.byte	-30
+ 2298 08dd 80       		.byte	-128
+ 2299 08de E6       		.byte	-26
+ 2300 08df 20       		.byte	32
+ 2301 08e0 B9       		.byte	-71
+ 2302 08e1 80       		.byte	-128
+ 2303 08e2 BF       		.byte	-65
+ 2304 08e3 40       		.byte	64
+ 2305 08e4 D9       		.byte	-39
+ 2306 08e5 04       		.byte	4
+ 2307 08e6 DF       		.byte	-33
+ 2308 08e7 01       		.byte	1
+ 2309 08e8 26       		.byte	38
+ 2310 08e9 80       		.byte	-128
+ 2311 08ea 8A       		.byte	-118
+ 2312 08eb 80       		.byte	-128
+ 2313 08ec 00       		.byte	0
+ 2314 08ed 0C       		.byte	12
+ 2315 08ee 02       		.byte	2
+ 2316 08ef 02       		.byte	2
+ 2317 08f0 04       		.byte	4
+ 2318 08f1 0E       		.byte	14
+ 2319 08f2 05       		.byte	5
+ 2320 08f3 03       		.byte	3
+ 2321 08f4 07       		.byte	7
+ 2322 08f5 0C       		.byte	12
+ 2323 08f6 08       		.byte	8
+ 2324 08f7 0C       		.byte	12
+ 2325 08f8 09       		.byte	9
+ 2326 08f9 0F       		.byte	15
+ 2327 08fa 0D       		.byte	13
+ 2328 08fb 0C       		.byte	12
+ 2329 08fc 0E       		.byte	14
+ 2330 08fd 02       		.byte	2
+ 2331 08fe 10       		.byte	16
+ 2332 08ff 04       		.byte	4
+ 2333 0900 11       		.byte	17
+ 2334 0901 04       		.byte	4
+ 2335 0902 14       		.byte	20
+ 2336 0903 02       		.byte	2
+ 2337 0904 15       		.byte	21
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 42
+
+
+ 2338 0905 01       		.byte	1
+ 2339 0906 16       		.byte	22
+ 2340 0907 0C       		.byte	12
+ 2341 0908 18       		.byte	24
+ 2342 0909 0C       		.byte	12
+ 2343 090a 19       		.byte	25
+ 2344 090b 0C       		.byte	12
+ 2345 090c 1A       		.byte	26
+ 2346 090d 02       		.byte	2
+ 2347 090e 1B       		.byte	27
+ 2348 090f 03       		.byte	3
+ 2349 0910 1D       		.byte	29
+ 2350 0911 08       		.byte	8
+ 2351 0912 20       		.byte	32
+ 2352 0913 08       		.byte	8
+ 2353 0914 21       		.byte	33
+ 2354 0915 02       		.byte	2
+ 2355 0916 24       		.byte	36
+ 2356 0917 01       		.byte	1
+ 2357 0918 25       		.byte	37
+ 2358 0919 03       		.byte	3
+ 2359 091a 28       		.byte	40
+ 2360 091b 01       		.byte	1
+ 2361 091c 29       		.byte	41
+ 2362 091d 0F       		.byte	15
+ 2363 091e 2C       		.byte	44
+ 2364 091f 01       		.byte	1
+ 2365 0920 2F       		.byte	47
+ 2366 0921 03       		.byte	3
+ 2367 0922 33       		.byte	51
+ 2368 0923 0F       		.byte	15
+ 2369 0924 34       		.byte	52
+ 2370 0925 0E       		.byte	14
+ 2371 0926 36       		.byte	54
+ 2372 0927 01       		.byte	1
+ 2373 0928 3A       		.byte	58
+ 2374 0929 20       		.byte	32
+ 2375 092a 3B       		.byte	59
+ 2376 092b 28       		.byte	40
+ 2377 092c 56       		.byte	86
+ 2378 092d 02       		.byte	2
+ 2379 092e 57       		.byte	87
+ 2380 092f 11       		.byte	17
+ 2381 0930 58       		.byte	88
+ 2382 0931 04       		.byte	4
+ 2383 0932 59       		.byte	89
+ 2384 0933 04       		.byte	4
+ 2385 0934 5B       		.byte	91
+ 2386 0935 04       		.byte	4
+ 2387 0936 5C       		.byte	92
+ 2388 0937 33       		.byte	51
+ 2389 0938 5D       		.byte	93
+ 2390 0939 30       		.byte	48
+ 2391 093a 5F       		.byte	95
+ 2392 093b 01       		.byte	1
+ 2393 093c 83       		.byte	-125
+ 2394 093d 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 43
+
+
+ 2395 093e 86       		.byte	-122
+ 2396 093f 02       		.byte	2
+ 2397 0940 91       		.byte	-111
+ 2398 0941 04       		.byte	4
+ 2399 0942 92       		.byte	-110
+ 2400 0943 01       		.byte	1
+ 2401 0944 93       		.byte	-109
+ 2402 0945 02       		.byte	2
+ 2403 0946 99       		.byte	-103
+ 2404 0947 02       		.byte	2
+ 2405 0948 9B       		.byte	-101
+ 2406 0949 04       		.byte	4
+ 2407 094a 9D       		.byte	-99
+ 2408 094b 02       		.byte	2
+ 2409 094c 9F       		.byte	-97
+ 2410 094d 04       		.byte	4
+ 2411 094e A5       		.byte	-91
+ 2412 094f 02       		.byte	2
+ 2413 0950 A7       		.byte	-89
+ 2414 0951 04       		.byte	4
+ 2415 0952 AE       		.byte	-82
+ 2416 0953 04       		.byte	4
+ 2417 0954 B0       		.byte	-80
+ 2418 0955 02       		.byte	2
+ 2419 0956 B2       		.byte	-78
+ 2420 0957 04       		.byte	4
+ 2421 0958 B3       		.byte	-77
+ 2422 0959 01       		.byte	1
+ 2423 095a B4       		.byte	-76
+ 2424 095b 01       		.byte	1
+ 2425 095c B7       		.byte	-73
+ 2426 095d 06       		.byte	6
+ 2427 095e BB       		.byte	-69
+ 2428 095f 80       		.byte	-128
+ 2429 0960 D8       		.byte	-40
+ 2430 0961 04       		.byte	4
+ 2431 0962 D9       		.byte	-39
+ 2432 0963 04       		.byte	4
+ 2433 0964 DC       		.byte	-36
+ 2434 0965 11       		.byte	17
+ 2435 0966 DF       		.byte	-33
+ 2436 0967 01       		.byte	1
+ 2437 0968 00       		.byte	0
+ 2438 0969 04       		.byte	4
+ 2439 096a 01       		.byte	1
+ 2440 096b 82       		.byte	-126
+ 2441 096c 02       		.byte	2
+ 2442 096d 08       		.byte	8
+ 2443 096e 07       		.byte	7
+ 2444 096f 10       		.byte	16
+ 2445 0970 08       		.byte	8
+ 2446 0971 11       		.byte	17
+ 2447 0972 09       		.byte	9
+ 2448 0973 08       		.byte	8
+ 2449 0974 0E       		.byte	14
+ 2450 0975 80       		.byte	-128
+ 2451 0976 10       		.byte	16
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 44
+
+
+ 2452 0977 82       		.byte	-126
+ 2453 0978 11       		.byte	17
+ 2454 0979 14       		.byte	20
+ 2455 097a 16       		.byte	22
+ 2456 097b 02       		.byte	2
+ 2457 097c 18       		.byte	24
+ 2458 097d 01       		.byte	1
+ 2459 097e 19       		.byte	25
+ 2460 097f 90       		.byte	-112
+ 2461 0980 1E       		.byte	30
+ 2462 0981 80       		.byte	-128
+ 2463 0982 1F       		.byte	31
+ 2464 0983 18       		.byte	24
+ 2465 0984 20       		.byte	32
+ 2466 0985 04       		.byte	4
+ 2467 0986 21       		.byte	33
+ 2468 0987 1C       		.byte	28
+ 2469 0988 27       		.byte	39
+ 2470 0989 12       		.byte	18
+ 2471 098a 28       		.byte	40
+ 2472 098b A0       		.byte	-96
+ 2473 098c 29       		.byte	41
+ 2474 098d 90       		.byte	-112
+ 2475 098e 2F       		.byte	47
+ 2476 098f 10       		.byte	16
+ 2477 0990 30       		.byte	48
+ 2478 0991 91       		.byte	-111
+ 2479 0992 32       		.byte	50
+ 2480 0993 04       		.byte	4
+ 2481 0994 36       		.byte	54
+ 2482 0995 40       		.byte	64
+ 2483 0996 37       		.byte	55
+ 2484 0997 12       		.byte	18
+ 2485 0998 39       		.byte	57
+ 2486 0999 28       		.byte	40
+ 2487 099a 3A       		.byte	58
+ 2488 099b 40       		.byte	64
+ 2489 099c 3F       		.byte	63
+ 2490 099d 02       		.byte	2
+ 2491 099e 5A       		.byte	90
+ 2492 099f 20       		.byte	32
+ 2493 09a0 68       		.byte	104
+ 2494 09a1 02       		.byte	2
+ 2495 09a2 69       		.byte	105
+ 2496 09a3 14       		.byte	20
+ 2497 09a4 6B       		.byte	107
+ 2498 09a5 08       		.byte	8
+ 2499 09a6 70       		.byte	112
+ 2500 09a7 A0       		.byte	-96
+ 2501 09a8 73       		.byte	115
+ 2502 09a9 10       		.byte	16
+ 2503 09aa 81       		.byte	-127
+ 2504 09ab 01       		.byte	1
+ 2505 09ac 83       		.byte	-125
+ 2506 09ad 02       		.byte	2
+ 2507 09ae 86       		.byte	-122
+ 2508 09af 02       		.byte	2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 45
+
+
+ 2509 09b0 88       		.byte	-120
+ 2510 09b1 31       		.byte	49
+ 2511 09b2 8A       		.byte	-118
+ 2512 09b3 4C       		.byte	76
+ 2513 09b4 8B       		.byte	-117
+ 2514 09b5 10       		.byte	16
+ 2515 09b6 8C       		.byte	-116
+ 2516 09b7 81       		.byte	-127
+ 2517 09b8 8D       		.byte	-115
+ 2518 09b9 12       		.byte	18
+ 2519 09ba 92       		.byte	-110
+ 2520 09bb 20       		.byte	32
+ 2521 09bc 95       		.byte	-107
+ 2522 09bd 2C       		.byte	44
+ 2523 09be 98       		.byte	-104
+ 2524 09bf A0       		.byte	-96
+ 2525 09c0 9C       		.byte	-100
+ 2526 09c1 10       		.byte	16
+ 2527 09c2 9D       		.byte	-99
+ 2528 09c3 10       		.byte	16
+ 2529 09c4 9F       		.byte	-97
+ 2530 09c5 08       		.byte	8
+ 2531 09c6 A3       		.byte	-93
+ 2532 09c7 01       		.byte	1
+ 2533 09c8 A5       		.byte	-91
+ 2534 09c9 01       		.byte	1
+ 2535 09ca A7       		.byte	-89
+ 2536 09cb 08       		.byte	8
+ 2537 09cc A8       		.byte	-88
+ 2538 09cd 80       		.byte	-128
+ 2539 09ce B1       		.byte	-79
+ 2540 09cf 04       		.byte	4
+ 2541 09d0 B3       		.byte	-77
+ 2542 09d1 12       		.byte	18
+ 2543 09d2 B5       		.byte	-75
+ 2544 09d3 10       		.byte	16
+ 2545 09d4 C0       		.byte	-64
+ 2546 09d5 2F       		.byte	47
+ 2547 09d6 C2       		.byte	-62
+ 2548 09d7 1E       		.byte	30
+ 2549 09d8 C4       		.byte	-60
+ 2550 09d9 8F       		.byte	-113
+ 2551 09da CA       		.byte	-54
+ 2552 09db 4F       		.byte	79
+ 2553 09dc CC       		.byte	-52
+ 2554 09dd BF       		.byte	-65
+ 2555 09de CE       		.byte	-50
+ 2556 09df 8E       		.byte	-114
+ 2557 09e0 D6       		.byte	-42
+ 2558 09e1 04       		.byte	4
+ 2559 09e2 E4       		.byte	-28
+ 2560 09e3 01       		.byte	1
+ 2561 09e4 EE       		.byte	-18
+ 2562 09e5 01       		.byte	1
+ 2563 09e6 1E       		.byte	30
+ 2564 09e7 01       		.byte	1
+ 2565 09e8 1F       		.byte	31
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 46
+
+
+ 2566 09e9 01       		.byte	1
+ 2567 09ea 21       		.byte	33
+ 2568 09eb 01       		.byte	1
+ 2569 09ec 35       		.byte	53
+ 2570 09ed 01       		.byte	1
+ 2571 09ee 36       		.byte	54
+ 2572 09ef 01       		.byte	1
+ 2573 09f0 3F       		.byte	63
+ 2574 09f1 10       		.byte	16
+ 2575 09f2 40       		.byte	64
+ 2576 09f3 36       		.byte	54
+ 2577 09f4 41       		.byte	65
+ 2578 09f5 05       		.byte	5
+ 2579 09f6 49       		.byte	73
+ 2580 09f7 FF       		.byte	-1
+ 2581 09f8 4A       		.byte	74
+ 2582 09f9 FF       		.byte	-1
+ 2583 09fa 4B       		.byte	75
+ 2584 09fb FF       		.byte	-1
+ 2585 09fc 4D       		.byte	77
+ 2586 09fd A0       		.byte	-96
+ 2587 09fe 4F       		.byte	79
+ 2588 09ff 01       		.byte	1
+ 2589 0a00 50       		.byte	80
+ 2590 0a01 18       		.byte	24
+ 2591 0a02 52       		.byte	82
+ 2592 0a03 80       		.byte	-128
+ 2593 0a04 58       		.byte	88
+ 2594 0a05 04       		.byte	4
+ 2595 0a06 59       		.byte	89
+ 2596 0a07 04       		.byte	4
+ 2597 0a08 5A       		.byte	90
+ 2598 0a09 04       		.byte	4
+ 2599 0a0a 5B       		.byte	91
+ 2600 0a0b 04       		.byte	4
+ 2601 0a0c 5C       		.byte	92
+ 2602 0a0d 01       		.byte	1
+ 2603 0a0e 5D       		.byte	93
+ 2604 0a0f 11       		.byte	17
+ 2605 0a10 5F       		.byte	95
+ 2606 0a11 01       		.byte	1
+ 2607 0a12 60       		.byte	96
+ 2608 0a13 40       		.byte	64
+ 2609 0a14 62       		.byte	98
+ 2610 0a15 80       		.byte	-128
+ 2611 0a16 64       		.byte	100
+ 2612 0a17 40       		.byte	64
+ 2613 0a18 65       		.byte	101
+ 2614 0a19 40       		.byte	64
+ 2615 0a1a 66       		.byte	102
+ 2616 0a1b 80       		.byte	-128
+ 2617 0a1c 68       		.byte	104
+ 2618 0a1d 40       		.byte	64
+ 2619 0a1e 6A       		.byte	106
+ 2620 0a1f 80       		.byte	-128
+ 2621 0a20 6C       		.byte	108
+ 2622 0a21 40       		.byte	64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 47
+
+
+ 2623 0a22 6D       		.byte	109
+ 2624 0a23 20       		.byte	32
+ 2625 0a24 6E       		.byte	110
+ 2626 0a25 80       		.byte	-128
+ 2627 0a26 82       		.byte	-126
+ 2628 0a27 01       		.byte	1
+ 2629 0a28 84       		.byte	-124
+ 2630 0a29 18       		.byte	24
+ 2631 0a2a 85       		.byte	-123
+ 2632 0a2b 02       		.byte	2
+ 2633 0a2c 86       		.byte	-122
+ 2634 0a2d 06       		.byte	6
+ 2635 0a2e 88       		.byte	-120
+ 2636 0a2f 20       		.byte	32
+ 2637 0a30 89       		.byte	-119
+ 2638 0a31 02       		.byte	2
+ 2639 0a32 8C       		.byte	-116
+ 2640 0a33 14       		.byte	20
+ 2641 0a34 8D       		.byte	-115
+ 2642 0a35 04       		.byte	4
+ 2643 0a36 8E       		.byte	-114
+ 2644 0a37 0A       		.byte	10
+ 2645 0a38 90       		.byte	-112
+ 2646 0a39 1E       		.byte	30
+ 2647 0a3a 94       		.byte	-108
+ 2648 0a3b 20       		.byte	32
+ 2649 0a3c 97       		.byte	-105
+ 2650 0a3d 04       		.byte	4
+ 2651 0a3e 98       		.byte	-104
+ 2652 0a3f 0A       		.byte	10
+ 2653 0a40 99       		.byte	-103
+ 2654 0a41 02       		.byte	2
+ 2655 0a42 9A       		.byte	-102
+ 2656 0a43 14       		.byte	20
+ 2657 0a44 9C       		.byte	-100
+ 2658 0a45 20       		.byte	32
+ 2659 0a46 9F       		.byte	-97
+ 2660 0a47 01       		.byte	1
+ 2661 0a48 A0       		.byte	-96
+ 2662 0a49 06       		.byte	6
+ 2663 0a4a A2       		.byte	-94
+ 2664 0a4b 18       		.byte	24
+ 2665 0a4c A5       		.byte	-91
+ 2666 0a4d 01       		.byte	1
+ 2667 0a4e A8       		.byte	-88
+ 2668 0a4f 0E       		.byte	14
+ 2669 0a50 A9       		.byte	-87
+ 2670 0a51 02       		.byte	2
+ 2671 0a52 B0       		.byte	-80
+ 2672 0a53 1E       		.byte	30
+ 2673 0a54 B1       		.byte	-79
+ 2674 0a55 04       		.byte	4
+ 2675 0a56 B2       		.byte	-78
+ 2676 0a57 01       		.byte	1
+ 2677 0a58 B4       		.byte	-76
+ 2678 0a59 20       		.byte	32
+ 2679 0a5a B5       		.byte	-75
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 48
+
+
+ 2680 0a5b 02       		.byte	2
+ 2681 0a5c B7       		.byte	-73
+ 2682 0a5d 01       		.byte	1
+ 2683 0a5e B8       		.byte	-72
+ 2684 0a5f 20       		.byte	32
+ 2685 0a60 BE       		.byte	-66
+ 2686 0a61 10       		.byte	16
+ 2687 0a62 BF       		.byte	-65
+ 2688 0a63 51       		.byte	81
+ 2689 0a64 C0       		.byte	-64
+ 2690 0a65 32       		.byte	50
+ 2691 0a66 C1       		.byte	-63
+ 2692 0a67 05       		.byte	5
+ 2693 0a68 C5       		.byte	-59
+ 2694 0a69 42       		.byte	66
+ 2695 0a6a C6       		.byte	-58
+ 2696 0a6b C3       		.byte	-61
+ 2697 0a6c C7       		.byte	-57
+ 2698 0a6d 0E       		.byte	14
+ 2699 0a6e C8       		.byte	-56
+ 2700 0a6f 1F       		.byte	31
+ 2701 0a70 C9       		.byte	-55
+ 2702 0a71 FF       		.byte	-1
+ 2703 0a72 CA       		.byte	-54
+ 2704 0a73 FF       		.byte	-1
+ 2705 0a74 CB       		.byte	-53
+ 2706 0a75 FF       		.byte	-1
+ 2707 0a76 CD       		.byte	-51
+ 2708 0a77 AF       		.byte	-81
+ 2709 0a78 CE       		.byte	-50
+ 2710 0a79 07       		.byte	7
+ 2711 0a7a CF       		.byte	-49
+ 2712 0a7b 01       		.byte	1
+ 2713 0a7c D0       		.byte	-48
+ 2714 0a7d 18       		.byte	24
+ 2715 0a7e D4       		.byte	-44
+ 2716 0a7f 0F       		.byte	15
+ 2717 0a80 D8       		.byte	-40
+ 2718 0a81 04       		.byte	4
+ 2719 0a82 D9       		.byte	-39
+ 2720 0a83 04       		.byte	4
+ 2721 0a84 DA       		.byte	-38
+ 2722 0a85 04       		.byte	4
+ 2723 0a86 DB       		.byte	-37
+ 2724 0a87 04       		.byte	4
+ 2725 0a88 DC       		.byte	-36
+ 2726 0a89 01       		.byte	1
+ 2727 0a8a DD       		.byte	-35
+ 2728 0a8b 11       		.byte	17
+ 2729 0a8c DF       		.byte	-33
+ 2730 0a8d 05       		.byte	5
+ 2731 0a8e E0       		.byte	-32
+ 2732 0a8f 40       		.byte	64
+ 2733 0a90 E2       		.byte	-30
+ 2734 0a91 80       		.byte	-128
+ 2735 0a92 E4       		.byte	-28
+ 2736 0a93 40       		.byte	64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 49
+
+
+ 2737 0a94 E5       		.byte	-27
+ 2738 0a95 40       		.byte	64
+ 2739 0a96 E6       		.byte	-26
+ 2740 0a97 80       		.byte	-128
+ 2741 0a98 E8       		.byte	-24
+ 2742 0a99 40       		.byte	64
+ 2743 0a9a EA       		.byte	-22
+ 2744 0a9b 80       		.byte	-128
+ 2745 0a9c EC       		.byte	-20
+ 2746 0a9d 40       		.byte	64
+ 2747 0a9e ED       		.byte	-19
+ 2748 0a9f 20       		.byte	32
+ 2749 0aa0 EE       		.byte	-18
+ 2750 0aa1 80       		.byte	-128
+ 2751 0aa2 00       		.byte	0
+ 2752 0aa3 24       		.byte	36
+ 2753 0aa4 01       		.byte	1
+ 2754 0aa5 22       		.byte	34
+ 2755 0aa6 02       		.byte	2
+ 2756 0aa7 01       		.byte	1
+ 2757 0aa8 08       		.byte	8
+ 2758 0aa9 08       		.byte	8
+ 2759 0aaa 09       		.byte	9
+ 2760 0aab 80       		.byte	-128
+ 2761 0aac 0A       		.byte	10
+ 2762 0aad 40       		.byte	64
+ 2763 0aae 0B       		.byte	11
+ 2764 0aaf 04       		.byte	4
+ 2765 0ab0 0D       		.byte	13
+ 2766 0ab1 80       		.byte	-128
+ 2767 0ab2 11       		.byte	17
+ 2768 0ab3 02       		.byte	2
+ 2769 0ab4 12       		.byte	18
+ 2770 0ab5 08       		.byte	8
+ 2771 0ab6 18       		.byte	24
+ 2772 0ab7 80       		.byte	-128
+ 2773 0ab8 19       		.byte	25
+ 2774 0ab9 09       		.byte	9
+ 2775 0aba 1A       		.byte	26
+ 2776 0abb 44       		.byte	68
+ 2777 0abc 1B       		.byte	27
+ 2778 0abd 12       		.byte	18
+ 2779 0abe 1F       		.byte	31
+ 2780 0abf 80       		.byte	-128
+ 2781 0ac0 22       		.byte	34
+ 2782 0ac1 51       		.byte	81
+ 2783 0ac2 27       		.byte	39
+ 2784 0ac3 04       		.byte	4
+ 2785 0ac4 29       		.byte	41
+ 2786 0ac5 18       		.byte	24
+ 2787 0ac6 2F       		.byte	47
+ 2788 0ac7 80       		.byte	-128
+ 2789 0ac8 30       		.byte	48
+ 2790 0ac9 90       		.byte	-112
+ 2791 0aca 31       		.byte	49
+ 2792 0acb 04       		.byte	4
+ 2793 0acc 36       		.byte	54
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 50
+
+
+ 2794 0acd 80       		.byte	-128
+ 2795 0ace 39       		.byte	57
+ 2796 0acf A8       		.byte	-88
+ 2797 0ad0 41       		.byte	65
+ 2798 0ad1 08       		.byte	8
+ 2799 0ad2 42       		.byte	66
+ 2800 0ad3 04       		.byte	4
+ 2801 0ad4 45       		.byte	69
+ 2802 0ad5 08       		.byte	8
+ 2803 0ad6 48       		.byte	72
+ 2804 0ad7 90       		.byte	-112
+ 2805 0ad8 49       		.byte	73
+ 2806 0ad9 06       		.byte	6
+ 2807 0ada 4A       		.byte	74
+ 2808 0adb 02       		.byte	2
+ 2809 0adc 4E       		.byte	78
+ 2810 0add 02       		.byte	2
+ 2811 0ade 4F       		.byte	79
+ 2812 0adf 20       		.byte	32
+ 2813 0ae0 51       		.byte	81
+ 2814 0ae1 80       		.byte	-128
+ 2815 0ae2 52       		.byte	82
+ 2816 0ae3 94       		.byte	-108
+ 2817 0ae4 59       		.byte	89
+ 2818 0ae5 20       		.byte	32
+ 2819 0ae6 5A       		.byte	90
+ 2820 0ae7 82       		.byte	-126
+ 2821 0ae8 5B       		.byte	91
+ 2822 0ae9 04       		.byte	4
+ 2823 0aea 62       		.byte	98
+ 2824 0aeb 14       		.byte	20
+ 2825 0aec 77       		.byte	119
+ 2826 0aed 40       		.byte	64
+ 2827 0aee 78       		.byte	120
+ 2828 0aef 08       		.byte	8
+ 2829 0af0 82       		.byte	-126
+ 2830 0af1 21       		.byte	33
+ 2831 0af2 87       		.byte	-121
+ 2832 0af3 01       		.byte	1
+ 2833 0af4 89       		.byte	-119
+ 2834 0af5 14       		.byte	20
+ 2835 0af6 8C       		.byte	-116
+ 2836 0af7 20       		.byte	32
+ 2837 0af8 8D       		.byte	-115
+ 2838 0af9 02       		.byte	2
+ 2839 0afa 8F       		.byte	-113
+ 2840 0afb 08       		.byte	8
+ 2841 0afc 90       		.byte	-112
+ 2842 0afd 04       		.byte	4
+ 2843 0afe 91       		.byte	-111
+ 2844 0aff 80       		.byte	-128
+ 2845 0b00 93       		.byte	-109
+ 2846 0b01 04       		.byte	4
+ 2847 0b02 94       		.byte	-108
+ 2848 0b03 80       		.byte	-128
+ 2849 0b04 96       		.byte	-106
+ 2850 0b05 40       		.byte	64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 51
+
+
+ 2851 0b06 97       		.byte	-105
+ 2852 0b07 10       		.byte	16
+ 2853 0b08 98       		.byte	-104
+ 2854 0b09 08       		.byte	8
+ 2855 0b0a 9A       		.byte	-102
+ 2856 0b0b 01       		.byte	1
+ 2857 0b0c 9D       		.byte	-99
+ 2858 0b0d 0D       		.byte	13
+ 2859 0b0e 9F       		.byte	-97
+ 2860 0b0f 40       		.byte	64
+ 2861 0b10 A1       		.byte	-95
+ 2862 0b11 0A       		.byte	10
+ 2863 0b12 A2       		.byte	-94
+ 2864 0b13 0A       		.byte	10
+ 2865 0b14 A4       		.byte	-92
+ 2866 0b15 10       		.byte	16
+ 2867 0b16 A5       		.byte	-91
+ 2868 0b17 81       		.byte	-127
+ 2869 0b18 A6       		.byte	-90
+ 2870 0b19 21       		.byte	33
+ 2871 0b1a A7       		.byte	-89
+ 2872 0b1b 08       		.byte	8
+ 2873 0b1c A8       		.byte	-88
+ 2874 0b1d 08       		.byte	8
+ 2875 0b1e AC       		.byte	-84
+ 2876 0b1f 10       		.byte	16
+ 2877 0b20 AE       		.byte	-82
+ 2878 0b21 80       		.byte	-128
+ 2879 0b22 B3       		.byte	-77
+ 2880 0b23 01       		.byte	1
+ 2881 0b24 B4       		.byte	-76
+ 2882 0b25 04       		.byte	4
+ 2883 0b26 B6       		.byte	-74
+ 2884 0b27 02       		.byte	2
+ 2885 0b28 C0       		.byte	-64
+ 2886 0b29 0F       		.byte	15
+ 2887 0b2a C2       		.byte	-62
+ 2888 0b2b 8F       		.byte	-113
+ 2889 0b2c C4       		.byte	-60
+ 2890 0b2d 0A       		.byte	10
+ 2891 0b2e CA       		.byte	-54
+ 2892 0b2f 86       		.byte	-122
+ 2893 0b30 CC       		.byte	-52
+ 2894 0b31 1E       		.byte	30
+ 2895 0b32 CE       		.byte	-50
+ 2896 0b33 0E       		.byte	14
+ 2897 0b34 D0       		.byte	-48
+ 2898 0b35 46       		.byte	70
+ 2899 0b36 D2       		.byte	-46
+ 2900 0b37 38       		.byte	56
+ 2901 0b38 D6       		.byte	-42
+ 2902 0b39 0F       		.byte	15
+ 2903 0b3a D8       		.byte	-40
+ 2904 0b3b 06       		.byte	6
+ 2905 0b3c DE       		.byte	-34
+ 2906 0b3d 02       		.byte	2
+ 2907 0b3e E6       		.byte	-26
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 52
+
+
+ 2908 0b3f 01       		.byte	1
+ 2909 0b40 E8       		.byte	-24
+ 2910 0b41 40       		.byte	64
+ 2911 0b42 EE       		.byte	-18
+ 2912 0b43 2E       		.byte	46
+ 2913 0b44 83       		.byte	-125
+ 2914 0b45 01       		.byte	1
+ 2915 0b46 8C       		.byte	-116
+ 2916 0b47 01       		.byte	1
+ 2917 0b48 92       		.byte	-110
+ 2918 0b49 01       		.byte	1
+ 2919 0b4a 93       		.byte	-109
+ 2920 0b4b 01       		.byte	1
+ 2921 0b4c 97       		.byte	-105
+ 2922 0b4d 02       		.byte	2
+ 2923 0b4e AF       		.byte	-81
+ 2924 0b4f 02       		.byte	2
+ 2925 0b50 B1       		.byte	-79
+ 2926 0b51 02       		.byte	2
+ 2927 0b52 B5       		.byte	-75
+ 2928 0b53 01       		.byte	1
+ 2929 0b54 B6       		.byte	-74
+ 2930 0b55 01       		.byte	1
+ 2931 0b56 BE       		.byte	-66
+ 2932 0b57 40       		.byte	64
+ 2933 0b58 BF       		.byte	-65
+ 2934 0b59 10       		.byte	16
+ 2935 0b5a D8       		.byte	-40
+ 2936 0b5b 04       		.byte	4
+ 2937 0b5c D9       		.byte	-39
+ 2938 0b5d 04       		.byte	4
+ 2939 0b5e DB       		.byte	-37
+ 2940 0b5f 04       		.byte	4
+ 2941 0b60 DC       		.byte	-36
+ 2942 0b61 10       		.byte	16
+ 2943 0b62 DF       		.byte	-33
+ 2944 0b63 01       		.byte	1
+ 2945 0b64 03       		.byte	3
+ 2946 0b65 01       		.byte	1
+ 2947 0b66 04       		.byte	4
+ 2948 0b67 52       		.byte	82
+ 2949 0b68 05       		.byte	5
+ 2950 0b69 08       		.byte	8
+ 2951 0b6a 09       		.byte	9
+ 2952 0b6b 02       		.byte	2
+ 2953 0b6c 0C       		.byte	12
+ 2954 0b6d 80       		.byte	-128
+ 2955 0b6e 0F       		.byte	15
+ 2956 0b6f 18       		.byte	24
+ 2957 0b70 14       		.byte	20
+ 2958 0b71 80       		.byte	-128
+ 2959 0b72 16       		.byte	22
+ 2960 0b73 08       		.byte	8
+ 2961 0b74 1A       		.byte	26
+ 2962 0b75 01       		.byte	1
+ 2963 0b76 1C       		.byte	28
+ 2964 0b77 54       		.byte	84
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 53
+
+
+ 2965 0b78 1D       		.byte	29
+ 2966 0b79 80       		.byte	-128
+ 2967 0b7a 21       		.byte	33
+ 2968 0b7b 03       		.byte	3
+ 2969 0b7c 22       		.byte	34
+ 2970 0b7d 20       		.byte	32
+ 2971 0b7e 24       		.byte	36
+ 2972 0b7f A0       		.byte	-96
+ 2973 0b80 25       		.byte	37
+ 2974 0b81 01       		.byte	1
+ 2975 0b82 26       		.byte	38
+ 2976 0b83 10       		.byte	16
+ 2977 0b84 2B       		.byte	43
+ 2978 0b85 01       		.byte	1
+ 2979 0b86 2C       		.byte	44
+ 2980 0b87 20       		.byte	32
+ 2981 0b88 2D       		.byte	45
+ 2982 0b89 81       		.byte	-127
+ 2983 0b8a 2F       		.byte	47
+ 2984 0b8b 08       		.byte	8
+ 2985 0b8c 32       		.byte	50
+ 2986 0b8d 08       		.byte	8
+ 2987 0b8e 33       		.byte	51
+ 2988 0b8f 01       		.byte	1
+ 2989 0b90 34       		.byte	52
+ 2990 0b91 02       		.byte	2
+ 2991 0b92 36       		.byte	54
+ 2992 0b93 80       		.byte	-128
+ 2993 0b94 37       		.byte	55
+ 2994 0b95 14       		.byte	20
+ 2995 0b96 39       		.byte	57
+ 2996 0b97 02       		.byte	2
+ 2997 0b98 3C       		.byte	60
+ 2998 0b99 84       		.byte	-124
+ 2999 0b9a 3D       		.byte	61
+ 3000 0b9b 02       		.byte	2
+ 3001 0b9c 3F       		.byte	63
+ 3002 0b9d 20       		.byte	32
+ 3003 0b9e 45       		.byte	69
+ 3004 0b9f 80       		.byte	-128
+ 3005 0ba0 47       		.byte	71
+ 3006 0ba1 24       		.byte	36
+ 3007 0ba2 4C       		.byte	76
+ 3008 0ba3 01       		.byte	1
+ 3009 0ba4 4E       		.byte	78
+ 3010 0ba5 82       		.byte	-126
+ 3011 0ba6 4F       		.byte	79
+ 3012 0ba7 10       		.byte	16
+ 3013 0ba8 57       		.byte	87
+ 3014 0ba9 10       		.byte	16
+ 3015 0baa 5E       		.byte	94
+ 3016 0bab 02       		.byte	2
+ 3017 0bac 65       		.byte	101
+ 3018 0bad 40       		.byte	64
+ 3019 0bae 66       		.byte	102
+ 3020 0baf 20       		.byte	32
+ 3021 0bb0 6B       		.byte	107
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 54
+
+
+ 3022 0bb1 01       		.byte	1
+ 3023 0bb2 81       		.byte	-127
+ 3024 0bb3 01       		.byte	1
+ 3025 0bb4 85       		.byte	-123
+ 3026 0bb5 40       		.byte	64
+ 3027 0bb6 86       		.byte	-122
+ 3028 0bb7 11       		.byte	17
+ 3029 0bb8 8A       		.byte	-118
+ 3030 0bb9 02       		.byte	2
+ 3031 0bba 8B       		.byte	-117
+ 3032 0bbb 12       		.byte	18
+ 3033 0bbc 8C       		.byte	-116
+ 3034 0bbd C1       		.byte	-63
+ 3035 0bbe 91       		.byte	-111
+ 3036 0bbf 81       		.byte	-127
+ 3037 0bc0 94       		.byte	-108
+ 3038 0bc1 80       		.byte	-128
+ 3039 0bc2 95       		.byte	-107
+ 3040 0bc3 40       		.byte	64
+ 3041 0bc4 97       		.byte	-105
+ 3042 0bc5 80       		.byte	-128
+ 3043 0bc6 9B       		.byte	-101
+ 3044 0bc7 10       		.byte	16
+ 3045 0bc8 9C       		.byte	-100
+ 3046 0bc9 02       		.byte	2
+ 3047 0bca 9F       		.byte	-97
+ 3048 0bcb 08       		.byte	8
+ 3049 0bcc A0       		.byte	-96
+ 3050 0bcd 60       		.byte	96
+ 3051 0bce A2       		.byte	-94
+ 3052 0bcf 08       		.byte	8
+ 3053 0bd0 A3       		.byte	-93
+ 3054 0bd1 08       		.byte	8
+ 3055 0bd2 A5       		.byte	-91
+ 3056 0bd3 01       		.byte	1
+ 3057 0bd4 AB       		.byte	-85
+ 3058 0bd5 04       		.byte	4
+ 3059 0bd6 AE       		.byte	-82
+ 3060 0bd7 42       		.byte	66
+ 3061 0bd8 B7       		.byte	-73
+ 3062 0bd9 48       		.byte	72
+ 3063 0bda C0       		.byte	-64
+ 3064 0bdb F1       		.byte	-15
+ 3065 0bdc C2       		.byte	-62
+ 3066 0bdd E8       		.byte	-24
+ 3067 0bde C4       		.byte	-60
+ 3068 0bdf 50       		.byte	80
+ 3069 0be0 CA       		.byte	-54
+ 3070 0be1 F8       		.byte	-8
+ 3071 0be2 CC       		.byte	-52
+ 3072 0be3 F3       		.byte	-13
+ 3073 0be4 CE       		.byte	-50
+ 3074 0be5 F1       		.byte	-15
+ 3075 0be6 D0       		.byte	-48
+ 3076 0be7 70       		.byte	112
+ 3077 0be8 D2       		.byte	-46
+ 3078 0be9 30       		.byte	48
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 55
+
+
+ 3079 0bea D6       		.byte	-42
+ 3080 0beb 80       		.byte	-128
+ 3081 0bec D8       		.byte	-40
+ 3082 0bed 30       		.byte	48
+ 3083 0bee E0       		.byte	-32
+ 3084 0bef 08       		.byte	8
+ 3085 0bf0 E2       		.byte	-30
+ 3086 0bf1 40       		.byte	64
+ 3087 0bf2 E4       		.byte	-28
+ 3088 0bf3 F0       		.byte	-16
+ 3089 0bf4 E8       		.byte	-24
+ 3090 0bf5 10       		.byte	16
+ 3091 0bf6 03       		.byte	3
+ 3092 0bf7 01       		.byte	1
+ 3093 0bf8 18       		.byte	24
+ 3094 0bf9 01       		.byte	1
+ 3095 0bfa 2E       		.byte	46
+ 3096 0bfb 01       		.byte	1
+ 3097 0bfc 35       		.byte	53
+ 3098 0bfd 01       		.byte	1
+ 3099 0bfe 36       		.byte	54
+ 3100 0bff 01       		.byte	1
+ 3101 0c00 40       		.byte	64
+ 3102 0c01 60       		.byte	96
+ 3103 0c02 41       		.byte	65
+ 3104 0c03 02       		.byte	2
+ 3105 0c04 49       		.byte	73
+ 3106 0c05 FF       		.byte	-1
+ 3107 0c06 4A       		.byte	74
+ 3108 0c07 FF       		.byte	-1
+ 3109 0c08 4B       		.byte	75
+ 3110 0c09 FF       		.byte	-1
+ 3111 0c0a 4D       		.byte	77
+ 3112 0c0b A0       		.byte	-96
+ 3113 0c0c 4F       		.byte	79
+ 3114 0c0d 04       		.byte	4
+ 3115 0c0e 50       		.byte	80
+ 3116 0c0f 18       		.byte	24
+ 3117 0c10 58       		.byte	88
+ 3118 0c11 04       		.byte	4
+ 3119 0c12 59       		.byte	89
+ 3120 0c13 04       		.byte	4
+ 3121 0c14 5A       		.byte	90
+ 3122 0c15 04       		.byte	4
+ 3123 0c16 5B       		.byte	91
+ 3124 0c17 04       		.byte	4
+ 3125 0c18 5C       		.byte	92
+ 3126 0c19 11       		.byte	17
+ 3127 0c1a 5D       		.byte	93
+ 3128 0c1b 01       		.byte	1
+ 3129 0c1c 5F       		.byte	95
+ 3130 0c1d 01       		.byte	1
+ 3131 0c1e 60       		.byte	96
+ 3132 0c1f 40       		.byte	64
+ 3133 0c20 62       		.byte	98
+ 3134 0c21 C0       		.byte	-64
+ 3135 0c22 64       		.byte	100
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 56
+
+
+ 3136 0c23 40       		.byte	64
+ 3137 0c24 65       		.byte	101
+ 3138 0c25 40       		.byte	64
+ 3139 0c26 66       		.byte	102
+ 3140 0c27 C0       		.byte	-64
+ 3141 0c28 68       		.byte	104
+ 3142 0c29 C0       		.byte	-64
+ 3143 0c2a 6A       		.byte	106
+ 3144 0c2b C0       		.byte	-64
+ 3145 0c2c 6C       		.byte	108
+ 3146 0c2d C0       		.byte	-64
+ 3147 0c2e 6E       		.byte	110
+ 3148 0c2f C0       		.byte	-64
+ 3149 0c30 04       		.byte	4
+ 3150 0c31 52       		.byte	82
+ 3151 0c32 05       		.byte	5
+ 3152 0c33 08       		.byte	8
+ 3153 0c34 09       		.byte	9
+ 3154 0c35 20       		.byte	32
+ 3155 0c36 0C       		.byte	12
+ 3156 0c37 40       		.byte	64
+ 3157 0c38 0E       		.byte	14
+ 3158 0c39 65       		.byte	101
+ 3159 0c3a 12       		.byte	18
+ 3160 0c3b 01       		.byte	1
+ 3161 0c3c 14       		.byte	20
+ 3162 0c3d 80       		.byte	-128
+ 3163 0c3e 16       		.byte	22
+ 3164 0c3f 02       		.byte	2
+ 3165 0c40 17       		.byte	23
+ 3166 0c41 28       		.byte	40
+ 3167 0c42 19       		.byte	25
+ 3168 0c43 80       		.byte	-128
+ 3169 0c44 1E       		.byte	30
+ 3170 0c45 22       		.byte	34
+ 3171 0c46 1F       		.byte	31
+ 3172 0c47 10       		.byte	16
+ 3173 0c48 21       		.byte	33
+ 3174 0c49 20       		.byte	32
+ 3175 0c4a 26       		.byte	38
+ 3176 0c4b 84       		.byte	-124
+ 3177 0c4c 27       		.byte	39
+ 3178 0c4d 04       		.byte	4
+ 3179 0c4e 2E       		.byte	46
+ 3180 0c4f 62       		.byte	98
+ 3181 0c50 2F       		.byte	47
+ 3182 0c51 12       		.byte	18
+ 3183 0c52 34       		.byte	52
+ 3184 0c53 40       		.byte	64
+ 3185 0c54 36       		.byte	54
+ 3186 0c55 0A       		.byte	10
+ 3187 0c56 37       		.byte	55
+ 3188 0c57 20       		.byte	32
+ 3189 0c58 3A       		.byte	58
+ 3190 0c59 01       		.byte	1
+ 3191 0c5a 3C       		.byte	60
+ 3192 0c5b 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 57
+
+
+ 3193 0c5c 3E       		.byte	62
+ 3194 0c5d 04       		.byte	4
+ 3195 0c5e 3F       		.byte	63
+ 3196 0c5f 80       		.byte	-128
+ 3197 0c60 43       		.byte	67
+ 3198 0c61 20       		.byte	32
+ 3199 0c62 46       		.byte	70
+ 3200 0c63 20       		.byte	32
+ 3201 0c64 4A       		.byte	74
+ 3202 0c65 08       		.byte	8
+ 3203 0c66 4D       		.byte	77
+ 3204 0c67 01       		.byte	1
+ 3205 0c68 4E       		.byte	78
+ 3206 0c69 08       		.byte	8
+ 3207 0c6a 56       		.byte	86
+ 3208 0c6b 21       		.byte	33
+ 3209 0c6c 57       		.byte	87
+ 3210 0c6d 21       		.byte	33
+ 3211 0c6e 5D       		.byte	93
+ 3212 0c6f 81       		.byte	-127
+ 3213 0c70 5E       		.byte	94
+ 3214 0c71 08       		.byte	8
+ 3215 0c72 69       		.byte	105
+ 3216 0c73 40       		.byte	64
+ 3217 0c74 80       		.byte	-128
+ 3218 0c75 02       		.byte	2
+ 3219 0c76 82       		.byte	-126
+ 3220 0c77 80       		.byte	-128
+ 3221 0c78 88       		.byte	-120
+ 3222 0c79 80       		.byte	-128
+ 3223 0c7a 89       		.byte	-119
+ 3224 0c7b 08       		.byte	8
+ 3225 0c7c 8A       		.byte	-118
+ 3226 0c7d 05       		.byte	5
+ 3227 0c7e 8B       		.byte	-117
+ 3228 0c7f 10       		.byte	16
+ 3229 0c80 8F       		.byte	-113
+ 3230 0c81 68       		.byte	104
+ 3231 0c82 90       		.byte	-112
+ 3232 0c83 53       		.byte	83
+ 3233 0c84 95       		.byte	-107
+ 3234 0c85 40       		.byte	64
+ 3235 0c86 9A       		.byte	-102
+ 3236 0c87 02       		.byte	2
+ 3237 0c88 9C       		.byte	-100
+ 3238 0c89 82       		.byte	-126
+ 3239 0c8a 9D       		.byte	-99
+ 3240 0c8b 08       		.byte	8
+ 3241 0c8c 9F       		.byte	-97
+ 3242 0c8d 24       		.byte	36
+ 3243 0c8e A2       		.byte	-94
+ 3244 0c8f 0A       		.byte	10
+ 3245 0c90 A3       		.byte	-93
+ 3246 0c91 02       		.byte	2
+ 3247 0c92 A6       		.byte	-90
+ 3248 0c93 01       		.byte	1
+ 3249 0c94 A7       		.byte	-89
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 58
+
+
+ 3250 0c95 01       		.byte	1
+ 3251 0c96 A8       		.byte	-88
+ 3252 0c97 10       		.byte	16
+ 3253 0c98 A9       		.byte	-87
+ 3254 0c99 40       		.byte	64
+ 3255 0c9a AE       		.byte	-82
+ 3256 0c9b 20       		.byte	32
+ 3257 0c9c B1       		.byte	-79
+ 3258 0c9d 80       		.byte	-128
+ 3259 0c9e B2       		.byte	-78
+ 3260 0c9f 08       		.byte	8
+ 3261 0ca0 B3       		.byte	-77
+ 3262 0ca1 48       		.byte	72
+ 3263 0ca2 B4       		.byte	-76
+ 3264 0ca3 10       		.byte	16
+ 3265 0ca4 B6       		.byte	-74
+ 3266 0ca5 22       		.byte	34
+ 3267 0ca6 B7       		.byte	-73
+ 3268 0ca7 04       		.byte	4
+ 3269 0ca8 C0       		.byte	-64
+ 3270 0ca9 F0       		.byte	-16
+ 3271 0caa C2       		.byte	-62
+ 3272 0cab F2       		.byte	-14
+ 3273 0cac C4       		.byte	-60
+ 3274 0cad F1       		.byte	-15
+ 3275 0cae CA       		.byte	-54
+ 3276 0caf F0       		.byte	-16
+ 3277 0cb0 CC       		.byte	-52
+ 3278 0cb1 F0       		.byte	-16
+ 3279 0cb2 CE       		.byte	-50
+ 3280 0cb3 D1       		.byte	-47
+ 3281 0cb4 D0       		.byte	-48
+ 3282 0cb5 44       		.byte	68
+ 3283 0cb6 D2       		.byte	-46
+ 3284 0cb7 24       		.byte	36
+ 3285 0cb8 D6       		.byte	-42
+ 3286 0cb9 D0       		.byte	-48
+ 3287 0cba E2       		.byte	-30
+ 3288 0cbb A0       		.byte	-96
+ 3289 0cbc E4       		.byte	-28
+ 3290 0cbd F4       		.byte	-12
+ 3291 0cbe E8       		.byte	-24
+ 3292 0cbf 61       		.byte	97
+ 3293 0cc0 EC       		.byte	-20
+ 3294 0cc1 82       		.byte	-126
+ 3295 0cc2 83       		.byte	-125
+ 3296 0cc3 02       		.byte	2
+ 3297 0cc4 8A       		.byte	-118
+ 3298 0cc5 02       		.byte	2
+ 3299 0cc6 E6       		.byte	-26
+ 3300 0cc7 80       		.byte	-128
+ 3301 0cc8 00       		.byte	0
+ 3302 0cc9 08       		.byte	8
+ 3303 0cca 07       		.byte	7
+ 3304 0ccb 80       		.byte	-128
+ 3305 0ccc 08       		.byte	8
+ 3306 0ccd 20       		.byte	32
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 59
+
+
+ 3307 0cce 0F       		.byte	15
+ 3308 0ccf 08       		.byte	8
+ 3309 0cd0 5F       		.byte	95
+ 3310 0cd1 02       		.byte	2
+ 3311 0cd2 86       		.byte	-122
+ 3312 0cd3 40       		.byte	64
+ 3313 0cd4 87       		.byte	-121
+ 3314 0cd5 80       		.byte	-128
+ 3315 0cd6 88       		.byte	-120
+ 3316 0cd7 04       		.byte	4
+ 3317 0cd8 8F       		.byte	-113
+ 3318 0cd9 01       		.byte	1
+ 3319 0cda 9B       		.byte	-101
+ 3320 0cdb 02       		.byte	2
+ 3321 0cdc A2       		.byte	-94
+ 3322 0cdd 02       		.byte	2
+ 3323 0cde C0       		.byte	-64
+ 3324 0cdf 30       		.byte	48
+ 3325 0ce0 C2       		.byte	-62
+ 3326 0ce1 C0       		.byte	-64
+ 3327 0ce2 D6       		.byte	-42
+ 3328 0ce3 80       		.byte	-128
+ 3329 0ce4 E0       		.byte	-32
+ 3330 0ce5 50       		.byte	80
+ 3331 0ce6 07       		.byte	7
+ 3332 0ce7 40       		.byte	64
+ 3333 0ce8 57       		.byte	87
+ 3334 0ce9 04       		.byte	4
+ 3335 0cea 63       		.byte	99
+ 3336 0ceb 01       		.byte	1
+ 3337 0cec 83       		.byte	-125
+ 3338 0ced 04       		.byte	4
+ 3339 0cee 87       		.byte	-121
+ 3340 0cef 01       		.byte	1
+ 3341 0cf0 93       		.byte	-109
+ 3342 0cf1 01       		.byte	1
+ 3343 0cf2 98       		.byte	-104
+ 3344 0cf3 20       		.byte	32
+ 3345 0cf4 9E       		.byte	-98
+ 3346 0cf5 40       		.byte	64
+ 3347 0cf6 A2       		.byte	-94
+ 3348 0cf7 02       		.byte	2
+ 3349 0cf8 AB       		.byte	-85
+ 3350 0cf9 04       		.byte	4
+ 3351 0cfa C0       		.byte	-64
+ 3352 0cfb 20       		.byte	32
+ 3353 0cfc D4       		.byte	-44
+ 3354 0cfd 40       		.byte	64
+ 3355 0cfe D6       		.byte	-42
+ 3356 0cff 40       		.byte	64
+ 3357 0d00 E0       		.byte	-32
+ 3358 0d01 40       		.byte	64
+ 3359 0d02 E6       		.byte	-26
+ 3360 0d03 20       		.byte	32
+ 3361 0d04 EC       		.byte	-20
+ 3362 0d05 20       		.byte	32
+ 3363 0d06 70       		.byte	112
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 60
+
+
+ 3364 0d07 20       		.byte	32
+ 3365 0d08 90       		.byte	-112
+ 3366 0d09 02       		.byte	2
+ 3367 0d0a 98       		.byte	-104
+ 3368 0d0b 20       		.byte	32
+ 3369 0d0c 9E       		.byte	-98
+ 3370 0d0d 40       		.byte	64
+ 3371 0d0e 9F       		.byte	-97
+ 3372 0d0f 01       		.byte	1
+ 3373 0d10 A2       		.byte	-94
+ 3374 0d11 02       		.byte	2
+ 3375 0d12 AB       		.byte	-85
+ 3376 0d13 40       		.byte	64
+ 3377 0d14 B4       		.byte	-76
+ 3378 0d15 01       		.byte	1
+ 3379 0d16 DC       		.byte	-36
+ 3380 0d17 20       		.byte	32
+ 3381 0d18 EC       		.byte	-20
+ 3382 0d19 80       		.byte	-128
+ 3383 0d1a 7C       		.byte	124
+ 3384 0d1b 20       		.byte	32
+ 3385 0d1c 88       		.byte	-120
+ 3386 0d1d 20       		.byte	32
+ 3387 0d1e DE       		.byte	-34
+ 3388 0d1f 01       		.byte	1
+ 3389 0d20 E0       		.byte	-32
+ 3390 0d21 01       		.byte	1
+ 3391 0d22 45       		.byte	69
+ 3392 0d23 08       		.byte	8
+ 3393 0d24 85       		.byte	-123
+ 3394 0d25 08       		.byte	8
+ 3395 0d26 D0       		.byte	-48
+ 3396 0d27 01       		.byte	1
+ 3397 0d28 8D       		.byte	-115
+ 3398 0d29 02       		.byte	2
+ 3399 0d2a E0       		.byte	-32
+ 3400 0d2b 02       		.byte	2
+ 3401 0d2c 27       		.byte	39
+ 3402 0d2d 01       		.byte	1
+ 3403 0d2e 84       		.byte	-124
+ 3404 0d2f 20       		.byte	32
+ 3405 0d30 90       		.byte	-112
+ 3406 0d31 02       		.byte	2
+ 3407 0d32 97       		.byte	-105
+ 3408 0d33 02       		.byte	2
+ 3409 0d34 98       		.byte	-104
+ 3410 0d35 20       		.byte	32
+ 3411 0d36 9E       		.byte	-98
+ 3412 0d37 40       		.byte	64
+ 3413 0d38 9F       		.byte	-97
+ 3414 0d39 01       		.byte	1
+ 3415 0d3a A2       		.byte	-94
+ 3416 0d3b 02       		.byte	2
+ 3417 0d3c B0       		.byte	-80
+ 3418 0d3d 20       		.byte	32
+ 3419 0d3e B7       		.byte	-73
+ 3420 0d3f 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 61
+
+
+ 3421 0d40 C8       		.byte	-56
+ 3422 0d41 20       		.byte	32
+ 3423 0d42 E4       		.byte	-28
+ 3424 0d43 10       		.byte	16
+ 3425 0d44 06       		.byte	6
+ 3426 0d45 40       		.byte	64
+ 3427 0d46 0B       		.byte	11
+ 3428 0d47 02       		.byte	2
+ 3429 0d48 0C       		.byte	12
+ 3430 0d49 40       		.byte	64
+ 3431 0d4a 50       		.byte	80
+ 3432 0d4b 01       		.byte	1
+ 3433 0d4c 62       		.byte	98
+ 3434 0d4d 02       		.byte	2
+ 3435 0d4e 84       		.byte	-124
+ 3436 0d4f 40       		.byte	64
+ 3437 0d50 90       		.byte	-112
+ 3438 0d51 02       		.byte	2
+ 3439 0d52 97       		.byte	-105
+ 3440 0d53 02       		.byte	2
+ 3441 0d54 9E       		.byte	-98
+ 3442 0d55 40       		.byte	64
+ 3443 0d56 A2       		.byte	-94
+ 3444 0d57 02       		.byte	2
+ 3445 0d58 C0       		.byte	-64
+ 3446 0d59 20       		.byte	32
+ 3447 0d5a C2       		.byte	-62
+ 3448 0d5b C0       		.byte	-64
+ 3449 0d5c D4       		.byte	-44
+ 3450 0d5d 80       		.byte	-128
+ 3451 0d5e D8       		.byte	-40
+ 3452 0d5f 40       		.byte	64
+ 3453 0d60 E4       		.byte	-28
+ 3454 0d61 10       		.byte	16
+ 3455 0d62 59       		.byte	89
+ 3456 0d63 02       		.byte	2
+ 3457 0d64 5F       		.byte	95
+ 3458 0d65 02       		.byte	2
+ 3459 0d66 62       		.byte	98
+ 3460 0d67 08       		.byte	8
+ 3461 0d68 66       		.byte	102
+ 3462 0d69 04       		.byte	4
+ 3463 0d6a 86       		.byte	-122
+ 3464 0d6b 08       		.byte	8
+ 3465 0d6c 99       		.byte	-103
+ 3466 0d6d 02       		.byte	2
+ 3467 0d6e D6       		.byte	-42
+ 3468 0d6f 03       		.byte	3
+ 3469 0d70 D8       		.byte	-40
+ 3470 0d71 03       		.byte	3
+ 3471 0d72 10       		.byte	16
+ 3472 0d73 40       		.byte	64
+ 3473 0d74 70       		.byte	112
+ 3474 0d75 01       		.byte	1
+ 3475 0d76 80       		.byte	-128
+ 3476 0d77 01       		.byte	1
+ 3477 0d78 88       		.byte	-120
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 62
+
+
+ 3478 0d79 40       		.byte	64
+ 3479 0d7a AA       		.byte	-86
+ 3480 0d7b 04       		.byte	4
+ 3481 0d7c AF       		.byte	-81
+ 3482 0d7d 02       		.byte	2
+ 3483 0d7e C4       		.byte	-60
+ 3484 0d7f 08       		.byte	8
+ 3485 0d80 DC       		.byte	-36
+ 3486 0d81 01       		.byte	1
+ 3487 0d82 E2       		.byte	-30
+ 3488 0d83 01       		.byte	1
+ 3489 0d84 00       		.byte	0
+ 3490 0d85 0A       		.byte	10
+ 3491 0d86 01       		.byte	1
+ 3492 0d87 01       		.byte	1
+ 3493 0d88 08       		.byte	8
+ 3494 0d89 0A       		.byte	10
+ 3495 0d8a 09       		.byte	9
+ 3496 0d8b 01       		.byte	1
+ 3497 0d8c 0A       		.byte	10
+ 3498 0d8d 02       		.byte	2
+ 3499 0d8e 0C       		.byte	12
+ 3500 0d8f 02       		.byte	2
+ 3501 0d90 0E       		.byte	14
+ 3502 0d91 02       		.byte	2
+ 3503 0d92 10       		.byte	16
+ 3504 0d93 0A       		.byte	10
+ 3505 0d94 11       		.byte	17
+ 3506 0d95 01       		.byte	1
+ 3507 0d96 1A       		.byte	26
+ 3508 0d97 0A       		.byte	10
+ 3509 0d98 1C       		.byte	28
+ 3510 0d99 0A       		.byte	10
+ 3511 0d9a 1D       		.byte	29
+ 3512 0d9b 01       		.byte	1
+ 3513 0d9c 04       		.byte	4
+ 3514 0d9d 84       		.byte	-124
+ 3515 0d9e 00       		.byte	0
+ 3516 0d9f 00       		.byte	0
+ 3517 0da0 40       		.byte	64
+ 3518 0da1 00       		.byte	0
+ 3519 0da2 00       		.byte	0
+ 3520 0da3 00       		.byte	0
+ 3521 0da4 80       		.byte	-128
+ 3522 0da5 00       		.byte	0
+ 3523 0da6 00       		.byte	0
+ 3524 0da7 07       		.byte	7
+ 3525 0da8 22       		.byte	34
+ 3526 0da9 00       		.byte	0
+ 3527 0daa 51       		.byte	81
+ 3528 0dab 20       		.byte	32
+ 3529 0dac 44       		.byte	68
+ 3530 0dad 00       		.byte	0
+ 3531 0dae 31       		.byte	49
+ 3532 0daf 10       		.byte	16
+ 3533 0db0 01       		.byte	1
+ 3534 0db1 00       		.byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 63
+
+
+ 3535 0db2 0E       		.byte	14
+ 3536 0db3 08       		.byte	8
+ 3537 0db4 00       		.byte	0
+ 3538 0db5 01       		.byte	1
+ 3539 0db6 00       		.byte	0
+ 3540 0db7 02       		.byte	2
+ 3541 0db8 80       		.byte	-128
+ 3542 0db9 00       		.byte	0
+ 3543 0dba 00       		.byte	0
+ 3544 0dbb 10       		.byte	16
+ 3545 0dbc 00       		.byte	0
+ 3546 0dbd 01       		.byte	1
+ 3547 0dbe 80       		.byte	-128
+ 3548 0dbf 02       		.byte	2
+ 3549 0dc0 67       		.byte	103
+ 3550 0dc1 00       		.byte	0
+ 3551 0dc2 00       		.byte	0
+ 3552 0dc3 20       		.byte	32
+ 3553 0dc4 00       		.byte	0
+ 3554 0dc5 07       		.byte	7
+ 3555 0dc6 80       		.byte	-128
+ 3556 0dc7 00       		.byte	0
+ 3557 0dc8 00       		.byte	0
+ 3558 0dc9 04       		.byte	4
+ 3559 0dca 00       		.byte	0
+ 3560 0dcb 00       		.byte	0
+ 3561 0dcc 67       		.byte	103
+ 3562 0dcd 00       		.byte	0
+ 3563 0dce 00       		.byte	0
+ 3564 0dcf 04       		.byte	4
+ 3565 0dd0 00       		.byte	0
+ 3566 0dd1 07       		.byte	7
+ 3567 0dd2 00       		.byte	0
+ 3568 0dd3 00       		.byte	0
+ 3569 0dd4 07       		.byte	7
+ 3570 0dd5 0F       		.byte	15
+ 3571 0dd6 60       		.byte	96
+ 3572 0dd7 20       		.byte	32
+ 3573 0dd8 80       		.byte	-128
+ 3574 0dd9 10       		.byte	16
+ 3575 0dda 18       		.byte	24
+ 3576 0ddb 00       		.byte	0
+ 3577 0ddc 20       		.byte	32
+ 3578 0ddd 00       		.byte	0
+ 3579 0dde 00       		.byte	0
+ 3580 0ddf 00       		.byte	0
+ 3581 0de0 00       		.byte	0
+ 3582 0de1 00       		.byte	0
+ 3583 0de2 40       		.byte	64
+ 3584 0de3 14       		.byte	20
+ 3585 0de4 62       		.byte	98
+ 3586 0de5 05       		.byte	5
+ 3587 0de6 03       		.byte	3
+ 3588 0de7 00       		.byte	0
+ 3589 0de8 01       		.byte	1
+ 3590 0de9 E0       		.byte	-32
+ 3591 0dea C0       		.byte	-64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 64
+
+
+ 3592 0deb 00       		.byte	0
+ 3593 0dec 0A       		.byte	10
+ 3594 0ded FF       		.byte	-1
+ 3595 0dee FF       		.byte	-1
+ 3596 0def FF       		.byte	-1
+ 3597 0df0 62       		.byte	98
+ 3598 0df1 A0       		.byte	-96
+ 3599 0df2 F0       		.byte	-16
+ 3600 0df3 41       		.byte	65
+ 3601 0df4 0C       		.byte	12
+ 3602 0df5 00       		.byte	0
+ 3603 0df6 00       		.byte	0
+ 3604 0df7 00       		.byte	0
+ 3605 0df8 18       		.byte	24
+ 3606 0df9 00       		.byte	0
+ 3607 0dfa 00       		.byte	0
+ 3608 0dfb 00       		.byte	0
+ 3609 0dfc 04       		.byte	4
+ 3610 0dfd 04       		.byte	4
+ 3611 0dfe 04       		.byte	4
+ 3612 0dff 04       		.byte	4
+ 3613 0e00 13       		.byte	19
+ 3614 0e01 33       		.byte	51
+ 3615 0e02 00       		.byte	0
+ 3616 0e03 01       		.byte	1
+ 3617 0e04 00       		.byte	0
+ 3618 0e05 00       		.byte	0
+ 3619 0e06 00       		.byte	0
+ 3620 0e07 00       		.byte	0
+ 3621 0e08 00       		.byte	0
+ 3622 0e09 00       		.byte	0
+ 3623 0e0a 40       		.byte	64
+ 3624 0e0b 02       		.byte	2
+ 3625 0e0c 00       		.byte	0
+ 3626 0e0d 10       		.byte	16
+ 3627 0e0e 30       		.byte	48
+ 3628 0e0f 10       		.byte	16
+ 3629 0e10 00       		.byte	0
+ 3630 0e11 10       		.byte	16
+ 3631 0e12 10       		.byte	16
+ 3632 0e13 12       		.byte	18
+ 3633 0e14 00       		.byte	0
+ 3634 0e15 00       		.byte	0
+ 3635 0e16 00       		.byte	0
+ 3636 0e17 00       		.byte	0
+ 3637 0e18 00       		.byte	0
+ 3638 0e19 00       		.byte	0
+ 3639 0e1a 00       		.byte	0
+ 3640 0e1b 00       		.byte	0
+ 3641 0e1c 00       		.byte	0
+ 3642 0e1d 00       		.byte	0
+ 3643 0e1e 00       		.byte	0
+ 3644 0e1f 00       		.byte	0
+ 3645 0e20 00       		.byte	0
+ 3646 0e21 00       		.byte	0
+ 3647 0e22 00       		.byte	0
+ 3648 0e23 00       		.byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 65
+
+
+ 3649 0e24 FE       		.byte	-2
+ 3650 0e25 08       		.byte	8
+ 3651 0e26 00       		.byte	0
+ 3652 0e27 00       		.byte	0
+ 3653 0e28 48       		.byte	72
+ 3654 0e29 02       		.byte	2
+ 3655 0e2a 01       		.byte	1
+ 3656 0e2b 00       		.byte	0
+ 3657 0e2c 80       		.byte	-128
+ 3658 0e2d 00       		.byte	0
+ 3659 0e2e 00       		.byte	0
+ 3660 0e2f 00       		.byte	0
+ 3661 0e30 C0       		.byte	-64
+ 3662 0e31 04       		.byte	4
+ 3663 0e32 00       		.byte	0
+ 3664 0e33 00       		.byte	0
+ 3665 0e34 CE       		.byte	-50
+ 3666 0e35 07       		.byte	7
+ 3667 0e36 30       		.byte	48
+ 3668 0e37 00       		.byte	0
+ 3669 0e38 00       		.byte	0
+ 3670 0e39 00       		.byte	0
+ 3671 0e3a 08       		.byte	8
+ 3672 0e3b 10       		.byte	16
+ 3673 0e3c 10       		.byte	16
+ 3674 0e3d 00       		.byte	0
+ 3675 0e3e 00       		.byte	0
+ 3676 0e3f 01       		.byte	1
+ 3677 0e40 30       		.byte	48
+ 3678 0e41 06       		.byte	6
+ 3679 0e42 00       		.byte	0
+ 3680 0e43 00       		.byte	0
+ 3681 0e44 38       		.byte	56
+ 3682 0e45 06       		.byte	6
+ 3683 0e46 C4       		.byte	-60
+ 3684 0e47 01       		.byte	1
+ 3685 0e48 20       		.byte	32
+ 3686 0e49 07       		.byte	7
+ 3687 0e4a 00       		.byte	0
+ 3688 0e4b 00       		.byte	0
+ 3689 0e4c 00       		.byte	0
+ 3690 0e4d 00       		.byte	0
+ 3691 0e4e C6       		.byte	-58
+ 3692 0e4f 10       		.byte	16
+ 3693 0e50 38       		.byte	56
+ 3694 0e51 01       		.byte	1
+ 3695 0e52 C2       		.byte	-62
+ 3696 0e53 06       		.byte	6
+ 3697 0e54 00       		.byte	0
+ 3698 0e55 00       		.byte	0
+ 3699 0e56 01       		.byte	1
+ 3700 0e57 10       		.byte	16
+ 3701 0e58 3E       		.byte	62
+ 3702 0e59 07       		.byte	7
+ 3703 0e5a C0       		.byte	-64
+ 3704 0e5b 08       		.byte	8
+ 3705 0e5c 00       		.byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 66
+
+
+ 3706 0e5d 00       		.byte	0
+ 3707 0e5e 20       		.byte	32
+ 3708 0e5f 00       		.byte	0
+ 3709 0e60 00       		.byte	0
+ 3710 0e61 00       		.byte	0
+ 3711 0e62 00       		.byte	0
+ 3712 0e63 44       		.byte	68
+ 3713 0e64 60       		.byte	96
+ 3714 0e65 03       		.byte	3
+ 3715 0e66 00       		.byte	0
+ 3716 0e67 00       		.byte	0
+ 3717 0e68 00       		.byte	0
+ 3718 0e69 D0       		.byte	-48
+ 3719 0e6a 20       		.byte	32
+ 3720 0e6b 10       		.byte	16
+ 3721 0e6c 2A       		.byte	42
+ 3722 0e6d FF       		.byte	-1
+ 3723 0e6e FF       		.byte	-1
+ 3724 0e6f FF       		.byte	-1
+ 3725 0e70 00       		.byte	0
+ 3726 0e71 AF       		.byte	-81
+ 3727 0e72 0F       		.byte	15
+ 3728 0e73 04       		.byte	4
+ 3729 0e74 18       		.byte	24
+ 3730 0e75 00       		.byte	0
+ 3731 0e76 00       		.byte	0
+ 3732 0e77 00       		.byte	0
+ 3733 0e78 05       		.byte	5
+ 3734 0e79 00       		.byte	0
+ 3735 0e7a 00       		.byte	0
+ 3736 0e7b 00       		.byte	0
+ 3737 0e7c 04       		.byte	4
+ 3738 0e7d 04       		.byte	4
+ 3739 0e7e 04       		.byte	4
+ 3740 0e7f 04       		.byte	4
+ 3741 0e80 33       		.byte	51
+ 3742 0e81 11       		.byte	17
+ 3743 0e82 00       		.byte	0
+ 3744 0e83 01       		.byte	1
+ 3745 0e84 40       		.byte	64
+ 3746 0e85 00       		.byte	0
+ 3747 0e86 C0       		.byte	-64
+ 3748 0e87 00       		.byte	0
+ 3749 0e88 40       		.byte	64
+ 3750 0e89 40       		.byte	64
+ 3751 0e8a C0       		.byte	-64
+ 3752 0e8b 00       		.byte	0
+ 3753 0e8c C0       		.byte	-64
+ 3754 0e8d 00       		.byte	0
+ 3755 0e8e C0       		.byte	-64
+ 3756 0e8f 00       		.byte	0
+ 3757 0e90 C0       		.byte	-64
+ 3758 0e91 00       		.byte	0
+ 3759 0e92 C0       		.byte	-64
+ 3760 0e93 00       		.byte	0
+ 3761 0e94 00       		.byte	0
+ 3762 0e95 00       		.byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 67
+
+
+ 3763 0e96 00       		.byte	0
+ 3764 0e97 00       		.byte	0
+ 3765 0e98 00       		.byte	0
+ 3766 0e99 00       		.byte	0
+ 3767 0e9a 00       		.byte	0
+ 3768 0e9b 00       		.byte	0
+ 3769 0e9c 00       		.byte	0
+ 3770 0e9d 00       		.byte	0
+ 3771 0e9e 00       		.byte	0
+ 3772 0e9f 00       		.byte	0
+ 3773 0ea0 00       		.byte	0
+ 3774 0ea1 00       		.byte	0
+ 3775 0ea2 00       		.byte	0
+ 3776 0ea3 00       		.byte	0
+ 3777 0ea4 C3       		.byte	-61
+ 3778 0ea5 10       		.byte	16
+ 3779 0ea6 10       		.byte	16
+ 3780 0ea7 00       		.byte	0
+ 3781 0ea8 10       		.byte	16
+ 3782 0ea9 00       		.byte	0
+ 3783 0eaa 00       		.byte	0
+ 3784 0eab 00       		.byte	0
+ 3785 0eac 80       		.byte	-128
+ 3786 0ead 00       		.byte	0
+ 3787 0eae 48       		.byte	72
+ 3788 0eaf 84       		.byte	-124
+ 3789 0eb0 84       		.byte	-124
+ 3790 0eb1 00       		.byte	0
+ 3791 0eb2 84       		.byte	-124
+ 3792 0eb3 00       		.byte	0
+ 3793 0eb4 00       		.byte	0
+ 3794 0eb5 00       		.byte	0
+ 3795 0eb6 00       		.byte	0
+ 3796 0eb7 00       		.byte	0
+ 3797 0eb8 00       		.byte	0
+ 3798 0eb9 25       		.byte	37
+ 3799 0eba 25       		.byte	37
+ 3800 0ebb 00       		.byte	0
+ 3801 0ebc 00       		.byte	0
+ 3802 0ebd 00       		.byte	0
+ 3803 0ebe 00       		.byte	0
+ 3804 0ebf 00       		.byte	0
+ 3805 0ec0 00       		.byte	0
+ 3806 0ec1 FB       		.byte	-5
+ 3807 0ec2 FB       		.byte	-5
+ 3808 0ec3 00       		.byte	0
+ 3809 0ec4 F0       		.byte	-16
+ 3810 0ec5 00       		.byte	0
+ 3811 0ec6 00       		.byte	0
+ 3812 0ec7 00       		.byte	0
+ 3813 0ec8 00       		.byte	0
+ 3814 0ec9 04       		.byte	4
+ 3815 0eca 00       		.byte	0
+ 3816 0ecb 00       		.byte	0
+ 3817 0ecc 00       		.byte	0
+ 3818 0ecd 00       		.byte	0
+ 3819 0ece 01       		.byte	1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 68
+
+
+ 3820 0ecf 00       		.byte	0
+ 3821 0ed0 C2       		.byte	-62
+ 3822 0ed1 11       		.byte	17
+ 3823 0ed2 11       		.byte	17
+ 3824 0ed3 00       		.byte	0
+ 3825 0ed4 11       		.byte	17
+ 3826 0ed5 00       		.byte	0
+ 3827 0ed6 00       		.byte	0
+ 3828 0ed7 00       		.byte	0
+ 3829 0ed8 07       		.byte	7
+ 3830 0ed9 00       		.byte	0
+ 3831 0eda 18       		.byte	24
+ 3832 0edb 01       		.byte	1
+ 3833              		.section	.cywolatch,"a",%progbits
+ 3834              		.align	2
+ 3835              		.type	cy_meta_wonvl, %object
+ 3836              		.size	cy_meta_wonvl, 4
+ 3837              	cy_meta_wonvl:
+ 3838 0000 BC       		.byte	-68
+ 3839 0001 90       		.byte	-112
+ 3840 0002 AC       		.byte	-84
+ 3841 0003 AF       		.byte	-81
+ 3842              		.section	.cycustnvl,"a",%progbits
+ 3843              		.align	2
+ 3844              		.type	cy_meta_custnvl, %object
+ 3845              		.size	cy_meta_custnvl, 4
+ 3846              	cy_meta_custnvl:
+ 3847 0000 00       		.byte	0
+ 3848 0001 00       		.byte	0
+ 3849 0002 40       		.byte	64
+ 3850 0003 05       		.byte	5
+ 3851              		.section	.cymeta,"a",%progbits
+ 3852              		.align	2
+ 3853              		.type	cy_metadata, %object
+ 3854              		.size	cy_metadata, 12
+ 3855              	cy_metadata:
+ 3856 0000 00       		.byte	0
+ 3857 0001 01       		.byte	1
+ 3858 0002 2E       		.byte	46
+ 3859 0003 16       		.byte	22
+ 3860 0004 10       		.byte	16
+ 3861 0005 69       		.byte	105
+ 3862 0006 00       		.byte	0
+ 3863 0007 01       		.byte	1
+ 3864 0008 00       		.byte	0
+ 3865 0009 00       		.byte	0
+ 3866 000a 00       		.byte	0
+ 3867 000b 00       		.byte	0
+ 3868              		.section	.cyflashprotect,"a",%progbits
+ 3869              		.align	2
+ 3870              		.type	cy_meta_flashprotect, %object
+ 3871              		.size	cy_meta_flashprotect, 256
+ 3872              	cy_meta_flashprotect:
+ 3873 0000 00000000 		.space	256
+ 3873      00000000 
+ 3873      00000000 
+ 3873      00000000 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 69
+
+
+ 3873      00000000 
+ 3874              		.text
+ 3875              	.Letext0:
+ 3876              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 3877              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 3878              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 3879              		.section	.debug_info,"",%progbits
+ 3880              	.Ldebug_info0:
+ 3881 0000 35010000 		.4byte	0x135
+ 3882 0004 0400     		.2byte	0x4
+ 3883 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 3884 000a 04       		.byte	0x4
+ 3885 000b 01       		.uleb128 0x1
+ 3886 000c 7A000000 		.4byte	.LASF17
+ 3887 0010 0C       		.byte	0xc
+ 3888 0011 D4010000 		.4byte	.LASF18
+ 3889 0015 0A000000 		.4byte	.LASF19
+ 3890 0019 00000000 		.4byte	.Ldebug_line0
+ 3891 001d 02       		.uleb128 0x2
+ 3892 001e 01       		.byte	0x1
+ 3893 001f 06       		.byte	0x6
+ 3894 0020 C8010000 		.4byte	.LASF0
+ 3895 0024 03       		.uleb128 0x3
+ 3896 0025 00000000 		.4byte	.LASF9
+ 3897 0029 01       		.byte	0x1
+ 3898 002a 1D       		.byte	0x1d
+ 3899 002b 2F000000 		.4byte	0x2f
+ 3900 002f 02       		.uleb128 0x2
+ 3901 0030 01       		.byte	0x1
+ 3902 0031 08       		.byte	0x8
+ 3903 0032 6C000000 		.4byte	.LASF1
+ 3904 0036 02       		.uleb128 0x2
+ 3905 0037 02       		.byte	0x2
+ 3906 0038 05       		.byte	0x5
+ 3907 0039 B5010000 		.4byte	.LASF2
+ 3908 003d 02       		.uleb128 0x2
+ 3909 003e 02       		.byte	0x2
+ 3910 003f 07       		.byte	0x7
+ 3911 0040 1A010000 		.4byte	.LASF3
+ 3912 0044 02       		.uleb128 0x2
+ 3913 0045 04       		.byte	0x4
+ 3914 0046 05       		.byte	0x5
+ 3915 0047 BF010000 		.4byte	.LASF4
+ 3916 004b 02       		.uleb128 0x2
+ 3917 004c 04       		.byte	0x4
+ 3918 004d 07       		.byte	0x7
+ 3919 004e 08010000 		.4byte	.LASF5
+ 3920 0052 02       		.uleb128 0x2
+ 3921 0053 08       		.byte	0x8
+ 3922 0054 05       		.byte	0x5
+ 3923 0055 A7010000 		.4byte	.LASF6
+ 3924 0059 02       		.uleb128 0x2
+ 3925 005a 08       		.byte	0x8
+ 3926 005b 07       		.byte	0x7
+ 3927 005c 5C010000 		.4byte	.LASF7
+ 3928 0060 04       		.uleb128 0x4
+ 3929 0061 04       		.byte	0x4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 70
+
+
+ 3930 0062 05       		.byte	0x5
+ 3931 0063 696E7400 		.ascii	"int\000"
+ 3932 0067 02       		.uleb128 0x2
+ 3933 0068 04       		.byte	0x4
+ 3934 0069 07       		.byte	0x7
+ 3935 006a 4F010000 		.4byte	.LASF8
+ 3936 006e 03       		.uleb128 0x3
+ 3937 006f 73010000 		.4byte	.LASF10
+ 3938 0073 02       		.byte	0x2
+ 3939 0074 18       		.byte	0x18
+ 3940 0075 24000000 		.4byte	0x24
+ 3941 0079 05       		.uleb128 0x5
+ 3942 007a 91000000 		.4byte	0x91
+ 3943 007e 8A000000 		.4byte	0x8a
+ 3944 0082 06       		.uleb128 0x6
+ 3945 0083 8A000000 		.4byte	0x8a
+ 3946 0087 DB0E     		.2byte	0xedb
+ 3947 0089 00       		.byte	0
+ 3948 008a 02       		.uleb128 0x2
+ 3949 008b 04       		.byte	0x4
+ 3950 008c 07       		.byte	0x7
+ 3951 008d 9E010000 		.4byte	.LASF11
+ 3952 0091 07       		.uleb128 0x7
+ 3953 0092 6E000000 		.4byte	0x6e
+ 3954 0096 08       		.uleb128 0x8
+ 3955 0097 3D010000 		.4byte	.LASF12
+ 3956 009b 03       		.byte	0x3
+ 3957 009c 1F       		.byte	0x1f
+ 3958 009d A7000000 		.4byte	0xa7
+ 3959 00a1 05       		.uleb128 0x5
+ 3960 00a2 03       		.byte	0x3
+ 3961 00a3 00000000 		.4byte	cy_meta_configecc
+ 3962 00a7 07       		.uleb128 0x7
+ 3963 00a8 79000000 		.4byte	0x79
+ 3964 00ac 05       		.uleb128 0x5
+ 3965 00ad 91000000 		.4byte	0x91
+ 3966 00b1 BC000000 		.4byte	0xbc
+ 3967 00b5 09       		.uleb128 0x9
+ 3968 00b6 8A000000 		.4byte	0x8a
+ 3969 00ba 03       		.byte	0x3
+ 3970 00bb 00       		.byte	0
+ 3971 00bc 0A       		.uleb128 0xa
+ 3972 00bd 2D010000 		.4byte	.LASF13
+ 3973 00c1 03       		.byte	0x3
+ 3974 00c2 0802     		.2byte	0x208
+ 3975 00c4 CE000000 		.4byte	0xce
+ 3976 00c8 05       		.uleb128 0x5
+ 3977 00c9 03       		.byte	0x3
+ 3978 00ca 00000000 		.4byte	cy_meta_custnvl
+ 3979 00ce 07       		.uleb128 0x7
+ 3980 00cf AC000000 		.4byte	0xac
+ 3981 00d3 0A       		.uleb128 0xa
+ 3982 00d4 90010000 		.4byte	.LASF14
+ 3983 00d8 03       		.byte	0x3
+ 3984 00d9 1602     		.2byte	0x216
+ 3985 00db E5000000 		.4byte	0xe5
+ 3986 00df 05       		.uleb128 0x5
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 71
+
+
+ 3987 00e0 03       		.byte	0x3
+ 3988 00e1 00000000 		.4byte	cy_meta_wonvl
+ 3989 00e5 07       		.uleb128 0x7
+ 3990 00e6 AC000000 		.4byte	0xac
+ 3991 00ea 05       		.uleb128 0x5
+ 3992 00eb 91000000 		.4byte	0x91
+ 3993 00ef FA000000 		.4byte	0xfa
+ 3994 00f3 09       		.uleb128 0x9
+ 3995 00f4 8A000000 		.4byte	0x8a
+ 3996 00f8 FF       		.byte	0xff
+ 3997 00f9 00       		.byte	0
+ 3998 00fa 0A       		.uleb128 0xa
+ 3999 00fb 7B010000 		.4byte	.LASF15
+ 4000 00ff 03       		.byte	0x3
+ 4001 0100 2402     		.2byte	0x224
+ 4002 0102 0C010000 		.4byte	0x10c
+ 4003 0106 05       		.uleb128 0x5
+ 4004 0107 03       		.byte	0x3
+ 4005 0108 00000000 		.4byte	cy_meta_flashprotect
+ 4006 010c 07       		.uleb128 0x7
+ 4007 010d EA000000 		.4byte	0xea
+ 4008 0111 05       		.uleb128 0x5
+ 4009 0112 91000000 		.4byte	0x91
+ 4010 0116 21010000 		.4byte	0x121
+ 4011 011a 09       		.uleb128 0x9
+ 4012 011b 8A000000 		.4byte	0x8a
+ 4013 011f 0B       		.byte	0xb
+ 4014 0120 00       		.byte	0
+ 4015 0121 0A       		.uleb128 0xa
+ 4016 0122 60000000 		.4byte	.LASF16
+ 4017 0126 03       		.byte	0x3
+ 4018 0127 5102     		.2byte	0x251
+ 4019 0129 33010000 		.4byte	0x133
+ 4020 012d 05       		.uleb128 0x5
+ 4021 012e 03       		.byte	0x3
+ 4022 012f 00000000 		.4byte	cy_metadata
+ 4023 0133 07       		.uleb128 0x7
+ 4024 0134 11010000 		.4byte	0x111
+ 4025 0138 00       		.byte	0
+ 4026              		.section	.debug_abbrev,"",%progbits
+ 4027              	.Ldebug_abbrev0:
+ 4028 0000 01       		.uleb128 0x1
+ 4029 0001 11       		.uleb128 0x11
+ 4030 0002 01       		.byte	0x1
+ 4031 0003 25       		.uleb128 0x25
+ 4032 0004 0E       		.uleb128 0xe
+ 4033 0005 13       		.uleb128 0x13
+ 4034 0006 0B       		.uleb128 0xb
+ 4035 0007 03       		.uleb128 0x3
+ 4036 0008 0E       		.uleb128 0xe
+ 4037 0009 1B       		.uleb128 0x1b
+ 4038 000a 0E       		.uleb128 0xe
+ 4039 000b 10       		.uleb128 0x10
+ 4040 000c 17       		.uleb128 0x17
+ 4041 000d 00       		.byte	0
+ 4042 000e 00       		.byte	0
+ 4043 000f 02       		.uleb128 0x2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 72
+
+
+ 4044 0010 24       		.uleb128 0x24
+ 4045 0011 00       		.byte	0
+ 4046 0012 0B       		.uleb128 0xb
+ 4047 0013 0B       		.uleb128 0xb
+ 4048 0014 3E       		.uleb128 0x3e
+ 4049 0015 0B       		.uleb128 0xb
+ 4050 0016 03       		.uleb128 0x3
+ 4051 0017 0E       		.uleb128 0xe
+ 4052 0018 00       		.byte	0
+ 4053 0019 00       		.byte	0
+ 4054 001a 03       		.uleb128 0x3
+ 4055 001b 16       		.uleb128 0x16
+ 4056 001c 00       		.byte	0
+ 4057 001d 03       		.uleb128 0x3
+ 4058 001e 0E       		.uleb128 0xe
+ 4059 001f 3A       		.uleb128 0x3a
+ 4060 0020 0B       		.uleb128 0xb
+ 4061 0021 3B       		.uleb128 0x3b
+ 4062 0022 0B       		.uleb128 0xb
+ 4063 0023 49       		.uleb128 0x49
+ 4064 0024 13       		.uleb128 0x13
+ 4065 0025 00       		.byte	0
+ 4066 0026 00       		.byte	0
+ 4067 0027 04       		.uleb128 0x4
+ 4068 0028 24       		.uleb128 0x24
+ 4069 0029 00       		.byte	0
+ 4070 002a 0B       		.uleb128 0xb
+ 4071 002b 0B       		.uleb128 0xb
+ 4072 002c 3E       		.uleb128 0x3e
+ 4073 002d 0B       		.uleb128 0xb
+ 4074 002e 03       		.uleb128 0x3
+ 4075 002f 08       		.uleb128 0x8
+ 4076 0030 00       		.byte	0
+ 4077 0031 00       		.byte	0
+ 4078 0032 05       		.uleb128 0x5
+ 4079 0033 01       		.uleb128 0x1
+ 4080 0034 01       		.byte	0x1
+ 4081 0035 49       		.uleb128 0x49
+ 4082 0036 13       		.uleb128 0x13
+ 4083 0037 01       		.uleb128 0x1
+ 4084 0038 13       		.uleb128 0x13
+ 4085 0039 00       		.byte	0
+ 4086 003a 00       		.byte	0
+ 4087 003b 06       		.uleb128 0x6
+ 4088 003c 21       		.uleb128 0x21
+ 4089 003d 00       		.byte	0
+ 4090 003e 49       		.uleb128 0x49
+ 4091 003f 13       		.uleb128 0x13
+ 4092 0040 2F       		.uleb128 0x2f
+ 4093 0041 05       		.uleb128 0x5
+ 4094 0042 00       		.byte	0
+ 4095 0043 00       		.byte	0
+ 4096 0044 07       		.uleb128 0x7
+ 4097 0045 26       		.uleb128 0x26
+ 4098 0046 00       		.byte	0
+ 4099 0047 49       		.uleb128 0x49
+ 4100 0048 13       		.uleb128 0x13
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 73
+
+
+ 4101 0049 00       		.byte	0
+ 4102 004a 00       		.byte	0
+ 4103 004b 08       		.uleb128 0x8
+ 4104 004c 34       		.uleb128 0x34
+ 4105 004d 00       		.byte	0
+ 4106 004e 03       		.uleb128 0x3
+ 4107 004f 0E       		.uleb128 0xe
+ 4108 0050 3A       		.uleb128 0x3a
+ 4109 0051 0B       		.uleb128 0xb
+ 4110 0052 3B       		.uleb128 0x3b
+ 4111 0053 0B       		.uleb128 0xb
+ 4112 0054 49       		.uleb128 0x49
+ 4113 0055 13       		.uleb128 0x13
+ 4114 0056 3F       		.uleb128 0x3f
+ 4115 0057 19       		.uleb128 0x19
+ 4116 0058 02       		.uleb128 0x2
+ 4117 0059 18       		.uleb128 0x18
+ 4118 005a 00       		.byte	0
+ 4119 005b 00       		.byte	0
+ 4120 005c 09       		.uleb128 0x9
+ 4121 005d 21       		.uleb128 0x21
+ 4122 005e 00       		.byte	0
+ 4123 005f 49       		.uleb128 0x49
+ 4124 0060 13       		.uleb128 0x13
+ 4125 0061 2F       		.uleb128 0x2f
+ 4126 0062 0B       		.uleb128 0xb
+ 4127 0063 00       		.byte	0
+ 4128 0064 00       		.byte	0
+ 4129 0065 0A       		.uleb128 0xa
+ 4130 0066 34       		.uleb128 0x34
+ 4131 0067 00       		.byte	0
+ 4132 0068 03       		.uleb128 0x3
+ 4133 0069 0E       		.uleb128 0xe
+ 4134 006a 3A       		.uleb128 0x3a
+ 4135 006b 0B       		.uleb128 0xb
+ 4136 006c 3B       		.uleb128 0x3b
+ 4137 006d 05       		.uleb128 0x5
+ 4138 006e 49       		.uleb128 0x49
+ 4139 006f 13       		.uleb128 0x13
+ 4140 0070 3F       		.uleb128 0x3f
+ 4141 0071 19       		.uleb128 0x19
+ 4142 0072 02       		.uleb128 0x2
+ 4143 0073 18       		.uleb128 0x18
+ 4144 0074 00       		.byte	0
+ 4145 0075 00       		.byte	0
+ 4146 0076 00       		.byte	0
+ 4147              		.section	.debug_aranges,"",%progbits
+ 4148 0000 14000000 		.4byte	0x14
+ 4149 0004 0200     		.2byte	0x2
+ 4150 0006 00000000 		.4byte	.Ldebug_info0
+ 4151 000a 04       		.byte	0x4
+ 4152 000b 00       		.byte	0
+ 4153 000c 0000     		.2byte	0
+ 4154 000e 0000     		.2byte	0
+ 4155 0010 00000000 		.4byte	0
+ 4156 0014 00000000 		.4byte	0
+ 4157              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 74
+
+
+ 4158              	.Ldebug_line0:
+ 4159 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 4159      02003701 
+ 4159      00000201 
+ 4159      FB0E0D00 
+ 4159      01010101 
+ 4160              	.LASF9:
+ 4161 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 4161      6E74385F 
+ 4161      7400
+ 4162              	.LASF19:
+ 4163 000a 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 4163      73657273 
+ 4163      5C446161 
+ 4163      6E697368 
+ 4163      20426F6F 
+ 4164 0039 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 4164      6F432044 
+ 4164      65736967 
+ 4164      6E5C4543 
+ 4164      45333039 
+ 4165              	.LASF16:
+ 4166 0060 63795F6D 		.ascii	"cy_metadata\000"
+ 4166      65746164 
+ 4166      61746100 
+ 4167              	.LASF1:
+ 4168 006c 756E7369 		.ascii	"unsigned char\000"
+ 4168      676E6564 
+ 4168      20636861 
+ 4168      7200
+ 4169              	.LASF17:
+ 4170 007a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 4170      43313120 
+ 4170      352E342E 
+ 4170      31203230 
+ 4170      31363036 
+ 4171 00ad 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 4171      20726576 
+ 4171      6973696F 
+ 4171      6E203233 
+ 4171      37373135 
+ 4172 00e0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 4172      66756E63 
+ 4172      74696F6E 
+ 4172      2D736563 
+ 4172      74696F6E 
+ 4173              	.LASF5:
+ 4174 0108 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4174      20756E73 
+ 4174      69676E65 
+ 4174      6420696E 
+ 4174      7400
+ 4175              	.LASF3:
+ 4176 011a 73686F72 		.ascii	"short unsigned int\000"
+ 4176      7420756E 
+ 4176      7369676E 
+ 4176      65642069 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 75
+
+
+ 4176      6E7400
+ 4177              	.LASF13:
+ 4178 012d 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 4178      6574615F 
+ 4178      63757374 
+ 4178      6E766C00 
+ 4179              	.LASF12:
+ 4180 013d 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 4180      6574615F 
+ 4180      636F6E66 
+ 4180      69676563 
+ 4180      6300
+ 4181              	.LASF8:
+ 4182 014f 756E7369 		.ascii	"unsigned int\000"
+ 4182      676E6564 
+ 4182      20696E74 
+ 4182      00
+ 4183              	.LASF7:
+ 4184 015c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 4184      206C6F6E 
+ 4184      6720756E 
+ 4184      7369676E 
+ 4184      65642069 
+ 4185              	.LASF10:
+ 4186 0173 75696E74 		.ascii	"uint8_t\000"
+ 4186      385F7400 
+ 4187              	.LASF15:
+ 4188 017b 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 4188      6574615F 
+ 4188      666C6173 
+ 4188      6870726F 
+ 4188      74656374 
+ 4189              	.LASF14:
+ 4190 0190 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 4190      6574615F 
+ 4190      776F6E76 
+ 4190      6C00
+ 4191              	.LASF11:
+ 4192 019e 73697A65 		.ascii	"sizetype\000"
+ 4192      74797065 
+ 4192      00
+ 4193              	.LASF6:
+ 4194 01a7 6C6F6E67 		.ascii	"long long int\000"
+ 4194      206C6F6E 
+ 4194      6720696E 
+ 4194      7400
+ 4195              	.LASF2:
+ 4196 01b5 73686F72 		.ascii	"short int\000"
+ 4196      7420696E 
+ 4196      7400
+ 4197              	.LASF4:
+ 4198 01bf 6C6F6E67 		.ascii	"long int\000"
+ 4198      20696E74 
+ 4198      00
+ 4199              	.LASF0:
+ 4200 01c8 7369676E 		.ascii	"signed char\000"
+ 4200      65642063 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccYfv4M7.s 			page 76
+
+
+ 4200      68617200 
+ 4201              	.LASF18:
+ 4202 01d4 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 4202      72617465 
+ 4202      645F536F 
+ 4202      75726365 
+ 4202      5C50536F 
+ 4203              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
