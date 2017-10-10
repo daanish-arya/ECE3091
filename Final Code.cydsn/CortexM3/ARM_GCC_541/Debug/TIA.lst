@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
   28:Generated_Source\PSoC5/TIA.c **** #if (CY_PSOC5A)
   29:Generated_Source\PSoC5/TIA.c ****     static TIA_BACKUP_STRUCT  TIA_P5backup;
   30:Generated_Source\PSoC5/TIA.c **** #endif /* (CY_PSOC5A) */
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 2
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 2
 
 
   31:Generated_Source\PSoC5/TIA.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
   85:Generated_Source\PSoC5/TIA.c **** 
   86:Generated_Source\PSoC5/TIA.c **** 
   87:Generated_Source\PSoC5/TIA.c **** /*******************************************************************************   
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 3
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 3
 
 
   88:Generated_Source\PSoC5/TIA.c **** * Function Name: TIA_Enable
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
   50              	.L3:
   51              		.align	2
   52              	.L2:
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 4
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 4
 
 
   53 0024 A9430040 		.word	1073759145
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  162:Generated_Source\PSoC5/TIA.c **** *  has been completed.
  163:Generated_Source\PSoC5/TIA.c **** *
  164:Generated_Source\PSoC5/TIA.c **** *******************************************************************************/
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 5
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 5
 
 
  165:Generated_Source\PSoC5/TIA.c **** void TIA_Start(void) 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
   86              	.LFE3:
   87              		.size	TIA_Stop, .-TIA_Stop
   88              		.section	.text.TIA_SetPower,"ax",%progbits
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 6
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 6
 
 
   89              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  239:Generated_Source\PSoC5/TIA.c ****     uint8 tmpCR;
  240:Generated_Source\PSoC5/TIA.c **** 
  241:Generated_Source\PSoC5/TIA.c ****     /* Sets drive bits in SC Block Control Register 1:  SCxx_CR[1:0] */
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 7
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 7
 
 
  242:Generated_Source\PSoC5/TIA.c ****     tmpCR = TIA_CR1_REG & (uint8)(~TIA_DRIVE_MASK);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  133              		@ frame_needed = 0, uses_anonymous_args = 0
  134              		@ link register save eliminated.
  135              	.LVL4:
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 8
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 8
 
 
  265:Generated_Source\PSoC5/TIA.c ****     /* Only set new gain if it is a valid gain */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  287:Generated_Source\PSoC5/TIA.c **** *
  288:Generated_Source\PSoC5/TIA.c **** * Return:
  289:Generated_Source\PSoC5/TIA.c **** *  void
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 9
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 9
 
 
  290:Generated_Source\PSoC5/TIA.c **** *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  209              		@ frame_needed = 0, uses_anonymous_args = 0
  210 0000 10B5     		push	{r4, lr}
  211              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 10
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 10
 
 
  212              		.cfi_offset 4, -8
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  259              		.cfi_def_cfa_offset 8
  260              		.cfi_offset 3, -8
  261              		.cfi_offset 14, -4
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 11
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 11
 
 
  167:Generated_Source\PSoC5/TIA.c ****     {
@@ -645,28 +645,28 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  299 0006 00000000 		.4byte	.Ldebug_abbrev0
  300 000a 04       		.byte	0x4
  301 000b 01       		.uleb128 0x1
- 302 000c D5000000 		.4byte	.LASF26
+ 302 000c 7F000000 		.4byte	.LASF26
  303 0010 0C       		.byte	0xc
  304 0011 1D000000 		.4byte	.LASF27
- 305 0015 53000000 		.4byte	.LASF28
+ 305 0015 31010000 		.4byte	.LASF28
  306 0019 00000000 		.4byte	.Ldebug_ranges0+0
  307 001d 00000000 		.4byte	0
  308 0021 00000000 		.4byte	.Ldebug_line0
  309 0025 02       		.uleb128 0x2
  310 0026 01       		.byte	0x1
  311 0027 06       		.byte	0x6
- 312 0028 2B020000 		.4byte	.LASF0
+ 312 0028 0E020000 		.4byte	.LASF0
  313 002c 02       		.uleb128 0x2
  314 002d 01       		.byte	0x1
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 12
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 12
 
 
  315 002e 08       		.byte	0x8
- 316 002f C7000000 		.4byte	.LASF1
+ 316 002f 71000000 		.4byte	.LASF1
  317 0033 02       		.uleb128 0x2
  318 0034 02       		.byte	0x2
  319 0035 05       		.byte	0x5
- 320 0036 E5010000 		.4byte	.LASF2
+ 320 0036 C8010000 		.4byte	.LASF2
  321 003a 02       		.uleb128 0x2
  322 003b 02       		.byte	0x2
  323 003c 07       		.byte	0x7
@@ -674,19 +674,19 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  325 0041 02       		.uleb128 0x2
  326 0042 04       		.byte	0x4
  327 0043 05       		.byte	0x5
- 328 0044 16020000 		.4byte	.LASF4
+ 328 0044 F9010000 		.4byte	.LASF4
  329 0048 02       		.uleb128 0x2
  330 0049 04       		.byte	0x4
  331 004a 07       		.byte	0x7
- 332 004b 68010000 		.4byte	.LASF5
+ 332 004b 12010000 		.4byte	.LASF5
  333 004f 02       		.uleb128 0x2
  334 0050 08       		.byte	0x8
  335 0051 05       		.byte	0x5
- 336 0052 D2010000 		.4byte	.LASF6
+ 336 0052 B5010000 		.4byte	.LASF6
  337 0056 02       		.uleb128 0x2
  338 0057 08       		.byte	0x8
  339 0058 07       		.byte	0x7
- 340 0059 9D010000 		.4byte	.LASF7
+ 340 0059 80010000 		.4byte	.LASF7
  341 005d 03       		.uleb128 0x3
  342 005e 04       		.byte	0x4
  343 005f 05       		.byte	0x5
@@ -694,44 +694,44 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  345 0064 02       		.uleb128 0x2
  346 0065 04       		.byte	0x4
  347 0066 07       		.byte	0x7
- 348 0067 87010000 		.4byte	.LASF8
+ 348 0067 6A010000 		.4byte	.LASF8
  349 006b 04       		.uleb128 0x4
- 350 006c 7A010000 		.4byte	.LASF12
+ 350 006c 24010000 		.4byte	.LASF12
  351 0070 02       		.byte	0x2
  352 0071 9201     		.2byte	0x192
  353 0073 2C000000 		.4byte	0x2c
  354 0077 02       		.uleb128 0x2
  355 0078 04       		.byte	0x4
  356 0079 04       		.byte	0x4
- 357 007a C1000000 		.4byte	.LASF9
+ 357 007a 6B000000 		.4byte	.LASF9
  358 007e 02       		.uleb128 0x2
  359 007f 08       		.byte	0x8
  360 0080 04       		.byte	0x4
- 361 0081 80010000 		.4byte	.LASF10
+ 361 0081 2A010000 		.4byte	.LASF10
  362 0085 02       		.uleb128 0x2
  363 0086 01       		.byte	0x1
  364 0087 08       		.byte	0x8
- 365 0088 E0010000 		.4byte	.LASF11
+ 365 0088 C3010000 		.4byte	.LASF11
  366 008c 04       		.uleb128 0x4
- 367 008d 63010000 		.4byte	.LASF13
+ 367 008d 0D010000 		.4byte	.LASF13
  368 0091 02       		.byte	0x2
  369 0092 3C02     		.2byte	0x23c
  370 0094 98000000 		.4byte	0x98
  371 0098 05       		.uleb128 0x5
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 13
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 13
 
 
  372 0099 6B000000 		.4byte	0x6b
  373 009d 02       		.uleb128 0x2
  374 009e 08       		.byte	0x8
  375 009f 04       		.byte	0x4
- 376 00a0 1F020000 		.4byte	.LASF14
+ 376 00a0 02020000 		.4byte	.LASF14
  377 00a4 02       		.uleb128 0x2
  378 00a5 04       		.byte	0x4
  379 00a6 07       		.byte	0x7
- 380 00a7 C9010000 		.4byte	.LASF15
+ 380 00a7 AC010000 		.4byte	.LASF15
  381 00ab 06       		.uleb128 0x6
- 382 00ac B6000000 		.4byte	.LASF16
+ 382 00ac 60000000 		.4byte	.LASF16
  383 00b0 01       		.byte	0x1
  384 00b1 65       		.byte	0x65
  385 00b2 00000000 		.4byte	.LFB1
@@ -739,7 +739,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  387 00ba 01       		.uleb128 0x1
  388 00bb 9C       		.byte	0x9c
  389 00bc 06       		.uleb128 0x6
- 390 00bd B4010000 		.4byte	.LASF17
+ 390 00bd 97010000 		.4byte	.LASF17
  391 00c1 01       		.byte	0x1
  392 00c2 BF       		.byte	0xbf
  393 00c3 00000000 		.4byte	.LFB3
@@ -769,7 +769,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  417 00fc 21000000 		.4byte	.LLST1
  418 0100 00       		.byte	0
  419 0101 0A       		.uleb128 0xa
- 420 0102 A9000000 		.4byte	.LASF19
+ 420 0102 53000000 		.4byte	.LASF19
  421 0106 01       		.byte	0x1
  422 0107 0701     		.2byte	0x107
  423 0109 00000000 		.4byte	.LFB5
@@ -778,17 +778,17 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  426 0112 9C       		.byte	0x9c
  427 0113 28010000 		.4byte	0x128
  428 0117 0B       		.uleb128 0xb
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 14
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 14
 
 
- 429 0118 FC010000 		.4byte	.LASF21
+ 429 0118 DF010000 		.4byte	.LASF21
  430 011c 01       		.byte	0x1
  431 011d 0701     		.2byte	0x107
  432 011f 6B000000 		.4byte	0x6b
  433 0123 3F000000 		.4byte	.LLST2
  434 0127 00       		.byte	0
  435 0128 0A       		.uleb128 0xa
- 436 0129 EF010000 		.4byte	.LASF22
+ 436 0129 D2010000 		.4byte	.LASF22
  437 012d 01       		.byte	0x1
  438 012e 2401     		.2byte	0x124
  439 0130 00000000 		.4byte	.LFB6
@@ -797,14 +797,14 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  442 0139 9C       		.byte	0x9c
  443 013a 4F010000 		.4byte	0x14f
  444 013e 0B       		.uleb128 0xb
- 445 013f 09020000 		.4byte	.LASF23
+ 445 013f EC010000 		.4byte	.LASF23
  446 0143 01       		.byte	0x1
  447 0144 2401     		.2byte	0x124
  448 0146 6B000000 		.4byte	0x6b
  449 014a 60000000 		.4byte	.LLST3
  450 014e 00       		.byte	0
  451 014f 07       		.uleb128 0x7
- 452 0150 94010000 		.4byte	.LASF24
+ 452 0150 77010000 		.4byte	.LASF24
  453 0154 01       		.byte	0x1
  454 0155 31       		.byte	0x31
  455 0156 00000000 		.4byte	.LFB0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  483 0190 CD000000 		.4byte	0xcd
  484 0194 0D       		.uleb128 0xd
  485 0195 01       		.uleb128 0x1
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 15
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 15
 
 
  486 0196 50       		.byte	0x50
@@ -863,7 +863,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  505 01be AB000000 		.4byte	0xab
  506 01c2 00       		.byte	0
  507 01c3 10       		.uleb128 0x10
- 508 01c4 BD010000 		.4byte	.LASF30
+ 508 01c4 A0010000 		.4byte	.LASF30
  509 01c8 01       		.byte	0x1
  510 01c9 1A       		.byte	0x1a
  511 01ca 6B000000 		.4byte	0x6b
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  540 0016 0B       		.uleb128 0xb
  541 0017 0B       		.uleb128 0xb
  542 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 16
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 16
 
 
  543 0019 0B       		.uleb128 0xb
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  597 004f 18       		.uleb128 0x18
  598 0050 9742     		.uleb128 0x2117
  599 0052 19       		.uleb128 0x19
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 17
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 17
 
 
  600 0053 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  654 008a 17       		.uleb128 0x17
  655 008b 00       		.byte	0
  656 008c 00       		.byte	0
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 18
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 18
 
 
  657 008d 0A       		.uleb128 0xa
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  711 00c8 02       		.uleb128 0x2
  712 00c9 18       		.uleb128 0x18
  713 00ca 9142     		.uleb128 0x2111
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 19
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 19
 
 
  714 00cc 18       		.uleb128 0x18
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  768 001d 00000000 		.4byte	0
  769              	.LLST1:
  770 0021 08000000 		.4byte	.LVL1
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 20
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 20
 
 
  771 0025 0E000000 		.4byte	.LVL3
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  825 0034 20000000 		.4byte	.LFE6-.LFB6
  826 0038 00000000 		.4byte	.LFB0
  827 003c 2C000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 21
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 21
 
 
  828 0040 00000000 		.4byte	.LFB2
@@ -1257,138 +1257,136 @@ ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 1
  863              	.LASF20:
  864 004d 706F7765 		.ascii	"power\000"
  864      7200
- 865              	.LASF28:
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 22
+ 865              	.LASF19:
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 22
 
 
- 866 0053 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
- 866      73657273 
- 866      5C446161 
- 866      6E697368 
- 866      20426F6F 
- 867 0082 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
- 867      6F432044 
- 867      65736967 
- 867      6E5C4543 
- 867      45333039 
- 868              	.LASF19:
- 869 00a9 5449415F 		.ascii	"TIA_SetResFB\000"
- 869      53657452 
- 869      65734642 
- 869      00
- 870              	.LASF16:
- 871 00b6 5449415F 		.ascii	"TIA_Enable\000"
- 871      456E6162 
- 871      6C6500
- 872              	.LASF9:
- 873 00c1 666C6F61 		.ascii	"float\000"
- 873      7400
- 874              	.LASF1:
- 875 00c7 756E7369 		.ascii	"unsigned char\000"
- 875      676E6564 
- 875      20636861 
- 875      7200
- 876              	.LASF26:
- 877 00d5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 877      43313120 
- 877      352E342E 
- 877      31203230 
- 877      31363036 
- 878 0108 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 878      20726576 
- 878      6973696F 
- 878      6E203233 
- 878      37373135 
- 879 013b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 879      66756E63 
- 879      74696F6E 
- 879      2D736563 
- 879      74696F6E 
- 880              	.LASF13:
- 881 0163 72656738 		.ascii	"reg8\000"
- 881      00
- 882              	.LASF5:
- 883 0168 6C6F6E67 		.ascii	"long unsigned int\000"
- 883      20756E73 
- 883      69676E65 
- 883      6420696E 
- 883      7400
- 884              	.LASF12:
- 885 017a 75696E74 		.ascii	"uint8\000"
- 885      3800
- 886              	.LASF10:
- 887 0180 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 23
-
-
- 887      6C6500
+ 866 0053 5449415F 		.ascii	"TIA_SetResFB\000"
+ 866      53657452 
+ 866      65734642 
+ 866      00
+ 867              	.LASF16:
+ 868 0060 5449415F 		.ascii	"TIA_Enable\000"
+ 868      456E6162 
+ 868      6C6500
+ 869              	.LASF9:
+ 870 006b 666C6F61 		.ascii	"float\000"
+ 870      7400
+ 871              	.LASF1:
+ 872 0071 756E7369 		.ascii	"unsigned char\000"
+ 872      676E6564 
+ 872      20636861 
+ 872      7200
+ 873              	.LASF26:
+ 874 007f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 874      43313120 
+ 874      352E342E 
+ 874      31203230 
+ 874      31363036 
+ 875 00b2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 875      20726576 
+ 875      6973696F 
+ 875      6E203233 
+ 875      37373135 
+ 876 00e5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 876      66756E63 
+ 876      74696F6E 
+ 876      2D736563 
+ 876      74696F6E 
+ 877              	.LASF13:
+ 878 010d 72656738 		.ascii	"reg8\000"
+ 878      00
+ 879              	.LASF5:
+ 880 0112 6C6F6E67 		.ascii	"long unsigned int\000"
+ 880      20756E73 
+ 880      69676E65 
+ 880      6420696E 
+ 880      7400
+ 881              	.LASF12:
+ 882 0124 75696E74 		.ascii	"uint8\000"
+ 882      3800
+ 883              	.LASF10:
+ 884 012a 646F7562 		.ascii	"double\000"
+ 884      6C6500
+ 885              	.LASF28:
+ 886 0131 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
+ 886      73657273 
+ 886      5C646161 
+ 886      6E695C44 
+ 886      6F63756D 
+ 887 015e 20436F64 		.ascii	" Code.cydsn\000"
+ 887      652E6379 
+ 887      64736E00 
  888              	.LASF8:
- 889 0187 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 23
+
+
+ 889 016a 756E7369 		.ascii	"unsigned int\000"
  889      676E6564 
  889      20696E74 
  889      00
  890              	.LASF24:
- 891 0194 5449415F 		.ascii	"TIA_Init\000"
+ 891 0177 5449415F 		.ascii	"TIA_Init\000"
  891      496E6974 
  891      00
  892              	.LASF7:
- 893 019d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 893 0180 6C6F6E67 		.ascii	"long long unsigned int\000"
  893      206C6F6E 
  893      6720756E 
  893      7369676E 
  893      65642069 
  894              	.LASF17:
- 895 01b4 5449415F 		.ascii	"TIA_Stop\000"
+ 895 0197 5449415F 		.ascii	"TIA_Stop\000"
  895      53746F70 
  895      00
  896              	.LASF30:
- 897 01bd 5449415F 		.ascii	"TIA_initVar\000"
+ 897 01a0 5449415F 		.ascii	"TIA_initVar\000"
  897      696E6974 
  897      56617200 
  898              	.LASF15:
- 899 01c9 73697A65 		.ascii	"sizetype\000"
+ 899 01ac 73697A65 		.ascii	"sizetype\000"
  899      74797065 
  899      00
  900              	.LASF6:
- 901 01d2 6C6F6E67 		.ascii	"long long int\000"
+ 901 01b5 6C6F6E67 		.ascii	"long long int\000"
  901      206C6F6E 
  901      6720696E 
  901      7400
  902              	.LASF11:
- 903 01e0 63686172 		.ascii	"char\000"
+ 903 01c3 63686172 		.ascii	"char\000"
  903      00
  904              	.LASF2:
- 905 01e5 73686F72 		.ascii	"short int\000"
+ 905 01c8 73686F72 		.ascii	"short int\000"
  905      7420696E 
  905      7400
  906              	.LASF22:
- 907 01ef 5449415F 		.ascii	"TIA_SetCapFB\000"
+ 907 01d2 5449415F 		.ascii	"TIA_SetCapFB\000"
  907      53657443 
  907      61704642 
  907      00
  908              	.LASF21:
- 909 01fc 7265735F 		.ascii	"res_feedback\000"
+ 909 01df 7265735F 		.ascii	"res_feedback\000"
  909      66656564 
  909      6261636B 
  909      00
  910              	.LASF23:
- 911 0209 6361705F 		.ascii	"cap_feedback\000"
+ 911 01ec 6361705F 		.ascii	"cap_feedback\000"
  911      66656564 
  911      6261636B 
  911      00
  912              	.LASF4:
- 913 0216 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccdYusEI.s 			page 24
-
-
+ 913 01f9 6C6F6E67 		.ascii	"long int\000"
  913      20696E74 
  913      00
+ARM GAS  C:\Users\daani\AppData\Local\Temp\cc5NV5lU.s 			page 24
+
+
  914              	.LASF14:
- 915 021f 6C6F6E67 		.ascii	"long double\000"
+ 915 0202 6C6F6E67 		.ascii	"long double\000"
  915      20646F75 
  915      626C6500 
  916              	.LASF0:
- 917 022b 7369676E 		.ascii	"signed char\000"
+ 917 020e 7369676E 		.ascii	"signed char\000"
  917      65642063 
  917      68617200 
  918              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Final Code.cyprj
-# Date: Fri, 15 Sep 2017 05:55:58 GMT
+# Component constraints for C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Final Code.cyprj
+# Date: Tue, 10 Oct 2017 12:48:36 GMT
