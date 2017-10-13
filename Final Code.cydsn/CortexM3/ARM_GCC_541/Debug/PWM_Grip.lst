@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
   28:Generated_Source\PSoC5/PWM_Grip.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
   29:Generated_Source\PSoC5/PWM_Grip.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWM_Grip.c **** #endif /* PWM_Grip_PWMUDB_genblk1_ctrlreg__REMOVED */
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 2
 
 
   31:Generated_Source\PSoC5/PWM_Grip.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
   85:Generated_Source\PSoC5/PWM_Grip.c **** {
   86:Generated_Source\PSoC5/PWM_Grip.c ****     #if (PWM_Grip_UsingFixedFunction || PWM_Grip_UseControl)
   87:Generated_Source\PSoC5/PWM_Grip.c ****         uint8 ctrl;
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 3
 
 
   88:Generated_Source\PSoC5/PWM_Grip.c ****     #endif /* (PWM_Grip_UsingFixedFunction || PWM_Grip_UseControl) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  142:Generated_Source\PSoC5/PWM_Grip.c ****             PWM_Grip_WriteCompare2(PWM_Grip_INIT_COMPARE_VALUE2);
  143:Generated_Source\PSoC5/PWM_Grip.c ****         #endif /* (PWM_Grip_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWM_Grip.c **** 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 4
 
 
  145:Generated_Source\PSoC5/PWM_Grip.c ****         #if (PWM_Grip_KillModeMinTime)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  199:Generated_Source\PSoC5/PWM_Grip.c **** void PWM_Grip_Enable(void) 
  200:Generated_Source\PSoC5/PWM_Grip.c **** {
   28              		.loc 1 200 0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 5
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 5
 
 
   29              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  230:Generated_Source\PSoC5/PWM_Grip.c **** *  has no effect on the operation of the PWM
  231:Generated_Source\PSoC5/PWM_Grip.c **** *
  232:Generated_Source\PSoC5/PWM_Grip.c **** *******************************************************************************/
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 6
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 6
 
 
  233:Generated_Source\PSoC5/PWM_Grip.c **** void PWM_Grip_Stop(void) 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  261:Generated_Source\PSoC5/PWM_Grip.c ****         *
  262:Generated_Source\PSoC5/PWM_Grip.c ****         * Return:
  263:Generated_Source\PSoC5/PWM_Grip.c ****         *  None
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 7
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 7
 
 
  264:Generated_Source\PSoC5/PWM_Grip.c ****         *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  318:Generated_Source\PSoC5/PWM_Grip.c ****         * Parameters:
  319:Generated_Source\PSoC5/PWM_Grip.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWM_Grip.c ****         *                defined in the H file as input arguments.
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 8
 
 
  321:Generated_Source\PSoC5/PWM_Grip.c ****         *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  375:Generated_Source\PSoC5/PWM_Grip.c ****     #endif /*PWM_Grip_CompareMode2SW */
  376:Generated_Source\PSoC5/PWM_Grip.c **** 
  377:Generated_Source\PSoC5/PWM_Grip.c **** #endif /* UseOneCompareMode */
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 9
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 9
 
 
  378:Generated_Source\PSoC5/PWM_Grip.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  407:Generated_Source\PSoC5/PWM_Grip.c ****     }
  408:Generated_Source\PSoC5/PWM_Grip.c **** 
  409:Generated_Source\PSoC5/PWM_Grip.c **** 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 10
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 10
 
 
  410:Generated_Source\PSoC5/PWM_Grip.c ****     /*******************************************************************************
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  134              	.LFB7:
  435:Generated_Source\PSoC5/PWM_Grip.c **** 
  436:Generated_Source\PSoC5/PWM_Grip.c ****     #if (PWM_Grip_UseStatus)
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 11
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 11
 
 
  437:Generated_Source\PSoC5/PWM_Grip.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  485:Generated_Source\PSoC5/PWM_Grip.c ****         CY_SET_REG16(PWM_Grip_PERIOD_LSB_PTR, (uint16)period);
  486:Generated_Source\PSoC5/PWM_Grip.c ****     #else
  487:Generated_Source\PSoC5/PWM_Grip.c ****         CY_SET_REG16(PWM_Grip_PERIOD_LSB_PTR, period);
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 12
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 12
 
 
  141              		.loc 1 487 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  164              		@ link register save eliminated.
  165              	.LVL2:
  519:Generated_Source\PSoC5/PWM_Grip.c ****         #if(PWM_Grip_UsingFixedFunction)
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 13
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 13
 
 
  520:Generated_Source\PSoC5/PWM_Grip.c ****             CY_SET_REG16(PWM_Grip_COMPARE1_LSB_PTR, (uint16)compare);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  555:Generated_Source\PSoC5/PWM_Grip.c ****     void PWM_Grip_WriteCompare1(uint16 compare) \
  556:Generated_Source\PSoC5/PWM_Grip.c ****                                         
  557:Generated_Source\PSoC5/PWM_Grip.c ****     {
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 14
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 14
 
 
  558:Generated_Source\PSoC5/PWM_Grip.c ****         #if(PWM_Grip_UsingFixedFunction)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  612:Generated_Source\PSoC5/PWM_Grip.c ****     void PWM_Grip_WriteDeadTime(uint8 deadtime) 
  613:Generated_Source\PSoC5/PWM_Grip.c ****     {
  614:Generated_Source\PSoC5/PWM_Grip.c ****         /* If using the Dead Band 1-255 mode then just write the register */
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 15
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 15
 
 
  615:Generated_Source\PSoC5/PWM_Grip.c ****         #if(!PWM_Grip_DeadBand2_4)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  669:Generated_Source\PSoC5/PWM_Grip.c ****     /*******************************************************************************
  670:Generated_Source\PSoC5/PWM_Grip.c ****     * Function Name: PWM_Grip_SetInterruptMode
  671:Generated_Source\PSoC5/PWM_Grip.c ****     ********************************************************************************
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 16
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 16
 
 
  672:Generated_Source\PSoC5/PWM_Grip.c ****     *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  701:Generated_Source\PSoC5/PWM_Grip.c ****     *  uint8 : Current status register value. The status register bits are:
  702:Generated_Source\PSoC5/PWM_Grip.c ****     *  [7:6] : Unused(0)
  703:Generated_Source\PSoC5/PWM_Grip.c ****     *  [5]   : Kill event output
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 17
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 17
 
 
  704:Generated_Source\PSoC5/PWM_Grip.c ****     *  [4]   : FIFO not empty
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  733:Generated_Source\PSoC5/PWM_Grip.c ****     * Return:
  734:Generated_Source\PSoC5/PWM_Grip.c ****     *  uint8 : Current control register value
  735:Generated_Source\PSoC5/PWM_Grip.c ****     *
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 18
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 18
 
 
  736:Generated_Source\PSoC5/PWM_Grip.c ****     *******************************************************************************/
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  764:Generated_Source\PSoC5/PWM_Grip.c ****     *******************************************************************************/
  765:Generated_Source\PSoC5/PWM_Grip.c ****     void PWM_Grip_WriteControlRegister(uint8 control) 
  766:Generated_Source\PSoC5/PWM_Grip.c ****     {
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 19
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 19
 
 
  261              		.loc 1 766 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  290              		@ link register save eliminated.
  792:Generated_Source\PSoC5/PWM_Grip.c ****         return (CY_GET_REG16(PWM_Grip_CAPTURE_LSB_PTR));
  291              		.loc 1 792 0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 20
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 20
 
 
  292 0000 014B     		ldr	r3, .L32
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  340              		.thumb
  341              		.thumb_func
  342              		.type	PWM_Grip_Init, %function
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 21
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 21
 
 
  343              	PWM_Grip_Init:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  167:Generated_Source\PSoC5/PWM_Grip.c ****             /* Use the interrupt output of the status register for IRQ output */
  388              		.loc 1 167 0
  389 0044 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 22
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 22
 
 
  390              	.LVL14:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  437 0010 1A70     		strb	r2, [r3]
  438              	.L43:
   63:Generated_Source\PSoC5/PWM_Grip.c **** 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 23
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 23
 
 
  439              		.loc 1 63 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  465 0002 1888     		ldrh	r0, [r3]
  822:Generated_Source\PSoC5/PWM_Grip.c ****         #endif /* (PWM_Grip_UsingFixedFunction) */
  823:Generated_Source\PSoC5/PWM_Grip.c ****     }
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 24
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 24
 
 
  466              		.loc 1 823 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  860:Generated_Source\PSoC5/PWM_Grip.c ****     *
  861:Generated_Source\PSoC5/PWM_Grip.c ****     *******************************************************************************/
  862:Generated_Source\PSoC5/PWM_Grip.c ****     uint16 PWM_Grip_ReadCompare2(void) 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 25
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 25
 
 
  863:Generated_Source\PSoC5/PWM_Grip.c ****     {
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  509              		.text
  510              	.Letext0:
  511              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 26
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 26
 
 
  512              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
@@ -1509,25 +1509,25 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  517 0006 00000000 		.4byte	.Ldebug_abbrev0
  518 000a 04       		.byte	0x4
  519 000b 01       		.uleb128 0x1
- 520 000c F9000000 		.4byte	.LASF43
+ 520 000c 4F010000 		.4byte	.LASF43
  521 0010 0C       		.byte	0xc
- 522 0011 17030000 		.4byte	.LASF44
- 523 0015 CF010000 		.4byte	.LASF45
+ 522 0011 34030000 		.4byte	.LASF44
+ 523 0015 9F000000 		.4byte	.LASF45
  524 0019 00000000 		.4byte	.Ldebug_ranges0+0
  525 001d 00000000 		.4byte	0
  526 0021 00000000 		.4byte	.Ldebug_line0
  527 0025 02       		.uleb128 0x2
  528 0026 01       		.byte	0x1
  529 0027 06       		.byte	0x6
- 530 0028 39030000 		.4byte	.LASF0
+ 530 0028 56030000 		.4byte	.LASF0
  531 002c 02       		.uleb128 0x2
  532 002d 01       		.byte	0x1
  533 002e 08       		.byte	0x8
- 534 002f EB000000 		.4byte	.LASF1
+ 534 002f 41010000 		.4byte	.LASF1
  535 0033 02       		.uleb128 0x2
  536 0034 02       		.byte	0x2
  537 0035 05       		.byte	0x5
- 538 0036 D9020000 		.4byte	.LASF2
+ 538 0036 F6020000 		.4byte	.LASF2
  539 003a 02       		.uleb128 0x2
  540 003b 02       		.byte	0x2
  541 003c 07       		.byte	0x7
@@ -1535,19 +1535,19 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  543 0041 02       		.uleb128 0x2
  544 0042 04       		.byte	0x4
  545 0043 05       		.byte	0x5
- 546 0044 FD020000 		.4byte	.LASF4
+ 546 0044 1A030000 		.4byte	.LASF4
  547 0048 02       		.uleb128 0x2
  548 0049 04       		.byte	0x4
  549 004a 07       		.byte	0x7
- 550 004b 9A010000 		.4byte	.LASF5
+ 550 004b F0010000 		.4byte	.LASF5
  551 004f 02       		.uleb128 0x2
  552 0050 08       		.byte	0x8
  553 0051 05       		.byte	0x5
- 554 0052 BD020000 		.4byte	.LASF6
+ 554 0052 DA020000 		.4byte	.LASF6
  555 0056 02       		.uleb128 0x2
  556 0057 08       		.byte	0x8
  557 0058 07       		.byte	0x7
- 558 0059 C0000000 		.4byte	.LASF7
+ 558 0059 16010000 		.4byte	.LASF7
  559 005d 03       		.uleb128 0x3
  560 005e 04       		.byte	0x4
  561 005f 05       		.byte	0x5
@@ -1555,34 +1555,34 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  563 0064 02       		.uleb128 0x2
  564 0065 04       		.byte	0x4
  565 0066 07       		.byte	0x7
- 566 0067 51020000 		.4byte	.LASF8
+ 566 0067 6E020000 		.4byte	.LASF8
  567 006b 04       		.uleb128 0x4
- 568 006c AC010000 		.4byte	.LASF9
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 27
+ 568 006c 02020000 		.4byte	.LASF9
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 27
 
 
  569 0070 02       		.byte	0x2
  570 0071 9201     		.2byte	0x192
  571 0073 2C000000 		.4byte	0x2c
  572 0077 04       		.uleb128 0x4
- 573 0078 1D020000 		.4byte	.LASF10
+ 573 0078 3A020000 		.4byte	.LASF10
  574 007c 02       		.byte	0x2
  575 007d 9301     		.2byte	0x193
  576 007f 3A000000 		.4byte	0x3a
  577 0083 02       		.uleb128 0x2
  578 0084 04       		.byte	0x4
  579 0085 04       		.byte	0x4
- 580 0086 B2000000 		.4byte	.LASF11
+ 580 0086 08010000 		.4byte	.LASF11
  581 008a 02       		.uleb128 0x2
  582 008b 08       		.byte	0x8
  583 008c 04       		.byte	0x4
- 584 008d C8010000 		.4byte	.LASF12
+ 584 008d 1E020000 		.4byte	.LASF12
  585 0091 02       		.uleb128 0x2
  586 0092 01       		.byte	0x1
  587 0093 08       		.byte	0x8
- 588 0094 06030000 		.4byte	.LASF13
+ 588 0094 23030000 		.4byte	.LASF13
  589 0098 04       		.uleb128 0x4
- 590 0099 87010000 		.4byte	.LASF14
+ 590 0099 DD010000 		.4byte	.LASF14
  591 009d 02       		.byte	0x2
  592 009e 3C02     		.2byte	0x23c
  593 00a0 A4000000 		.4byte	0xa4
@@ -1598,13 +1598,13 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  603 00ba 02       		.uleb128 0x2
  604 00bb 08       		.byte	0x8
  605 00bc 04       		.byte	0x4
- 606 00bd 0B030000 		.4byte	.LASF16
+ 606 00bd 28030000 		.4byte	.LASF16
  607 00c1 02       		.uleb128 0x2
  608 00c2 04       		.byte	0x4
  609 00c3 07       		.byte	0x7
- 610 00c4 B4020000 		.4byte	.LASF17
+ 610 00c4 D1020000 		.4byte	.LASF17
  611 00c8 06       		.uleb128 0x6
- 612 00c9 8A020000 		.4byte	.LASF18
+ 612 00c9 A7020000 		.4byte	.LASF18
  613 00cd 01       		.byte	0x1
  614 00ce C7       		.byte	0xc7
  615 00cf 00000000 		.4byte	.LFB2
@@ -1612,18 +1612,18 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  617 00d7 01       		.uleb128 0x1
  618 00d8 9C       		.byte	0x9c
  619 00d9 06       		.uleb128 0x6
- 620 00da BA010000 		.4byte	.LASF19
+ 620 00da 10020000 		.4byte	.LASF19
  621 00de 01       		.byte	0x1
  622 00df E9       		.byte	0xe9
  623 00e0 00000000 		.4byte	.LFB3
  624 00e4 10000000 		.4byte	.LFE3-.LFB3
  625 00e8 01       		.uleb128 0x1
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 28
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 28
 
 
  626 00e9 9C       		.byte	0x9c
  627 00ea 07       		.uleb128 0x7
- 628 00eb 24020000 		.4byte	.LASF20
+ 628 00eb 41020000 		.4byte	.LASF20
  629 00ef 01       		.byte	0x1
  630 00f0 9301     		.2byte	0x193
  631 00f2 00000000 		.4byte	.LFB4
@@ -1632,7 +1632,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  634 00fb 9C       		.byte	0x9c
  635 00fc 0F010000 		.4byte	0x10f
  636 0100 08       		.uleb128 0x8
- 637 0101 B8000000 		.4byte	.LASF22
+ 637 0101 0E010000 		.4byte	.LASF22
  638 0105 01       		.byte	0x1
  639 0106 9301     		.2byte	0x193
  640 0108 77000000 		.4byte	0x77
@@ -1640,7 +1640,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  642 010d 50       		.byte	0x50
  643 010e 00       		.byte	0
  644 010f 09       		.uleb128 0x9
- 645 0110 08020000 		.4byte	.LASF28
+ 645 0110 25020000 		.4byte	.LASF28
  646 0114 01       		.byte	0x1
  647 0115 A901     		.2byte	0x1a9
  648 0117 77000000 		.4byte	0x77
@@ -1649,7 +1649,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  651 0123 01       		.uleb128 0x1
  652 0124 9C       		.byte	0x9c
  653 0125 07       		.uleb128 0x7
- 654 0126 9F020000 		.4byte	.LASF21
+ 654 0126 BC020000 		.4byte	.LASF21
  655 012a 01       		.byte	0x1
  656 012b E201     		.2byte	0x1e2
  657 012d 00000000 		.4byte	.LFB7
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  680 0161 06000000 		.4byte	.LASF25
  681 0165 01       		.byte	0x1
  682 0166 0402     		.2byte	0x204
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 29
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 29
 
 
  683 0168 77000000 		.4byte	0x77
@@ -1686,7 +1686,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  685 016d 50       		.byte	0x50
  686 016e 00       		.byte	0
  687 016f 07       		.uleb128 0x7
- 688 0170 E3020000 		.4byte	.LASF26
+ 688 0170 00030000 		.4byte	.LASF26
  689 0174 01       		.byte	0x1
  690 0175 AC02     		.2byte	0x2ac
  691 0177 00000000 		.4byte	.LFB9
@@ -1695,7 +1695,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  694 0180 9C       		.byte	0x9c
  695 0181 94010000 		.4byte	0x194
  696 0185 08       		.uleb128 0x8
- 697 0186 CB020000 		.4byte	.LASF27
+ 697 0186 E8020000 		.4byte	.LASF27
  698 018a 01       		.byte	0x1
  699 018b AC02     		.2byte	0x2ac
  700 018d 6B000000 		.4byte	0x6b
@@ -1703,7 +1703,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  702 0192 50       		.byte	0x50
  703 0193 00       		.byte	0
  704 0194 09       		.uleb128 0x9
- 705 0195 72030000 		.4byte	.LASF29
+ 705 0195 8F030000 		.4byte	.LASF29
  706 0199 01       		.byte	0x1
  707 019a C702     		.2byte	0x2c7
  708 019c 6B000000 		.4byte	0x6b
@@ -1722,7 +1722,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  721 01bf 9C       		.byte	0x9c
  722 01c0 D3010000 		.4byte	0x1d3
  723 01c4 0B       		.uleb128 0xb
- 724 01c5 83020000 		.4byte	.LASF35
+ 724 01c5 A0020000 		.4byte	.LASF35
  725 01c9 01       		.byte	0x1
  726 01ca E302     		.2byte	0x2e3
  727 01cc 6B000000 		.4byte	0x6b
@@ -1738,11 +1738,11 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  737 01e3 01       		.uleb128 0x1
  738 01e4 9C       		.byte	0x9c
  739 01e5 F8010000 		.4byte	0x1f8
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 30
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 30
 
 
  740 01e9 08       		.uleb128 0x8
- 741 01ea B2010000 		.4byte	.LASF31
+ 741 01ea 08020000 		.4byte	.LASF31
  742 01ee 01       		.byte	0x1
  743 01ef FD02     		.2byte	0x2fd
  744 01f1 6B000000 		.4byte	0x6b
@@ -1759,7 +1759,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  755 020c 01       		.uleb128 0x1
  756 020d 9C       		.byte	0x9c
  757 020e 07       		.uleb128 0x7
- 758 020f 9F000000 		.4byte	.LASF33
+ 758 020f F5000000 		.4byte	.LASF33
  759 0213 01       		.byte	0x1
  760 0214 C501     		.2byte	0x1c5
  761 0216 00000000 		.4byte	.LFB6
@@ -1775,7 +1775,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  771 0232 94010000 		.4byte	0x194
  772 0236 00       		.byte	0
  773 0237 0D       		.uleb128 0xd
- 774 0238 8C010000 		.4byte	.LASF34
+ 774 0238 E2010000 		.4byte	.LASF34
  775 023c 01       		.byte	0x1
  776 023d 54       		.byte	0x54
  777 023e 00000000 		.4byte	.LFB1
@@ -1784,13 +1784,13 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  780 0247 9C       		.byte	0x9c
  781 0248 D8020000 		.4byte	0x2d8
  782 024c 0E       		.uleb128 0xe
- 783 024d 9A020000 		.4byte	.LASF36
+ 783 024d B7020000 		.4byte	.LASF36
  784 0251 01       		.byte	0x1
  785 0252 57       		.byte	0x57
  786 0253 6B000000 		.4byte	0x6b
  787 0257 00000000 		.4byte	.LLST0
  788 025b 0E       		.uleb128 0xe
- 789 025c 45030000 		.4byte	.LASF37
+ 789 025c 62030000 		.4byte	.LASF37
  790 0260 01       		.byte	0x1
  791 0261 5D       		.byte	0x5d
  792 0262 6B000000 		.4byte	0x6b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  794 026a 0F       		.uleb128 0xf
  795 026b 2E000000 		.4byte	.LVL10
  796 026f EA000000 		.4byte	0xea
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 31
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 31
 
 
  797 0273 7F020000 		.4byte	0x27f
@@ -1852,13 +1852,13 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  845 02d3 0E020000 		.4byte	0x20e
  846 02d7 00       		.byte	0
  847 02d8 0D       		.uleb128 0xd
- 848 02d9 74020000 		.4byte	.LASF38
+ 848 02d9 91020000 		.4byte	.LASF38
  849 02dd 01       		.byte	0x1
  850 02de 37       		.byte	0x37
  851 02df 00000000 		.4byte	.LFB0
  852 02e3 1C000000 		.4byte	.LFE0-.LFB0
  853 02e7 01       		.uleb128 0x1
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 32
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 32
 
 
  854 02e8 9C       		.byte	0x9c
@@ -1871,7 +1871,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  861 02fb C8000000 		.4byte	0xc8
  862 02ff 00       		.byte	0
  863 0300 09       		.uleb128 0x9
- 864 0301 5D030000 		.4byte	.LASF39
+ 864 0301 7A030000 		.4byte	.LASF39
  865 0305 01       		.byte	0x1
  866 0306 3003     		.2byte	0x330
  867 0308 77000000 		.4byte	0x77
@@ -1880,7 +1880,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  870 0314 01       		.uleb128 0x1
  871 0315 9C       		.byte	0x9c
  872 0316 09       		.uleb128 0x9
- 873 0317 D7000000 		.4byte	.LASF40
+ 873 0317 2D010000 		.4byte	.LASF40
  874 031b 01       		.byte	0x1
  875 031c 7403     		.2byte	0x374
  876 031e 77000000 		.4byte	0x77
@@ -1897,13 +1897,13 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  887 0338 03       		.byte	0x3
  888 0339 00000000 		.4byte	PWM_Grip_initVar
  889 033d 12       		.uleb128 0x12
- 890 033e 3A020000 		.4byte	.LASF41
- 891 0342 3A020000 		.4byte	.LASF41
+ 890 033e 57020000 		.4byte	.LASF41
+ 891 0342 57020000 		.4byte	.LASF41
  892 0346 03       		.byte	0x3
  893 0347 7D       		.byte	0x7d
  894 0348 12       		.uleb128 0x12
- 895 0349 5E020000 		.4byte	.LASF42
- 896 034d 5E020000 		.4byte	.LASF42
+ 895 0349 7B020000 		.4byte	.LASF42
+ 896 034d 7B020000 		.4byte	.LASF42
  897 0351 03       		.byte	0x3
  898 0352 7E       		.byte	0x7e
  899 0353 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  908 0006 0B       		.uleb128 0xb
  909 0007 03       		.uleb128 0x3
  910 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 33
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 33
 
 
  911 0009 1B       		.uleb128 0x1b
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  965 003f 00       		.byte	0
  966 0040 3F       		.uleb128 0x3f
  967 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 34
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 34
 
 
  968 0042 03       		.uleb128 0x3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1022 007a 02       		.uleb128 0x2
  1023 007b 18       		.uleb128 0x18
  1024 007c 00       		.byte	0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 35
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 35
 
 
  1025 007d 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1079 00b5 34       		.uleb128 0x34
  1080 00b6 00       		.byte	0
  1081 00b7 03       		.uleb128 0x3
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 36
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 36
 
 
  1082 00b8 0E       		.uleb128 0xe
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1136 00f1 49       		.uleb128 0x49
  1137 00f2 13       		.uleb128 0x13
  1138 00f3 02       		.uleb128 0x2
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 37
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 37
 
 
  1139 00f4 17       		.uleb128 0x17
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1193 012f 0B       		.uleb128 0xb
  1194 0130 00       		.byte	0
  1195 0131 00       		.byte	0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 38
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 38
 
 
  1196 0132 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1250 0084 0C000000 		.4byte	.LFE14-.LFB14
  1251 0088 00000000 		.4byte	.LFB15
  1252 008c 0C000000 		.4byte	.LFE15-.LFB15
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 39
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 39
 
 
  1253 0090 00000000 		.4byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1299      5F696E69 
  1299      74566172 
  1299      00
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 40
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 40
 
 
  1300              	.LASF32:
@@ -2374,213 +2374,215 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 1
  1311      5F577269 
  1311      7465436F 
  1311      6D706172 
- 1312              	.LASF33:
- 1313 009f 50574D5F 		.ascii	"PWM_Grip_ClearFIFO\000"
- 1313      47726970 
- 1313      5F436C65 
- 1313      61724649 
- 1313      464F00
- 1314              	.LASF11:
- 1315 00b2 666C6F61 		.ascii	"float\000"
- 1315      7400
- 1316              	.LASF22:
- 1317 00b8 636F756E 		.ascii	"counter\000"
- 1317      74657200 
- 1318              	.LASF7:
- 1319 00c0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1319      206C6F6E 
- 1319      6720756E 
- 1319      7369676E 
- 1319      65642069 
- 1320              	.LASF40:
- 1321 00d7 50574D5F 		.ascii	"PWM_Grip_ReadPeriod\000"
- 1321      47726970 
- 1321      5F526561 
- 1321      64506572 
- 1321      696F6400 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 41
+ 1312              	.LASF45:
+ 1313 009f 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 1313      73657273 
+ 1313      5C446161 
+ 1313      6E697368 
+ 1313      20426F6F 
+ 1314 00ce 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 1314      6F432044 
+ 1314      65736967 
+ 1314      6E5C4543 
+ 1314      45333039 
+ 1315              	.LASF33:
+ 1316 00f5 50574D5F 		.ascii	"PWM_Grip_ClearFIFO\000"
+ 1316      47726970 
+ 1316      5F436C65 
+ 1316      61724649 
+ 1316      464F00
+ 1317              	.LASF11:
+ 1318 0108 666C6F61 		.ascii	"float\000"
+ 1318      7400
+ 1319              	.LASF22:
+ 1320 010e 636F756E 		.ascii	"counter\000"
+ 1320      74657200 
+ 1321              	.LASF7:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 41
 
 
- 1322              	.LASF1:
- 1323 00eb 756E7369 		.ascii	"unsigned char\000"
- 1323      676E6564 
- 1323      20636861 
- 1323      7200
- 1324              	.LASF43:
- 1325 00f9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1325      43313120 
- 1325      352E342E 
- 1325      31203230 
- 1325      31363036 
- 1326 012c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1326      20726576 
- 1326      6973696F 
- 1326      6E203233 
- 1326      37373135 
- 1327 015f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1327      66756E63 
- 1327      74696F6E 
- 1327      2D736563 
- 1327      74696F6E 
- 1328              	.LASF14:
- 1329 0187 72656738 		.ascii	"reg8\000"
- 1329      00
- 1330              	.LASF34:
- 1331 018c 50574D5F 		.ascii	"PWM_Grip_Init\000"
- 1331      47726970 
- 1331      5F496E69 
- 1331      7400
- 1332              	.LASF5:
- 1333 019a 6C6F6E67 		.ascii	"long unsigned int\000"
- 1333      20756E73 
- 1333      69676E65 
- 1333      6420696E 
- 1333      7400
- 1334              	.LASF9:
- 1335 01ac 75696E74 		.ascii	"uint8\000"
- 1335      3800
- 1336              	.LASF31:
- 1337 01b2 636F6E74 		.ascii	"control\000"
- 1337      726F6C00 
- 1338              	.LASF19:
- 1339 01ba 50574D5F 		.ascii	"PWM_Grip_Stop\000"
- 1339      47726970 
- 1339      5F53746F 
- 1339      7000
- 1340              	.LASF12:
- 1341 01c8 646F7562 		.ascii	"double\000"
- 1341      6C6500
- 1342              	.LASF45:
- 1343 01cf 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
- 1343      73657273 
- 1343      5C646161 
- 1343      6E695C44 
- 1343      6F63756D 
- 1344 01fc 20436F64 		.ascii	" Code.cydsn\000"
- 1344      652E6379 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 42
+ 1322 0116 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1322      206C6F6E 
+ 1322      6720756E 
+ 1322      7369676E 
+ 1322      65642069 
+ 1323              	.LASF40:
+ 1324 012d 50574D5F 		.ascii	"PWM_Grip_ReadPeriod\000"
+ 1324      47726970 
+ 1324      5F526561 
+ 1324      64506572 
+ 1324      696F6400 
+ 1325              	.LASF1:
+ 1326 0141 756E7369 		.ascii	"unsigned char\000"
+ 1326      676E6564 
+ 1326      20636861 
+ 1326      7200
+ 1327              	.LASF43:
+ 1328 014f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1328      43313120 
+ 1328      352E342E 
+ 1328      31203230 
+ 1328      31363036 
+ 1329 0182 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1329      20726576 
+ 1329      6973696F 
+ 1329      6E203233 
+ 1329      37373135 
+ 1330 01b5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1330      66756E63 
+ 1330      74696F6E 
+ 1330      2D736563 
+ 1330      74696F6E 
+ 1331              	.LASF14:
+ 1332 01dd 72656738 		.ascii	"reg8\000"
+ 1332      00
+ 1333              	.LASF34:
+ 1334 01e2 50574D5F 		.ascii	"PWM_Grip_Init\000"
+ 1334      47726970 
+ 1334      5F496E69 
+ 1334      7400
+ 1335              	.LASF5:
+ 1336 01f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1336      20756E73 
+ 1336      69676E65 
+ 1336      6420696E 
+ 1336      7400
+ 1337              	.LASF9:
+ 1338 0202 75696E74 		.ascii	"uint8\000"
+ 1338      3800
+ 1339              	.LASF31:
+ 1340 0208 636F6E74 		.ascii	"control\000"
+ 1340      726F6C00 
+ 1341              	.LASF19:
+ 1342 0210 50574D5F 		.ascii	"PWM_Grip_Stop\000"
+ 1342      47726970 
+ 1342      5F53746F 
+ 1342      7000
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 42
 
 
- 1344      64736E00 
+ 1343              	.LASF12:
+ 1344 021e 646F7562 		.ascii	"double\000"
+ 1344      6C6500
  1345              	.LASF28:
- 1346 0208 50574D5F 		.ascii	"PWM_Grip_ReadCounter\000"
+ 1346 0225 50574D5F 		.ascii	"PWM_Grip_ReadCounter\000"
  1346      47726970 
  1346      5F526561 
  1346      64436F75 
  1346      6E746572 
  1347              	.LASF10:
- 1348 021d 75696E74 		.ascii	"uint16\000"
+ 1348 023a 75696E74 		.ascii	"uint16\000"
  1348      313600
  1349              	.LASF20:
- 1350 0224 50574D5F 		.ascii	"PWM_Grip_WriteCounter\000"
+ 1350 0241 50574D5F 		.ascii	"PWM_Grip_WriteCounter\000"
  1350      47726970 
  1350      5F577269 
  1350      7465436F 
  1350      756E7465 
  1351              	.LASF41:
- 1352 023a 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1352 0257 4379456E 		.ascii	"CyEnterCriticalSection\000"
  1352      74657243 
  1352      72697469 
  1352      63616C53 
  1352      65637469 
  1353              	.LASF8:
- 1354 0251 756E7369 		.ascii	"unsigned int\000"
+ 1354 026e 756E7369 		.ascii	"unsigned int\000"
  1354      676E6564 
  1354      20696E74 
  1354      00
  1355              	.LASF42:
- 1356 025e 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1356 027b 43794578 		.ascii	"CyExitCriticalSection\000"
  1356      69744372 
  1356      69746963 
  1356      616C5365 
  1356      6374696F 
  1357              	.LASF38:
- 1358 0274 50574D5F 		.ascii	"PWM_Grip_Start\000"
+ 1358 0291 50574D5F 		.ascii	"PWM_Grip_Start\000"
  1358      47726970 
  1358      5F537461 
  1358      727400
  1359              	.LASF35:
- 1360 0283 72657375 		.ascii	"result\000"
+ 1360 02a0 72657375 		.ascii	"result\000"
  1360      6C7400
  1361              	.LASF18:
- 1362 028a 50574D5F 		.ascii	"PWM_Grip_Enable\000"
+ 1362 02a7 50574D5F 		.ascii	"PWM_Grip_Enable\000"
  1362      47726970 
  1362      5F456E61 
  1362      626C6500 
  1363              	.LASF36:
- 1364 029a 6374726C 		.ascii	"ctrl\000"
+ 1364 02b7 6374726C 		.ascii	"ctrl\000"
  1364      00
  1365              	.LASF21:
- 1366 029f 50574D5F 		.ascii	"PWM_Grip_WritePeriod\000"
+ 1366 02bc 50574D5F 		.ascii	"PWM_Grip_WritePeriod\000"
  1366      47726970 
  1366      5F577269 
  1366      74655065 
  1366      72696F64 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 43
+
+
  1367              	.LASF17:
- 1368 02b4 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 43
-
-
+ 1368 02d1 73697A65 		.ascii	"sizetype\000"
  1368      74797065 
  1368      00
  1369              	.LASF6:
- 1370 02bd 6C6F6E67 		.ascii	"long long int\000"
+ 1370 02da 6C6F6E67 		.ascii	"long long int\000"
  1370      206C6F6E 
  1370      6720696E 
  1370      7400
  1371              	.LASF27:
- 1372 02cb 696E7465 		.ascii	"interruptMode\000"
+ 1372 02e8 696E7465 		.ascii	"interruptMode\000"
  1372      72727570 
  1372      744D6F64 
  1372      6500
  1373              	.LASF2:
- 1374 02d9 73686F72 		.ascii	"short int\000"
+ 1374 02f6 73686F72 		.ascii	"short int\000"
  1374      7420696E 
  1374      7400
  1375              	.LASF26:
- 1376 02e3 50574D5F 		.ascii	"PWM_Grip_SetInterruptMode\000"
+ 1376 0300 50574D5F 		.ascii	"PWM_Grip_SetInterruptMode\000"
  1376      47726970 
  1376      5F536574 
  1376      496E7465 
  1376      72727570 
  1377              	.LASF4:
- 1378 02fd 6C6F6E67 		.ascii	"long int\000"
+ 1378 031a 6C6F6E67 		.ascii	"long int\000"
  1378      20696E74 
  1378      00
  1379              	.LASF13:
- 1380 0306 63686172 		.ascii	"char\000"
+ 1380 0323 63686172 		.ascii	"char\000"
  1380      00
  1381              	.LASF16:
- 1382 030b 6C6F6E67 		.ascii	"long double\000"
+ 1382 0328 6C6F6E67 		.ascii	"long double\000"
  1382      20646F75 
  1382      626C6500 
  1383              	.LASF44:
- 1384 0317 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_Grip.c\000"
+ 1384 0334 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_Grip.c\000"
  1384      72617465 
  1384      645F536F 
  1384      75726365 
  1384      5C50536F 
  1385              	.LASF0:
- 1386 0339 7369676E 		.ascii	"signed char\000"
+ 1386 0356 7369676E 		.ascii	"signed char\000"
  1386      65642063 
  1386      68617200 
  1387              	.LASF37:
- 1388 0345 50574D5F 		.ascii	"PWM_Grip_interruptState\000"
+ 1388 0362 50574D5F 		.ascii	"PWM_Grip_interruptState\000"
  1388      47726970 
  1388      5F696E74 
  1388      65727275 
  1388      70745374 
  1389              	.LASF39:
- 1390 035d 50574D5F 		.ascii	"PWM_Grip_ReadCompare\000"
+ 1390 037a 50574D5F 		.ascii	"PWM_Grip_ReadCompare\000"
  1390      47726970 
  1390      5F526561 
  1390      64436F6D 
  1390      70617265 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccNiBlys.s 			page 44
+
+
  1391              	.LASF29:
- 1392 0372 50574D5F 		.ascii	"PWM_Grip_ReadStatusRegister\000"
-ARM GAS  C:\Users\daani\AppData\Local\Temp\ccJffV2B.s 			page 44
-
-
+ 1392 038f 50574D5F 		.ascii	"PWM_Grip_ReadStatusRegister\000"
  1392      47726970 
  1392      5F526561 
  1392      64537461 

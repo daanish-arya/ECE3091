@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
   28:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** *
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
   59              		.align	2
   60              		.global	Timer_ULTRASONIC_F2_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 3
 
 
   62              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
   87:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c ****         #if(!Timer_ULTRASONIC_F2_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c ****             Timer_ULTRASONIC_F2_WriteControlRegister(Timer_ULTRASONIC_F2_backup.TimerControlRegiste
   83              		.loc 1 88 0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 4
 
 
   84 0010 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  115:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c ****         if(Timer_ULTRASONIC_F2_CTRL_ENABLE == (Timer_ULTRASONIC_F2_CONTROL & Timer_ULTRASONIC_F2_CT
  112              		.loc 1 116 0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 5
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  133:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** * Function Name: Timer_ULTRASONIC_F2_Wakeup
  134:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** *
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 6
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_ULTRASONIC_F2_PM.c **** * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  184              	Timer_ULTRASONIC_F2_backup:
  185 0000 00000000 		.space	6
  185      0000
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 7
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 7
 
 
  186              		.text
@@ -372,25 +372,25 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  194 0006 00000000 		.4byte	.Ldebug_abbrev0
  195 000a 04       		.byte	0x4
  196 000b 01       		.uleb128 0x1
- 197 000c A6000000 		.4byte	.LASF32
+ 197 000c FC000000 		.4byte	.LASF32
  198 0010 0C       		.byte	0xc
- 199 0011 CE010000 		.4byte	.LASF33
- 200 0015 77010000 		.4byte	.LASF34
+ 199 0011 EB010000 		.4byte	.LASF33
+ 200 0015 69000000 		.4byte	.LASF34
  201 0019 00000000 		.4byte	.Ldebug_ranges0+0
  202 001d 00000000 		.4byte	0
  203 0021 00000000 		.4byte	.Ldebug_line0
  204 0025 02       		.uleb128 0x2
  205 0026 01       		.byte	0x1
  206 0027 06       		.byte	0x6
- 207 0028 20030000 		.4byte	.LASF0
+ 207 0028 3D030000 		.4byte	.LASF0
  208 002c 02       		.uleb128 0x2
  209 002d 01       		.byte	0x1
  210 002e 08       		.byte	0x8
- 211 002f 98000000 		.4byte	.LASF1
+ 211 002f EE000000 		.4byte	.LASF1
  212 0033 02       		.uleb128 0x2
  213 0034 02       		.byte	0x2
  214 0035 05       		.byte	0x5
- 215 0036 B0010000 		.4byte	.LASF2
+ 215 0036 CD010000 		.4byte	.LASF2
  216 003a 02       		.uleb128 0x2
  217 003b 02       		.byte	0x2
  218 003c 07       		.byte	0x7
@@ -398,19 +398,19 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  220 0041 02       		.uleb128 0x2
  221 0042 04       		.byte	0x4
  222 0043 05       		.byte	0x5
- 223 0044 0B030000 		.4byte	.LASF4
+ 223 0044 28030000 		.4byte	.LASF4
  224 0048 02       		.uleb128 0x2
  225 0049 04       		.byte	0x4
  226 004a 07       		.byte	0x7
- 227 004b 39010000 		.4byte	.LASF5
+ 227 004b 8F010000 		.4byte	.LASF5
  228 004f 02       		.uleb128 0x2
  229 0050 08       		.byte	0x8
  230 0051 05       		.byte	0x5
- 231 0052 7A020000 		.4byte	.LASF6
+ 231 0052 97020000 		.4byte	.LASF6
  232 0056 02       		.uleb128 0x2
  233 0057 08       		.byte	0x8
  234 0058 07       		.byte	0x7
- 235 0059 FE010000 		.4byte	.LASF7
+ 235 0059 1B020000 		.4byte	.LASF7
  236 005d 03       		.uleb128 0x3
  237 005e 04       		.byte	0x4
  238 005f 05       		.byte	0x5
@@ -418,34 +418,34 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
  242 0066 07       		.byte	0x7
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 8
 
 
- 243 0067 C1010000 		.4byte	.LASF8
+ 243 0067 DE010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
- 245 006c 4B010000 		.4byte	.LASF9
+ 245 006c A1010000 		.4byte	.LASF9
  246 0070 02       		.byte	0x2
  247 0071 9201     		.2byte	0x192
  248 0073 2C000000 		.4byte	0x2c
  249 0077 04       		.uleb128 0x4
- 250 0078 BA010000 		.4byte	.LASF10
+ 250 0078 D7010000 		.4byte	.LASF10
  251 007c 02       		.byte	0x2
  252 007d 9301     		.2byte	0x193
  253 007f 3A000000 		.4byte	0x3a
  254 0083 02       		.uleb128 0x2
  255 0084 04       		.byte	0x4
  256 0085 04       		.byte	0x4
- 257 0086 69000000 		.4byte	.LASF11
+ 257 0086 BF000000 		.4byte	.LASF11
  258 008a 02       		.uleb128 0x2
  259 008b 08       		.byte	0x8
  260 008c 04       		.byte	0x4
- 261 008d 70010000 		.4byte	.LASF12
+ 261 008d C6010000 		.4byte	.LASF12
  262 0091 02       		.uleb128 0x2
  263 0092 01       		.byte	0x1
  264 0093 08       		.byte	0x8
- 265 0094 AA020000 		.4byte	.LASF13
+ 265 0094 C7020000 		.4byte	.LASF13
  266 0098 04       		.uleb128 0x4
- 267 0099 34010000 		.4byte	.LASF14
+ 267 0099 8A010000 		.4byte	.LASF14
  268 009d 02       		.byte	0x2
  269 009e 3C02     		.2byte	0x23c
  270 00a0 A4000000 		.4byte	0xa4
@@ -454,11 +454,11 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  273 00a9 02       		.uleb128 0x2
  274 00aa 08       		.byte	0x8
  275 00ab 04       		.byte	0x4
- 276 00ac 14030000 		.4byte	.LASF15
+ 276 00ac 31030000 		.4byte	.LASF15
  277 00b0 02       		.uleb128 0x2
  278 00b1 04       		.byte	0x4
  279 00b2 07       		.byte	0x7
- 280 00b3 56020000 		.4byte	.LASF16
+ 280 00b3 73020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
  282 00b8 06       		.byte	0x6
  283 00b9 03       		.byte	0x3
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  296 00d2 77000000 		.4byte	0x77
  297 00d6 02       		.byte	0x2
  298 00d7 07       		.uleb128 0x7
- 299 00d8 46030000 		.4byte	.LASF19
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 9
+ 299 00d8 63030000 		.4byte	.LASF19
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 9
 
 
  300 00dc 03       		.byte	0x3
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  302 00de 6B000000 		.4byte	0x6b
  303 00e2 04       		.byte	0x4
  304 00e3 07       		.uleb128 0x7
- 305 00e4 59030000 		.4byte	.LASF20
+ 305 00e4 76030000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  314 00f6 53       		.byte	0x53
  315 00f7 B7000000 		.4byte	0xb7
  316 00fb 09       		.uleb128 0x9
- 317 00fc 51010000 		.4byte	.LASF22
+ 317 00fc A7010000 		.4byte	.LASF22
  318 0100 01       		.byte	0x1
  319 0101 2B       		.byte	0x2b
  320 0102 00000000 		.4byte	.LFB0
@@ -514,7 +514,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  330 011e B7010000 		.4byte	0x1b7
  331 0122 00       		.byte	0
  332 0123 09       		.uleb128 0x9
- 333 0124 88020000 		.4byte	.LASF23
+ 333 0124 A5020000 		.4byte	.LASF23
  334 0128 01       		.byte	0x1
  335 0129 4D       		.byte	0x4d
  336 012a 00000000 		.4byte	.LFB1
@@ -530,7 +530,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  346 0146 CD010000 		.4byte	0x1cd
  347 014a 00       		.byte	0
  348 014b 09       		.uleb128 0x9
- 349 014c 2C030000 		.4byte	.LASF24
+ 349 014c 49030000 		.4byte	.LASF24
  350 0150 01       		.byte	0x1
  351 0151 70       		.byte	0x70
  352 0152 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
  356 015c 73010000 		.4byte	0x173
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 10
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 10
 
 
  357 0160 0A       		.uleb128 0xa
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  362 016e FB000000 		.4byte	0xfb
  363 0172 00       		.byte	0
  364 0173 09       		.uleb128 0x9
- 365 0174 5F020000 		.4byte	.LASF25
+ 365 0174 7C020000 		.4byte	.LASF25
  366 0178 01       		.byte	0x1
  367 0179 96       		.byte	0x96
  368 017a 00000000 		.4byte	.LFB3
@@ -573,36 +573,36 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  386 01a7 03       		.byte	0x3
  387 01a8 00000000 		.4byte	Timer_ULTRASONIC_F2_backup
  388 01ac 0C       		.uleb128 0xc
- 389 01ad 36020000 		.4byte	.LASF26
- 390 01b1 36020000 		.4byte	.LASF26
+ 389 01ad 53020000 		.4byte	.LASF26
+ 390 01b1 53020000 		.4byte	.LASF26
  391 01b5 03       		.byte	0x3
  392 01b6 69       		.byte	0x69
  393 01b7 0C       		.uleb128 0xc
- 394 01b8 CA020000 		.4byte	.LASF27
- 395 01bc CA020000 		.4byte	.LASF27
+ 394 01b8 E7020000 		.4byte	.LASF27
+ 395 01bc E7020000 		.4byte	.LASF27
  396 01c0 03       		.byte	0x3
  397 01c1 63       		.byte	0x63
  398 01c2 0C       		.uleb128 0xc
- 399 01c3 15020000 		.4byte	.LASF28
- 400 01c7 15020000 		.4byte	.LASF28
+ 399 01c3 32020000 		.4byte	.LASF28
+ 400 01c7 32020000 		.4byte	.LASF28
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
- 404 01ce 6F000000 		.4byte	.LASF29
- 405 01d2 6F000000 		.4byte	.LASF29
+ 404 01ce C5000000 		.4byte	.LASF29
+ 405 01d2 C5000000 		.4byte	.LASF29
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
- 409 01d9 F2020000 		.4byte	.LASF30
- 410 01dd F2020000 		.4byte	.LASF30
+ 409 01d9 0F030000 		.4byte	.LASF30
+ 410 01dd 0F030000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
  413 01e3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 11
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 11
 
 
- 414 01e4 AF020000 		.4byte	.LASF31
- 415 01e8 AF020000 		.4byte	.LASF31
+ 414 01e4 CC020000 		.4byte	.LASF31
+ 415 01e8 CC020000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
  417 01ed 8B       		.byte	0x8b
  418 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 12
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 12
 
 
  471 0032 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
  527 006a 19       		.uleb128 0x19
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 13
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 13
 
 
  528 006b 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
  584 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 14
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 14
 
 
  585 00a7 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  627              	.LASF35:
  628 0032 54696D65 		.ascii	"Timer_ULTRASONIC_F2_backup\000"
  628      725F554C 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 15
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 15
 
 
  628      54524153 
@@ -854,179 +854,181 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 1
  632 0060 54696D65 		.ascii	"TimerUdb\000"
  632      72556462 
  632      00
- 633              	.LASF11:
- 634 0069 666C6F61 		.ascii	"float\000"
- 634      7400
- 635              	.LASF29:
- 636 006f 54696D65 		.ascii	"Timer_ULTRASONIC_F2_WriteControlRegister\000"
- 636      725F554C 
- 636      54524153 
- 636      4F4E4943 
- 636      5F46325F 
- 637              	.LASF1:
- 638 0098 756E7369 		.ascii	"unsigned char\000"
- 638      676E6564 
- 638      20636861 
- 638      7200
- 639              	.LASF32:
- 640 00a6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 640      43313120 
- 640      352E342E 
- 640      31203230 
- 640      31363036 
- 641 00d9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 641      20726576 
- 641      6973696F 
- 641      6E203233 
- 641      37373135 
- 642 010c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 642      66756E63 
- 642      74696F6E 
- 642      2D736563 
- 642      74696F6E 
- 643              	.LASF14:
- 644 0134 72656738 		.ascii	"reg8\000"
- 644      00
- 645              	.LASF5:
- 646 0139 6C6F6E67 		.ascii	"long unsigned int\000"
- 646      20756E73 
- 646      69676E65 
- 646      6420696E 
- 646      7400
- 647              	.LASF9:
- 648 014b 75696E74 		.ascii	"uint8\000"
- 648      3800
- 649              	.LASF22:
- 650 0151 54696D65 		.ascii	"Timer_ULTRASONIC_F2_SaveConfig\000"
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 16
+ 633              	.LASF34:
+ 634 0069 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 634      73657273 
+ 634      5C446161 
+ 634      6E697368 
+ 634      20426F6F 
+ 635 0098 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 635      6F432044 
+ 635      65736967 
+ 635      6E5C4543 
+ 635      45333039 
+ 636              	.LASF11:
+ 637 00bf 666C6F61 		.ascii	"float\000"
+ 637      7400
+ 638              	.LASF29:
+ 639 00c5 54696D65 		.ascii	"Timer_ULTRASONIC_F2_WriteControlRegister\000"
+ 639      725F554C 
+ 639      54524153 
+ 639      4F4E4943 
+ 639      5F46325F 
+ 640              	.LASF1:
+ 641 00ee 756E7369 		.ascii	"unsigned char\000"
+ 641      676E6564 
+ 641      20636861 
+ 641      7200
+ 642              	.LASF32:
+ 643 00fc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 643      43313120 
+ 643      352E342E 
+ 643      31203230 
+ 643      31363036 
+ 644 012f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 644      20726576 
+ 644      6973696F 
+ 644      6E203233 
+ 644      37373135 
+ 645 0162 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 645      66756E63 
+ 645      74696F6E 
+ 645      2D736563 
+ 645      74696F6E 
+ 646              	.LASF14:
+ 647 018a 72656738 		.ascii	"reg8\000"
+ 647      00
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 16
 
 
- 650      725F554C 
- 650      54524153 
- 650      4F4E4943 
- 650      5F46325F 
- 651              	.LASF12:
- 652 0170 646F7562 		.ascii	"double\000"
- 652      6C6500
- 653              	.LASF34:
- 654 0177 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
- 654      73657273 
- 654      5C646161 
- 654      6E695C44 
- 654      6F63756D 
- 655 01a4 20436F64 		.ascii	" Code.cydsn\000"
- 655      652E6379 
- 655      64736E00 
+ 648              	.LASF5:
+ 649 018f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 649      20756E73 
+ 649      69676E65 
+ 649      6420696E 
+ 649      7400
+ 650              	.LASF9:
+ 651 01a1 75696E74 		.ascii	"uint8\000"
+ 651      3800
+ 652              	.LASF22:
+ 653 01a7 54696D65 		.ascii	"Timer_ULTRASONIC_F2_SaveConfig\000"
+ 653      725F554C 
+ 653      54524153 
+ 653      4F4E4943 
+ 653      5F46325F 
+ 654              	.LASF12:
+ 655 01c6 646F7562 		.ascii	"double\000"
+ 655      6C6500
  656              	.LASF2:
- 657 01b0 73686F72 		.ascii	"short int\000"
+ 657 01cd 73686F72 		.ascii	"short int\000"
  657      7420696E 
  657      7400
  658              	.LASF10:
- 659 01ba 75696E74 		.ascii	"uint16\000"
+ 659 01d7 75696E74 		.ascii	"uint16\000"
  659      313600
  660              	.LASF8:
- 661 01c1 756E7369 		.ascii	"unsigned int\000"
+ 661 01de 756E7369 		.ascii	"unsigned int\000"
  661      676E6564 
  661      20696E74 
  661      00
  662              	.LASF33:
- 663 01ce 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_ULTRASONIC_F2_PM.c\000"
+ 663 01eb 47656E65 		.ascii	"Generated_Source\\PSoC5\\Timer_ULTRASONIC_F2_PM.c\000"
  663      72617465 
  663      645F536F 
  663      75726365 
  663      5C50536F 
  664              	.LASF7:
- 665 01fe 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 665 021b 6C6F6E67 		.ascii	"long long unsigned int\000"
  665      206C6F6E 
  665      6720756E 
  665      7369676E 
  665      65642069 
  666              	.LASF28:
- 667 0215 54696D65 		.ascii	"Timer_ULTRASONIC_F2_WriteCounter\000"
+ 667 0232 54696D65 		.ascii	"Timer_ULTRASONIC_F2_WriteCounter\000"
  667      725F554C 
  667      54524153 
  667      4F4E4943 
  667      5F46325F 
  668              	.LASF26:
- 669 0236 54696D65 		.ascii	"Timer_ULTRASONIC_F2_ReadCounter\000"
+ 669 0253 54696D65 		.ascii	"Timer_ULTRASONIC_F2_ReadCounter\000"
  669      725F554C 
  669      54524153 
  669      4F4E4943 
  669      5F46325F 
  670              	.LASF16:
- 671 0256 73697A65 		.ascii	"sizetype\000"
+ 671 0273 73697A65 		.ascii	"sizetype\000"
  671      74797065 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 17
+
+
  671      00
  672              	.LASF25:
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 17
-
-
- 673 025f 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Wakeup\000"
+ 673 027c 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Wakeup\000"
  673      725F554C 
  673      54524153 
  673      4F4E4943 
  673      5F46325F 
  674              	.LASF6:
- 675 027a 6C6F6E67 		.ascii	"long long int\000"
+ 675 0297 6C6F6E67 		.ascii	"long long int\000"
  675      206C6F6E 
  675      6720696E 
  675      7400
  676              	.LASF23:
- 677 0288 54696D65 		.ascii	"Timer_ULTRASONIC_F2_RestoreConfig\000"
+ 677 02a5 54696D65 		.ascii	"Timer_ULTRASONIC_F2_RestoreConfig\000"
  677      725F554C 
  677      54524153 
  677      4F4E4943 
  677      5F46325F 
  678              	.LASF13:
- 679 02aa 63686172 		.ascii	"char\000"
+ 679 02c7 63686172 		.ascii	"char\000"
  679      00
  680              	.LASF31:
- 681 02af 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Enable\000"
+ 681 02cc 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Enable\000"
  681      725F554C 
  681      54524153 
  681      4F4E4943 
  681      5F46325F 
  682              	.LASF27:
- 683 02ca 54696D65 		.ascii	"Timer_ULTRASONIC_F2_ReadControlRegister\000"
+ 683 02e7 54696D65 		.ascii	"Timer_ULTRASONIC_F2_ReadControlRegister\000"
  683      725F554C 
  683      54524153 
  683      4F4E4943 
  683      5F46325F 
  684              	.LASF30:
- 685 02f2 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Stop\000"
+ 685 030f 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Stop\000"
  685      725F554C 
  685      54524153 
  685      4F4E4943 
  685      5F46325F 
  686              	.LASF4:
- 687 030b 6C6F6E67 		.ascii	"long int\000"
+ 687 0328 6C6F6E67 		.ascii	"long int\000"
  687      20696E74 
  687      00
  688              	.LASF15:
- 689 0314 6C6F6E67 		.ascii	"long double\000"
+ 689 0331 6C6F6E67 		.ascii	"long double\000"
  689      20646F75 
  689      626C6500 
  690              	.LASF0:
- 691 0320 7369676E 		.ascii	"signed char\000"
+ 691 033d 7369676E 		.ascii	"signed char\000"
  691      65642063 
  691      68617200 
  692              	.LASF24:
- 693 032c 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Sleep\000"
+ 693 0349 54696D65 		.ascii	"Timer_ULTRASONIC_F2_Sleep\000"
  693      725F554C 
  693      54524153 
  693      4F4E4943 
  693      5F46325F 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccn8uvri.s 			page 18
+
+
  694              	.LASF19:
- 695 0346 496E7465 		.ascii	"InterruptMaskValue\000"
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cc9JTRsc.s 			page 18
-
-
+ 695 0363 496E7465 		.ascii	"InterruptMaskValue\000"
  695      72727570 
  695      744D6173 
  695      6B56616C 
  695      756500
  696              	.LASF20:
- 697 0359 54696D65 		.ascii	"TimerControlRegister\000"
+ 697 0376 54696D65 		.ascii	"TimerControlRegister\000"
  697      72436F6E 
  697      74726F6C 
  697      52656769 

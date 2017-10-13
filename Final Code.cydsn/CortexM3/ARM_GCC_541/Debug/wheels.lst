@@ -1,0 +1,2134 @@
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"wheels.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_fmul
+  20              		.global	__aeabi_fdiv
+  21              		.global	__aeabi_f2uiz
+  22              		.section	.text.LeftMotor,"ax",%progbits
+  23              		.align	2
+  24              		.global	LeftMotor
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	LeftMotor, %function
+  28              	LeftMotor:
+  29              	.LFB63:
+  30              		.file 1 "wheels.c"
+   1:wheels.c      **** /* ========================================
+   2:wheels.c      ****  *
+   3:wheels.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:wheels.c      ****  * All Rights Reserved
+   5:wheels.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:wheels.c      ****  *
+   7:wheels.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:wheels.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:wheels.c      ****  *
+  10:wheels.c      ****  * ========================================
+  11:wheels.c      **** */
+  12:wheels.c      **** #include <project.h>
+  13:wheels.c      **** #include <stdlib.h>
+  14:wheels.c      **** 
+  15:wheels.c      **** float LeftDelta = 290.0; // Ratio to convert shaft count to distance
+  16:wheels.c      **** 
+  17:wheels.c      **** void LeftMotor(float speed, int direction)
+  18:wheels.c      **** {
+  31              		.loc 1 18 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              	.LVL0:
+  36 0000 38B5     		push	{r3, r4, r5, lr}
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 3, -16
+  39              		.cfi_offset 4, -12
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 2
+
+
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 0D46     		mov	r5, r1
+  19:wheels.c      ****         speed = (65535*speed)/100.0;      // speed as duty cycle
+  43              		.loc 1 19 0
+  44 0004 0949     		ldr	r1, .L3
+  45              	.LVL1:
+  46 0006 FFF7FEFF 		bl	__aeabi_fmul
+  47              	.LVL2:
+  48 000a 0949     		ldr	r1, .L3+4
+  49 000c FFF7FEFF 		bl	__aeabi_fdiv
+  50              	.LVL3:
+  51 0010 0446     		mov	r4, r0
+  52              	.LVL4:
+  20:wheels.c      ****         M1_Direction_Write(direction);  // write 1 or 0 for direction
+  53              		.loc 1 20 0
+  54 0012 E8B2     		uxtb	r0, r5
+  55              	.LVL5:
+  56 0014 FFF7FEFF 		bl	M1_Direction_Write
+  57              	.LVL6:
+  21:wheels.c      ****         PWM_M1_WriteCompare(speed);     // write speed in terms of duty cycle// start left PWM
+  58              		.loc 1 21 0
+  59 0018 2046     		mov	r0, r4
+  60 001a FFF7FEFF 		bl	__aeabi_f2uiz
+  61              	.LVL7:
+  62 001e 80B2     		uxth	r0, r0
+  63 0020 FFF7FEFF 		bl	PWM_M1_WriteCompare
+  64              	.LVL8:
+  22:wheels.c      ****         PWM_M1_Start();
+  65              		.loc 1 22 0
+  66 0024 FFF7FEFF 		bl	PWM_M1_Start
+  67              	.LVL9:
+  68 0028 38BD     		pop	{r3, r4, r5, pc}
+  69              	.LVL10:
+  70              	.L4:
+  71 002a 00BF     		.align	2
+  72              	.L3:
+  73 002c 00FF7F47 		.word	1199570688
+  74 0030 0000C842 		.word	1120403456
+  75              		.cfi_endproc
+  76              	.LFE63:
+  77              		.size	LeftMotor, .-LeftMotor
+  78              		.section	.text.RightMotor,"ax",%progbits
+  79              		.align	2
+  80              		.global	RightMotor
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	RightMotor, %function
+  84              	RightMotor:
+  85              	.LFB64:
+  23:wheels.c      **** }
+  24:wheels.c      **** 
+  25:wheels.c      **** void RightMotor(float speed, int direction)
+  26:wheels.c      **** {
+  86              		.loc 1 26 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 3
+
+
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90              	.LVL11:
+  91 0000 38B5     		push	{r3, r4, r5, lr}
+  92              		.cfi_def_cfa_offset 16
+  93              		.cfi_offset 3, -16
+  94              		.cfi_offset 4, -12
+  95              		.cfi_offset 5, -8
+  96              		.cfi_offset 14, -4
+  97 0002 0D46     		mov	r5, r1
+  27:wheels.c      ****         speed = (65535*speed)/100.0;      // speed as duty cycle
+  98              		.loc 1 27 0
+  99 0004 0949     		ldr	r1, .L7
+ 100              	.LVL12:
+ 101 0006 FFF7FEFF 		bl	__aeabi_fmul
+ 102              	.LVL13:
+ 103 000a 0949     		ldr	r1, .L7+4
+ 104 000c FFF7FEFF 		bl	__aeabi_fdiv
+ 105              	.LVL14:
+ 106 0010 0446     		mov	r4, r0
+ 107              	.LVL15:
+  28:wheels.c      ****         M2_Direction_Write(direction);  // write 1 or 0 for direction
+ 108              		.loc 1 28 0
+ 109 0012 E8B2     		uxtb	r0, r5
+ 110              	.LVL16:
+ 111 0014 FFF7FEFF 		bl	M2_Direction_Write
+ 112              	.LVL17:
+  29:wheels.c      ****         PWM_M2_WriteCompare(speed);     // write speed in terms of duty cycle
+ 113              		.loc 1 29 0
+ 114 0018 2046     		mov	r0, r4
+ 115 001a FFF7FEFF 		bl	__aeabi_f2uiz
+ 116              	.LVL18:
+ 117 001e 80B2     		uxth	r0, r0
+ 118 0020 FFF7FEFF 		bl	PWM_M2_WriteCompare
+ 119              	.LVL19:
+  30:wheels.c      ****         PWM_M2_Start();                 // start left PWM   
+ 120              		.loc 1 30 0
+ 121 0024 FFF7FEFF 		bl	PWM_M2_Start
+ 122              	.LVL20:
+ 123 0028 38BD     		pop	{r3, r4, r5, pc}
+ 124              	.LVL21:
+ 125              	.L8:
+ 126 002a 00BF     		.align	2
+ 127              	.L7:
+ 128 002c 00FF7F47 		.word	1199570688
+ 129 0030 0000C842 		.word	1120403456
+ 130              		.cfi_endproc
+ 131              	.LFE64:
+ 132              		.size	RightMotor, .-RightMotor
+ 133              		.global	__aeabi_i2f
+ 134              		.global	__aeabi_fcmpge
+ 135              		.section	.text.Turn,"ax",%progbits
+ 136              		.align	2
+ 137              		.global	Turn
+ 138              		.thumb
+ 139              		.thumb_func
+ 140              		.type	Turn, %function
+ 141              	Turn:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 4
+
+
+ 142              	.LFB65:
+  31:wheels.c      **** }
+  32:wheels.c      **** 
+  33:wheels.c      **** 
+  34:wheels.c      **** void Turn(float speed, float Distance, int Direction)
+  35:wheels.c      **** {
+ 143              		.loc 1 35 0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              	.LVL22:
+ 148 0000 70B5     		push	{r4, r5, r6, lr}
+ 149              		.cfi_def_cfa_offset 16
+ 150              		.cfi_offset 4, -16
+ 151              		.cfi_offset 5, -12
+ 152              		.cfi_offset 6, -8
+ 153              		.cfi_offset 14, -4
+ 154 0002 0546     		mov	r5, r0
+ 155 0004 0E46     		mov	r6, r1
+ 156 0006 1446     		mov	r4, r2
+  36:wheels.c      ****     QuadDec_Left_SetCounter(0);
+ 157              		.loc 1 36 0
+ 158 0008 0020     		movs	r0, #0
+ 159              	.LVL23:
+ 160 000a FFF7FEFF 		bl	QuadDec_Left_SetCounter
+ 161              	.LVL24:
+  37:wheels.c      ****     QuadDec_Right_SetCounter(0);
+ 162              		.loc 1 37 0
+ 163 000e 0020     		movs	r0, #0
+ 164 0010 FFF7FEFF 		bl	QuadDec_Right_SetCounter
+ 165              	.LVL25:
+ 166              	.L10:
+ 167              	.LBB2:
+  38:wheels.c      **** 
+  39:wheels.c      ****     for(;;)
+  40:wheels.c      ****     {
+  41:wheels.c      **** 		LeftMotor(speed,~Direction);
+ 168              		.loc 1 41 0
+ 169 0014 E143     		mvns	r1, r4
+ 170 0016 2846     		mov	r0, r5
+ 171 0018 FFF7FEFF 		bl	LeftMotor
+ 172              	.LVL26:
+  42:wheels.c      ****     	RightMotor(speed,Direction);
+ 173              		.loc 1 42 0
+ 174 001c 2146     		mov	r1, r4
+ 175 001e 2846     		mov	r0, r5
+ 176 0020 FFF7FEFF 		bl	RightMotor
+ 177              	.LVL27:
+  43:wheels.c      ****     	
+  44:wheels.c      ****         float tempCount = fabs((float)QuadDec_Left_GetCounter() / LeftDelta);
+ 178              		.loc 1 44 0
+ 179 0024 FFF7FEFF 		bl	QuadDec_Left_GetCounter
+ 180              	.LVL28:
+ 181 0028 FFF7FEFF 		bl	__aeabi_i2f
+ 182              	.LVL29:
+ 183 002c 074B     		ldr	r3, .L14
+ 184 002e 1968     		ldr	r1, [r3]	@ float
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 5
+
+
+ 185 0030 FFF7FEFF 		bl	__aeabi_fdiv
+ 186              	.LVL30:
+ 187 0034 20F00040 		bic	r0, r0, #-2147483648
+ 188              	.LVL31:
+  45:wheels.c      **** 		
+  46:wheels.c      ****     	if ( tempCount >= Distance)
+ 189              		.loc 1 46 0
+ 190 0038 3146     		mov	r1, r6
+ 191 003a FFF7FEFF 		bl	__aeabi_fcmpge
+ 192              	.LVL32:
+ 193 003e 0028     		cmp	r0, #0
+ 194 0040 E8D0     		beq	.L10
+  47:wheels.c      ****     	{
+  48:wheels.c      **** 			PWM_M1_Stop();                 // stop left PWM
+ 195              		.loc 1 48 0
+ 196 0042 FFF7FEFF 		bl	PWM_M1_Stop
+ 197              	.LVL33:
+  49:wheels.c      ****     		PWM_M2_Stop();                 // stop right PWM
+ 198              		.loc 1 49 0
+ 199 0046 FFF7FEFF 		bl	PWM_M2_Stop
+ 200              	.LVL34:
+ 201 004a 70BD     		pop	{r4, r5, r6, pc}
+ 202              	.LVL35:
+ 203              	.L15:
+ 204              		.align	2
+ 205              	.L14:
+ 206 004c 00000000 		.word	.LANCHOR0
+ 207              	.LBE2:
+ 208              		.cfi_endproc
+ 209              	.LFE65:
+ 210              		.size	Turn, .-Turn
+ 211              		.global	__aeabi_fcmplt
+ 212              		.section	.text.MoveStraight,"ax",%progbits
+ 213              		.align	2
+ 214              		.global	MoveStraight
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	MoveStraight, %function
+ 218              	MoveStraight:
+ 219              	.LFB66:
+  50:wheels.c      ****             break;
+  51:wheels.c      ****     	}
+  52:wheels.c      ****     }
+  53:wheels.c      ****     
+  54:wheels.c      **** }
+  55:wheels.c      **** 
+  56:wheels.c      **** 
+  57:wheels.c      **** void MoveStraight(float FinalSpeed, float Distance, int Direction)
+  58:wheels.c      **** {
+ 220              		.loc 1 58 0
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              	.LVL36:
+ 225 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 226              		.cfi_def_cfa_offset 24
+ 227              		.cfi_offset 3, -24
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 6
+
+
+ 228              		.cfi_offset 4, -20
+ 229              		.cfi_offset 5, -16
+ 230              		.cfi_offset 6, -12
+ 231              		.cfi_offset 7, -8
+ 232              		.cfi_offset 14, -4
+ 233 0002 0546     		mov	r5, r0
+ 234 0004 0F46     		mov	r7, r1
+ 235 0006 1446     		mov	r4, r2
+ 236              	.LVL37:
+  59:wheels.c      ****     float LeftSpeed = 30 - 0.15;
+  60:wheels.c      ****     float RightSpeed = 30;
+  61:wheels.c      ****     QuadDec_Right_SetCounter(0);
+ 237              		.loc 1 61 0
+ 238 0008 0020     		movs	r0, #0
+ 239              	.LVL38:
+ 240 000a FFF7FEFF 		bl	QuadDec_Right_SetCounter
+ 241              	.LVL39:
+  62:wheels.c      ****     QuadDec_Left_SetCounter(0);
+ 242              		.loc 1 62 0
+ 243 000e 0020     		movs	r0, #0
+ 244 0010 FFF7FEFF 		bl	QuadDec_Left_SetCounter
+ 245              	.LVL40:
+  63:wheels.c      ****     LeftMotor(LeftSpeed,Direction);
+ 246              		.loc 1 63 0
+ 247 0014 2146     		mov	r1, r4
+ 248 0016 2548     		ldr	r0, .L23
+ 249 0018 FFF7FEFF 		bl	LeftMotor
+ 250              	.LVL41:
+  64:wheels.c      **** 	RightMotor(RightSpeed,Direction);
+ 251              		.loc 1 64 0
+ 252 001c 2146     		mov	r1, r4
+ 253 001e 2448     		ldr	r0, .L23+4
+ 254 0020 FFF7FEFF 		bl	RightMotor
+ 255              	.LVL42:
+  65:wheels.c      ****     
+  66:wheels.c      ****     while(QuadDec_Left_GetCounter() < 5 * LeftDelta)   // Wait for couts of Shaft Encoder to settle
+ 256              		.loc 1 66 0
+ 257 0024 07E0     		b	.L17
+ 258              	.L18:
+  67:wheels.c      ****     {
+  68:wheels.c      **** 		LeftMotor(LeftSpeed,Direction);
+ 259              		.loc 1 68 0
+ 260 0026 2146     		mov	r1, r4
+ 261 0028 2048     		ldr	r0, .L23
+ 262 002a FFF7FEFF 		bl	LeftMotor
+ 263              	.LVL43:
+  69:wheels.c      **** 		RightMotor(RightSpeed,Direction);
+ 264              		.loc 1 69 0
+ 265 002e 2146     		mov	r1, r4
+ 266 0030 1F48     		ldr	r0, .L23+4
+ 267 0032 FFF7FEFF 		bl	RightMotor
+ 268              	.LVL44:
+ 269              	.L17:
+  66:wheels.c      ****     {
+ 270              		.loc 1 66 0
+ 271 0036 FFF7FEFF 		bl	QuadDec_Left_GetCounter
+ 272              	.LVL45:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 7
+
+
+ 273 003a FFF7FEFF 		bl	__aeabi_i2f
+ 274              	.LVL46:
+ 275 003e 0646     		mov	r6, r0
+ 276 0040 1C49     		ldr	r1, .L23+8
+ 277 0042 1D4B     		ldr	r3, .L23+12
+ 278 0044 1868     		ldr	r0, [r3]	@ float
+ 279 0046 FFF7FEFF 		bl	__aeabi_fmul
+ 280              	.LVL47:
+ 281 004a 0146     		mov	r1, r0
+ 282 004c 3046     		mov	r0, r6
+ 283 004e FFF7FEFF 		bl	__aeabi_fcmplt
+ 284              	.LVL48:
+ 285 0052 0028     		cmp	r0, #0
+ 286 0054 E7D1     		bne	.L18
+ 287              	.LVL49:
+ 288              	.L19:
+ 289              	.LBB3:
+  70:wheels.c      ****     }
+  71:wheels.c      ****     
+  72:wheels.c      **** 	for(;;)
+  73:wheels.c      **** 		{        
+  74:wheels.c      ****        
+  75:wheels.c      ****         RightSpeed = FinalSpeed * (float)QuadDec_Left_GetCounter()/ (float)QuadDec_Right_GetCounter
+ 290              		.loc 1 75 0
+ 291 0056 FFF7FEFF 		bl	QuadDec_Left_GetCounter
+ 292              	.LVL50:
+ 293 005a FFF7FEFF 		bl	__aeabi_i2f
+ 294              	.LVL51:
+ 295 005e 2946     		mov	r1, r5
+ 296 0060 FFF7FEFF 		bl	__aeabi_fmul
+ 297              	.LVL52:
+ 298 0064 0646     		mov	r6, r0
+ 299 0066 FFF7FEFF 		bl	QuadDec_Right_GetCounter
+ 300              	.LVL53:
+ 301 006a FFF7FEFF 		bl	__aeabi_i2f
+ 302              	.LVL54:
+ 303 006e 0146     		mov	r1, r0
+ 304 0070 3046     		mov	r0, r6
+ 305 0072 FFF7FEFF 		bl	__aeabi_fdiv
+ 306              	.LVL55:
+  76:wheels.c      ****     	RightMotor(RightSpeed,Direction);
+ 307              		.loc 1 76 0
+ 308 0076 2146     		mov	r1, r4
+ 309 0078 FFF7FEFF 		bl	RightMotor
+ 310              	.LVL56:
+  77:wheels.c      ****     	LeftMotor(FinalSpeed,Direction);
+ 311              		.loc 1 77 0
+ 312 007c 2146     		mov	r1, r4
+ 313 007e 2846     		mov	r0, r5
+ 314 0080 FFF7FEFF 		bl	LeftMotor
+ 315              	.LVL57:
+  78:wheels.c      ****         float tempCount = fabs((float)QuadDec_Left_GetCounter() / LeftDelta);
+ 316              		.loc 1 78 0
+ 317 0084 FFF7FEFF 		bl	QuadDec_Left_GetCounter
+ 318              	.LVL58:
+ 319 0088 FFF7FEFF 		bl	__aeabi_i2f
+ 320              	.LVL59:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 8
+
+
+ 321 008c 0A4B     		ldr	r3, .L23+12
+ 322 008e 1968     		ldr	r1, [r3]	@ float
+ 323 0090 FFF7FEFF 		bl	__aeabi_fdiv
+ 324              	.LVL60:
+ 325 0094 20F00040 		bic	r0, r0, #-2147483648
+ 326              	.LVL61:
+  79:wheels.c      **** 
+  80:wheels.c      ****     	if ( tempCount >= Distance)
+ 327              		.loc 1 80 0
+ 328 0098 3946     		mov	r1, r7
+ 329 009a FFF7FEFF 		bl	__aeabi_fcmpge
+ 330              	.LVL62:
+ 331 009e 0028     		cmp	r0, #0
+ 332 00a0 D9D0     		beq	.L19
+  81:wheels.c      ****     	{
+  82:wheels.c      **** 			PWM_M1_Stop();                 // stop left PWM
+ 333              		.loc 1 82 0
+ 334 00a2 FFF7FEFF 		bl	PWM_M1_Stop
+ 335              	.LVL63:
+  83:wheels.c      ****     		PWM_M2_Stop();                 // stop right PWM
+ 336              		.loc 1 83 0
+ 337 00a6 FFF7FEFF 		bl	PWM_M2_Stop
+ 338              	.LVL64:
+ 339 00aa F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 340              	.LVL65:
+ 341              	.L24:
+ 342              		.align	2
+ 343              	.L23:
+ 344 00ac CDCCEE41 		.word	1106169037
+ 345 00b0 0000F041 		.word	1106247680
+ 346 00b4 0000A040 		.word	1084227584
+ 347 00b8 00000000 		.word	.LANCHOR0
+ 348              	.LBE3:
+ 349              		.cfi_endproc
+ 350              	.LFE66:
+ 351              		.size	MoveStraight, .-MoveStraight
+ 352              		.section	.text.ParallelRobot,"ax",%progbits
+ 353              		.align	2
+ 354              		.global	ParallelRobot
+ 355              		.thumb
+ 356              		.thumb_func
+ 357              		.type	ParallelRobot, %function
+ 358              	ParallelRobot:
+ 359              	.LFB67:
+  84:wheels.c      ****             break;
+  85:wheels.c      ****     	}
+  86:wheels.c      ****            
+  87:wheels.c      **** 		}
+  88:wheels.c      ****    
+  89:wheels.c      **** }
+  90:wheels.c      **** void ParallelRobot() // NOTE: THIS FUNCTION IS OBSOLETE AND WILL NOT WORK.
+  91:wheels.c      ****                      // MICROS NEED TO BE IMPLEMENTED WITH INTERRUPTS
+  92:wheels.c      **** {   
+ 360              		.loc 1 92 0
+ 361              		.cfi_startproc
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 9
+
+
+ 364 0000 10B5     		push	{r4, lr}
+ 365              		.cfi_def_cfa_offset 8
+ 366              		.cfi_offset 4, -8
+ 367              		.cfi_offset 14, -4
+  93:wheels.c      **** //    while (Left_bumper_Read() == 1 || Right_bumper_Read() == 1) 
+  94:wheels.c      **** //    {
+  95:wheels.c      **** //        LeftMotor(50,0);
+  96:wheels.c      **** //        RightMotor(50,0);
+  97:wheels.c      **** //        
+  98:wheels.c      **** //        if (Left_bumper_Read() == 0 && Right_bumper_Read() == 0) 
+  99:wheels.c      **** //        {
+ 100:wheels.c      **** //            PWM_M2_Stop(); // stop left PWM
+ 101:wheels.c      **** //            PWM_M1_Stop(); // stop right PWM
+ 102:wheels.c      **** //            break;
+ 103:wheels.c      **** //        }
+ 104:wheels.c      **** //    }
+ 105:wheels.c      ****     
+ 106:wheels.c      ****     LeftMotor(50,0);
+ 368              		.loc 1 106 0
+ 369 0002 1B4C     		ldr	r4, .L33
+ 370 0004 0021     		movs	r1, #0
+ 371 0006 2046     		mov	r0, r4
+ 372 0008 FFF7FEFF 		bl	LeftMotor
+ 373              	.LVL66:
+ 107:wheels.c      ****     RightMotor(50,0);
+ 374              		.loc 1 107 0
+ 375 000c 0021     		movs	r1, #0
+ 376 000e 2046     		mov	r0, r4
+ 377 0010 FFF7FEFF 		bl	RightMotor
+ 378              	.LVL67:
+ 108:wheels.c      ****     
+ 109:wheels.c      ****         while (Left_bumper_Read() == 0 || Right_bumper_Read() == 0) 
+ 379              		.loc 1 109 0
+ 380 0014 22E0     		b	.L26
+ 381              	.L31:
+ 110:wheels.c      ****     {
+ 111:wheels.c      **** 
+ 112:wheels.c      ****         if (Left_bumper_Read() == 1) 
+ 382              		.loc 1 112 0
+ 383 0016 FFF7FEFF 		bl	Left_bumper_Read
+ 384              	.LVL68:
+ 385 001a 0128     		cmp	r0, #1
+ 386 001c 06D1     		bne	.L27
+ 113:wheels.c      ****         {
+ 114:wheels.c      ****             RightMotor(50,0);
+ 387              		.loc 1 114 0
+ 388 001e 0021     		movs	r1, #0
+ 389 0020 1348     		ldr	r0, .L33
+ 390 0022 FFF7FEFF 		bl	RightMotor
+ 391              	.LVL69:
+ 115:wheels.c      ****             PWM_M1_Stop(); // stop left PWM
+ 392              		.loc 1 115 0
+ 393 0026 FFF7FEFF 		bl	PWM_M1_Stop
+ 394              	.LVL70:
+ 395 002a 17E0     		b	.L26
+ 396              	.L27:
+ 116:wheels.c      ****         }
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 10
+
+
+ 117:wheels.c      ****         
+ 118:wheels.c      ****         else if (Right_bumper_Read() == 1) 
+ 397              		.loc 1 118 0
+ 398 002c FFF7FEFF 		bl	Right_bumper_Read
+ 399              	.LVL71:
+ 400 0030 0128     		cmp	r0, #1
+ 401 0032 06D1     		bne	.L29
+ 119:wheels.c      ****         {
+ 120:wheels.c      ****             LeftMotor(50,0);
+ 402              		.loc 1 120 0
+ 403 0034 0021     		movs	r1, #0
+ 404 0036 0E48     		ldr	r0, .L33
+ 405 0038 FFF7FEFF 		bl	LeftMotor
+ 406              	.LVL72:
+ 121:wheels.c      ****             PWM_M2_Stop(); // stop left PWM
+ 407              		.loc 1 121 0
+ 408 003c FFF7FEFF 		bl	PWM_M2_Stop
+ 409              	.LVL73:
+ 410 0040 0CE0     		b	.L26
+ 411              	.L29:
+ 122:wheels.c      ****         }
+ 123:wheels.c      ****         
+ 124:wheels.c      ****         else if (Left_bumper_Read() == 1 && Right_bumper_Read() == 1) 
+ 412              		.loc 1 124 0
+ 413 0042 FFF7FEFF 		bl	Left_bumper_Read
+ 414              	.LVL74:
+ 415 0046 0128     		cmp	r0, #1
+ 416 0048 08D1     		bne	.L26
+ 417              		.loc 1 124 0 is_stmt 0 discriminator 1
+ 418 004a FFF7FEFF 		bl	Right_bumper_Read
+ 419              	.LVL75:
+ 420 004e 0128     		cmp	r0, #1
+ 421 0050 04D1     		bne	.L26
+ 125:wheels.c      ****         {
+ 126:wheels.c      ****             PWM_M1_Stop(); // stop left PWM
+ 422              		.loc 1 126 0 is_stmt 1
+ 423 0052 FFF7FEFF 		bl	PWM_M1_Stop
+ 424              	.LVL76:
+ 127:wheels.c      ****             PWM_M2_Stop(); // stop right PWM
+ 425              		.loc 1 127 0
+ 426 0056 FFF7FEFF 		bl	PWM_M2_Stop
+ 427              	.LVL77:
+ 128:wheels.c      ****             break;
+ 428              		.loc 1 128 0
+ 429 005a 10BD     		pop	{r4, pc}
+ 430              	.L26:
+ 109:wheels.c      ****     {
+ 431              		.loc 1 109 0
+ 432 005c FFF7FEFF 		bl	Left_bumper_Read
+ 433              	.LVL78:
+ 434 0060 0028     		cmp	r0, #0
+ 435 0062 D8D0     		beq	.L31
+ 109:wheels.c      ****     {
+ 436              		.loc 1 109 0 is_stmt 0 discriminator 1
+ 437 0064 FFF7FEFF 		bl	Right_bumper_Read
+ 438              	.LVL79:
+ 439 0068 0028     		cmp	r0, #0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 11
+
+
+ 440 006a D4D0     		beq	.L31
+ 441 006c 10BD     		pop	{r4, pc}
+ 442              	.L34:
+ 443 006e 00BF     		.align	2
+ 444              	.L33:
+ 445 0070 00004842 		.word	1112014848
+ 446              		.cfi_endproc
+ 447              	.LFE67:
+ 448              		.size	ParallelRobot, .-ParallelRobot
+ 449              		.global	LeftDelta
+ 450              		.data
+ 451              		.align	2
+ 452              		.set	.LANCHOR0,. + 0
+ 453              		.type	LeftDelta, %object
+ 454              		.size	LeftDelta, 4
+ 455              	LeftDelta:
+ 456 0000 00009143 		.word	1133576192
+ 457              		.text
+ 458              	.Letext0:
+ 459              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 460              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 461              		.file 4 "<built-in>"
+ 462              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 463              		.file 6 "Generated_Source\\PSoC5/M1_Direction.h"
+ 464              		.file 7 "Generated_Source\\PSoC5/PWM_M1.h"
+ 465              		.file 8 "Generated_Source\\PSoC5/M2_Direction.h"
+ 466              		.file 9 "Generated_Source\\PSoC5/PWM_M2.h"
+ 467              		.file 10 "Generated_Source\\PSoC5/QuadDec_Left.h"
+ 468              		.file 11 "Generated_Source\\PSoC5/QuadDec_Right.h"
+ 469              		.file 12 "Generated_Source\\PSoC5/Left_bumper.h"
+ 470              		.file 13 "Generated_Source\\PSoC5/Right_bumper.h"
+ 471              		.section	.debug_info,"",%progbits
+ 472              	.Ldebug_info0:
+ 473 0000 33050000 		.4byte	0x533
+ 474 0004 0400     		.2byte	0x4
+ 475 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 476 000a 04       		.byte	0x4
+ 477 000b 01       		.uleb128 0x1
+ 478 000c CE010000 		.4byte	.LASF45
+ 479 0010 0C       		.byte	0xc
+ 480 0011 9F010000 		.4byte	.LASF46
+ 481 0015 49000000 		.4byte	.LASF47
+ 482 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 483 001d 00000000 		.4byte	0
+ 484 0021 00000000 		.4byte	.Ldebug_line0
+ 485 0025 02       		.uleb128 0x2
+ 486 0026 04       		.byte	0x4
+ 487 0027 04       		.byte	0x4
+ 488 0028 B6000000 		.4byte	.LASF0
+ 489 002c 02       		.uleb128 0x2
+ 490 002d 01       		.byte	0x1
+ 491 002e 06       		.byte	0x6
+ 492 002f 0D030000 		.4byte	.LASF1
+ 493 0033 02       		.uleb128 0x2
+ 494 0034 01       		.byte	0x1
+ 495 0035 08       		.byte	0x8
+ 496 0036 CF000000 		.4byte	.LASF2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 12
+
+
+ 497 003a 02       		.uleb128 0x2
+ 498 003b 02       		.byte	0x2
+ 499 003c 05       		.byte	0x5
+ 500 003d 9D020000 		.4byte	.LASF3
+ 501 0041 02       		.uleb128 0x2
+ 502 0042 02       		.byte	0x2
+ 503 0043 07       		.byte	0x7
+ 504 0044 11010000 		.4byte	.LASF4
+ 505 0048 03       		.uleb128 0x3
+ 506 0049 0A000000 		.4byte	.LASF10
+ 507 004d 02       		.byte	0x2
+ 508 004e 3F       		.byte	0x3f
+ 509 004f 53000000 		.4byte	0x53
+ 510 0053 02       		.uleb128 0x2
+ 511 0054 04       		.byte	0x4
+ 512 0055 05       		.byte	0x5
+ 513 0056 E5020000 		.4byte	.LASF5
+ 514 005a 02       		.uleb128 0x2
+ 515 005b 04       		.byte	0x4
+ 516 005c 07       		.byte	0x7
+ 517 005d FF000000 		.4byte	.LASF6
+ 518 0061 02       		.uleb128 0x2
+ 519 0062 08       		.byte	0x8
+ 520 0063 05       		.byte	0x5
+ 521 0064 6B020000 		.4byte	.LASF7
+ 522 0068 02       		.uleb128 0x2
+ 523 0069 08       		.byte	0x8
+ 524 006a 07       		.byte	0x7
+ 525 006b 88010000 		.4byte	.LASF8
+ 526 006f 04       		.uleb128 0x4
+ 527 0070 04       		.byte	0x4
+ 528 0071 05       		.byte	0x5
+ 529 0072 696E7400 		.ascii	"int\000"
+ 530 0076 02       		.uleb128 0x2
+ 531 0077 04       		.byte	0x4
+ 532 0078 07       		.byte	0x7
+ 533 0079 6F010000 		.4byte	.LASF9
+ 534 007d 03       		.uleb128 0x3
+ 535 007e 88020000 		.4byte	.LASF11
+ 536 0082 03       		.byte	0x3
+ 537 0083 2C       		.byte	0x2c
+ 538 0084 48000000 		.4byte	0x48
+ 539 0088 02       		.uleb128 0x2
+ 540 0089 08       		.byte	0x8
+ 541 008a 04       		.byte	0x4
+ 542 008b 38000000 		.4byte	.LASF12
+ 543 008f 02       		.uleb128 0x2
+ 544 0090 01       		.byte	0x1
+ 545 0091 08       		.byte	0x8
+ 546 0092 79020000 		.4byte	.LASF13
+ 547 0096 02       		.uleb128 0x2
+ 548 0097 08       		.byte	0x8
+ 549 0098 04       		.byte	0x4
+ 550 0099 EE020000 		.4byte	.LASF14
+ 551 009d 02       		.uleb128 0x2
+ 552 009e 04       		.byte	0x4
+ 553 009f 07       		.byte	0x7
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 13
+
+
+ 554 00a0 62020000 		.4byte	.LASF15
+ 555 00a4 05       		.uleb128 0x5
+ 556 00a5 D1020000 		.4byte	.LASF18
+ 557 00a9 01       		.byte	0x1
+ 558 00aa 11       		.byte	0x11
+ 559 00ab 00000000 		.4byte	.LFB63
+ 560 00af 34000000 		.4byte	.LFE63-.LFB63
+ 561 00b3 01       		.uleb128 0x1
+ 562 00b4 9C       		.byte	0x9c
+ 563 00b5 FE000000 		.4byte	0xfe
+ 564 00b9 06       		.uleb128 0x6
+ 565 00ba 5C020000 		.4byte	.LASF16
+ 566 00be 01       		.byte	0x1
+ 567 00bf 11       		.byte	0x11
+ 568 00c0 25000000 		.4byte	0x25
+ 569 00c4 00000000 		.4byte	.LLST0
+ 570 00c8 06       		.uleb128 0x6
+ 571 00c9 3F000000 		.4byte	.LASF17
+ 572 00cd 01       		.byte	0x1
+ 573 00ce 11       		.byte	0x11
+ 574 00cf 6F000000 		.4byte	0x6f
+ 575 00d3 39000000 		.4byte	.LLST1
+ 576 00d7 07       		.uleb128 0x7
+ 577 00d8 18000000 		.4byte	.LVL6
+ 578 00dc 9C040000 		.4byte	0x49c
+ 579 00e0 EB000000 		.4byte	0xeb
+ 580 00e4 08       		.uleb128 0x8
+ 581 00e5 01       		.uleb128 0x1
+ 582 00e6 50       		.byte	0x50
+ 583 00e7 02       		.uleb128 0x2
+ 584 00e8 75       		.byte	0x75
+ 585 00e9 00       		.sleb128 0
+ 586 00ea 00       		.byte	0
+ 587 00eb 09       		.uleb128 0x9
+ 588 00ec 24000000 		.4byte	.LVL8
+ 589 00f0 A7040000 		.4byte	0x4a7
+ 590 00f4 09       		.uleb128 0x9
+ 591 00f5 28000000 		.4byte	.LVL9
+ 592 00f9 B2040000 		.4byte	0x4b2
+ 593 00fd 00       		.byte	0
+ 594 00fe 05       		.uleb128 0x5
+ 595 00ff 2D000000 		.4byte	.LASF19
+ 596 0103 01       		.byte	0x1
+ 597 0104 19       		.byte	0x19
+ 598 0105 00000000 		.4byte	.LFB64
+ 599 0109 34000000 		.4byte	.LFE64-.LFB64
+ 600 010d 01       		.uleb128 0x1
+ 601 010e 9C       		.byte	0x9c
+ 602 010f 58010000 		.4byte	0x158
+ 603 0113 06       		.uleb128 0x6
+ 604 0114 5C020000 		.4byte	.LASF16
+ 605 0118 01       		.byte	0x1
+ 606 0119 19       		.byte	0x19
+ 607 011a 25000000 		.4byte	0x25
+ 608 011e 65000000 		.4byte	.LLST2
+ 609 0122 06       		.uleb128 0x6
+ 610 0123 3F000000 		.4byte	.LASF17
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 14
+
+
+ 611 0127 01       		.byte	0x1
+ 612 0128 19       		.byte	0x19
+ 613 0129 6F000000 		.4byte	0x6f
+ 614 012d 9E000000 		.4byte	.LLST3
+ 615 0131 07       		.uleb128 0x7
+ 616 0132 18000000 		.4byte	.LVL17
+ 617 0136 BD040000 		.4byte	0x4bd
+ 618 013a 45010000 		.4byte	0x145
+ 619 013e 08       		.uleb128 0x8
+ 620 013f 01       		.uleb128 0x1
+ 621 0140 50       		.byte	0x50
+ 622 0141 02       		.uleb128 0x2
+ 623 0142 75       		.byte	0x75
+ 624 0143 00       		.sleb128 0
+ 625 0144 00       		.byte	0
+ 626 0145 09       		.uleb128 0x9
+ 627 0146 24000000 		.4byte	.LVL19
+ 628 014a C8040000 		.4byte	0x4c8
+ 629 014e 09       		.uleb128 0x9
+ 630 014f 28000000 		.4byte	.LVL20
+ 631 0153 D3040000 		.4byte	0x4d3
+ 632 0157 00       		.byte	0
+ 633 0158 05       		.uleb128 0x5
+ 634 0159 CC020000 		.4byte	.LASF20
+ 635 015d 01       		.byte	0x1
+ 636 015e 22       		.byte	0x22
+ 637 015f 00000000 		.4byte	.LFB65
+ 638 0163 50000000 		.4byte	.LFE65-.LFB65
+ 639 0167 01       		.uleb128 0x1
+ 640 0168 9C       		.byte	0x9c
+ 641 0169 41020000 		.4byte	0x241
+ 642 016d 06       		.uleb128 0x6
+ 643 016e 5C020000 		.4byte	.LASF16
+ 644 0172 01       		.byte	0x1
+ 645 0173 22       		.byte	0x22
+ 646 0174 25000000 		.4byte	0x25
+ 647 0178 CA000000 		.4byte	.LLST4
+ 648 017c 06       		.uleb128 0x6
+ 649 017d DD000000 		.4byte	.LASF21
+ 650 0181 01       		.byte	0x1
+ 651 0182 22       		.byte	0x22
+ 652 0183 25000000 		.4byte	0x25
+ 653 0187 F8000000 		.4byte	.LLST5
+ 654 018b 06       		.uleb128 0x6
+ 655 018c DB020000 		.4byte	.LASF22
+ 656 0190 01       		.byte	0x1
+ 657 0191 22       		.byte	0x22
+ 658 0192 6F000000 		.4byte	0x6f
+ 659 0196 26010000 		.4byte	.LLST6
+ 660 019a 0A       		.uleb128 0xa
+ 661 019b 14000000 		.4byte	.LBB2
+ 662 019f 3C000000 		.4byte	.LBE2-.LBB2
+ 663 01a3 1E020000 		.4byte	0x21e
+ 664 01a7 0B       		.uleb128 0xb
+ 665 01a8 00000000 		.4byte	.LASF25
+ 666 01ac 01       		.byte	0x1
+ 667 01ad 2C       		.byte	0x2c
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 15
+
+
+ 668 01ae 25000000 		.4byte	0x25
+ 669 01b2 52010000 		.4byte	.LLST7
+ 670 01b6 0C       		.uleb128 0xc
+ 671 01b7 FA000000 		.4byte	.LASF28
+ 672 01bb 04       		.byte	0x4
+ 673 01bc 00       		.byte	0
+ 674 01bd 88000000 		.4byte	0x88
+ 675 01c1 CB010000 		.4byte	0x1cb
+ 676 01c5 0D       		.uleb128 0xd
+ 677 01c6 88000000 		.4byte	0x88
+ 678 01ca 00       		.byte	0
+ 679 01cb 07       		.uleb128 0x7
+ 680 01cc 1C000000 		.4byte	.LVL26
+ 681 01d0 A4000000 		.4byte	0xa4
+ 682 01d4 E7010000 		.4byte	0x1e7
+ 683 01d8 08       		.uleb128 0x8
+ 684 01d9 01       		.uleb128 0x1
+ 685 01da 50       		.byte	0x50
+ 686 01db 03       		.uleb128 0x3
+ 687 01dc F5       		.byte	0xf5
+ 688 01dd 05       		.uleb128 0x5
+ 689 01de 25       		.uleb128 0x25
+ 690 01df 08       		.uleb128 0x8
+ 691 01e0 01       		.uleb128 0x1
+ 692 01e1 51       		.byte	0x51
+ 693 01e2 03       		.uleb128 0x3
+ 694 01e3 74       		.byte	0x74
+ 695 01e4 00       		.sleb128 0
+ 696 01e5 20       		.byte	0x20
+ 697 01e6 00       		.byte	0
+ 698 01e7 07       		.uleb128 0x7
+ 699 01e8 24000000 		.4byte	.LVL27
+ 700 01ec FE000000 		.4byte	0xfe
+ 701 01f0 02020000 		.4byte	0x202
+ 702 01f4 08       		.uleb128 0x8
+ 703 01f5 01       		.uleb128 0x1
+ 704 01f6 50       		.byte	0x50
+ 705 01f7 03       		.uleb128 0x3
+ 706 01f8 F5       		.byte	0xf5
+ 707 01f9 05       		.uleb128 0x5
+ 708 01fa 25       		.uleb128 0x25
+ 709 01fb 08       		.uleb128 0x8
+ 710 01fc 01       		.uleb128 0x1
+ 711 01fd 51       		.byte	0x51
+ 712 01fe 02       		.uleb128 0x2
+ 713 01ff 74       		.byte	0x74
+ 714 0200 00       		.sleb128 0
+ 715 0201 00       		.byte	0
+ 716 0202 09       		.uleb128 0x9
+ 717 0203 28000000 		.4byte	.LVL28
+ 718 0207 DE040000 		.4byte	0x4de
+ 719 020b 09       		.uleb128 0x9
+ 720 020c 46000000 		.4byte	.LVL33
+ 721 0210 E9040000 		.4byte	0x4e9
+ 722 0214 09       		.uleb128 0x9
+ 723 0215 4A000000 		.4byte	.LVL34
+ 724 0219 F4040000 		.4byte	0x4f4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 16
+
+
+ 725 021d 00       		.byte	0
+ 726 021e 07       		.uleb128 0x7
+ 727 021f 0E000000 		.4byte	.LVL24
+ 728 0223 FF040000 		.4byte	0x4ff
+ 729 0227 31020000 		.4byte	0x231
+ 730 022b 08       		.uleb128 0x8
+ 731 022c 01       		.uleb128 0x1
+ 732 022d 50       		.byte	0x50
+ 733 022e 01       		.uleb128 0x1
+ 734 022f 30       		.byte	0x30
+ 735 0230 00       		.byte	0
+ 736 0231 0E       		.uleb128 0xe
+ 737 0232 14000000 		.4byte	.LVL25
+ 738 0236 0A050000 		.4byte	0x50a
+ 739 023a 08       		.uleb128 0x8
+ 740 023b 01       		.uleb128 0x1
+ 741 023c 50       		.byte	0x50
+ 742 023d 01       		.uleb128 0x1
+ 743 023e 30       		.byte	0x30
+ 744 023f 00       		.byte	0
+ 745 0240 00       		.byte	0
+ 746 0241 05       		.uleb128 0x5
+ 747 0242 90020000 		.4byte	.LASF23
+ 748 0246 01       		.byte	0x1
+ 749 0247 39       		.byte	0x39
+ 750 0248 00000000 		.4byte	.LFB66
+ 751 024c BC000000 		.4byte	.LFE66-.LFB66
+ 752 0250 01       		.uleb128 0x1
+ 753 0251 9C       		.byte	0x9c
+ 754 0252 B0030000 		.4byte	0x3b0
+ 755 0256 06       		.uleb128 0x6
+ 756 0257 57010000 		.4byte	.LASF24
+ 757 025b 01       		.byte	0x1
+ 758 025c 39       		.byte	0x39
+ 759 025d 25000000 		.4byte	0x25
+ 760 0261 65010000 		.4byte	.LLST8
+ 761 0265 06       		.uleb128 0x6
+ 762 0266 DD000000 		.4byte	.LASF21
+ 763 026a 01       		.byte	0x1
+ 764 026b 39       		.byte	0x39
+ 765 026c 25000000 		.4byte	0x25
+ 766 0270 93010000 		.4byte	.LLST9
+ 767 0274 06       		.uleb128 0x6
+ 768 0275 DB020000 		.4byte	.LASF22
+ 769 0279 01       		.byte	0x1
+ 770 027a 39       		.byte	0x39
+ 771 027b 6F000000 		.4byte	0x6f
+ 772 027f C1010000 		.4byte	.LLST10
+ 773 0283 0F       		.uleb128 0xf
+ 774 0284 2B030000 		.4byte	.LASF26
+ 775 0288 01       		.byte	0x1
+ 776 0289 3B       		.byte	0x3b
+ 777 028a 25000000 		.4byte	0x25
+ 778 028e 04       		.byte	0x4
+ 779 028f CDCCEE41 		.4byte	0x41eecccd
+ 780 0293 0B       		.uleb128 0xb
+ 781 0294 AB000000 		.4byte	.LASF27
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 17
+
+
+ 782 0298 01       		.byte	0x1
+ 783 0299 3C       		.byte	0x3c
+ 784 029a 25000000 		.4byte	0x25
+ 785 029e ED010000 		.4byte	.LLST11
+ 786 02a2 0A       		.uleb128 0xa
+ 787 02a3 56000000 		.4byte	.LBB3
+ 788 02a7 66000000 		.4byte	.LBE3-.LBB3
+ 789 02ab 30030000 		.4byte	0x330
+ 790 02af 0B       		.uleb128 0xb
+ 791 02b0 00000000 		.4byte	.LASF25
+ 792 02b4 01       		.byte	0x1
+ 793 02b5 4E       		.byte	0x4e
+ 794 02b6 25000000 		.4byte	0x25
+ 795 02ba 10020000 		.4byte	.LLST12
+ 796 02be 0C       		.uleb128 0xc
+ 797 02bf FA000000 		.4byte	.LASF28
+ 798 02c3 04       		.byte	0x4
+ 799 02c4 00       		.byte	0
+ 800 02c5 88000000 		.4byte	0x88
+ 801 02c9 D3020000 		.4byte	0x2d3
+ 802 02cd 0D       		.uleb128 0xd
+ 803 02ce 88000000 		.4byte	0x88
+ 804 02d2 00       		.byte	0
+ 805 02d3 09       		.uleb128 0x9
+ 806 02d4 5A000000 		.4byte	.LVL50
+ 807 02d8 DE040000 		.4byte	0x4de
+ 808 02dc 09       		.uleb128 0x9
+ 809 02dd 6A000000 		.4byte	.LVL53
+ 810 02e1 15050000 		.4byte	0x515
+ 811 02e5 07       		.uleb128 0x7
+ 812 02e6 7C000000 		.4byte	.LVL56
+ 813 02ea FE000000 		.4byte	0xfe
+ 814 02ee F9020000 		.4byte	0x2f9
+ 815 02f2 08       		.uleb128 0x8
+ 816 02f3 01       		.uleb128 0x1
+ 817 02f4 51       		.byte	0x51
+ 818 02f5 02       		.uleb128 0x2
+ 819 02f6 74       		.byte	0x74
+ 820 02f7 00       		.sleb128 0
+ 821 02f8 00       		.byte	0
+ 822 02f9 07       		.uleb128 0x7
+ 823 02fa 84000000 		.4byte	.LVL57
+ 824 02fe A4000000 		.4byte	0xa4
+ 825 0302 14030000 		.4byte	0x314
+ 826 0306 08       		.uleb128 0x8
+ 827 0307 01       		.uleb128 0x1
+ 828 0308 50       		.byte	0x50
+ 829 0309 03       		.uleb128 0x3
+ 830 030a F5       		.byte	0xf5
+ 831 030b 05       		.uleb128 0x5
+ 832 030c 25       		.uleb128 0x25
+ 833 030d 08       		.uleb128 0x8
+ 834 030e 01       		.uleb128 0x1
+ 835 030f 51       		.byte	0x51
+ 836 0310 02       		.uleb128 0x2
+ 837 0311 74       		.byte	0x74
+ 838 0312 00       		.sleb128 0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 18
+
+
+ 839 0313 00       		.byte	0
+ 840 0314 09       		.uleb128 0x9
+ 841 0315 88000000 		.4byte	.LVL58
+ 842 0319 DE040000 		.4byte	0x4de
+ 843 031d 09       		.uleb128 0x9
+ 844 031e A6000000 		.4byte	.LVL63
+ 845 0322 E9040000 		.4byte	0x4e9
+ 846 0326 09       		.uleb128 0x9
+ 847 0327 AA000000 		.4byte	.LVL64
+ 848 032b F4040000 		.4byte	0x4f4
+ 849 032f 00       		.byte	0
+ 850 0330 07       		.uleb128 0x7
+ 851 0331 0E000000 		.4byte	.LVL39
+ 852 0335 0A050000 		.4byte	0x50a
+ 853 0339 43030000 		.4byte	0x343
+ 854 033d 08       		.uleb128 0x8
+ 855 033e 01       		.uleb128 0x1
+ 856 033f 50       		.byte	0x50
+ 857 0340 01       		.uleb128 0x1
+ 858 0341 30       		.byte	0x30
+ 859 0342 00       		.byte	0
+ 860 0343 07       		.uleb128 0x7
+ 861 0344 14000000 		.4byte	.LVL40
+ 862 0348 FF040000 		.4byte	0x4ff
+ 863 034c 56030000 		.4byte	0x356
+ 864 0350 08       		.uleb128 0x8
+ 865 0351 01       		.uleb128 0x1
+ 866 0352 50       		.byte	0x50
+ 867 0353 01       		.uleb128 0x1
+ 868 0354 30       		.byte	0x30
+ 869 0355 00       		.byte	0
+ 870 0356 07       		.uleb128 0x7
+ 871 0357 1C000000 		.4byte	.LVL41
+ 872 035b A4000000 		.4byte	0xa4
+ 873 035f 6A030000 		.4byte	0x36a
+ 874 0363 08       		.uleb128 0x8
+ 875 0364 01       		.uleb128 0x1
+ 876 0365 51       		.byte	0x51
+ 877 0366 02       		.uleb128 0x2
+ 878 0367 74       		.byte	0x74
+ 879 0368 00       		.sleb128 0
+ 880 0369 00       		.byte	0
+ 881 036a 07       		.uleb128 0x7
+ 882 036b 24000000 		.4byte	.LVL42
+ 883 036f FE000000 		.4byte	0xfe
+ 884 0373 7E030000 		.4byte	0x37e
+ 885 0377 08       		.uleb128 0x8
+ 886 0378 01       		.uleb128 0x1
+ 887 0379 51       		.byte	0x51
+ 888 037a 02       		.uleb128 0x2
+ 889 037b 74       		.byte	0x74
+ 890 037c 00       		.sleb128 0
+ 891 037d 00       		.byte	0
+ 892 037e 07       		.uleb128 0x7
+ 893 037f 2E000000 		.4byte	.LVL43
+ 894 0383 A4000000 		.4byte	0xa4
+ 895 0387 92030000 		.4byte	0x392
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 19
+
+
+ 896 038b 08       		.uleb128 0x8
+ 897 038c 01       		.uleb128 0x1
+ 898 038d 51       		.byte	0x51
+ 899 038e 02       		.uleb128 0x2
+ 900 038f 74       		.byte	0x74
+ 901 0390 00       		.sleb128 0
+ 902 0391 00       		.byte	0
+ 903 0392 07       		.uleb128 0x7
+ 904 0393 36000000 		.4byte	.LVL44
+ 905 0397 FE000000 		.4byte	0xfe
+ 906 039b A6030000 		.4byte	0x3a6
+ 907 039f 08       		.uleb128 0x8
+ 908 03a0 01       		.uleb128 0x1
+ 909 03a1 51       		.byte	0x51
+ 910 03a2 02       		.uleb128 0x2
+ 911 03a3 74       		.byte	0x74
+ 912 03a4 00       		.sleb128 0
+ 913 03a5 00       		.byte	0
+ 914 03a6 09       		.uleb128 0x9
+ 915 03a7 3A000000 		.4byte	.LVL45
+ 916 03ab DE040000 		.4byte	0x4de
+ 917 03af 00       		.byte	0
+ 918 03b0 10       		.uleb128 0x10
+ 919 03b1 A8010000 		.4byte	.LASF48
+ 920 03b5 01       		.byte	0x1
+ 921 03b6 5A       		.byte	0x5a
+ 922 03b7 00000000 		.4byte	.LFB67
+ 923 03bb 74000000 		.4byte	.LFE67-.LFB67
+ 924 03bf 01       		.uleb128 0x1
+ 925 03c0 9C       		.byte	0x9c
+ 926 03c1 7A040000 		.4byte	0x47a
+ 927 03c5 07       		.uleb128 0x7
+ 928 03c6 0C000000 		.4byte	.LVL66
+ 929 03ca A4000000 		.4byte	0xa4
+ 930 03ce DF030000 		.4byte	0x3df
+ 931 03d2 08       		.uleb128 0x8
+ 932 03d3 01       		.uleb128 0x1
+ 933 03d4 50       		.byte	0x50
+ 934 03d5 03       		.uleb128 0x3
+ 935 03d6 F5       		.byte	0xf5
+ 936 03d7 04       		.uleb128 0x4
+ 937 03d8 25       		.uleb128 0x25
+ 938 03d9 08       		.uleb128 0x8
+ 939 03da 01       		.uleb128 0x1
+ 940 03db 51       		.byte	0x51
+ 941 03dc 01       		.uleb128 0x1
+ 942 03dd 30       		.byte	0x30
+ 943 03de 00       		.byte	0
+ 944 03df 07       		.uleb128 0x7
+ 945 03e0 14000000 		.4byte	.LVL67
+ 946 03e4 FE000000 		.4byte	0xfe
+ 947 03e8 F9030000 		.4byte	0x3f9
+ 948 03ec 08       		.uleb128 0x8
+ 949 03ed 01       		.uleb128 0x1
+ 950 03ee 50       		.byte	0x50
+ 951 03ef 03       		.uleb128 0x3
+ 952 03f0 F5       		.byte	0xf5
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 20
+
+
+ 953 03f1 04       		.uleb128 0x4
+ 954 03f2 25       		.uleb128 0x25
+ 955 03f3 08       		.uleb128 0x8
+ 956 03f4 01       		.uleb128 0x1
+ 957 03f5 51       		.byte	0x51
+ 958 03f6 01       		.uleb128 0x1
+ 959 03f7 30       		.byte	0x30
+ 960 03f8 00       		.byte	0
+ 961 03f9 09       		.uleb128 0x9
+ 962 03fa 1A000000 		.4byte	.LVL68
+ 963 03fe 20050000 		.4byte	0x520
+ 964 0402 07       		.uleb128 0x7
+ 965 0403 26000000 		.4byte	.LVL69
+ 966 0407 FE000000 		.4byte	0xfe
+ 967 040b 15040000 		.4byte	0x415
+ 968 040f 08       		.uleb128 0x8
+ 969 0410 01       		.uleb128 0x1
+ 970 0411 51       		.byte	0x51
+ 971 0412 01       		.uleb128 0x1
+ 972 0413 30       		.byte	0x30
+ 973 0414 00       		.byte	0
+ 974 0415 09       		.uleb128 0x9
+ 975 0416 2A000000 		.4byte	.LVL70
+ 976 041a E9040000 		.4byte	0x4e9
+ 977 041e 09       		.uleb128 0x9
+ 978 041f 30000000 		.4byte	.LVL71
+ 979 0423 2B050000 		.4byte	0x52b
+ 980 0427 07       		.uleb128 0x7
+ 981 0428 3C000000 		.4byte	.LVL72
+ 982 042c A4000000 		.4byte	0xa4
+ 983 0430 3A040000 		.4byte	0x43a
+ 984 0434 08       		.uleb128 0x8
+ 985 0435 01       		.uleb128 0x1
+ 986 0436 51       		.byte	0x51
+ 987 0437 01       		.uleb128 0x1
+ 988 0438 30       		.byte	0x30
+ 989 0439 00       		.byte	0
+ 990 043a 09       		.uleb128 0x9
+ 991 043b 40000000 		.4byte	.LVL73
+ 992 043f F4040000 		.4byte	0x4f4
+ 993 0443 09       		.uleb128 0x9
+ 994 0444 46000000 		.4byte	.LVL74
+ 995 0448 20050000 		.4byte	0x520
+ 996 044c 09       		.uleb128 0x9
+ 997 044d 4E000000 		.4byte	.LVL75
+ 998 0451 2B050000 		.4byte	0x52b
+ 999 0455 09       		.uleb128 0x9
+ 1000 0456 56000000 		.4byte	.LVL76
+ 1001 045a E9040000 		.4byte	0x4e9
+ 1002 045e 09       		.uleb128 0x9
+ 1003 045f 5A000000 		.4byte	.LVL77
+ 1004 0463 F4040000 		.4byte	0x4f4
+ 1005 0467 09       		.uleb128 0x9
+ 1006 0468 60000000 		.4byte	.LVL78
+ 1007 046c 20050000 		.4byte	0x520
+ 1008 0470 09       		.uleb128 0x9
+ 1009 0471 68000000 		.4byte	.LVL79
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 21
+
+
+ 1010 0475 2B050000 		.4byte	0x52b
+ 1011 0479 00       		.byte	0
+ 1012 047a 11       		.uleb128 0x11
+ 1013 047b 4A010000 		.4byte	.LASF29
+ 1014 047f 05       		.byte	0x5
+ 1015 0480 1207     		.2byte	0x712
+ 1016 0482 86040000 		.4byte	0x486
+ 1017 0486 12       		.uleb128 0x12
+ 1018 0487 7D000000 		.4byte	0x7d
+ 1019 048b 13       		.uleb128 0x13
+ 1020 048c 7E020000 		.4byte	.LASF30
+ 1021 0490 01       		.byte	0x1
+ 1022 0491 0F       		.byte	0xf
+ 1023 0492 25000000 		.4byte	0x25
+ 1024 0496 05       		.uleb128 0x5
+ 1025 0497 03       		.byte	0x3
+ 1026 0498 00000000 		.4byte	LeftDelta
+ 1027 049c 14       		.uleb128 0x14
+ 1028 049d BC000000 		.4byte	.LASF31
+ 1029 04a1 BC000000 		.4byte	.LASF31
+ 1030 04a5 06       		.byte	0x6
+ 1031 04a6 2F       		.byte	0x2f
+ 1032 04a7 14       		.uleb128 0x14
+ 1033 04a8 A7020000 		.4byte	.LASF32
+ 1034 04ac A7020000 		.4byte	.LASF32
+ 1035 04b0 07       		.byte	0x7
+ 1036 04b1 C3       		.byte	0xc3
+ 1037 04b2 14       		.uleb128 0x14
+ 1038 04b3 3D010000 		.4byte	.LASF33
+ 1039 04b7 3D010000 		.4byte	.LASF33
+ 1040 04bb 07       		.byte	0x7
+ 1041 04bc 92       		.byte	0x92
+ 1042 04bd 14       		.uleb128 0x14
+ 1043 04be FA020000 		.4byte	.LASF34
+ 1044 04c2 FA020000 		.4byte	.LASF34
+ 1045 04c6 08       		.byte	0x8
+ 1046 04c7 2F       		.byte	0x2f
+ 1047 04c8 14       		.uleb128 0x14
+ 1048 04c9 E6000000 		.4byte	.LASF35
+ 1049 04cd E6000000 		.4byte	.LASF35
+ 1050 04d1 09       		.byte	0x9
+ 1051 04d2 C3       		.byte	0xc3
+ 1052 04d3 14       		.uleb128 0x14
+ 1053 04d4 62010000 		.4byte	.LASF36
+ 1054 04d8 62010000 		.4byte	.LASF36
+ 1055 04dc 09       		.byte	0x9
+ 1056 04dd 92       		.byte	0x92
+ 1057 04de 14       		.uleb128 0x14
+ 1058 04df B6010000 		.4byte	.LASF37
+ 1059 04e3 B6010000 		.4byte	.LASF37
+ 1060 04e7 0A       		.byte	0xa
+ 1061 04e8 4E       		.byte	0x4e
+ 1062 04e9 14       		.uleb128 0x14
+ 1063 04ea 9F000000 		.4byte	.LASF38
+ 1064 04ee 9F000000 		.4byte	.LASF38
+ 1065 04f2 07       		.byte	0x7
+ 1066 04f3 93       		.byte	0x93
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 22
+
+
+ 1067 04f4 14       		.uleb128 0x14
+ 1068 04f5 7C010000 		.4byte	.LASF39
+ 1069 04f9 7C010000 		.4byte	.LASF39
+ 1070 04fd 09       		.byte	0x9
+ 1071 04fe 93       		.byte	0x93
+ 1072 04ff 14       		.uleb128 0x14
+ 1073 0500 35030000 		.4byte	.LASF40
+ 1074 0504 35030000 		.4byte	.LASF40
+ 1075 0508 0A       		.byte	0xa
+ 1076 0509 4F       		.byte	0x4f
+ 1077 050a 14       		.uleb128 0x14
+ 1078 050b 14000000 		.4byte	.LASF41
+ 1079 050f 14000000 		.4byte	.LASF41
+ 1080 0513 0B       		.byte	0xb
+ 1081 0514 4F       		.byte	0x4f
+ 1082 0515 14       		.uleb128 0x14
+ 1083 0516 24010000 		.4byte	.LASF42
+ 1084 051a 24010000 		.4byte	.LASF42
+ 1085 051e 0B       		.byte	0xb
+ 1086 051f 4E       		.byte	0x4e
+ 1087 0520 14       		.uleb128 0x14
+ 1088 0521 BB020000 		.4byte	.LASF43
+ 1089 0525 BB020000 		.4byte	.LASF43
+ 1090 0529 0C       		.byte	0xc
+ 1091 052a 29       		.byte	0x29
+ 1092 052b 14       		.uleb128 0x14
+ 1093 052c 19030000 		.4byte	.LASF44
+ 1094 0530 19030000 		.4byte	.LASF44
+ 1095 0534 0D       		.byte	0xd
+ 1096 0535 29       		.byte	0x29
+ 1097 0536 00       		.byte	0
+ 1098              		.section	.debug_abbrev,"",%progbits
+ 1099              	.Ldebug_abbrev0:
+ 1100 0000 01       		.uleb128 0x1
+ 1101 0001 11       		.uleb128 0x11
+ 1102 0002 01       		.byte	0x1
+ 1103 0003 25       		.uleb128 0x25
+ 1104 0004 0E       		.uleb128 0xe
+ 1105 0005 13       		.uleb128 0x13
+ 1106 0006 0B       		.uleb128 0xb
+ 1107 0007 03       		.uleb128 0x3
+ 1108 0008 0E       		.uleb128 0xe
+ 1109 0009 1B       		.uleb128 0x1b
+ 1110 000a 0E       		.uleb128 0xe
+ 1111 000b 55       		.uleb128 0x55
+ 1112 000c 17       		.uleb128 0x17
+ 1113 000d 11       		.uleb128 0x11
+ 1114 000e 01       		.uleb128 0x1
+ 1115 000f 10       		.uleb128 0x10
+ 1116 0010 17       		.uleb128 0x17
+ 1117 0011 00       		.byte	0
+ 1118 0012 00       		.byte	0
+ 1119 0013 02       		.uleb128 0x2
+ 1120 0014 24       		.uleb128 0x24
+ 1121 0015 00       		.byte	0
+ 1122 0016 0B       		.uleb128 0xb
+ 1123 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 23
+
+
+ 1124 0018 3E       		.uleb128 0x3e
+ 1125 0019 0B       		.uleb128 0xb
+ 1126 001a 03       		.uleb128 0x3
+ 1127 001b 0E       		.uleb128 0xe
+ 1128 001c 00       		.byte	0
+ 1129 001d 00       		.byte	0
+ 1130 001e 03       		.uleb128 0x3
+ 1131 001f 16       		.uleb128 0x16
+ 1132 0020 00       		.byte	0
+ 1133 0021 03       		.uleb128 0x3
+ 1134 0022 0E       		.uleb128 0xe
+ 1135 0023 3A       		.uleb128 0x3a
+ 1136 0024 0B       		.uleb128 0xb
+ 1137 0025 3B       		.uleb128 0x3b
+ 1138 0026 0B       		.uleb128 0xb
+ 1139 0027 49       		.uleb128 0x49
+ 1140 0028 13       		.uleb128 0x13
+ 1141 0029 00       		.byte	0
+ 1142 002a 00       		.byte	0
+ 1143 002b 04       		.uleb128 0x4
+ 1144 002c 24       		.uleb128 0x24
+ 1145 002d 00       		.byte	0
+ 1146 002e 0B       		.uleb128 0xb
+ 1147 002f 0B       		.uleb128 0xb
+ 1148 0030 3E       		.uleb128 0x3e
+ 1149 0031 0B       		.uleb128 0xb
+ 1150 0032 03       		.uleb128 0x3
+ 1151 0033 08       		.uleb128 0x8
+ 1152 0034 00       		.byte	0
+ 1153 0035 00       		.byte	0
+ 1154 0036 05       		.uleb128 0x5
+ 1155 0037 2E       		.uleb128 0x2e
+ 1156 0038 01       		.byte	0x1
+ 1157 0039 3F       		.uleb128 0x3f
+ 1158 003a 19       		.uleb128 0x19
+ 1159 003b 03       		.uleb128 0x3
+ 1160 003c 0E       		.uleb128 0xe
+ 1161 003d 3A       		.uleb128 0x3a
+ 1162 003e 0B       		.uleb128 0xb
+ 1163 003f 3B       		.uleb128 0x3b
+ 1164 0040 0B       		.uleb128 0xb
+ 1165 0041 27       		.uleb128 0x27
+ 1166 0042 19       		.uleb128 0x19
+ 1167 0043 11       		.uleb128 0x11
+ 1168 0044 01       		.uleb128 0x1
+ 1169 0045 12       		.uleb128 0x12
+ 1170 0046 06       		.uleb128 0x6
+ 1171 0047 40       		.uleb128 0x40
+ 1172 0048 18       		.uleb128 0x18
+ 1173 0049 9642     		.uleb128 0x2116
+ 1174 004b 19       		.uleb128 0x19
+ 1175 004c 01       		.uleb128 0x1
+ 1176 004d 13       		.uleb128 0x13
+ 1177 004e 00       		.byte	0
+ 1178 004f 00       		.byte	0
+ 1179 0050 06       		.uleb128 0x6
+ 1180 0051 05       		.uleb128 0x5
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 24
+
+
+ 1181 0052 00       		.byte	0
+ 1182 0053 03       		.uleb128 0x3
+ 1183 0054 0E       		.uleb128 0xe
+ 1184 0055 3A       		.uleb128 0x3a
+ 1185 0056 0B       		.uleb128 0xb
+ 1186 0057 3B       		.uleb128 0x3b
+ 1187 0058 0B       		.uleb128 0xb
+ 1188 0059 49       		.uleb128 0x49
+ 1189 005a 13       		.uleb128 0x13
+ 1190 005b 02       		.uleb128 0x2
+ 1191 005c 17       		.uleb128 0x17
+ 1192 005d 00       		.byte	0
+ 1193 005e 00       		.byte	0
+ 1194 005f 07       		.uleb128 0x7
+ 1195 0060 898201   		.uleb128 0x4109
+ 1196 0063 01       		.byte	0x1
+ 1197 0064 11       		.uleb128 0x11
+ 1198 0065 01       		.uleb128 0x1
+ 1199 0066 31       		.uleb128 0x31
+ 1200 0067 13       		.uleb128 0x13
+ 1201 0068 01       		.uleb128 0x1
+ 1202 0069 13       		.uleb128 0x13
+ 1203 006a 00       		.byte	0
+ 1204 006b 00       		.byte	0
+ 1205 006c 08       		.uleb128 0x8
+ 1206 006d 8A8201   		.uleb128 0x410a
+ 1207 0070 00       		.byte	0
+ 1208 0071 02       		.uleb128 0x2
+ 1209 0072 18       		.uleb128 0x18
+ 1210 0073 9142     		.uleb128 0x2111
+ 1211 0075 18       		.uleb128 0x18
+ 1212 0076 00       		.byte	0
+ 1213 0077 00       		.byte	0
+ 1214 0078 09       		.uleb128 0x9
+ 1215 0079 898201   		.uleb128 0x4109
+ 1216 007c 00       		.byte	0
+ 1217 007d 11       		.uleb128 0x11
+ 1218 007e 01       		.uleb128 0x1
+ 1219 007f 31       		.uleb128 0x31
+ 1220 0080 13       		.uleb128 0x13
+ 1221 0081 00       		.byte	0
+ 1222 0082 00       		.byte	0
+ 1223 0083 0A       		.uleb128 0xa
+ 1224 0084 0B       		.uleb128 0xb
+ 1225 0085 01       		.byte	0x1
+ 1226 0086 11       		.uleb128 0x11
+ 1227 0087 01       		.uleb128 0x1
+ 1228 0088 12       		.uleb128 0x12
+ 1229 0089 06       		.uleb128 0x6
+ 1230 008a 01       		.uleb128 0x1
+ 1231 008b 13       		.uleb128 0x13
+ 1232 008c 00       		.byte	0
+ 1233 008d 00       		.byte	0
+ 1234 008e 0B       		.uleb128 0xb
+ 1235 008f 34       		.uleb128 0x34
+ 1236 0090 00       		.byte	0
+ 1237 0091 03       		.uleb128 0x3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 25
+
+
+ 1238 0092 0E       		.uleb128 0xe
+ 1239 0093 3A       		.uleb128 0x3a
+ 1240 0094 0B       		.uleb128 0xb
+ 1241 0095 3B       		.uleb128 0x3b
+ 1242 0096 0B       		.uleb128 0xb
+ 1243 0097 49       		.uleb128 0x49
+ 1244 0098 13       		.uleb128 0x13
+ 1245 0099 02       		.uleb128 0x2
+ 1246 009a 17       		.uleb128 0x17
+ 1247 009b 00       		.byte	0
+ 1248 009c 00       		.byte	0
+ 1249 009d 0C       		.uleb128 0xc
+ 1250 009e 2E       		.uleb128 0x2e
+ 1251 009f 01       		.byte	0x1
+ 1252 00a0 3F       		.uleb128 0x3f
+ 1253 00a1 19       		.uleb128 0x19
+ 1254 00a2 03       		.uleb128 0x3
+ 1255 00a3 0E       		.uleb128 0xe
+ 1256 00a4 3A       		.uleb128 0x3a
+ 1257 00a5 0B       		.uleb128 0xb
+ 1258 00a6 3B       		.uleb128 0x3b
+ 1259 00a7 0B       		.uleb128 0xb
+ 1260 00a8 27       		.uleb128 0x27
+ 1261 00a9 19       		.uleb128 0x19
+ 1262 00aa 49       		.uleb128 0x49
+ 1263 00ab 13       		.uleb128 0x13
+ 1264 00ac 3C       		.uleb128 0x3c
+ 1265 00ad 19       		.uleb128 0x19
+ 1266 00ae 01       		.uleb128 0x1
+ 1267 00af 13       		.uleb128 0x13
+ 1268 00b0 00       		.byte	0
+ 1269 00b1 00       		.byte	0
+ 1270 00b2 0D       		.uleb128 0xd
+ 1271 00b3 05       		.uleb128 0x5
+ 1272 00b4 00       		.byte	0
+ 1273 00b5 49       		.uleb128 0x49
+ 1274 00b6 13       		.uleb128 0x13
+ 1275 00b7 00       		.byte	0
+ 1276 00b8 00       		.byte	0
+ 1277 00b9 0E       		.uleb128 0xe
+ 1278 00ba 898201   		.uleb128 0x4109
+ 1279 00bd 01       		.byte	0x1
+ 1280 00be 11       		.uleb128 0x11
+ 1281 00bf 01       		.uleb128 0x1
+ 1282 00c0 31       		.uleb128 0x31
+ 1283 00c1 13       		.uleb128 0x13
+ 1284 00c2 00       		.byte	0
+ 1285 00c3 00       		.byte	0
+ 1286 00c4 0F       		.uleb128 0xf
+ 1287 00c5 34       		.uleb128 0x34
+ 1288 00c6 00       		.byte	0
+ 1289 00c7 03       		.uleb128 0x3
+ 1290 00c8 0E       		.uleb128 0xe
+ 1291 00c9 3A       		.uleb128 0x3a
+ 1292 00ca 0B       		.uleb128 0xb
+ 1293 00cb 3B       		.uleb128 0x3b
+ 1294 00cc 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 26
+
+
+ 1295 00cd 49       		.uleb128 0x49
+ 1296 00ce 13       		.uleb128 0x13
+ 1297 00cf 1C       		.uleb128 0x1c
+ 1298 00d0 0A       		.uleb128 0xa
+ 1299 00d1 00       		.byte	0
+ 1300 00d2 00       		.byte	0
+ 1301 00d3 10       		.uleb128 0x10
+ 1302 00d4 2E       		.uleb128 0x2e
+ 1303 00d5 01       		.byte	0x1
+ 1304 00d6 3F       		.uleb128 0x3f
+ 1305 00d7 19       		.uleb128 0x19
+ 1306 00d8 03       		.uleb128 0x3
+ 1307 00d9 0E       		.uleb128 0xe
+ 1308 00da 3A       		.uleb128 0x3a
+ 1309 00db 0B       		.uleb128 0xb
+ 1310 00dc 3B       		.uleb128 0x3b
+ 1311 00dd 0B       		.uleb128 0xb
+ 1312 00de 11       		.uleb128 0x11
+ 1313 00df 01       		.uleb128 0x1
+ 1314 00e0 12       		.uleb128 0x12
+ 1315 00e1 06       		.uleb128 0x6
+ 1316 00e2 40       		.uleb128 0x40
+ 1317 00e3 18       		.uleb128 0x18
+ 1318 00e4 9742     		.uleb128 0x2117
+ 1319 00e6 19       		.uleb128 0x19
+ 1320 00e7 01       		.uleb128 0x1
+ 1321 00e8 13       		.uleb128 0x13
+ 1322 00e9 00       		.byte	0
+ 1323 00ea 00       		.byte	0
+ 1324 00eb 11       		.uleb128 0x11
+ 1325 00ec 34       		.uleb128 0x34
+ 1326 00ed 00       		.byte	0
+ 1327 00ee 03       		.uleb128 0x3
+ 1328 00ef 0E       		.uleb128 0xe
+ 1329 00f0 3A       		.uleb128 0x3a
+ 1330 00f1 0B       		.uleb128 0xb
+ 1331 00f2 3B       		.uleb128 0x3b
+ 1332 00f3 05       		.uleb128 0x5
+ 1333 00f4 49       		.uleb128 0x49
+ 1334 00f5 13       		.uleb128 0x13
+ 1335 00f6 3F       		.uleb128 0x3f
+ 1336 00f7 19       		.uleb128 0x19
+ 1337 00f8 3C       		.uleb128 0x3c
+ 1338 00f9 19       		.uleb128 0x19
+ 1339 00fa 00       		.byte	0
+ 1340 00fb 00       		.byte	0
+ 1341 00fc 12       		.uleb128 0x12
+ 1342 00fd 35       		.uleb128 0x35
+ 1343 00fe 00       		.byte	0
+ 1344 00ff 49       		.uleb128 0x49
+ 1345 0100 13       		.uleb128 0x13
+ 1346 0101 00       		.byte	0
+ 1347 0102 00       		.byte	0
+ 1348 0103 13       		.uleb128 0x13
+ 1349 0104 34       		.uleb128 0x34
+ 1350 0105 00       		.byte	0
+ 1351 0106 03       		.uleb128 0x3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 27
+
+
+ 1352 0107 0E       		.uleb128 0xe
+ 1353 0108 3A       		.uleb128 0x3a
+ 1354 0109 0B       		.uleb128 0xb
+ 1355 010a 3B       		.uleb128 0x3b
+ 1356 010b 0B       		.uleb128 0xb
+ 1357 010c 49       		.uleb128 0x49
+ 1358 010d 13       		.uleb128 0x13
+ 1359 010e 3F       		.uleb128 0x3f
+ 1360 010f 19       		.uleb128 0x19
+ 1361 0110 02       		.uleb128 0x2
+ 1362 0111 18       		.uleb128 0x18
+ 1363 0112 00       		.byte	0
+ 1364 0113 00       		.byte	0
+ 1365 0114 14       		.uleb128 0x14
+ 1366 0115 2E       		.uleb128 0x2e
+ 1367 0116 00       		.byte	0
+ 1368 0117 3F       		.uleb128 0x3f
+ 1369 0118 19       		.uleb128 0x19
+ 1370 0119 3C       		.uleb128 0x3c
+ 1371 011a 19       		.uleb128 0x19
+ 1372 011b 6E       		.uleb128 0x6e
+ 1373 011c 0E       		.uleb128 0xe
+ 1374 011d 03       		.uleb128 0x3
+ 1375 011e 0E       		.uleb128 0xe
+ 1376 011f 3A       		.uleb128 0x3a
+ 1377 0120 0B       		.uleb128 0xb
+ 1378 0121 3B       		.uleb128 0x3b
+ 1379 0122 0B       		.uleb128 0xb
+ 1380 0123 00       		.byte	0
+ 1381 0124 00       		.byte	0
+ 1382 0125 00       		.byte	0
+ 1383              		.section	.debug_loc,"",%progbits
+ 1384              	.Ldebug_loc0:
+ 1385              	.LLST0:
+ 1386 0000 00000000 		.4byte	.LVL0
+ 1387 0004 09000000 		.4byte	.LVL2-1
+ 1388 0008 0100     		.2byte	0x1
+ 1389 000a 50       		.byte	0x50
+ 1390 000b 09000000 		.4byte	.LVL2-1
+ 1391 000f 12000000 		.4byte	.LVL4
+ 1392 0013 0600     		.2byte	0x6
+ 1393 0015 F3       		.byte	0xf3
+ 1394 0016 03       		.uleb128 0x3
+ 1395 0017 F5       		.byte	0xf5
+ 1396 0018 00       		.uleb128 0
+ 1397 0019 25       		.uleb128 0x25
+ 1398 001a 9F       		.byte	0x9f
+ 1399 001b 12000000 		.4byte	.LVL4
+ 1400 001f 14000000 		.4byte	.LVL5
+ 1401 0023 0100     		.2byte	0x1
+ 1402 0025 50       		.byte	0x50
+ 1403 0026 14000000 		.4byte	.LVL5
+ 1404 002a 2A000000 		.4byte	.LVL10
+ 1405 002e 0100     		.2byte	0x1
+ 1406 0030 54       		.byte	0x54
+ 1407 0031 00000000 		.4byte	0
+ 1408 0035 00000000 		.4byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 28
+
+
+ 1409              	.LLST1:
+ 1410 0039 00000000 		.4byte	.LVL0
+ 1411 003d 06000000 		.4byte	.LVL1
+ 1412 0041 0100     		.2byte	0x1
+ 1413 0043 51       		.byte	0x51
+ 1414 0044 06000000 		.4byte	.LVL1
+ 1415 0048 2A000000 		.4byte	.LVL10
+ 1416 004c 0100     		.2byte	0x1
+ 1417 004e 55       		.byte	0x55
+ 1418 004f 2A000000 		.4byte	.LVL10
+ 1419 0053 34000000 		.4byte	.LFE63
+ 1420 0057 0400     		.2byte	0x4
+ 1421 0059 F3       		.byte	0xf3
+ 1422 005a 01       		.uleb128 0x1
+ 1423 005b 51       		.byte	0x51
+ 1424 005c 9F       		.byte	0x9f
+ 1425 005d 00000000 		.4byte	0
+ 1426 0061 00000000 		.4byte	0
+ 1427              	.LLST2:
+ 1428 0065 00000000 		.4byte	.LVL11
+ 1429 0069 09000000 		.4byte	.LVL13-1
+ 1430 006d 0100     		.2byte	0x1
+ 1431 006f 50       		.byte	0x50
+ 1432 0070 09000000 		.4byte	.LVL13-1
+ 1433 0074 12000000 		.4byte	.LVL15
+ 1434 0078 0600     		.2byte	0x6
+ 1435 007a F3       		.byte	0xf3
+ 1436 007b 03       		.uleb128 0x3
+ 1437 007c F5       		.byte	0xf5
+ 1438 007d 00       		.uleb128 0
+ 1439 007e 25       		.uleb128 0x25
+ 1440 007f 9F       		.byte	0x9f
+ 1441 0080 12000000 		.4byte	.LVL15
+ 1442 0084 14000000 		.4byte	.LVL16
+ 1443 0088 0100     		.2byte	0x1
+ 1444 008a 50       		.byte	0x50
+ 1445 008b 14000000 		.4byte	.LVL16
+ 1446 008f 2A000000 		.4byte	.LVL21
+ 1447 0093 0100     		.2byte	0x1
+ 1448 0095 54       		.byte	0x54
+ 1449 0096 00000000 		.4byte	0
+ 1450 009a 00000000 		.4byte	0
+ 1451              	.LLST3:
+ 1452 009e 00000000 		.4byte	.LVL11
+ 1453 00a2 06000000 		.4byte	.LVL12
+ 1454 00a6 0100     		.2byte	0x1
+ 1455 00a8 51       		.byte	0x51
+ 1456 00a9 06000000 		.4byte	.LVL12
+ 1457 00ad 2A000000 		.4byte	.LVL21
+ 1458 00b1 0100     		.2byte	0x1
+ 1459 00b3 55       		.byte	0x55
+ 1460 00b4 2A000000 		.4byte	.LVL21
+ 1461 00b8 34000000 		.4byte	.LFE64
+ 1462 00bc 0400     		.2byte	0x4
+ 1463 00be F3       		.byte	0xf3
+ 1464 00bf 01       		.uleb128 0x1
+ 1465 00c0 51       		.byte	0x51
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 29
+
+
+ 1466 00c1 9F       		.byte	0x9f
+ 1467 00c2 00000000 		.4byte	0
+ 1468 00c6 00000000 		.4byte	0
+ 1469              	.LLST4:
+ 1470 00ca 00000000 		.4byte	.LVL22
+ 1471 00ce 0A000000 		.4byte	.LVL23
+ 1472 00d2 0100     		.2byte	0x1
+ 1473 00d4 50       		.byte	0x50
+ 1474 00d5 0A000000 		.4byte	.LVL23
+ 1475 00d9 4C000000 		.4byte	.LVL35
+ 1476 00dd 0100     		.2byte	0x1
+ 1477 00df 55       		.byte	0x55
+ 1478 00e0 4C000000 		.4byte	.LVL35
+ 1479 00e4 50000000 		.4byte	.LFE65
+ 1480 00e8 0600     		.2byte	0x6
+ 1481 00ea F3       		.byte	0xf3
+ 1482 00eb 03       		.uleb128 0x3
+ 1483 00ec F5       		.byte	0xf5
+ 1484 00ed 00       		.uleb128 0
+ 1485 00ee 25       		.uleb128 0x25
+ 1486 00ef 9F       		.byte	0x9f
+ 1487 00f0 00000000 		.4byte	0
+ 1488 00f4 00000000 		.4byte	0
+ 1489              	.LLST5:
+ 1490 00f8 00000000 		.4byte	.LVL22
+ 1491 00fc 0D000000 		.4byte	.LVL24-1
+ 1492 0100 0100     		.2byte	0x1
+ 1493 0102 51       		.byte	0x51
+ 1494 0103 0D000000 		.4byte	.LVL24-1
+ 1495 0107 4C000000 		.4byte	.LVL35
+ 1496 010b 0100     		.2byte	0x1
+ 1497 010d 56       		.byte	0x56
+ 1498 010e 4C000000 		.4byte	.LVL35
+ 1499 0112 50000000 		.4byte	.LFE65
+ 1500 0116 0600     		.2byte	0x6
+ 1501 0118 F3       		.byte	0xf3
+ 1502 0119 03       		.uleb128 0x3
+ 1503 011a F5       		.byte	0xf5
+ 1504 011b 01       		.uleb128 0x1
+ 1505 011c 25       		.uleb128 0x25
+ 1506 011d 9F       		.byte	0x9f
+ 1507 011e 00000000 		.4byte	0
+ 1508 0122 00000000 		.4byte	0
+ 1509              	.LLST6:
+ 1510 0126 00000000 		.4byte	.LVL22
+ 1511 012a 0D000000 		.4byte	.LVL24-1
+ 1512 012e 0100     		.2byte	0x1
+ 1513 0130 52       		.byte	0x52
+ 1514 0131 0D000000 		.4byte	.LVL24-1
+ 1515 0135 4C000000 		.4byte	.LVL35
+ 1516 0139 0100     		.2byte	0x1
+ 1517 013b 54       		.byte	0x54
+ 1518 013c 4C000000 		.4byte	.LVL35
+ 1519 0140 50000000 		.4byte	.LFE65
+ 1520 0144 0400     		.2byte	0x4
+ 1521 0146 F3       		.byte	0xf3
+ 1522 0147 01       		.uleb128 0x1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 30
+
+
+ 1523 0148 52       		.byte	0x52
+ 1524 0149 9F       		.byte	0x9f
+ 1525 014a 00000000 		.4byte	0
+ 1526 014e 00000000 		.4byte	0
+ 1527              	.LLST7:
+ 1528 0152 38000000 		.4byte	.LVL31
+ 1529 0156 3D000000 		.4byte	.LVL32-1
+ 1530 015a 0100     		.2byte	0x1
+ 1531 015c 50       		.byte	0x50
+ 1532 015d 00000000 		.4byte	0
+ 1533 0161 00000000 		.4byte	0
+ 1534              	.LLST8:
+ 1535 0165 00000000 		.4byte	.LVL36
+ 1536 0169 0A000000 		.4byte	.LVL38
+ 1537 016d 0100     		.2byte	0x1
+ 1538 016f 50       		.byte	0x50
+ 1539 0170 0A000000 		.4byte	.LVL38
+ 1540 0174 AC000000 		.4byte	.LVL65
+ 1541 0178 0100     		.2byte	0x1
+ 1542 017a 55       		.byte	0x55
+ 1543 017b AC000000 		.4byte	.LVL65
+ 1544 017f BC000000 		.4byte	.LFE66
+ 1545 0183 0600     		.2byte	0x6
+ 1546 0185 F3       		.byte	0xf3
+ 1547 0186 03       		.uleb128 0x3
+ 1548 0187 F5       		.byte	0xf5
+ 1549 0188 00       		.uleb128 0
+ 1550 0189 25       		.uleb128 0x25
+ 1551 018a 9F       		.byte	0x9f
+ 1552 018b 00000000 		.4byte	0
+ 1553 018f 00000000 		.4byte	0
+ 1554              	.LLST9:
+ 1555 0193 00000000 		.4byte	.LVL36
+ 1556 0197 0D000000 		.4byte	.LVL39-1
+ 1557 019b 0100     		.2byte	0x1
+ 1558 019d 51       		.byte	0x51
+ 1559 019e 0D000000 		.4byte	.LVL39-1
+ 1560 01a2 AC000000 		.4byte	.LVL65
+ 1561 01a6 0100     		.2byte	0x1
+ 1562 01a8 57       		.byte	0x57
+ 1563 01a9 AC000000 		.4byte	.LVL65
+ 1564 01ad BC000000 		.4byte	.LFE66
+ 1565 01b1 0600     		.2byte	0x6
+ 1566 01b3 F3       		.byte	0xf3
+ 1567 01b4 03       		.uleb128 0x3
+ 1568 01b5 F5       		.byte	0xf5
+ 1569 01b6 01       		.uleb128 0x1
+ 1570 01b7 25       		.uleb128 0x25
+ 1571 01b8 9F       		.byte	0x9f
+ 1572 01b9 00000000 		.4byte	0
+ 1573 01bd 00000000 		.4byte	0
+ 1574              	.LLST10:
+ 1575 01c1 00000000 		.4byte	.LVL36
+ 1576 01c5 0D000000 		.4byte	.LVL39-1
+ 1577 01c9 0100     		.2byte	0x1
+ 1578 01cb 52       		.byte	0x52
+ 1579 01cc 0D000000 		.4byte	.LVL39-1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 31
+
+
+ 1580 01d0 AC000000 		.4byte	.LVL65
+ 1581 01d4 0100     		.2byte	0x1
+ 1582 01d6 54       		.byte	0x54
+ 1583 01d7 AC000000 		.4byte	.LVL65
+ 1584 01db BC000000 		.4byte	.LFE66
+ 1585 01df 0400     		.2byte	0x4
+ 1586 01e1 F3       		.byte	0xf3
+ 1587 01e2 01       		.uleb128 0x1
+ 1588 01e3 52       		.byte	0x52
+ 1589 01e4 9F       		.byte	0x9f
+ 1590 01e5 00000000 		.4byte	0
+ 1591 01e9 00000000 		.4byte	0
+ 1592              	.LLST11:
+ 1593 01ed 08000000 		.4byte	.LVL37
+ 1594 01f1 56000000 		.4byte	.LVL49
+ 1595 01f5 0600     		.2byte	0x6
+ 1596 01f7 9E       		.byte	0x9e
+ 1597 01f8 04       		.uleb128 0x4
+ 1598 01f9 0000F041 		.4byte	0x41f00000
+ 1599 01fd 76000000 		.4byte	.LVL55
+ 1600 0201 7B000000 		.4byte	.LVL56-1
+ 1601 0205 0100     		.2byte	0x1
+ 1602 0207 50       		.byte	0x50
+ 1603 0208 00000000 		.4byte	0
+ 1604 020c 00000000 		.4byte	0
+ 1605              	.LLST12:
+ 1606 0210 98000000 		.4byte	.LVL61
+ 1607 0214 9D000000 		.4byte	.LVL62-1
+ 1608 0218 0100     		.2byte	0x1
+ 1609 021a 50       		.byte	0x50
+ 1610 021b 00000000 		.4byte	0
+ 1611 021f 00000000 		.4byte	0
+ 1612              		.section	.debug_aranges,"",%progbits
+ 1613 0000 3C000000 		.4byte	0x3c
+ 1614 0004 0200     		.2byte	0x2
+ 1615 0006 00000000 		.4byte	.Ldebug_info0
+ 1616 000a 04       		.byte	0x4
+ 1617 000b 00       		.byte	0
+ 1618 000c 0000     		.2byte	0
+ 1619 000e 0000     		.2byte	0
+ 1620 0010 00000000 		.4byte	.LFB63
+ 1621 0014 34000000 		.4byte	.LFE63-.LFB63
+ 1622 0018 00000000 		.4byte	.LFB64
+ 1623 001c 34000000 		.4byte	.LFE64-.LFB64
+ 1624 0020 00000000 		.4byte	.LFB65
+ 1625 0024 50000000 		.4byte	.LFE65-.LFB65
+ 1626 0028 00000000 		.4byte	.LFB66
+ 1627 002c BC000000 		.4byte	.LFE66-.LFB66
+ 1628 0030 00000000 		.4byte	.LFB67
+ 1629 0034 74000000 		.4byte	.LFE67-.LFB67
+ 1630 0038 00000000 		.4byte	0
+ 1631 003c 00000000 		.4byte	0
+ 1632              		.section	.debug_ranges,"",%progbits
+ 1633              	.Ldebug_ranges0:
+ 1634 0000 00000000 		.4byte	.LFB63
+ 1635 0004 34000000 		.4byte	.LFE63
+ 1636 0008 00000000 		.4byte	.LFB64
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 32
+
+
+ 1637 000c 34000000 		.4byte	.LFE64
+ 1638 0010 00000000 		.4byte	.LFB65
+ 1639 0014 50000000 		.4byte	.LFE65
+ 1640 0018 00000000 		.4byte	.LFB66
+ 1641 001c BC000000 		.4byte	.LFE66
+ 1642 0020 00000000 		.4byte	.LFB67
+ 1643 0024 74000000 		.4byte	.LFE67
+ 1644 0028 00000000 		.4byte	0
+ 1645 002c 00000000 		.4byte	0
+ 1646              		.section	.debug_line,"",%progbits
+ 1647              	.Ldebug_line0:
+ 1648 0000 65020000 		.section	.debug_str,"MS",%progbits,1
+ 1648      0200D301 
+ 1648      00000201 
+ 1648      FB0E0D00 
+ 1648      01010101 
+ 1649              	.LASF25:
+ 1650 0000 74656D70 		.ascii	"tempCount\000"
+ 1650      436F756E 
+ 1650      7400
+ 1651              	.LASF10:
+ 1652 000a 5F5F696E 		.ascii	"__int32_t\000"
+ 1652      7433325F 
+ 1652      7400
+ 1653              	.LASF41:
+ 1654 0014 51756164 		.ascii	"QuadDec_Right_SetCounter\000"
+ 1654      4465635F 
+ 1654      52696768 
+ 1654      745F5365 
+ 1654      74436F75 
+ 1655              	.LASF19:
+ 1656 002d 52696768 		.ascii	"RightMotor\000"
+ 1656      744D6F74 
+ 1656      6F7200
+ 1657              	.LASF12:
+ 1658 0038 646F7562 		.ascii	"double\000"
+ 1658      6C6500
+ 1659              	.LASF17:
+ 1660 003f 64697265 		.ascii	"direction\000"
+ 1660      6374696F 
+ 1660      6E00
+ 1661              	.LASF47:
+ 1662 0049 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 1662      73657273 
+ 1662      5C446161 
+ 1662      6E697368 
+ 1662      20426F6F 
+ 1663 0078 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 1663      6F432044 
+ 1663      65736967 
+ 1663      6E5C4543 
+ 1663      45333039 
+ 1664              	.LASF38:
+ 1665 009f 50574D5F 		.ascii	"PWM_M1_Stop\000"
+ 1665      4D315F53 
+ 1665      746F7000 
+ 1666              	.LASF27:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 33
+
+
+ 1667 00ab 52696768 		.ascii	"RightSpeed\000"
+ 1667      74537065 
+ 1667      656400
+ 1668              	.LASF0:
+ 1669 00b6 666C6F61 		.ascii	"float\000"
+ 1669      7400
+ 1670              	.LASF31:
+ 1671 00bc 4D315F44 		.ascii	"M1_Direction_Write\000"
+ 1671      69726563 
+ 1671      74696F6E 
+ 1671      5F577269 
+ 1671      746500
+ 1672              	.LASF2:
+ 1673 00cf 756E7369 		.ascii	"unsigned char\000"
+ 1673      676E6564 
+ 1673      20636861 
+ 1673      7200
+ 1674              	.LASF21:
+ 1675 00dd 44697374 		.ascii	"Distance\000"
+ 1675      616E6365 
+ 1675      00
+ 1676              	.LASF35:
+ 1677 00e6 50574D5F 		.ascii	"PWM_M2_WriteCompare\000"
+ 1677      4D325F57 
+ 1677      72697465 
+ 1677      436F6D70 
+ 1677      61726500 
+ 1678              	.LASF28:
+ 1679 00fa 66616273 		.ascii	"fabs\000"
+ 1679      00
+ 1680              	.LASF6:
+ 1681 00ff 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1681      20756E73 
+ 1681      69676E65 
+ 1681      6420696E 
+ 1681      7400
+ 1682              	.LASF4:
+ 1683 0111 73686F72 		.ascii	"short unsigned int\000"
+ 1683      7420756E 
+ 1683      7369676E 
+ 1683      65642069 
+ 1683      6E7400
+ 1684              	.LASF42:
+ 1685 0124 51756164 		.ascii	"QuadDec_Right_GetCounter\000"
+ 1685      4465635F 
+ 1685      52696768 
+ 1685      745F4765 
+ 1685      74436F75 
+ 1686              	.LASF33:
+ 1687 013d 50574D5F 		.ascii	"PWM_M1_Start\000"
+ 1687      4D315F53 
+ 1687      74617274 
+ 1687      00
+ 1688              	.LASF29:
+ 1689 014a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1689      52784275 
+ 1689      66666572 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 34
+
+
+ 1689      00
+ 1690              	.LASF24:
+ 1691 0157 46696E61 		.ascii	"FinalSpeed\000"
+ 1691      6C537065 
+ 1691      656400
+ 1692              	.LASF36:
+ 1693 0162 50574D5F 		.ascii	"PWM_M2_Start\000"
+ 1693      4D325F53 
+ 1693      74617274 
+ 1693      00
+ 1694              	.LASF9:
+ 1695 016f 756E7369 		.ascii	"unsigned int\000"
+ 1695      676E6564 
+ 1695      20696E74 
+ 1695      00
+ 1696              	.LASF39:
+ 1697 017c 50574D5F 		.ascii	"PWM_M2_Stop\000"
+ 1697      4D325F53 
+ 1697      746F7000 
+ 1698              	.LASF8:
+ 1699 0188 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1699      206C6F6E 
+ 1699      6720756E 
+ 1699      7369676E 
+ 1699      65642069 
+ 1700              	.LASF46:
+ 1701 019f 77686565 		.ascii	"wheels.c\000"
+ 1701      6C732E63 
+ 1701      00
+ 1702              	.LASF48:
+ 1703 01a8 50617261 		.ascii	"ParallelRobot\000"
+ 1703      6C6C656C 
+ 1703      526F626F 
+ 1703      7400
+ 1704              	.LASF37:
+ 1705 01b6 51756164 		.ascii	"QuadDec_Left_GetCounter\000"
+ 1705      4465635F 
+ 1705      4C656674 
+ 1705      5F476574 
+ 1705      436F756E 
+ 1706              	.LASF45:
+ 1707 01ce 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1707      43313120 
+ 1707      352E342E 
+ 1707      31203230 
+ 1707      31363036 
+ 1708 0201 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1708      20726576 
+ 1708      6973696F 
+ 1708      6E203233 
+ 1708      37373135 
+ 1709 0234 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1709      66756E63 
+ 1709      74696F6E 
+ 1709      2D736563 
+ 1709      74696F6E 
+ 1710              	.LASF16:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 35
+
+
+ 1711 025c 73706565 		.ascii	"speed\000"
+ 1711      6400
+ 1712              	.LASF15:
+ 1713 0262 73697A65 		.ascii	"sizetype\000"
+ 1713      74797065 
+ 1713      00
+ 1714              	.LASF7:
+ 1715 026b 6C6F6E67 		.ascii	"long long int\000"
+ 1715      206C6F6E 
+ 1715      6720696E 
+ 1715      7400
+ 1716              	.LASF13:
+ 1717 0279 63686172 		.ascii	"char\000"
+ 1717      00
+ 1718              	.LASF30:
+ 1719 027e 4C656674 		.ascii	"LeftDelta\000"
+ 1719      44656C74 
+ 1719      6100
+ 1720              	.LASF11:
+ 1721 0288 696E7433 		.ascii	"int32_t\000"
+ 1721      325F7400 
+ 1722              	.LASF23:
+ 1723 0290 4D6F7665 		.ascii	"MoveStraight\000"
+ 1723      53747261 
+ 1723      69676874 
+ 1723      00
+ 1724              	.LASF3:
+ 1725 029d 73686F72 		.ascii	"short int\000"
+ 1725      7420696E 
+ 1725      7400
+ 1726              	.LASF32:
+ 1727 02a7 50574D5F 		.ascii	"PWM_M1_WriteCompare\000"
+ 1727      4D315F57 
+ 1727      72697465 
+ 1727      436F6D70 
+ 1727      61726500 
+ 1728              	.LASF43:
+ 1729 02bb 4C656674 		.ascii	"Left_bumper_Read\000"
+ 1729      5F62756D 
+ 1729      7065725F 
+ 1729      52656164 
+ 1729      00
+ 1730              	.LASF20:
+ 1731 02cc 5475726E 		.ascii	"Turn\000"
+ 1731      00
+ 1732              	.LASF18:
+ 1733 02d1 4C656674 		.ascii	"LeftMotor\000"
+ 1733      4D6F746F 
+ 1733      7200
+ 1734              	.LASF22:
+ 1735 02db 44697265 		.ascii	"Direction\000"
+ 1735      6374696F 
+ 1735      6E00
+ 1736              	.LASF5:
+ 1737 02e5 6C6F6E67 		.ascii	"long int\000"
+ 1737      20696E74 
+ 1737      00
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\cccFhzea.s 			page 36
+
+
+ 1738              	.LASF14:
+ 1739 02ee 6C6F6E67 		.ascii	"long double\000"
+ 1739      20646F75 
+ 1739      626C6500 
+ 1740              	.LASF34:
+ 1741 02fa 4D325F44 		.ascii	"M2_Direction_Write\000"
+ 1741      69726563 
+ 1741      74696F6E 
+ 1741      5F577269 
+ 1741      746500
+ 1742              	.LASF1:
+ 1743 030d 7369676E 		.ascii	"signed char\000"
+ 1743      65642063 
+ 1743      68617200 
+ 1744              	.LASF44:
+ 1745 0319 52696768 		.ascii	"Right_bumper_Read\000"
+ 1745      745F6275 
+ 1745      6D706572 
+ 1745      5F526561 
+ 1745      6400
+ 1746              	.LASF26:
+ 1747 032b 4C656674 		.ascii	"LeftSpeed\000"
+ 1747      53706565 
+ 1747      6400
+ 1748              	.LASF40:
+ 1749 0335 51756164 		.ascii	"QuadDec_Left_SetCounter\000"
+ 1749      4465635F 
+ 1749      4C656674 
+ 1749      5F536574 
+ 1749      436F756E 
+ 1750              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

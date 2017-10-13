@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
   28:Generated_Source\PSoC5/QuadDec_Left_INT.c **** ********************************************************************************
   29:Generated_Source\PSoC5/QuadDec_Left_INT.c **** *
   30:Generated_Source\PSoC5/QuadDec_Left_INT.c **** * Summary:
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 2
 
 
   31:Generated_Source\PSoC5/QuadDec_Left_INT.c **** *  Interrupt Service Routine for Quadrature Decoder Component.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
   64:Generated_Source\PSoC5/QuadDec_Left_INT.c ****     }
   65:Generated_Source\PSoC5/QuadDec_Left_INT.c ****     else if (0u != (QuadDec_Left_swStatus & QuadDec_Left_COUNTER_UNDERFLOW))
   49              		.loc 1 65 0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 3
 
 
   50 001a 13F0020F 		tst	r3, #2
@@ -176,13 +176,13 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
   91 0006 00000000 		.4byte	.Ldebug_abbrev0
   92 000a 04       		.byte	0x4
   93 000b 01       		.uleb128 0x1
-  94 000c 38000000 		.4byte	.LASF17
+  94 000c 8E000000 		.4byte	.LASF17
   95 0010 0C       		.byte	0xc
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 4
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 4
 
 
-  96 0011 C1010000 		.4byte	.LASF18
-  97 0015 70010000 		.4byte	.LASF19
+  96 0011 DE010000 		.4byte	.LASF18
+  97 0015 38000000 		.4byte	.LASF19
   98 0019 00000000 		.4byte	.Ldebug_ranges0+0
   99 001d 00000000 		.4byte	0
  100 0021 00000000 		.4byte	.Ldebug_line0
@@ -201,73 +201,73 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  113 003a 03       		.uleb128 0x3
  114 003b 08       		.byte	0x8
  115 003c 04       		.byte	0x4
- 116 003d 45010000 		.4byte	.LASF2
+ 116 003d BA010000 		.4byte	.LASF2
  117 0041 03       		.uleb128 0x3
  118 0042 01       		.byte	0x1
  119 0043 06       		.byte	0x6
- 120 0044 64010000 		.4byte	.LASF3
+ 120 0044 AE010000 		.4byte	.LASF3
  121 0048 03       		.uleb128 0x3
  122 0049 01       		.byte	0x1
  123 004a 08       		.byte	0x8
- 124 004b 11010000 		.4byte	.LASF4
+ 124 004b 67010000 		.4byte	.LASF4
  125 004f 03       		.uleb128 0x3
  126 0050 02       		.byte	0x2
  127 0051 05       		.byte	0x5
- 128 0052 B2010000 		.4byte	.LASF5
+ 128 0052 CF010000 		.4byte	.LASF5
  129 0056 03       		.uleb128 0x3
  130 0057 02       		.byte	0x2
  131 0058 07       		.byte	0x7
- 132 0059 51010000 		.4byte	.LASF6
+ 132 0059 9B010000 		.4byte	.LASF6
  133 005d 03       		.uleb128 0x3
  134 005e 04       		.byte	0x4
  135 005f 05       		.byte	0x5
- 136 0060 24010000 		.4byte	.LASF7
+ 136 0060 7A010000 		.4byte	.LASF7
  137 0064 03       		.uleb128 0x3
  138 0065 04       		.byte	0x4
  139 0066 07       		.byte	0x7
- 140 0067 CC000000 		.4byte	.LASF8
+ 140 0067 22010000 		.4byte	.LASF8
  141 006b 03       		.uleb128 0x3
  142 006c 08       		.byte	0x8
  143 006d 07       		.byte	0x7
- 144 006e DE000000 		.4byte	.LASF9
+ 144 006e 34010000 		.4byte	.LASF9
  145 0072 03       		.uleb128 0x3
  146 0073 04       		.byte	0x4
  147 0074 07       		.byte	0x7
- 148 0075 A9010000 		.4byte	.LASF10
+ 148 0075 C6010000 		.4byte	.LASF10
  149 0079 03       		.uleb128 0x3
  150 007a 01       		.byte	0x1
  151 007b 08       		.byte	0x8
- 152 007c 1F010000 		.4byte	.LASF11
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 5
+ 152 007c 75010000 		.4byte	.LASF11
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 5
 
 
  153 0080 04       		.uleb128 0x4
- 154 0081 C6000000 		.4byte	.LASF12
+ 154 0081 1C010000 		.4byte	.LASF12
  155 0085 02       		.byte	0x2
  156 0086 9201     		.2byte	0x192
  157 0088 48000000 		.4byte	0x48
  158 008c 04       		.uleb128 0x4
- 159 008d EB010000 		.4byte	.LASF13
+ 159 008d 08020000 		.4byte	.LASF13
  160 0091 02       		.byte	0x2
  161 0092 9701     		.2byte	0x197
  162 0094 5D000000 		.4byte	0x5d
  163 0098 03       		.uleb128 0x3
  164 0099 04       		.byte	0x4
  165 009a 04       		.byte	0x4
- 166 009b 0B010000 		.4byte	.LASF14
+ 166 009b 61010000 		.4byte	.LASF14
  167 009f 03       		.uleb128 0x3
  168 00a0 08       		.byte	0x8
  169 00a1 04       		.byte	0x4
- 170 00a2 3E010000 		.4byte	.LASF15
+ 170 00a2 94010000 		.4byte	.LASF15
  171 00a6 04       		.uleb128 0x4
- 172 00a7 BC010000 		.4byte	.LASF16
+ 172 00a7 D9010000 		.4byte	.LASF16
  173 00ab 02       		.byte	0x2
  174 00ac 3C02     		.2byte	0x23c
  175 00ae B2000000 		.4byte	0xb2
  176 00b2 05       		.uleb128 0x5
  177 00b3 80000000 		.4byte	0x80
  178 00b7 06       		.uleb128 0x6
- 179 00b8 2D010000 		.4byte	.LASF20
+ 179 00b8 83010000 		.4byte	.LASF20
  180 00bc 01       		.byte	0x1
  181 00bd 2E       		.byte	0x2e
  182 00be 00000000 		.4byte	.LFB0
@@ -276,7 +276,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  185 00c7 9C       		.byte	0x9c
  186 00c8 DC000000 		.4byte	0xdc
  187 00cc 07       		.uleb128 0x7
- 188 00cd F5000000 		.4byte	.LASF21
+ 188 00cd 4B010000 		.4byte	.LASF21
  189 00d1 01       		.byte	0x1
  190 00d2 30       		.byte	0x30
  191 00d3 80000000 		.4byte	0x80
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  207 0000 01       		.uleb128 0x1
  208 0001 11       		.uleb128 0x11
  209 0002 01       		.byte	0x1
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 6
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 6
 
 
  210 0003 25       		.uleb128 0x25
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  264 0039 49       		.uleb128 0x49
  265 003a 13       		.uleb128 0x13
  266 003b 00       		.byte	0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 7
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 7
 
 
  267 003c 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  321 0073 02       		.uleb128 0x2
  322 0074 18       		.uleb128 0x18
  323 0075 00       		.byte	0
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 8
 
 
  324 0076 00       		.byte	0
@@ -473,114 +473,116 @@ ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 1
  361      4C656674 
  361      5F636F75 
  361      6E743332 
- 362              	.LASF17:
- 363 0038 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 363      43313120 
- 363      352E342E 
- 363      31203230 
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 9
+ 362              	.LASF19:
+ 363 0038 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 363      73657273 
+ 363      5C446161 
+ 363      6E697368 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 9
 
 
- 363      31363036 
- 364 006b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 364      20726576 
- 364      6973696F 
- 364      6E203233 
- 364      37373135 
- 365 009e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 365      66756E63 
- 365      74696F6E 
- 365      2D736563 
- 365      74696F6E 
- 366              	.LASF12:
- 367 00c6 75696E74 		.ascii	"uint8\000"
- 367      3800
- 368              	.LASF8:
- 369 00cc 6C6F6E67 		.ascii	"long unsigned int\000"
- 369      20756E73 
- 369      69676E65 
- 369      6420696E 
- 369      7400
- 370              	.LASF9:
- 371 00de 6C6F6E67 		.ascii	"long long unsigned int\000"
- 371      206C6F6E 
- 371      6720756E 
- 371      7369676E 
- 371      65642069 
- 372              	.LASF21:
- 373 00f5 51756164 		.ascii	"QuadDec_Left_swStatus\000"
- 373      4465635F 
- 373      4C656674 
- 373      5F737753 
- 373      74617475 
- 374              	.LASF14:
- 375 010b 666C6F61 		.ascii	"float\000"
- 375      7400
- 376              	.LASF4:
- 377 0111 756E7369 		.ascii	"unsigned char\000"
- 377      676E6564 
- 377      20636861 
- 377      7200
- 378              	.LASF11:
- 379 011f 63686172 		.ascii	"char\000"
- 379      00
- 380              	.LASF7:
- 381 0124 6C6F6E67 		.ascii	"long int\000"
- 381      20696E74 
- 381      00
- 382              	.LASF20:
- 383 012d 51756164 		.ascii	"QuadDec_Left_ISR\000"
- 383      4465635F 
- 383      4C656674 
- 383      5F495352 
- 383      00
- 384              	.LASF15:
- 385 013e 646F7562 		.ascii	"double\000"
- 385      6C6500
- 386              	.LASF2:
-ARM GAS  C:\Users\daani\AppData\Local\Temp\cctA1gg1.s 			page 10
+ 363      20426F6F 
+ 364 0067 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 364      6F432044 
+ 364      65736967 
+ 364      6E5C4543 
+ 364      45333039 
+ 365              	.LASF17:
+ 366 008e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 366      43313120 
+ 366      352E342E 
+ 366      31203230 
+ 366      31363036 
+ 367 00c1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 367      20726576 
+ 367      6973696F 
+ 367      6E203233 
+ 367      37373135 
+ 368 00f4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 368      66756E63 
+ 368      74696F6E 
+ 368      2D736563 
+ 368      74696F6E 
+ 369              	.LASF12:
+ 370 011c 75696E74 		.ascii	"uint8\000"
+ 370      3800
+ 371              	.LASF8:
+ 372 0122 6C6F6E67 		.ascii	"long unsigned int\000"
+ 372      20756E73 
+ 372      69676E65 
+ 372      6420696E 
+ 372      7400
+ 373              	.LASF9:
+ 374 0134 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 374      206C6F6E 
+ 374      6720756E 
+ 374      7369676E 
+ 374      65642069 
+ 375              	.LASF21:
+ 376 014b 51756164 		.ascii	"QuadDec_Left_swStatus\000"
+ 376      4465635F 
+ 376      4C656674 
+ 376      5F737753 
+ 376      74617475 
+ 377              	.LASF14:
+ 378 0161 666C6F61 		.ascii	"float\000"
+ 378      7400
+ 379              	.LASF4:
+ 380 0167 756E7369 		.ascii	"unsigned char\000"
+ 380      676E6564 
+ 380      20636861 
+ 380      7200
+ 381              	.LASF11:
+ 382 0175 63686172 		.ascii	"char\000"
+ 382      00
+ 383              	.LASF7:
+ 384 017a 6C6F6E67 		.ascii	"long int\000"
+ 384      20696E74 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccLwnYau.s 			page 10
 
 
- 387 0145 6C6F6E67 		.ascii	"long double\000"
- 387      20646F75 
- 387      626C6500 
- 388              	.LASF6:
- 389 0151 73686F72 		.ascii	"short unsigned int\000"
- 389      7420756E 
- 389      7369676E 
- 389      65642069 
- 389      6E7400
- 390              	.LASF3:
- 391 0164 7369676E 		.ascii	"signed char\000"
- 391      65642063 
- 391      68617200 
- 392              	.LASF19:
- 393 0170 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
- 393      73657273 
- 393      5C646161 
- 393      6E695C44 
- 393      6F63756D 
- 394 019d 20436F64 		.ascii	" Code.cydsn\000"
- 394      652E6379 
- 394      64736E00 
+ 384      00
+ 385              	.LASF20:
+ 386 0183 51756164 		.ascii	"QuadDec_Left_ISR\000"
+ 386      4465635F 
+ 386      4C656674 
+ 386      5F495352 
+ 386      00
+ 387              	.LASF15:
+ 388 0194 646F7562 		.ascii	"double\000"
+ 388      6C6500
+ 389              	.LASF6:
+ 390 019b 73686F72 		.ascii	"short unsigned int\000"
+ 390      7420756E 
+ 390      7369676E 
+ 390      65642069 
+ 390      6E7400
+ 391              	.LASF3:
+ 392 01ae 7369676E 		.ascii	"signed char\000"
+ 392      65642063 
+ 392      68617200 
+ 393              	.LASF2:
+ 394 01ba 6C6F6E67 		.ascii	"long double\000"
+ 394      20646F75 
+ 394      626C6500 
  395              	.LASF10:
- 396 01a9 73697A65 		.ascii	"sizetype\000"
+ 396 01c6 73697A65 		.ascii	"sizetype\000"
  396      74797065 
  396      00
  397              	.LASF5:
- 398 01b2 73686F72 		.ascii	"short int\000"
+ 398 01cf 73686F72 		.ascii	"short int\000"
  398      7420696E 
  398      7400
  399              	.LASF16:
- 400 01bc 72656738 		.ascii	"reg8\000"
+ 400 01d9 72656738 		.ascii	"reg8\000"
  400      00
  401              	.LASF18:
- 402 01c1 47656E65 		.ascii	"Generated_Source\\PSoC5\\QuadDec_Left_INT.c\000"
+ 402 01de 47656E65 		.ascii	"Generated_Source\\PSoC5\\QuadDec_Left_INT.c\000"
  402      72617465 
  402      645F536F 
  402      75726365 
  402      5C50536F 
  403              	.LASF13:
- 404 01eb 696E7433 		.ascii	"int32\000"
+ 404 0208 696E7433 		.ascii	"int32\000"
  404      3200
  405              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

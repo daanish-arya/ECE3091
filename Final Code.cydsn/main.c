@@ -17,40 +17,43 @@
 #include "project.h"
 #include "stdio.h"
 #include "math.h"
+#include "colour.h"
 #include "stdlib.h"
+#include "wheels.h"
 
 
 
 // Function Prototypes
-void LeftMotor(float speed, int direction);
-void RightMotor(float speed, int direction);
 void Finish_Tasks(void);
-void RightTurn();
-void LeftTurn();
-void MoveStraight(float FinalSpeed, float Distance, int Direction);
-void Turn(float speed, float Distance, int Direction);
 void OnOff();
 float Ultrasonic_Sensor(int usonic);
 void Reset_Tasks();
 void UltraSonics();
-void ParallelRobot();
-void LED();
+int * Read_Order();
+int Move_to_Pucks(int obstacle_location);
+int Line_Up_Puck(int colour);
+void Pick_Up_Puck();
+void Backtrack(int obstacle_location);
+void Stack();
 
 // Defining Variables
 char string[100];
 int i = 0;
 int flag = 1;
+int obstacle_location; // 0 for left or centre, 1 for right
+int pucks_stacked = 0;
+int given_pattern[5];
+int * pattern_pointer;
 int32 LeftCount = 0;
 int32 RightCount = 0;
-int32 red;
-int32 blue;
-int32 green;
 int ratio;
-float LeftDelta = 290.0; // Ratio to convert shaft count to distance
+int orientation;
+int location[2];
 float F1Coord = 0;
 float F2Coord = 0;
 float LeftCoord = 0;
 float RightCoord = 0;
+
 
 // Declare Ultrasonic Interrupts
 CY_ISR(TimerF1_ISR_Handler) {
@@ -77,15 +80,26 @@ CY_ISR(TimerR_ISR_Handler) {
   RightCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
 }
 
+int * pattern(int yus[]) {
+    int ayus[5];
+    for (int i = 0; i < 5; i++) {
+        ayus[i] = yus[i];
+    }
+     
+    return yus; // Returns pointer to first element of array
+}
+
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
+    
+    
+    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-//        Clock_1_Start();
+        Clock_1_Start();
 //        QuadDec_Left_Start();
 //        QuadDec_Right_Start();        
-//        UART_Start(); 
+        UART_Start(); 
 //        IDAC8_Start();
 //        ADC_Start(); 
 //        TIA_Start();
@@ -105,16 +119,35 @@ int main(void)
 //		Timer_ULTRASONIC_F2_Start();
 //		Timer_ULTRASONIC_L_Start();
 //		Timer_ULTRASONIC_R_Start();
-
-        for(;;)
-        {
-                LED_Write(1);
-                CyDelay(1000);
-                //ParallelRobot();
-                LED_Write(0);
-                CyDelay(1000);
-        }
-  
+//      zero stepper
+    char lul[] = "2 plus 2 is 4 - 1 thats 3 quick maffs\n";
+    UART_PutString(lul);
+    
+    int array[] = {1, 2, 3, 5, 6};
+    char skrrt[30];
+//    pattern_pointer = Read_Order();
+    int * das_it;
+    das_it = pattern(array);
+    int i;
+    for (i = 0; i < 5; i++) {
+        given_pattern[i] = *(das_it + i);
+        sprintf(lul, "The ting go %d\n", given_pattern[i]);
+        UART_PutString(lul);
+        CyDelay(1000);
+    }
+    // Obstacle location defined using switch
+    
+    while (pucks_stacked < 5) {
+        // Initialise stepper
+        Move_to_Pucks(obstacle_location);
+        Line_Up_Puck(given_pattern[pucks_stacked]);
+        Pick_Up_Puck();
+        Backtrack(obstacle_location);
+        Stack();
+        pucks_stacked++;
+        Backtrack(obstacle_location);
+        
+    }
 }
 
 void Finish_Tasks(void) 
@@ -168,199 +201,7 @@ void Reset_Tasks()
     }
 }
 
-void LeftMotor(float speed, int direction)
-{
-        speed = (65535*speed)/100.0;      // speed as duty cycle
-        M1_Direction_Write(direction);  // write 1 or 0 for direction
-        PWM_M1_WriteCompare(speed);     // write speed in terms of duty cycle// start left PWM
-        PWM_M1_Start();
-}
 
-void RightMotor(float speed, int direction)
-{
-        speed = (65535*speed)/100.0;      // speed as duty cycle
-        M2_Direction_Write(direction);  // write 1 or 0 for direction
-        PWM_M2_WriteCompare(speed);     // write speed in terms of duty cycle
-        PWM_M2_Start();                 // start left PWM   
-}
-
-
-void Turn(float speed, float Distance, int Direction)
-{
-    QuadDec_Left_SetCounter(0);
-    QuadDec_Right_SetCounter(0);
-
-    for(;;)
-    {
-		LeftMotor(speed,~Direction);
-    	RightMotor(speed,Direction);
-    	
-        float tempCount = fabs((float)QuadDec_Left_GetCounter() / LeftDelta);
-		
-    	if ( tempCount >= Distance)
-    	{
-			PWM_M1_Stop();                 // stop left PWM
-    		PWM_M2_Stop();                 // stop right PWM
-            break;
-    	}
-    }
-    
-}
-
-
-void MoveStraight(float FinalSpeed, float Distance, int Direction)
-{
-    float LeftSpeed = 30 - 0.15;
-    float RightSpeed = 30;
-    QuadDec_Right_SetCounter(0);
-    QuadDec_Left_SetCounter(0);
-    LeftMotor(LeftSpeed,Direction);
-	RightMotor(RightSpeed,Direction);
-    
-    while(QuadDec_Left_GetCounter() < 5 * LeftDelta)   // Wait for couts of Shaft Encoder to settle
-    {
-		LeftMotor(LeftSpeed,Direction);
-		RightMotor(RightSpeed,Direction);
-    }
-    
-	for(;;)
-		{        
-       
-        RightSpeed = FinalSpeed * (float)QuadDec_Left_GetCounter()/ (float)QuadDec_Right_GetCounter(); // Calc Right Speed with respect to Left Speed
-    	RightMotor(RightSpeed,Direction);
-    	LeftMotor(FinalSpeed,Direction);
-        float tempCount = fabs((float)QuadDec_Left_GetCounter() / LeftDelta);
-
-    	if ( tempCount >= Distance)
-    	{
-			PWM_M1_Stop();                 // stop left PWM
-    		PWM_M2_Stop();                 // stop right PWM
-            break;
-    	}
-           
-		}
-   
-}
-void ParallelRobot()
-{   
-//    while (Left_bumper_Read() == 1 || Right_bumper_Read() == 1) 
-//    {
-//        LeftMotor(50,0);
-//        RightMotor(50,0);
-//        
-//        if (Left_bumper_Read() == 0 && Right_bumper_Read() == 0) 
-//        {
-//            PWM_M2_Stop(); // stop left PWM
-//            PWM_M1_Stop(); // stop right PWM
-//            break;
-//        }
-//    }
-    
-    LeftMotor(50,0);
-    RightMotor(50,0);
-    
-        while (Left_bumper_Read() == 0 || Right_bumper_Read() == 0) 
-    {
-
-        if (Left_bumper_Read() == 1) 
-        {
-            RightMotor(50,0);
-            PWM_M1_Stop(); // stop left PWM
-        }
-        
-        else if (Right_bumper_Read() == 1) 
-        {
-            LeftMotor(50,0);
-            PWM_M2_Stop(); // stop left PWM
-        }
-        
-        else if (Left_bumper_Read() == 1 && Right_bumper_Read() == 1) 
-        {
-            PWM_M1_Stop(); // stop left PWM
-            PWM_M2_Stop(); // stop right PWM
-            break;
-        }
-        
-        
-    }
-
-}
-
-
-
-void LED() 
-{
-    red = 0;
-    green = 0;
-    blue = 0;
-    
-    LED_Blue_Write(0);
-    LED_Red_Write(0);
-    LED_Green_Write(0);
-    
-    CyDelay(10);
-    
-    IDAC8_Wakeup();
-    LED_Red_Write(1);
-    CyDelay(40);
-    ADC_StartConvert();
-    ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
-    red = ADC_GetResult32();
-    LED_Red_Write(0);
-    IDAC8_Sleep();
-    
-    CyDelay(10);
-    
-    IDAC8_Wakeup();
-    LED_Green_Write(1);
-    CyDelay(40);
-    ADC_StartConvert();
-    ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
-    green = ADC_GetResult32();
-    LED_Green_Write(0);
-    IDAC8_Sleep();
-    
-    CyDelay(10);
-    
-    IDAC8_Wakeup();
-    LED_Blue_Write(1);
-    CyDelay(40);
-    ADC_StartConvert();
-    ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
-    blue = ADC_GetResult32();
-    LED_Blue_Write(0);
-    IDAC8_Sleep();
-    
-    CyDelay(200);
-    
-    if ((red-blue > 4000) && (red-green > 4000))
-    {
-        LED_Red_Write(1);
-        CyDelay(1000);
-        LED_Red_Write(0);
-    }
-    else if ((green-red > 4000) && (green-blue > 4000))
-    {
-        LED_Green_Write(1);
-        CyDelay(500);
-        LED_Green_Write(0);
-    }
-    else if ((blue-red > 4000) && (blue-green > 4000))
-    {
-        LED_Blue_Write(1);
-        CyDelay(500);
-        LED_Blue_Write(0);
-    }
-    else
-    {  
-        LED_Red_Write(0);
-        LED_Green_Write(0);
-        LED_Blue_Write(0);
-        
-        CyDelay(500);
-    }
-    //LED_Write(0);
-}
 int Grip_Open()
     {
         PWM_Grip_WriteCompare(1050);
@@ -450,6 +291,74 @@ int Lift_Down()
     
     PWM_Lift_WriteCompare(1475);
     return 0;
+}
+
+int * Read_Order() {
+    
+    int pucks_read = 0;
+    int pattern[5];
+    
+    
+    MoveStraight(40, 3.2, 1);
+    while (pucks_read < 5) {
+        pattern[4-i] = LED();
+        pucks_read++;
+        MoveStraight(40, 3.2, 0);
+    }
+    return pattern;
+}
+
+int Move_to_Pucks(int obstacle_location) {
+    
+    if (obstacle_location) {
+        Turn(50, 180, 0);
+        MoveStraight(50, 50, 0); // Until back wall is reached?
+        Turn(50, 90, 1); 
+        // Parallel robot?
+        MoveStraight(50, 100, 0); // Move to pucks
+    }
+    
+    return 0;
+}
+
+int Line_Up_Puck(int colour) {
+    // To be done once robot is in position
+    int correct_puck = 0;
+    int puck_colour = 0;
+    
+    while (1) {
+        puck_colour = LED();
+        if (puck_colour == colour) {
+            return 1;
+        }
+        else {
+            // Turn a few degrees in either direction
+            // Move straight
+            continue;
+        }
+        
+    }
+}
+
+void Pick_Up_Puck() {
+    // TODO: Implement this. Have the ting close its gripper and then
+    // lift it up.
+}
+
+void Backtrack(int obstacle_location) {
+    if (obstacle_location) {
+        // Code for obstacle in centre or right
+    }
+    else {
+        // Code for obstacle on left
+    }
+}
+
+void Stack() {
+    // Move to construction zone
+    // Read number of already stacked pucks
+    // Raise platform to appropriate height
+    // Drop it on top
 }
 
 // Code to print Distance, diff and stuff

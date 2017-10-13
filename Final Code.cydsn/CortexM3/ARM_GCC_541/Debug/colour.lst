@@ -1,0 +1,1490 @@
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"colour.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.LED,"ax",%progbits
+  20              		.align	2
+  21              		.global	LED
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	LED, %function
+  25              	LED:
+  26              	.LFB63:
+  27              		.file 1 "colour.c"
+   1:colour.c      **** /* ========================================
+   2:colour.c      ****  *
+   3:colour.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:colour.c      ****  * All Rights Reserved
+   5:colour.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:colour.c      ****  *
+   7:colour.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:colour.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:colour.c      ****  *
+  10:colour.c      ****  * ========================================
+  11:colour.c      **** */
+  12:colour.c      **** 
+  13:colour.c      **** /* [] END OF FILE */
+  14:colour.c      **** #include <project.h>
+  15:colour.c      **** 
+  16:colour.c      **** int32 red;
+  17:colour.c      **** int32 blue;
+  18:colour.c      **** int32 green;
+  19:colour.c      **** 
+  20:colour.c      **** int LED() 
+  21:colour.c      **** {
+  28              		.loc 1 21 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 24
+  34              		.cfi_offset 3, -24
+  35              		.cfi_offset 4, -20
+  36              		.cfi_offset 5, -16
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 2
+
+
+  37              		.cfi_offset 6, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  22:colour.c      ****     red = 0;
+  40              		.loc 1 22 0
+  41 0002 554E     		ldr	r6, .L7
+  42 0004 0024     		movs	r4, #0
+  43 0006 3460     		str	r4, [r6]
+  23:colour.c      ****     green = 0;
+  44              		.loc 1 23 0
+  45 0008 544F     		ldr	r7, .L7+4
+  46 000a 3C60     		str	r4, [r7]
+  24:colour.c      ****     blue = 0;
+  47              		.loc 1 24 0
+  48 000c 544D     		ldr	r5, .L7+8
+  49 000e 2C60     		str	r4, [r5]
+  50              	.LVL0:
+  25:colour.c      ****     
+  26:colour.c      ****     int colour = 0;
+  27:colour.c      ****     
+  28:colour.c      ****     LED_Blue_Write(0);
+  51              		.loc 1 28 0
+  52 0010 2046     		mov	r0, r4
+  53 0012 FFF7FEFF 		bl	LED_Blue_Write
+  54              	.LVL1:
+  29:colour.c      ****     LED_Red_Write(0);
+  55              		.loc 1 29 0
+  56 0016 2046     		mov	r0, r4
+  57 0018 FFF7FEFF 		bl	LED_Red_Write
+  58              	.LVL2:
+  30:colour.c      ****     LED_Green_Write(0);
+  59              		.loc 1 30 0
+  60 001c 2046     		mov	r0, r4
+  61 001e FFF7FEFF 		bl	LED_Green_Write
+  62              	.LVL3:
+  31:colour.c      ****     
+  32:colour.c      ****     CyDelay(10);
+  63              		.loc 1 32 0
+  64 0022 0A20     		movs	r0, #10
+  65 0024 FFF7FEFF 		bl	CyDelay
+  66              	.LVL4:
+  33:colour.c      ****     
+  34:colour.c      ****     IDAC8_Wakeup();
+  67              		.loc 1 34 0
+  68 0028 FFF7FEFF 		bl	IDAC8_Wakeup
+  69              	.LVL5:
+  35:colour.c      ****     LED_Red_Write(1);
+  70              		.loc 1 35 0
+  71 002c 0120     		movs	r0, #1
+  72 002e FFF7FEFF 		bl	LED_Red_Write
+  73              	.LVL6:
+  36:colour.c      ****     CyDelay(40);
+  74              		.loc 1 36 0
+  75 0032 2820     		movs	r0, #40
+  76 0034 FFF7FEFF 		bl	CyDelay
+  77              	.LVL7:
+  37:colour.c      ****     ADC_StartConvert();
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 3
+
+
+  78              		.loc 1 37 0
+  79 0038 FFF7FEFF 		bl	ADC_StartConvert
+  80              	.LVL8:
+  38:colour.c      ****     ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+  81              		.loc 1 38 0
+  82 003c 2046     		mov	r0, r4
+  83 003e FFF7FEFF 		bl	ADC_IsEndConversion
+  84              	.LVL9:
+  39:colour.c      ****     red = ADC_GetResult32();
+  85              		.loc 1 39 0
+  86 0042 FFF7FEFF 		bl	ADC_GetResult32
+  87              	.LVL10:
+  88 0046 3060     		str	r0, [r6]
+  40:colour.c      ****     LED_Red_Write(0);
+  89              		.loc 1 40 0
+  90 0048 2046     		mov	r0, r4
+  91 004a FFF7FEFF 		bl	LED_Red_Write
+  92              	.LVL11:
+  41:colour.c      ****     IDAC8_Sleep();
+  93              		.loc 1 41 0
+  94 004e FFF7FEFF 		bl	IDAC8_Sleep
+  95              	.LVL12:
+  42:colour.c      ****     
+  43:colour.c      ****     CyDelay(10);
+  96              		.loc 1 43 0
+  97 0052 0A20     		movs	r0, #10
+  98 0054 FFF7FEFF 		bl	CyDelay
+  99              	.LVL13:
+  44:colour.c      ****     
+  45:colour.c      ****     IDAC8_Wakeup();
+ 100              		.loc 1 45 0
+ 101 0058 FFF7FEFF 		bl	IDAC8_Wakeup
+ 102              	.LVL14:
+  46:colour.c      ****     LED_Green_Write(1);
+ 103              		.loc 1 46 0
+ 104 005c 0120     		movs	r0, #1
+ 105 005e FFF7FEFF 		bl	LED_Green_Write
+ 106              	.LVL15:
+  47:colour.c      ****     CyDelay(40);
+ 107              		.loc 1 47 0
+ 108 0062 2820     		movs	r0, #40
+ 109 0064 FFF7FEFF 		bl	CyDelay
+ 110              	.LVL16:
+  48:colour.c      ****     ADC_StartConvert();
+ 111              		.loc 1 48 0
+ 112 0068 FFF7FEFF 		bl	ADC_StartConvert
+ 113              	.LVL17:
+  49:colour.c      ****     ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+ 114              		.loc 1 49 0
+ 115 006c 2046     		mov	r0, r4
+ 116 006e FFF7FEFF 		bl	ADC_IsEndConversion
+ 117              	.LVL18:
+  50:colour.c      ****     green = ADC_GetResult32();
+ 118              		.loc 1 50 0
+ 119 0072 FFF7FEFF 		bl	ADC_GetResult32
+ 120              	.LVL19:
+ 121 0076 3860     		str	r0, [r7]
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 4
+
+
+  51:colour.c      ****     LED_Green_Write(0);
+ 122              		.loc 1 51 0
+ 123 0078 2046     		mov	r0, r4
+ 124 007a FFF7FEFF 		bl	LED_Green_Write
+ 125              	.LVL20:
+  52:colour.c      ****     IDAC8_Sleep();
+ 126              		.loc 1 52 0
+ 127 007e FFF7FEFF 		bl	IDAC8_Sleep
+ 128              	.LVL21:
+  53:colour.c      ****     
+  54:colour.c      ****     CyDelay(10);
+ 129              		.loc 1 54 0
+ 130 0082 0A20     		movs	r0, #10
+ 131 0084 FFF7FEFF 		bl	CyDelay
+ 132              	.LVL22:
+  55:colour.c      ****     
+  56:colour.c      ****     IDAC8_Wakeup();
+ 133              		.loc 1 56 0
+ 134 0088 FFF7FEFF 		bl	IDAC8_Wakeup
+ 135              	.LVL23:
+  57:colour.c      ****     LED_Blue_Write(1);
+ 136              		.loc 1 57 0
+ 137 008c 0120     		movs	r0, #1
+ 138 008e FFF7FEFF 		bl	LED_Blue_Write
+ 139              	.LVL24:
+  58:colour.c      ****     CyDelay(40);
+ 140              		.loc 1 58 0
+ 141 0092 2820     		movs	r0, #40
+ 142 0094 FFF7FEFF 		bl	CyDelay
+ 143              	.LVL25:
+  59:colour.c      ****     ADC_StartConvert();
+ 144              		.loc 1 59 0
+ 145 0098 FFF7FEFF 		bl	ADC_StartConvert
+ 146              	.LVL26:
+  60:colour.c      ****     ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+ 147              		.loc 1 60 0
+ 148 009c 2046     		mov	r0, r4
+ 149 009e FFF7FEFF 		bl	ADC_IsEndConversion
+ 150              	.LVL27:
+  61:colour.c      ****     blue = ADC_GetResult32();
+ 151              		.loc 1 61 0
+ 152 00a2 FFF7FEFF 		bl	ADC_GetResult32
+ 153              	.LVL28:
+ 154 00a6 2860     		str	r0, [r5]
+  62:colour.c      ****     LED_Blue_Write(0);
+ 155              		.loc 1 62 0
+ 156 00a8 2046     		mov	r0, r4
+ 157 00aa FFF7FEFF 		bl	LED_Blue_Write
+ 158              	.LVL29:
+  63:colour.c      ****     IDAC8_Sleep();
+ 159              		.loc 1 63 0
+ 160 00ae FFF7FEFF 		bl	IDAC8_Sleep
+ 161              	.LVL30:
+  64:colour.c      ****     
+  65:colour.c      ****     CyDelay(200);
+ 162              		.loc 1 65 0
+ 163 00b2 C820     		movs	r0, #200
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 5
+
+
+ 164 00b4 FFF7FEFF 		bl	CyDelay
+ 165              	.LVL31:
+  66:colour.c      ****     
+  67:colour.c      ****     if ((red-blue > 4000) && (red-green > 4000))
+ 166              		.loc 1 67 0
+ 167 00b8 3368     		ldr	r3, [r6]
+ 168 00ba 2A68     		ldr	r2, [r5]
+ 169 00bc 991A     		subs	r1, r3, r2
+ 170 00be B1F57A6F 		cmp	r1, #4000
+ 171 00c2 10DD     		ble	.L2
+ 172              		.loc 1 67 0 is_stmt 0 discriminator 1
+ 173 00c4 3968     		ldr	r1, [r7]
+ 174 00c6 591A     		subs	r1, r3, r1
+ 175 00c8 B1F57A6F 		cmp	r1, #4000
+ 176 00cc 0BDD     		ble	.L2
+  68:colour.c      ****     {
+  69:colour.c      ****         LED_Red_Write(1);
+ 177              		.loc 1 69 0 is_stmt 1
+ 178 00ce 0120     		movs	r0, #1
+ 179 00d0 FFF7FEFF 		bl	LED_Red_Write
+ 180              	.LVL32:
+  70:colour.c      ****         colour = 1;
+  71:colour.c      ****         CyDelay(1000);
+ 181              		.loc 1 71 0
+ 182 00d4 4FF47A70 		mov	r0, #1000
+ 183 00d8 FFF7FEFF 		bl	CyDelay
+ 184              	.LVL33:
+  72:colour.c      ****         LED_Red_Write(0);
+ 185              		.loc 1 72 0
+ 186 00dc 2046     		mov	r0, r4
+ 187 00de FFF7FEFF 		bl	LED_Red_Write
+ 188              	.LVL34:
+  70:colour.c      ****         colour = 1;
+ 189              		.loc 1 70 0
+ 190 00e2 0120     		movs	r0, #1
+ 191              		.loc 1 72 0
+ 192 00e4 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 193              	.LVL35:
+ 194              	.L2:
+  73:colour.c      ****     }
+  74:colour.c      ****     else if ((green-red > 4000) && (green-blue > 4000))
+ 195              		.loc 1 74 0
+ 196 00e6 1D49     		ldr	r1, .L7+4
+ 197 00e8 0968     		ldr	r1, [r1]
+ 198 00ea C81A     		subs	r0, r1, r3
+ 199 00ec B0F57A6F 		cmp	r0, #4000
+ 200 00f0 0FDD     		ble	.L4
+ 201              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 202 00f2 881A     		subs	r0, r1, r2
+ 203 00f4 B0F57A6F 		cmp	r0, #4000
+ 204 00f8 0BDD     		ble	.L4
+  75:colour.c      ****     {
+  76:colour.c      ****         LED_Green_Write(1);
+ 205              		.loc 1 76 0 is_stmt 1
+ 206 00fa 0120     		movs	r0, #1
+ 207 00fc FFF7FEFF 		bl	LED_Green_Write
+ 208              	.LVL36:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 6
+
+
+  77:colour.c      ****         colour = 2;
+  78:colour.c      ****         CyDelay(500);
+ 209              		.loc 1 78 0
+ 210 0100 4FF4FA70 		mov	r0, #500
+ 211 0104 FFF7FEFF 		bl	CyDelay
+ 212              	.LVL37:
+  79:colour.c      ****         LED_Green_Write(0);
+ 213              		.loc 1 79 0
+ 214 0108 0020     		movs	r0, #0
+ 215 010a FFF7FEFF 		bl	LED_Green_Write
+ 216              	.LVL38:
+  77:colour.c      ****         colour = 2;
+ 217              		.loc 1 77 0
+ 218 010e 0220     		movs	r0, #2
+ 219              		.loc 1 79 0
+ 220 0110 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 221              	.LVL39:
+ 222              	.L4:
+  80:colour.c      ****     }
+  81:colour.c      ****     else if ((blue-red > 4000) && (blue-green > 4000))
+ 223              		.loc 1 81 0
+ 224 0112 D31A     		subs	r3, r2, r3
+ 225 0114 B3F57A6F 		cmp	r3, #4000
+ 226 0118 0FDD     		ble	.L5
+ 227              		.loc 1 81 0 is_stmt 0 discriminator 1
+ 228 011a 521A     		subs	r2, r2, r1
+ 229 011c B2F57A6F 		cmp	r2, #4000
+ 230 0120 0BDD     		ble	.L5
+  82:colour.c      ****     {
+  83:colour.c      ****         LED_Blue_Write(1);
+ 231              		.loc 1 83 0 is_stmt 1
+ 232 0122 0120     		movs	r0, #1
+ 233 0124 FFF7FEFF 		bl	LED_Blue_Write
+ 234              	.LVL40:
+  84:colour.c      ****         colour = 3;
+  85:colour.c      ****         CyDelay(500);
+ 235              		.loc 1 85 0
+ 236 0128 4FF4FA70 		mov	r0, #500
+ 237 012c FFF7FEFF 		bl	CyDelay
+ 238              	.LVL41:
+  86:colour.c      ****         LED_Blue_Write(0);
+ 239              		.loc 1 86 0
+ 240 0130 0020     		movs	r0, #0
+ 241 0132 FFF7FEFF 		bl	LED_Blue_Write
+ 242              	.LVL42:
+  84:colour.c      ****         colour = 3;
+ 243              		.loc 1 84 0
+ 244 0136 0320     		movs	r0, #3
+ 245              		.loc 1 86 0
+ 246 0138 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 247              	.LVL43:
+ 248              	.L5:
+  87:colour.c      ****     }
+  88:colour.c      ****     else
+  89:colour.c      ****     {  
+  90:colour.c      ****         LED_Red_Write(0);
+ 249              		.loc 1 90 0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 7
+
+
+ 250 013a 0020     		movs	r0, #0
+ 251 013c FFF7FEFF 		bl	LED_Red_Write
+ 252              	.LVL44:
+  91:colour.c      ****         LED_Green_Write(0);
+ 253              		.loc 1 91 0
+ 254 0140 0020     		movs	r0, #0
+ 255 0142 FFF7FEFF 		bl	LED_Green_Write
+ 256              	.LVL45:
+  92:colour.c      ****         LED_Blue_Write(0);
+ 257              		.loc 1 92 0
+ 258 0146 0020     		movs	r0, #0
+ 259 0148 FFF7FEFF 		bl	LED_Blue_Write
+ 260              	.LVL46:
+  93:colour.c      ****         CyDelay(500);
+ 261              		.loc 1 93 0
+ 262 014c 4FF4FA70 		mov	r0, #500
+ 263 0150 FFF7FEFF 		bl	CyDelay
+ 264              	.LVL47:
+  26:colour.c      ****     
+ 265              		.loc 1 26 0
+ 266 0154 0020     		movs	r0, #0
+ 267              	.LVL48:
+  94:colour.c      ****     }
+  95:colour.c      ****     
+  96:colour.c      ****     return colour;
+  97:colour.c      ****     //LED_Write(0);
+  98:colour.c      **** }...
+ 268              		.loc 1 98 0
+ 269 0156 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 270              	.LVL49:
+ 271              	.L8:
+ 272              		.align	2
+ 273              	.L7:
+ 274 0158 00000000 		.word	red
+ 275 015c 00000000 		.word	green
+ 276 0160 00000000 		.word	blue
+ 277              		.cfi_endproc
+ 278              	.LFE63:
+ 279              		.size	LED, .-LED
+ 280              		.comm	green,4,4
+ 281              		.comm	blue,4,4
+ 282              		.comm	red,4,4
+ 283              		.text
+ 284              	.Letext0:
+ 285              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 286              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 287              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 288              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 289              		.file 6 "Generated_Source\\PSoC5/LED_Blue.h"
+ 290              		.file 7 "Generated_Source\\PSoC5/LED_Red.h"
+ 291              		.file 8 "Generated_Source\\PSoC5/LED_Green.h"
+ 292              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 293              		.file 10 "Generated_Source\\PSoC5/IDAC8.h"
+ 294              		.file 11 "Generated_Source\\PSoC5/ADC.h"
+ 295              		.section	.debug_info,"",%progbits
+ 296              	.Ldebug_info0:
+ 297 0000 60040000 		.4byte	0x460
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 8
+
+
+ 298 0004 0400     		.2byte	0x4
+ 299 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 300 000a 04       		.byte	0x4
+ 301 000b 01       		.uleb128 0x1
+ 302 000c AA000000 		.4byte	.LASF29
+ 303 0010 0C       		.byte	0xc
+ 304 0011 15020000 		.4byte	.LASF30
+ 305 0015 24000000 		.4byte	.LASF31
+ 306 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 307 001d 00000000 		.4byte	0
+ 308 0021 00000000 		.4byte	.Ldebug_line0
+ 309 0025 02       		.uleb128 0x2
+ 310 0026 01       		.byte	0x1
+ 311 0027 06       		.byte	0x6
+ 312 0028 90000000 		.4byte	.LASF0
+ 313 002c 02       		.uleb128 0x2
+ 314 002d 01       		.byte	0x1
+ 315 002e 08       		.byte	0x8
+ 316 002f 9C000000 		.4byte	.LASF1
+ 317 0033 02       		.uleb128 0x2
+ 318 0034 02       		.byte	0x2
+ 319 0035 05       		.byte	0x5
+ 320 0036 FD010000 		.4byte	.LASF2
+ 321 003a 02       		.uleb128 0x2
+ 322 003b 02       		.byte	0x2
+ 323 003c 07       		.byte	0x7
+ 324 003d 0A000000 		.4byte	.LASF3
+ 325 0041 03       		.uleb128 0x3
+ 326 0042 00000000 		.4byte	.LASF9
+ 327 0046 02       		.byte	0x2
+ 328 0047 3F       		.byte	0x3f
+ 329 0048 4C000000 		.4byte	0x4c
+ 330 004c 02       		.uleb128 0x2
+ 331 004d 04       		.byte	0x4
+ 332 004e 05       		.byte	0x5
+ 333 004f 2E020000 		.4byte	.LASF4
+ 334 0053 02       		.uleb128 0x2
+ 335 0054 04       		.byte	0x4
+ 336 0055 07       		.byte	0x7
+ 337 0056 76010000 		.4byte	.LASF5
+ 338 005a 02       		.uleb128 0x2
+ 339 005b 08       		.byte	0x8
+ 340 005c 05       		.byte	0x5
+ 341 005d DD010000 		.4byte	.LASF6
+ 342 0061 02       		.uleb128 0x2
+ 343 0062 08       		.byte	0x8
+ 344 0063 07       		.byte	0x7
+ 345 0064 B5010000 		.4byte	.LASF7
+ 346 0068 04       		.uleb128 0x4
+ 347 0069 04       		.byte	0x4
+ 348 006a 05       		.byte	0x5
+ 349 006b 696E7400 		.ascii	"int\000"
+ 350 006f 02       		.uleb128 0x2
+ 351 0070 04       		.byte	0x4
+ 352 0071 07       		.byte	0x7
+ 353 0072 99010000 		.4byte	.LASF8
+ 354 0076 03       		.uleb128 0x3
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 9
+
+
+ 355 0077 CC010000 		.4byte	.LASF10
+ 356 007b 03       		.byte	0x3
+ 357 007c 2C       		.byte	0x2c
+ 358 007d 41000000 		.4byte	0x41
+ 359 0081 05       		.uleb128 0x5
+ 360 0082 5D010000 		.4byte	.LASF11
+ 361 0086 04       		.byte	0x4
+ 362 0087 9701     		.2byte	0x197
+ 363 0089 4C000000 		.4byte	0x4c
+ 364 008d 02       		.uleb128 0x2
+ 365 008e 04       		.byte	0x4
+ 366 008f 04       		.byte	0x4
+ 367 0090 7A000000 		.4byte	.LASF12
+ 368 0094 02       		.uleb128 0x2
+ 369 0095 08       		.byte	0x8
+ 370 0096 04       		.byte	0x4
+ 371 0097 1D000000 		.4byte	.LASF13
+ 372 009b 02       		.uleb128 0x2
+ 373 009c 01       		.byte	0x1
+ 374 009d 08       		.byte	0x8
+ 375 009e EB010000 		.4byte	.LASF14
+ 376 00a2 02       		.uleb128 0x2
+ 377 00a3 08       		.byte	0x8
+ 378 00a4 04       		.byte	0x4
+ 379 00a5 37020000 		.4byte	.LASF15
+ 380 00a9 02       		.uleb128 0x2
+ 381 00aa 04       		.byte	0x4
+ 382 00ab 07       		.byte	0x7
+ 383 00ac D4010000 		.4byte	.LASF16
+ 384 00b0 06       		.uleb128 0x6
+ 385 00b1 4C454400 		.ascii	"LED\000"
+ 386 00b5 01       		.byte	0x1
+ 387 00b6 14       		.byte	0x14
+ 388 00b7 68000000 		.4byte	0x68
+ 389 00bb 00000000 		.4byte	.LFB63
+ 390 00bf 64010000 		.4byte	.LFE63-.LFB63
+ 391 00c3 01       		.uleb128 0x1
+ 392 00c4 9C       		.byte	0x9c
+ 393 00c5 BC030000 		.4byte	0x3bc
+ 394 00c9 07       		.uleb128 0x7
+ 395 00ca 4B020000 		.4byte	.LASF32
+ 396 00ce 01       		.byte	0x1
+ 397 00cf 1A       		.byte	0x1a
+ 398 00d0 68000000 		.4byte	0x68
+ 399 00d4 00000000 		.4byte	.LLST0
+ 400 00d8 08       		.uleb128 0x8
+ 401 00d9 16000000 		.4byte	.LVL1
+ 402 00dd 00040000 		.4byte	0x400
+ 403 00e1 EC000000 		.4byte	0xec
+ 404 00e5 09       		.uleb128 0x9
+ 405 00e6 01       		.uleb128 0x1
+ 406 00e7 50       		.byte	0x50
+ 407 00e8 02       		.uleb128 0x2
+ 408 00e9 74       		.byte	0x74
+ 409 00ea 00       		.sleb128 0
+ 410 00eb 00       		.byte	0
+ 411 00ec 08       		.uleb128 0x8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 10
+
+
+ 412 00ed 1C000000 		.4byte	.LVL2
+ 413 00f1 0B040000 		.4byte	0x40b
+ 414 00f5 00010000 		.4byte	0x100
+ 415 00f9 09       		.uleb128 0x9
+ 416 00fa 01       		.uleb128 0x1
+ 417 00fb 50       		.byte	0x50
+ 418 00fc 02       		.uleb128 0x2
+ 419 00fd 74       		.byte	0x74
+ 420 00fe 00       		.sleb128 0
+ 421 00ff 00       		.byte	0
+ 422 0100 08       		.uleb128 0x8
+ 423 0101 22000000 		.4byte	.LVL3
+ 424 0105 16040000 		.4byte	0x416
+ 425 0109 14010000 		.4byte	0x114
+ 426 010d 09       		.uleb128 0x9
+ 427 010e 01       		.uleb128 0x1
+ 428 010f 50       		.byte	0x50
+ 429 0110 02       		.uleb128 0x2
+ 430 0111 74       		.byte	0x74
+ 431 0112 00       		.sleb128 0
+ 432 0113 00       		.byte	0
+ 433 0114 08       		.uleb128 0x8
+ 434 0115 28000000 		.4byte	.LVL4
+ 435 0119 21040000 		.4byte	0x421
+ 436 011d 27010000 		.4byte	0x127
+ 437 0121 09       		.uleb128 0x9
+ 438 0122 01       		.uleb128 0x1
+ 439 0123 50       		.byte	0x50
+ 440 0124 01       		.uleb128 0x1
+ 441 0125 3A       		.byte	0x3a
+ 442 0126 00       		.byte	0
+ 443 0127 0A       		.uleb128 0xa
+ 444 0128 2C000000 		.4byte	.LVL5
+ 445 012c 2C040000 		.4byte	0x42c
+ 446 0130 08       		.uleb128 0x8
+ 447 0131 32000000 		.4byte	.LVL6
+ 448 0135 0B040000 		.4byte	0x40b
+ 449 0139 43010000 		.4byte	0x143
+ 450 013d 09       		.uleb128 0x9
+ 451 013e 01       		.uleb128 0x1
+ 452 013f 50       		.byte	0x50
+ 453 0140 01       		.uleb128 0x1
+ 454 0141 31       		.byte	0x31
+ 455 0142 00       		.byte	0
+ 456 0143 08       		.uleb128 0x8
+ 457 0144 38000000 		.4byte	.LVL7
+ 458 0148 21040000 		.4byte	0x421
+ 459 014c 57010000 		.4byte	0x157
+ 460 0150 09       		.uleb128 0x9
+ 461 0151 01       		.uleb128 0x1
+ 462 0152 50       		.byte	0x50
+ 463 0153 02       		.uleb128 0x2
+ 464 0154 08       		.byte	0x8
+ 465 0155 28       		.byte	0x28
+ 466 0156 00       		.byte	0
+ 467 0157 0A       		.uleb128 0xa
+ 468 0158 3C000000 		.4byte	.LVL8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 11
+
+
+ 469 015c 37040000 		.4byte	0x437
+ 470 0160 08       		.uleb128 0x8
+ 471 0161 42000000 		.4byte	.LVL9
+ 472 0165 42040000 		.4byte	0x442
+ 473 0169 74010000 		.4byte	0x174
+ 474 016d 09       		.uleb128 0x9
+ 475 016e 01       		.uleb128 0x1
+ 476 016f 50       		.byte	0x50
+ 477 0170 02       		.uleb128 0x2
+ 478 0171 74       		.byte	0x74
+ 479 0172 00       		.sleb128 0
+ 480 0173 00       		.byte	0
+ 481 0174 0A       		.uleb128 0xa
+ 482 0175 46000000 		.4byte	.LVL10
+ 483 0179 4D040000 		.4byte	0x44d
+ 484 017d 08       		.uleb128 0x8
+ 485 017e 4E000000 		.4byte	.LVL11
+ 486 0182 0B040000 		.4byte	0x40b
+ 487 0186 91010000 		.4byte	0x191
+ 488 018a 09       		.uleb128 0x9
+ 489 018b 01       		.uleb128 0x1
+ 490 018c 50       		.byte	0x50
+ 491 018d 02       		.uleb128 0x2
+ 492 018e 74       		.byte	0x74
+ 493 018f 00       		.sleb128 0
+ 494 0190 00       		.byte	0
+ 495 0191 0A       		.uleb128 0xa
+ 496 0192 52000000 		.4byte	.LVL12
+ 497 0196 58040000 		.4byte	0x458
+ 498 019a 08       		.uleb128 0x8
+ 499 019b 58000000 		.4byte	.LVL13
+ 500 019f 21040000 		.4byte	0x421
+ 501 01a3 AD010000 		.4byte	0x1ad
+ 502 01a7 09       		.uleb128 0x9
+ 503 01a8 01       		.uleb128 0x1
+ 504 01a9 50       		.byte	0x50
+ 505 01aa 01       		.uleb128 0x1
+ 506 01ab 3A       		.byte	0x3a
+ 507 01ac 00       		.byte	0
+ 508 01ad 0A       		.uleb128 0xa
+ 509 01ae 5C000000 		.4byte	.LVL14
+ 510 01b2 2C040000 		.4byte	0x42c
+ 511 01b6 08       		.uleb128 0x8
+ 512 01b7 62000000 		.4byte	.LVL15
+ 513 01bb 16040000 		.4byte	0x416
+ 514 01bf C9010000 		.4byte	0x1c9
+ 515 01c3 09       		.uleb128 0x9
+ 516 01c4 01       		.uleb128 0x1
+ 517 01c5 50       		.byte	0x50
+ 518 01c6 01       		.uleb128 0x1
+ 519 01c7 31       		.byte	0x31
+ 520 01c8 00       		.byte	0
+ 521 01c9 08       		.uleb128 0x8
+ 522 01ca 68000000 		.4byte	.LVL16
+ 523 01ce 21040000 		.4byte	0x421
+ 524 01d2 DD010000 		.4byte	0x1dd
+ 525 01d6 09       		.uleb128 0x9
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 12
+
+
+ 526 01d7 01       		.uleb128 0x1
+ 527 01d8 50       		.byte	0x50
+ 528 01d9 02       		.uleb128 0x2
+ 529 01da 08       		.byte	0x8
+ 530 01db 28       		.byte	0x28
+ 531 01dc 00       		.byte	0
+ 532 01dd 0A       		.uleb128 0xa
+ 533 01de 6C000000 		.4byte	.LVL17
+ 534 01e2 37040000 		.4byte	0x437
+ 535 01e6 08       		.uleb128 0x8
+ 536 01e7 72000000 		.4byte	.LVL18
+ 537 01eb 42040000 		.4byte	0x442
+ 538 01ef FA010000 		.4byte	0x1fa
+ 539 01f3 09       		.uleb128 0x9
+ 540 01f4 01       		.uleb128 0x1
+ 541 01f5 50       		.byte	0x50
+ 542 01f6 02       		.uleb128 0x2
+ 543 01f7 74       		.byte	0x74
+ 544 01f8 00       		.sleb128 0
+ 545 01f9 00       		.byte	0
+ 546 01fa 0A       		.uleb128 0xa
+ 547 01fb 76000000 		.4byte	.LVL19
+ 548 01ff 4D040000 		.4byte	0x44d
+ 549 0203 08       		.uleb128 0x8
+ 550 0204 7E000000 		.4byte	.LVL20
+ 551 0208 16040000 		.4byte	0x416
+ 552 020c 17020000 		.4byte	0x217
+ 553 0210 09       		.uleb128 0x9
+ 554 0211 01       		.uleb128 0x1
+ 555 0212 50       		.byte	0x50
+ 556 0213 02       		.uleb128 0x2
+ 557 0214 74       		.byte	0x74
+ 558 0215 00       		.sleb128 0
+ 559 0216 00       		.byte	0
+ 560 0217 0A       		.uleb128 0xa
+ 561 0218 82000000 		.4byte	.LVL21
+ 562 021c 58040000 		.4byte	0x458
+ 563 0220 08       		.uleb128 0x8
+ 564 0221 88000000 		.4byte	.LVL22
+ 565 0225 21040000 		.4byte	0x421
+ 566 0229 33020000 		.4byte	0x233
+ 567 022d 09       		.uleb128 0x9
+ 568 022e 01       		.uleb128 0x1
+ 569 022f 50       		.byte	0x50
+ 570 0230 01       		.uleb128 0x1
+ 571 0231 3A       		.byte	0x3a
+ 572 0232 00       		.byte	0
+ 573 0233 0A       		.uleb128 0xa
+ 574 0234 8C000000 		.4byte	.LVL23
+ 575 0238 2C040000 		.4byte	0x42c
+ 576 023c 08       		.uleb128 0x8
+ 577 023d 92000000 		.4byte	.LVL24
+ 578 0241 00040000 		.4byte	0x400
+ 579 0245 4F020000 		.4byte	0x24f
+ 580 0249 09       		.uleb128 0x9
+ 581 024a 01       		.uleb128 0x1
+ 582 024b 50       		.byte	0x50
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 13
+
+
+ 583 024c 01       		.uleb128 0x1
+ 584 024d 31       		.byte	0x31
+ 585 024e 00       		.byte	0
+ 586 024f 08       		.uleb128 0x8
+ 587 0250 98000000 		.4byte	.LVL25
+ 588 0254 21040000 		.4byte	0x421
+ 589 0258 63020000 		.4byte	0x263
+ 590 025c 09       		.uleb128 0x9
+ 591 025d 01       		.uleb128 0x1
+ 592 025e 50       		.byte	0x50
+ 593 025f 02       		.uleb128 0x2
+ 594 0260 08       		.byte	0x8
+ 595 0261 28       		.byte	0x28
+ 596 0262 00       		.byte	0
+ 597 0263 0A       		.uleb128 0xa
+ 598 0264 9C000000 		.4byte	.LVL26
+ 599 0268 37040000 		.4byte	0x437
+ 600 026c 08       		.uleb128 0x8
+ 601 026d A2000000 		.4byte	.LVL27
+ 602 0271 42040000 		.4byte	0x442
+ 603 0275 80020000 		.4byte	0x280
+ 604 0279 09       		.uleb128 0x9
+ 605 027a 01       		.uleb128 0x1
+ 606 027b 50       		.byte	0x50
+ 607 027c 02       		.uleb128 0x2
+ 608 027d 74       		.byte	0x74
+ 609 027e 00       		.sleb128 0
+ 610 027f 00       		.byte	0
+ 611 0280 0A       		.uleb128 0xa
+ 612 0281 A6000000 		.4byte	.LVL28
+ 613 0285 4D040000 		.4byte	0x44d
+ 614 0289 08       		.uleb128 0x8
+ 615 028a AE000000 		.4byte	.LVL29
+ 616 028e 00040000 		.4byte	0x400
+ 617 0292 9D020000 		.4byte	0x29d
+ 618 0296 09       		.uleb128 0x9
+ 619 0297 01       		.uleb128 0x1
+ 620 0298 50       		.byte	0x50
+ 621 0299 02       		.uleb128 0x2
+ 622 029a 74       		.byte	0x74
+ 623 029b 00       		.sleb128 0
+ 624 029c 00       		.byte	0
+ 625 029d 0A       		.uleb128 0xa
+ 626 029e B2000000 		.4byte	.LVL30
+ 627 02a2 58040000 		.4byte	0x458
+ 628 02a6 08       		.uleb128 0x8
+ 629 02a7 B8000000 		.4byte	.LVL31
+ 630 02ab 21040000 		.4byte	0x421
+ 631 02af BA020000 		.4byte	0x2ba
+ 632 02b3 09       		.uleb128 0x9
+ 633 02b4 01       		.uleb128 0x1
+ 634 02b5 50       		.byte	0x50
+ 635 02b6 02       		.uleb128 0x2
+ 636 02b7 08       		.byte	0x8
+ 637 02b8 C8       		.byte	0xc8
+ 638 02b9 00       		.byte	0
+ 639 02ba 08       		.uleb128 0x8
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 14
+
+
+ 640 02bb D4000000 		.4byte	.LVL32
+ 641 02bf 0B040000 		.4byte	0x40b
+ 642 02c3 CD020000 		.4byte	0x2cd
+ 643 02c7 09       		.uleb128 0x9
+ 644 02c8 01       		.uleb128 0x1
+ 645 02c9 50       		.byte	0x50
+ 646 02ca 01       		.uleb128 0x1
+ 647 02cb 31       		.byte	0x31
+ 648 02cc 00       		.byte	0
+ 649 02cd 08       		.uleb128 0x8
+ 650 02ce DC000000 		.4byte	.LVL33
+ 651 02d2 21040000 		.4byte	0x421
+ 652 02d6 E2020000 		.4byte	0x2e2
+ 653 02da 09       		.uleb128 0x9
+ 654 02db 01       		.uleb128 0x1
+ 655 02dc 50       		.byte	0x50
+ 656 02dd 03       		.uleb128 0x3
+ 657 02de 0A       		.byte	0xa
+ 658 02df E803     		.2byte	0x3e8
+ 659 02e1 00       		.byte	0
+ 660 02e2 08       		.uleb128 0x8
+ 661 02e3 E2000000 		.4byte	.LVL34
+ 662 02e7 0B040000 		.4byte	0x40b
+ 663 02eb F6020000 		.4byte	0x2f6
+ 664 02ef 09       		.uleb128 0x9
+ 665 02f0 01       		.uleb128 0x1
+ 666 02f1 50       		.byte	0x50
+ 667 02f2 02       		.uleb128 0x2
+ 668 02f3 74       		.byte	0x74
+ 669 02f4 00       		.sleb128 0
+ 670 02f5 00       		.byte	0
+ 671 02f6 08       		.uleb128 0x8
+ 672 02f7 00010000 		.4byte	.LVL36
+ 673 02fb 16040000 		.4byte	0x416
+ 674 02ff 09030000 		.4byte	0x309
+ 675 0303 09       		.uleb128 0x9
+ 676 0304 01       		.uleb128 0x1
+ 677 0305 50       		.byte	0x50
+ 678 0306 01       		.uleb128 0x1
+ 679 0307 31       		.byte	0x31
+ 680 0308 00       		.byte	0
+ 681 0309 08       		.uleb128 0x8
+ 682 030a 08010000 		.4byte	.LVL37
+ 683 030e 21040000 		.4byte	0x421
+ 684 0312 1E030000 		.4byte	0x31e
+ 685 0316 09       		.uleb128 0x9
+ 686 0317 01       		.uleb128 0x1
+ 687 0318 50       		.byte	0x50
+ 688 0319 03       		.uleb128 0x3
+ 689 031a 0A       		.byte	0xa
+ 690 031b F401     		.2byte	0x1f4
+ 691 031d 00       		.byte	0
+ 692 031e 08       		.uleb128 0x8
+ 693 031f 0E010000 		.4byte	.LVL38
+ 694 0323 16040000 		.4byte	0x416
+ 695 0327 32030000 		.4byte	0x332
+ 696 032b 09       		.uleb128 0x9
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 15
+
+
+ 697 032c 01       		.uleb128 0x1
+ 698 032d 50       		.byte	0x50
+ 699 032e 02       		.uleb128 0x2
+ 700 032f 74       		.byte	0x74
+ 701 0330 00       		.sleb128 0
+ 702 0331 00       		.byte	0
+ 703 0332 08       		.uleb128 0x8
+ 704 0333 28010000 		.4byte	.LVL40
+ 705 0337 00040000 		.4byte	0x400
+ 706 033b 45030000 		.4byte	0x345
+ 707 033f 09       		.uleb128 0x9
+ 708 0340 01       		.uleb128 0x1
+ 709 0341 50       		.byte	0x50
+ 710 0342 01       		.uleb128 0x1
+ 711 0343 31       		.byte	0x31
+ 712 0344 00       		.byte	0
+ 713 0345 08       		.uleb128 0x8
+ 714 0346 30010000 		.4byte	.LVL41
+ 715 034a 21040000 		.4byte	0x421
+ 716 034e 5A030000 		.4byte	0x35a
+ 717 0352 09       		.uleb128 0x9
+ 718 0353 01       		.uleb128 0x1
+ 719 0354 50       		.byte	0x50
+ 720 0355 03       		.uleb128 0x3
+ 721 0356 0A       		.byte	0xa
+ 722 0357 F401     		.2byte	0x1f4
+ 723 0359 00       		.byte	0
+ 724 035a 08       		.uleb128 0x8
+ 725 035b 36010000 		.4byte	.LVL42
+ 726 035f 00040000 		.4byte	0x400
+ 727 0363 6E030000 		.4byte	0x36e
+ 728 0367 09       		.uleb128 0x9
+ 729 0368 01       		.uleb128 0x1
+ 730 0369 50       		.byte	0x50
+ 731 036a 02       		.uleb128 0x2
+ 732 036b 74       		.byte	0x74
+ 733 036c 00       		.sleb128 0
+ 734 036d 00       		.byte	0
+ 735 036e 08       		.uleb128 0x8
+ 736 036f 40010000 		.4byte	.LVL44
+ 737 0373 0B040000 		.4byte	0x40b
+ 738 0377 82030000 		.4byte	0x382
+ 739 037b 09       		.uleb128 0x9
+ 740 037c 01       		.uleb128 0x1
+ 741 037d 50       		.byte	0x50
+ 742 037e 02       		.uleb128 0x2
+ 743 037f 74       		.byte	0x74
+ 744 0380 00       		.sleb128 0
+ 745 0381 00       		.byte	0
+ 746 0382 08       		.uleb128 0x8
+ 747 0383 46010000 		.4byte	.LVL45
+ 748 0387 16040000 		.4byte	0x416
+ 749 038b 96030000 		.4byte	0x396
+ 750 038f 09       		.uleb128 0x9
+ 751 0390 01       		.uleb128 0x1
+ 752 0391 50       		.byte	0x50
+ 753 0392 02       		.uleb128 0x2
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 16
+
+
+ 754 0393 74       		.byte	0x74
+ 755 0394 00       		.sleb128 0
+ 756 0395 00       		.byte	0
+ 757 0396 08       		.uleb128 0x8
+ 758 0397 4C010000 		.4byte	.LVL46
+ 759 039b 00040000 		.4byte	0x400
+ 760 039f AA030000 		.4byte	0x3aa
+ 761 03a3 09       		.uleb128 0x9
+ 762 03a4 01       		.uleb128 0x1
+ 763 03a5 50       		.byte	0x50
+ 764 03a6 02       		.uleb128 0x2
+ 765 03a7 74       		.byte	0x74
+ 766 03a8 00       		.sleb128 0
+ 767 03a9 00       		.byte	0
+ 768 03aa 0B       		.uleb128 0xb
+ 769 03ab 54010000 		.4byte	.LVL47
+ 770 03af 21040000 		.4byte	0x421
+ 771 03b3 09       		.uleb128 0x9
+ 772 03b4 01       		.uleb128 0x1
+ 773 03b5 50       		.byte	0x50
+ 774 03b6 03       		.uleb128 0x3
+ 775 03b7 0A       		.byte	0xa
+ 776 03b8 F401     		.2byte	0x1f4
+ 777 03ba 00       		.byte	0
+ 778 03bb 00       		.byte	0
+ 779 03bc 0C       		.uleb128 0xc
+ 780 03bd 69010000 		.4byte	.LASF17
+ 781 03c1 05       		.byte	0x5
+ 782 03c2 1207     		.2byte	0x712
+ 783 03c4 C8030000 		.4byte	0x3c8
+ 784 03c8 0D       		.uleb128 0xd
+ 785 03c9 76000000 		.4byte	0x76
+ 786 03cd 0E       		.uleb128 0xe
+ 787 03ce 72656400 		.ascii	"red\000"
+ 788 03d2 01       		.byte	0x1
+ 789 03d3 10       		.byte	0x10
+ 790 03d4 81000000 		.4byte	0x81
+ 791 03d8 05       		.uleb128 0x5
+ 792 03d9 03       		.byte	0x3
+ 793 03da 00000000 		.4byte	red
+ 794 03de 0F       		.uleb128 0xf
+ 795 03df 88010000 		.4byte	.LASF18
+ 796 03e3 01       		.byte	0x1
+ 797 03e4 11       		.byte	0x11
+ 798 03e5 81000000 		.4byte	0x81
+ 799 03e9 05       		.uleb128 0x5
+ 800 03ea 03       		.byte	0x3
+ 801 03eb 00000000 		.4byte	blue
+ 802 03ef 0F       		.uleb128 0xf
+ 803 03f0 63010000 		.4byte	.LASF19
+ 804 03f4 01       		.byte	0x1
+ 805 03f5 12       		.byte	0x12
+ 806 03f6 81000000 		.4byte	0x81
+ 807 03fa 05       		.uleb128 0x5
+ 808 03fb 03       		.byte	0x3
+ 809 03fc 00000000 		.4byte	green
+ 810 0400 10       		.uleb128 0x10
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 17
+
+
+ 811 0401 A6010000 		.4byte	.LASF20
+ 812 0405 A6010000 		.4byte	.LASF20
+ 813 0409 06       		.byte	0x6
+ 814 040a 26       		.byte	0x26
+ 815 040b 10       		.uleb128 0x10
+ 816 040c 07020000 		.4byte	.LASF21
+ 817 0410 07020000 		.4byte	.LASF21
+ 818 0414 07       		.byte	0x7
+ 819 0415 26       		.byte	0x26
+ 820 0416 10       		.uleb128 0x10
+ 821 0417 1E020000 		.4byte	.LASF22
+ 822 041b 1E020000 		.4byte	.LASF22
+ 823 041f 08       		.byte	0x8
+ 824 0420 26       		.byte	0x26
+ 825 0421 10       		.uleb128 0x10
+ 826 0422 43020000 		.4byte	.LASF23
+ 827 0426 43020000 		.4byte	.LASF23
+ 828 042a 09       		.byte	0x9
+ 829 042b 76       		.byte	0x76
+ 830 042c 10       		.uleb128 0x10
+ 831 042d F0010000 		.4byte	.LASF24
+ 832 0431 F0010000 		.4byte	.LASF24
+ 833 0435 0A       		.byte	0xa
+ 834 0436 4A       		.byte	0x4a
+ 835 0437 10       		.uleb128 0x10
+ 836 0438 38010000 		.4byte	.LASF25
+ 837 043c 38010000 		.4byte	.LASF25
+ 838 0440 0B       		.byte	0xb
+ 839 0441 3D       		.byte	0x3d
+ 840 0442 10       		.uleb128 0x10
+ 841 0443 49010000 		.4byte	.LASF26
+ 842 0447 49010000 		.4byte	.LASF26
+ 843 044b 0B       		.byte	0xb
+ 844 044c 3F       		.byte	0x3f
+ 845 044d 10       		.uleb128 0x10
+ 846 044e 80000000 		.4byte	.LASF27
+ 847 0452 80000000 		.4byte	.LASF27
+ 848 0456 0B       		.byte	0xb
+ 849 0457 42       		.byte	0x42
+ 850 0458 10       		.uleb128 0x10
+ 851 0459 8D010000 		.4byte	.LASF28
+ 852 045d 8D010000 		.4byte	.LASF28
+ 853 0461 0A       		.byte	0xa
+ 854 0462 49       		.byte	0x49
+ 855 0463 00       		.byte	0
+ 856              		.section	.debug_abbrev,"",%progbits
+ 857              	.Ldebug_abbrev0:
+ 858 0000 01       		.uleb128 0x1
+ 859 0001 11       		.uleb128 0x11
+ 860 0002 01       		.byte	0x1
+ 861 0003 25       		.uleb128 0x25
+ 862 0004 0E       		.uleb128 0xe
+ 863 0005 13       		.uleb128 0x13
+ 864 0006 0B       		.uleb128 0xb
+ 865 0007 03       		.uleb128 0x3
+ 866 0008 0E       		.uleb128 0xe
+ 867 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 18
+
+
+ 868 000a 0E       		.uleb128 0xe
+ 869 000b 55       		.uleb128 0x55
+ 870 000c 17       		.uleb128 0x17
+ 871 000d 11       		.uleb128 0x11
+ 872 000e 01       		.uleb128 0x1
+ 873 000f 10       		.uleb128 0x10
+ 874 0010 17       		.uleb128 0x17
+ 875 0011 00       		.byte	0
+ 876 0012 00       		.byte	0
+ 877 0013 02       		.uleb128 0x2
+ 878 0014 24       		.uleb128 0x24
+ 879 0015 00       		.byte	0
+ 880 0016 0B       		.uleb128 0xb
+ 881 0017 0B       		.uleb128 0xb
+ 882 0018 3E       		.uleb128 0x3e
+ 883 0019 0B       		.uleb128 0xb
+ 884 001a 03       		.uleb128 0x3
+ 885 001b 0E       		.uleb128 0xe
+ 886 001c 00       		.byte	0
+ 887 001d 00       		.byte	0
+ 888 001e 03       		.uleb128 0x3
+ 889 001f 16       		.uleb128 0x16
+ 890 0020 00       		.byte	0
+ 891 0021 03       		.uleb128 0x3
+ 892 0022 0E       		.uleb128 0xe
+ 893 0023 3A       		.uleb128 0x3a
+ 894 0024 0B       		.uleb128 0xb
+ 895 0025 3B       		.uleb128 0x3b
+ 896 0026 0B       		.uleb128 0xb
+ 897 0027 49       		.uleb128 0x49
+ 898 0028 13       		.uleb128 0x13
+ 899 0029 00       		.byte	0
+ 900 002a 00       		.byte	0
+ 901 002b 04       		.uleb128 0x4
+ 902 002c 24       		.uleb128 0x24
+ 903 002d 00       		.byte	0
+ 904 002e 0B       		.uleb128 0xb
+ 905 002f 0B       		.uleb128 0xb
+ 906 0030 3E       		.uleb128 0x3e
+ 907 0031 0B       		.uleb128 0xb
+ 908 0032 03       		.uleb128 0x3
+ 909 0033 08       		.uleb128 0x8
+ 910 0034 00       		.byte	0
+ 911 0035 00       		.byte	0
+ 912 0036 05       		.uleb128 0x5
+ 913 0037 16       		.uleb128 0x16
+ 914 0038 00       		.byte	0
+ 915 0039 03       		.uleb128 0x3
+ 916 003a 0E       		.uleb128 0xe
+ 917 003b 3A       		.uleb128 0x3a
+ 918 003c 0B       		.uleb128 0xb
+ 919 003d 3B       		.uleb128 0x3b
+ 920 003e 05       		.uleb128 0x5
+ 921 003f 49       		.uleb128 0x49
+ 922 0040 13       		.uleb128 0x13
+ 923 0041 00       		.byte	0
+ 924 0042 00       		.byte	0
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 19
+
+
+ 925 0043 06       		.uleb128 0x6
+ 926 0044 2E       		.uleb128 0x2e
+ 927 0045 01       		.byte	0x1
+ 928 0046 3F       		.uleb128 0x3f
+ 929 0047 19       		.uleb128 0x19
+ 930 0048 03       		.uleb128 0x3
+ 931 0049 08       		.uleb128 0x8
+ 932 004a 3A       		.uleb128 0x3a
+ 933 004b 0B       		.uleb128 0xb
+ 934 004c 3B       		.uleb128 0x3b
+ 935 004d 0B       		.uleb128 0xb
+ 936 004e 49       		.uleb128 0x49
+ 937 004f 13       		.uleb128 0x13
+ 938 0050 11       		.uleb128 0x11
+ 939 0051 01       		.uleb128 0x1
+ 940 0052 12       		.uleb128 0x12
+ 941 0053 06       		.uleb128 0x6
+ 942 0054 40       		.uleb128 0x40
+ 943 0055 18       		.uleb128 0x18
+ 944 0056 9742     		.uleb128 0x2117
+ 945 0058 19       		.uleb128 0x19
+ 946 0059 01       		.uleb128 0x1
+ 947 005a 13       		.uleb128 0x13
+ 948 005b 00       		.byte	0
+ 949 005c 00       		.byte	0
+ 950 005d 07       		.uleb128 0x7
+ 951 005e 34       		.uleb128 0x34
+ 952 005f 00       		.byte	0
+ 953 0060 03       		.uleb128 0x3
+ 954 0061 0E       		.uleb128 0xe
+ 955 0062 3A       		.uleb128 0x3a
+ 956 0063 0B       		.uleb128 0xb
+ 957 0064 3B       		.uleb128 0x3b
+ 958 0065 0B       		.uleb128 0xb
+ 959 0066 49       		.uleb128 0x49
+ 960 0067 13       		.uleb128 0x13
+ 961 0068 02       		.uleb128 0x2
+ 962 0069 17       		.uleb128 0x17
+ 963 006a 00       		.byte	0
+ 964 006b 00       		.byte	0
+ 965 006c 08       		.uleb128 0x8
+ 966 006d 898201   		.uleb128 0x4109
+ 967 0070 01       		.byte	0x1
+ 968 0071 11       		.uleb128 0x11
+ 969 0072 01       		.uleb128 0x1
+ 970 0073 31       		.uleb128 0x31
+ 971 0074 13       		.uleb128 0x13
+ 972 0075 01       		.uleb128 0x1
+ 973 0076 13       		.uleb128 0x13
+ 974 0077 00       		.byte	0
+ 975 0078 00       		.byte	0
+ 976 0079 09       		.uleb128 0x9
+ 977 007a 8A8201   		.uleb128 0x410a
+ 978 007d 00       		.byte	0
+ 979 007e 02       		.uleb128 0x2
+ 980 007f 18       		.uleb128 0x18
+ 981 0080 9142     		.uleb128 0x2111
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 20
+
+
+ 982 0082 18       		.uleb128 0x18
+ 983 0083 00       		.byte	0
+ 984 0084 00       		.byte	0
+ 985 0085 0A       		.uleb128 0xa
+ 986 0086 898201   		.uleb128 0x4109
+ 987 0089 00       		.byte	0
+ 988 008a 11       		.uleb128 0x11
+ 989 008b 01       		.uleb128 0x1
+ 990 008c 31       		.uleb128 0x31
+ 991 008d 13       		.uleb128 0x13
+ 992 008e 00       		.byte	0
+ 993 008f 00       		.byte	0
+ 994 0090 0B       		.uleb128 0xb
+ 995 0091 898201   		.uleb128 0x4109
+ 996 0094 01       		.byte	0x1
+ 997 0095 11       		.uleb128 0x11
+ 998 0096 01       		.uleb128 0x1
+ 999 0097 31       		.uleb128 0x31
+ 1000 0098 13       		.uleb128 0x13
+ 1001 0099 00       		.byte	0
+ 1002 009a 00       		.byte	0
+ 1003 009b 0C       		.uleb128 0xc
+ 1004 009c 34       		.uleb128 0x34
+ 1005 009d 00       		.byte	0
+ 1006 009e 03       		.uleb128 0x3
+ 1007 009f 0E       		.uleb128 0xe
+ 1008 00a0 3A       		.uleb128 0x3a
+ 1009 00a1 0B       		.uleb128 0xb
+ 1010 00a2 3B       		.uleb128 0x3b
+ 1011 00a3 05       		.uleb128 0x5
+ 1012 00a4 49       		.uleb128 0x49
+ 1013 00a5 13       		.uleb128 0x13
+ 1014 00a6 3F       		.uleb128 0x3f
+ 1015 00a7 19       		.uleb128 0x19
+ 1016 00a8 3C       		.uleb128 0x3c
+ 1017 00a9 19       		.uleb128 0x19
+ 1018 00aa 00       		.byte	0
+ 1019 00ab 00       		.byte	0
+ 1020 00ac 0D       		.uleb128 0xd
+ 1021 00ad 35       		.uleb128 0x35
+ 1022 00ae 00       		.byte	0
+ 1023 00af 49       		.uleb128 0x49
+ 1024 00b0 13       		.uleb128 0x13
+ 1025 00b1 00       		.byte	0
+ 1026 00b2 00       		.byte	0
+ 1027 00b3 0E       		.uleb128 0xe
+ 1028 00b4 34       		.uleb128 0x34
+ 1029 00b5 00       		.byte	0
+ 1030 00b6 03       		.uleb128 0x3
+ 1031 00b7 08       		.uleb128 0x8
+ 1032 00b8 3A       		.uleb128 0x3a
+ 1033 00b9 0B       		.uleb128 0xb
+ 1034 00ba 3B       		.uleb128 0x3b
+ 1035 00bb 0B       		.uleb128 0xb
+ 1036 00bc 49       		.uleb128 0x49
+ 1037 00bd 13       		.uleb128 0x13
+ 1038 00be 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 21
+
+
+ 1039 00bf 19       		.uleb128 0x19
+ 1040 00c0 02       		.uleb128 0x2
+ 1041 00c1 18       		.uleb128 0x18
+ 1042 00c2 00       		.byte	0
+ 1043 00c3 00       		.byte	0
+ 1044 00c4 0F       		.uleb128 0xf
+ 1045 00c5 34       		.uleb128 0x34
+ 1046 00c6 00       		.byte	0
+ 1047 00c7 03       		.uleb128 0x3
+ 1048 00c8 0E       		.uleb128 0xe
+ 1049 00c9 3A       		.uleb128 0x3a
+ 1050 00ca 0B       		.uleb128 0xb
+ 1051 00cb 3B       		.uleb128 0x3b
+ 1052 00cc 0B       		.uleb128 0xb
+ 1053 00cd 49       		.uleb128 0x49
+ 1054 00ce 13       		.uleb128 0x13
+ 1055 00cf 3F       		.uleb128 0x3f
+ 1056 00d0 19       		.uleb128 0x19
+ 1057 00d1 02       		.uleb128 0x2
+ 1058 00d2 18       		.uleb128 0x18
+ 1059 00d3 00       		.byte	0
+ 1060 00d4 00       		.byte	0
+ 1061 00d5 10       		.uleb128 0x10
+ 1062 00d6 2E       		.uleb128 0x2e
+ 1063 00d7 00       		.byte	0
+ 1064 00d8 3F       		.uleb128 0x3f
+ 1065 00d9 19       		.uleb128 0x19
+ 1066 00da 3C       		.uleb128 0x3c
+ 1067 00db 19       		.uleb128 0x19
+ 1068 00dc 6E       		.uleb128 0x6e
+ 1069 00dd 0E       		.uleb128 0xe
+ 1070 00de 03       		.uleb128 0x3
+ 1071 00df 0E       		.uleb128 0xe
+ 1072 00e0 3A       		.uleb128 0x3a
+ 1073 00e1 0B       		.uleb128 0xb
+ 1074 00e2 3B       		.uleb128 0x3b
+ 1075 00e3 0B       		.uleb128 0xb
+ 1076 00e4 00       		.byte	0
+ 1077 00e5 00       		.byte	0
+ 1078 00e6 00       		.byte	0
+ 1079              		.section	.debug_loc,"",%progbits
+ 1080              	.Ldebug_loc0:
+ 1081              	.LLST0:
+ 1082 0000 10000000 		.4byte	.LVL0
+ 1083 0004 D4000000 		.4byte	.LVL32
+ 1084 0008 0200     		.2byte	0x2
+ 1085 000a 30       		.byte	0x30
+ 1086 000b 9F       		.byte	0x9f
+ 1087 000c D4000000 		.4byte	.LVL32
+ 1088 0010 E6000000 		.4byte	.LVL35
+ 1089 0014 0200     		.2byte	0x2
+ 1090 0016 31       		.byte	0x31
+ 1091 0017 9F       		.byte	0x9f
+ 1092 0018 E6000000 		.4byte	.LVL35
+ 1093 001c 00010000 		.4byte	.LVL36
+ 1094 0020 0200     		.2byte	0x2
+ 1095 0022 30       		.byte	0x30
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 22
+
+
+ 1096 0023 9F       		.byte	0x9f
+ 1097 0024 00010000 		.4byte	.LVL36
+ 1098 0028 12010000 		.4byte	.LVL39
+ 1099 002c 0200     		.2byte	0x2
+ 1100 002e 32       		.byte	0x32
+ 1101 002f 9F       		.byte	0x9f
+ 1102 0030 12010000 		.4byte	.LVL39
+ 1103 0034 28010000 		.4byte	.LVL40
+ 1104 0038 0200     		.2byte	0x2
+ 1105 003a 30       		.byte	0x30
+ 1106 003b 9F       		.byte	0x9f
+ 1107 003c 28010000 		.4byte	.LVL40
+ 1108 0040 3A010000 		.4byte	.LVL43
+ 1109 0044 0200     		.2byte	0x2
+ 1110 0046 33       		.byte	0x33
+ 1111 0047 9F       		.byte	0x9f
+ 1112 0048 3A010000 		.4byte	.LVL43
+ 1113 004c 56010000 		.4byte	.LVL48
+ 1114 0050 0200     		.2byte	0x2
+ 1115 0052 30       		.byte	0x30
+ 1116 0053 9F       		.byte	0x9f
+ 1117 0054 56010000 		.4byte	.LVL48
+ 1118 0058 58010000 		.4byte	.LVL49
+ 1119 005c 0100     		.2byte	0x1
+ 1120 005e 54       		.byte	0x54
+ 1121 005f 58010000 		.4byte	.LVL49
+ 1122 0063 64010000 		.4byte	.LFE63
+ 1123 0067 0100     		.2byte	0x1
+ 1124 0069 50       		.byte	0x50
+ 1125 006a 00000000 		.4byte	0
+ 1126 006e 00000000 		.4byte	0
+ 1127              		.section	.debug_aranges,"",%progbits
+ 1128 0000 1C000000 		.4byte	0x1c
+ 1129 0004 0200     		.2byte	0x2
+ 1130 0006 00000000 		.4byte	.Ldebug_info0
+ 1131 000a 04       		.byte	0x4
+ 1132 000b 00       		.byte	0
+ 1133 000c 0000     		.2byte	0
+ 1134 000e 0000     		.2byte	0
+ 1135 0010 00000000 		.4byte	.LFB63
+ 1136 0014 64010000 		.4byte	.LFE63-.LFB63
+ 1137 0018 00000000 		.4byte	0
+ 1138 001c 00000000 		.4byte	0
+ 1139              		.section	.debug_ranges,"",%progbits
+ 1140              	.Ldebug_ranges0:
+ 1141 0000 00000000 		.4byte	.LFB63
+ 1142 0004 64010000 		.4byte	.LFE63
+ 1143 0008 00000000 		.4byte	0
+ 1144 000c 00000000 		.4byte	0
+ 1145              		.section	.debug_line,"",%progbits
+ 1146              	.Ldebug_line0:
+ 1147 0000 01020000 		.section	.debug_str,"MS",%progbits,1
+ 1147      02009701 
+ 1147      00000201 
+ 1147      FB0E0D00 
+ 1147      01010101 
+ 1148              	.LASF9:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 23
+
+
+ 1149 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 1149      7433325F 
+ 1149      7400
+ 1150              	.LASF3:
+ 1151 000a 73686F72 		.ascii	"short unsigned int\000"
+ 1151      7420756E 
+ 1151      7369676E 
+ 1151      65642069 
+ 1151      6E7400
+ 1152              	.LASF13:
+ 1153 001d 646F7562 		.ascii	"double\000"
+ 1153      6C6500
+ 1154              	.LASF31:
+ 1155 0024 433A5C55 		.ascii	"C:\\Users\\Daanish Bootcamp\\Documents\\PSoC Creato"
+ 1155      73657273 
+ 1155      5C446161 
+ 1155      6E697368 
+ 1155      20426F6F 
+ 1156 0053 725C5053 		.ascii	"r\\PSoC Design\\ECE3091\\Final Code.cydsn\000"
+ 1156      6F432044 
+ 1156      65736967 
+ 1156      6E5C4543 
+ 1156      45333039 
+ 1157              	.LASF12:
+ 1158 007a 666C6F61 		.ascii	"float\000"
+ 1158      7400
+ 1159              	.LASF27:
+ 1160 0080 4144435F 		.ascii	"ADC_GetResult32\000"
+ 1160      47657452 
+ 1160      6573756C 
+ 1160      74333200 
+ 1161              	.LASF0:
+ 1162 0090 7369676E 		.ascii	"signed char\000"
+ 1162      65642063 
+ 1162      68617200 
+ 1163              	.LASF1:
+ 1164 009c 756E7369 		.ascii	"unsigned char\000"
+ 1164      676E6564 
+ 1164      20636861 
+ 1164      7200
+ 1165              	.LASF29:
+ 1166 00aa 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1166      43313120 
+ 1166      352E342E 
+ 1166      31203230 
+ 1166      31363036 
+ 1167 00dd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1167      20726576 
+ 1167      6973696F 
+ 1167      6E203233 
+ 1167      37373135 
+ 1168 0110 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1168      66756E63 
+ 1168      74696F6E 
+ 1168      2D736563 
+ 1168      74696F6E 
+ 1169              	.LASF25:
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 24
+
+
+ 1170 0138 4144435F 		.ascii	"ADC_StartConvert\000"
+ 1170      53746172 
+ 1170      74436F6E 
+ 1170      76657274 
+ 1170      00
+ 1171              	.LASF26:
+ 1172 0149 4144435F 		.ascii	"ADC_IsEndConversion\000"
+ 1172      4973456E 
+ 1172      64436F6E 
+ 1172      76657273 
+ 1172      696F6E00 
+ 1173              	.LASF11:
+ 1174 015d 696E7433 		.ascii	"int32\000"
+ 1174      3200
+ 1175              	.LASF19:
+ 1176 0163 67726565 		.ascii	"green\000"
+ 1176      6E00
+ 1177              	.LASF17:
+ 1178 0169 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1178      52784275 
+ 1178      66666572 
+ 1178      00
+ 1179              	.LASF5:
+ 1180 0176 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1180      20756E73 
+ 1180      69676E65 
+ 1180      6420696E 
+ 1180      7400
+ 1181              	.LASF18:
+ 1182 0188 626C7565 		.ascii	"blue\000"
+ 1182      00
+ 1183              	.LASF28:
+ 1184 018d 49444143 		.ascii	"IDAC8_Sleep\000"
+ 1184      385F536C 
+ 1184      65657000 
+ 1185              	.LASF8:
+ 1186 0199 756E7369 		.ascii	"unsigned int\000"
+ 1186      676E6564 
+ 1186      20696E74 
+ 1186      00
+ 1187              	.LASF20:
+ 1188 01a6 4C45445F 		.ascii	"LED_Blue_Write\000"
+ 1188      426C7565 
+ 1188      5F577269 
+ 1188      746500
+ 1189              	.LASF7:
+ 1190 01b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1190      206C6F6E 
+ 1190      6720756E 
+ 1190      7369676E 
+ 1190      65642069 
+ 1191              	.LASF10:
+ 1192 01cc 696E7433 		.ascii	"int32_t\000"
+ 1192      325F7400 
+ 1193              	.LASF16:
+ 1194 01d4 73697A65 		.ascii	"sizetype\000"
+ 1194      74797065 
+ARM GAS  C:\Users\DAANIS~1\AppData\Local\Temp\ccRsrgNp.s 			page 25
+
+
+ 1194      00
+ 1195              	.LASF6:
+ 1196 01dd 6C6F6E67 		.ascii	"long long int\000"
+ 1196      206C6F6E 
+ 1196      6720696E 
+ 1196      7400
+ 1197              	.LASF14:
+ 1198 01eb 63686172 		.ascii	"char\000"
+ 1198      00
+ 1199              	.LASF24:
+ 1200 01f0 49444143 		.ascii	"IDAC8_Wakeup\000"
+ 1200      385F5761 
+ 1200      6B657570 
+ 1200      00
+ 1201              	.LASF2:
+ 1202 01fd 73686F72 		.ascii	"short int\000"
+ 1202      7420696E 
+ 1202      7400
+ 1203              	.LASF21:
+ 1204 0207 4C45445F 		.ascii	"LED_Red_Write\000"
+ 1204      5265645F 
+ 1204      57726974 
+ 1204      6500
+ 1205              	.LASF30:
+ 1206 0215 636F6C6F 		.ascii	"colour.c\000"
+ 1206      75722E63 
+ 1206      00
+ 1207              	.LASF22:
+ 1208 021e 4C45445F 		.ascii	"LED_Green_Write\000"
+ 1208      47726565 
+ 1208      6E5F5772 
+ 1208      69746500 
+ 1209              	.LASF4:
+ 1210 022e 6C6F6E67 		.ascii	"long int\000"
+ 1210      20696E74 
+ 1210      00
+ 1211              	.LASF15:
+ 1212 0237 6C6F6E67 		.ascii	"long double\000"
+ 1212      20646F75 
+ 1212      626C6500 
+ 1213              	.LASF23:
+ 1214 0243 43794465 		.ascii	"CyDelay\000"
+ 1214      6C617900 
+ 1215              	.LASF32:
+ 1216 024b 636F6C6F 		.ascii	"colour\000"
+ 1216      757200
+ 1217              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
