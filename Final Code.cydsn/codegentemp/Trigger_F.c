@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Echo_F2.c  
+* File Name: Trigger_F.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Echo_F2.h"
+#include "Trigger_F.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Echo_F2__PORT == 15 && ((Echo_F2__MASK & 0xC0) != 0))
+	 Trigger_F__PORT == 15 && ((Trigger_F__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Echo_F2_Write
+* Function Name: Trigger_F_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Echo_F2_SUT.c usage_Echo_F2_Write
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_Write
 *******************************************************************************/
-void Echo_F2_Write(uint8 value)
+void Trigger_F_Write(uint8 value)
 {
-    uint8 staticBits = (Echo_F2_DR & (uint8)(~Echo_F2_MASK));
-    Echo_F2_DR = staticBits | ((uint8)(value << Echo_F2_SHIFT) & Echo_F2_MASK);
+    uint8 staticBits = (Trigger_F_DR & (uint8)(~Trigger_F_MASK));
+    Trigger_F_DR = staticBits | ((uint8)(value << Trigger_F_SHIFT) & Trigger_F_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Echo_F2_SetDriveMode
+* Function Name: Trigger_F_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void Echo_F2_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet Echo_F2_SUT.c usage_Echo_F2_SetDriveMode
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_SetDriveMode
 *******************************************************************************/
-void Echo_F2_SetDriveMode(uint8 mode)
+void Trigger_F_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(Echo_F2_0, mode);
+	CyPins_SetPinDriveMode(Trigger_F_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Echo_F2_Read
+* Function Name: Trigger_F_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void Echo_F2_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Echo_F2_SUT.c usage_Echo_F2_Read  
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_Read  
 *******************************************************************************/
-uint8 Echo_F2_Read(void)
+uint8 Trigger_F_Read(void)
 {
-    return (Echo_F2_PS & Echo_F2_MASK) >> Echo_F2_SHIFT;
+    return (Trigger_F_PS & Trigger_F_MASK) >> Trigger_F_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Echo_F2_ReadDataReg
+* Function Name: Trigger_F_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 Echo_F2_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Echo_F2_Read() API because the 
-* Echo_F2_ReadDataReg() reads the data register instead of the status 
+* preferred Trigger_F_Read() API because the 
+* Trigger_F_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 Echo_F2_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Echo_F2_SUT.c usage_Echo_F2_ReadDataReg 
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_ReadDataReg 
 *******************************************************************************/
-uint8 Echo_F2_ReadDataReg(void)
+uint8 Trigger_F_ReadDataReg(void)
 {
-    return (Echo_F2_DR & Echo_F2_MASK) >> Echo_F2_SHIFT;
+    return (Trigger_F_DR & Trigger_F_MASK) >> Trigger_F_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(Echo_F2_INTSTAT) 
+#if defined(Trigger_F_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Echo_F2_SetInterruptMode
+    * Function Name: Trigger_F_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 Echo_F2_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use Echo_F2_INTR_ALL to configure the
+    *  component. Or you may use Trigger_F_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - Echo_F2_0_INTR       (First pin in the list)
-    *  - Echo_F2_1_INTR       (Second pin in the list)
+    *  - Trigger_F_0_INTR       (First pin in the list)
+    *  - Trigger_F_1_INTR       (Second pin in the list)
     *  - ...
-    *  - Echo_F2_INTR_ALL     (All pins in Pins component)
+    *  - Trigger_F_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 Echo_F2_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet Echo_F2_SUT.c usage_Echo_F2_SetInterruptMode
+    *  \snippet Trigger_F_SUT.c usage_Trigger_F_SetInterruptMode
     *******************************************************************************/
-    void Echo_F2_SetInterruptMode(uint16 position, uint16 mode)
+    void Trigger_F_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & Echo_F2_0_INTR) != 0u) 
+		if((position & Trigger_F_0_INTR) != 0u) 
 		{ 
-			 Echo_F2_0_INTTYPE_REG = (uint8)mode; 
+			 Trigger_F_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: Echo_F2_ClearInterrupt
+    * Function Name: Trigger_F_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 Echo_F2_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet Echo_F2_SUT.c usage_Echo_F2_ClearInterrupt
+    *  \snippet Trigger_F_SUT.c usage_Trigger_F_ClearInterrupt
     *******************************************************************************/
-    uint8 Echo_F2_ClearInterrupt(void)
+    uint8 Trigger_F_ClearInterrupt(void)
     {
-        return (Echo_F2_INTSTAT & Echo_F2_MASK) >> Echo_F2_SHIFT;
+        return (Trigger_F_INTSTAT & Trigger_F_MASK) >> Trigger_F_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

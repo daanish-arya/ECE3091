@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Trigger_F1.c  
+* File Name: Trigger_F.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Trigger_F1.h"
+#include "Trigger_F.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Trigger_F1__PORT == 15 && ((Trigger_F1__MASK & 0xC0) != 0))
+	 Trigger_F__PORT == 15 && ((Trigger_F__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Trigger_F1_Write
+* Function Name: Trigger_F_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Trigger_F1_SUT.c usage_Trigger_F1_Write
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_Write
 *******************************************************************************/
-void Trigger_F1_Write(uint8 value)
+void Trigger_F_Write(uint8 value)
 {
-    uint8 staticBits = (Trigger_F1_DR & (uint8)(~Trigger_F1_MASK));
-    Trigger_F1_DR = staticBits | ((uint8)(value << Trigger_F1_SHIFT) & Trigger_F1_MASK);
+    uint8 staticBits = (Trigger_F_DR & (uint8)(~Trigger_F_MASK));
+    Trigger_F_DR = staticBits | ((uint8)(value << Trigger_F_SHIFT) & Trigger_F_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Trigger_F1_SetDriveMode
+* Function Name: Trigger_F_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void Trigger_F1_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet Trigger_F1_SUT.c usage_Trigger_F1_SetDriveMode
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_SetDriveMode
 *******************************************************************************/
-void Trigger_F1_SetDriveMode(uint8 mode)
+void Trigger_F_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(Trigger_F1_0, mode);
+	CyPins_SetPinDriveMode(Trigger_F_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Trigger_F1_Read
+* Function Name: Trigger_F_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void Trigger_F1_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Trigger_F1_SUT.c usage_Trigger_F1_Read  
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_Read  
 *******************************************************************************/
-uint8 Trigger_F1_Read(void)
+uint8 Trigger_F_Read(void)
 {
-    return (Trigger_F1_PS & Trigger_F1_MASK) >> Trigger_F1_SHIFT;
+    return (Trigger_F_PS & Trigger_F_MASK) >> Trigger_F_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Trigger_F1_ReadDataReg
+* Function Name: Trigger_F_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 Trigger_F1_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Trigger_F1_Read() API because the 
-* Trigger_F1_ReadDataReg() reads the data register instead of the status 
+* preferred Trigger_F_Read() API because the 
+* Trigger_F_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 Trigger_F1_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Trigger_F1_SUT.c usage_Trigger_F1_ReadDataReg 
+*  \snippet Trigger_F_SUT.c usage_Trigger_F_ReadDataReg 
 *******************************************************************************/
-uint8 Trigger_F1_ReadDataReg(void)
+uint8 Trigger_F_ReadDataReg(void)
 {
-    return (Trigger_F1_DR & Trigger_F1_MASK) >> Trigger_F1_SHIFT;
+    return (Trigger_F_DR & Trigger_F_MASK) >> Trigger_F_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(Trigger_F1_INTSTAT) 
+#if defined(Trigger_F_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Trigger_F1_SetInterruptMode
+    * Function Name: Trigger_F_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 Trigger_F1_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use Trigger_F1_INTR_ALL to configure the
+    *  component. Or you may use Trigger_F_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - Trigger_F1_0_INTR       (First pin in the list)
-    *  - Trigger_F1_1_INTR       (Second pin in the list)
+    *  - Trigger_F_0_INTR       (First pin in the list)
+    *  - Trigger_F_1_INTR       (Second pin in the list)
     *  - ...
-    *  - Trigger_F1_INTR_ALL     (All pins in Pins component)
+    *  - Trigger_F_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 Trigger_F1_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet Trigger_F1_SUT.c usage_Trigger_F1_SetInterruptMode
+    *  \snippet Trigger_F_SUT.c usage_Trigger_F_SetInterruptMode
     *******************************************************************************/
-    void Trigger_F1_SetInterruptMode(uint16 position, uint16 mode)
+    void Trigger_F_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & Trigger_F1_0_INTR) != 0u) 
+		if((position & Trigger_F_0_INTR) != 0u) 
 		{ 
-			 Trigger_F1_0_INTTYPE_REG = (uint8)mode; 
+			 Trigger_F_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: Trigger_F1_ClearInterrupt
+    * Function Name: Trigger_F_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 Trigger_F1_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet Trigger_F1_SUT.c usage_Trigger_F1_ClearInterrupt
+    *  \snippet Trigger_F_SUT.c usage_Trigger_F_ClearInterrupt
     *******************************************************************************/
-    uint8 Trigger_F1_ClearInterrupt(void)
+    uint8 Trigger_F_ClearInterrupt(void)
     {
-        return (Trigger_F1_INTSTAT & Trigger_F1_MASK) >> Trigger_F1_SHIFT;
+        return (Trigger_F_INTSTAT & Trigger_F_MASK) >> Trigger_F_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

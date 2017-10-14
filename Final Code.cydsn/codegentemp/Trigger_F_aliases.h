@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Trigger_F2.h  
+* File Name: Trigger_F.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_Trigger_F2_ALIASES_H) /* Pins Trigger_F2_ALIASES_H */
-#define CY_PINS_Trigger_F2_ALIASES_H
+#if !defined(CY_PINS_Trigger_F_ALIASES_H) /* Pins Trigger_F_ALIASES_H */
+#define CY_PINS_Trigger_F_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define Trigger_F2_0			(Trigger_F2__0__PC)
-#define Trigger_F2_0_INTR	((uint16)((uint16)0x0001u << Trigger_F2__0__SHIFT))
+#define Trigger_F_0			(Trigger_F__0__PC)
+#define Trigger_F_0_INTR	((uint16)((uint16)0x0001u << Trigger_F__0__SHIFT))
 
-#define Trigger_F2_INTR_ALL	 ((uint16)(Trigger_F2_0_INTR))
+#define Trigger_F_INTR_ALL	 ((uint16)(Trigger_F_0_INTR))
 
-#endif /* End Pins Trigger_F2_ALIASES_H */
+#endif /* End Pins Trigger_F_ALIASES_H */
 
 
 /* [] END OF FILE */

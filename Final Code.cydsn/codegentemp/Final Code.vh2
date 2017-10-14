@@ -2,7 +2,7 @@
 --	Conversion of Final Code.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Oct 12 19:19:40 2017
+--	Fri Oct 13 20:32:27 2017
 --
 
 USE cypress.cypress.all;
@@ -969,28 +969,17 @@ SIGNAL Net_249 : bit;
 SIGNAL tmpIO_0__Trigger_L_net_0 : bit;
 TERMINAL tmpSIOVREF__Trigger_L_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Trigger_L_net_0 : bit;
-SIGNAL Net_217 : bit;
-SIGNAL tmpOE__Echo_F2_net_0 : bit;
-SIGNAL Net_218 : bit;
-SIGNAL tmpIO_0__Echo_F2_net_0 : bit;
-TERMINAL tmpSIOVREF__Echo_F2_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Echo_F2_net_0 : bit;
-SIGNAL tmpOE__Trigger_F2_net_0 : bit;
-SIGNAL Net_216 : bit;
-SIGNAL tmpIO_0__Trigger_F2_net_0 : bit;
-TERMINAL tmpSIOVREF__Trigger_F2_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Trigger_F2_net_0 : bit;
 SIGNAL Net_161 : bit;
-SIGNAL tmpOE__Echo_F1_net_0 : bit;
+SIGNAL tmpOE__Echo_F_net_0 : bit;
 SIGNAL Net_160 : bit;
-SIGNAL tmpIO_0__Echo_F1_net_0 : bit;
-TERMINAL tmpSIOVREF__Echo_F1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Echo_F1_net_0 : bit;
-SIGNAL tmpOE__Trigger_F1_net_0 : bit;
+SIGNAL tmpIO_0__Echo_F_net_0 : bit;
+TERMINAL tmpSIOVREF__Echo_F_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Echo_F_net_0 : bit;
+SIGNAL tmpOE__Trigger_F_net_0 : bit;
 SIGNAL Net_1596 : bit;
-SIGNAL tmpIO_0__Trigger_F1_net_0 : bit;
-TERMINAL tmpSIOVREF__Trigger_F1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Trigger_F1_net_0 : bit;
+SIGNAL tmpIO_0__Trigger_F_net_0 : bit;
+TERMINAL tmpSIOVREF__Trigger_F_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Trigger_F_net_0 : bit;
 SIGNAL tmpOE__Grip_Servo_net_0 : bit;
 SIGNAL Net_2686 : bit;
 SIGNAL tmpFB_0__Grip_Servo_net_0 : bit;
@@ -2335,518 +2324,262 @@ SIGNAL tmpIO_0__Right_bumper_net_0 : bit;
 TERMINAL tmpSIOVREF__Right_bumper_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Right_bumper_net_0 : bit;
 SIGNAL Net_1600 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:Net_260\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:Net_55\ : bit;
-SIGNAL Net_869 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:Net_53\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:Clk_Ctl_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_7\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_6\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_5\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:control_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_ten\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_cmode_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_cmode_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_tmode_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_tmode_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_ic_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:ctrl_ic_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:fifo_load_polarized\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:run_mode\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:hwEnable_reg\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_tc\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:trigger_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:per_zero\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:tc_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:tc_reg_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:hwEnable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capture_out_reg_i\ : bit;
-SIGNAL Net_868 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:Net_260\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:Net_55\ : bit;
+SIGNAL Net_872 : bit;
+SIGNAL \Timer_ULTRASONIC_F:Net_53\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:Clk_Ctl_i\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_7\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_6\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_5\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_4\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_3\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_2\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:control_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_enable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_ten\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_cmode_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_cmode_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_tmode_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_tmode_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_ic_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:ctrl_ic_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:fifo_load_polarized\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capture_last\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:run_mode\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_tc\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:trigger_enable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:per_zero\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:tc_i\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:tc_reg_i\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:hwEnable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capture_out_reg_i\ : bit;
+SIGNAL Net_871 : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:int_capt_count_1\ : bit;
 SIGNAL cmp_vv_vv_MODGEN_9 : bit;
 SIGNAL add_vv_vv_MODGEN_10_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:int_capt_count_0\ : bit;
 SIGNAL add_vv_vv_MODGEN_10_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load_int\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newa_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load_int\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newa_1\ : bit;
 SIGNAL MODIN8_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newa_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newa_0\ : bit;
 SIGNAL MODIN8_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newb_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newb_1\ : bit;
 SIGNAL MODIN9_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newb_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:newb_0\ : bit;
 SIGNAL MODIN9_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:dataa_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:dataa_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:datab_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:datab_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:a_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:xnor_array_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:xnor_array_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:aeqb_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eqi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:albi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:agbi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:albi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:agbi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xeq\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xneq\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xlt\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xlte\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xgt\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xgte\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:lt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:lt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:gt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:gt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:gte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:gte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:lte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:lte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:neq\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_9:neq\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:a_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:dataa_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:dataa_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:datab_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:datab_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:a_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:xnor_array_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:xnor_array_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:aeqb_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eq_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eq_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:eqi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:albi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:agbi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:lti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:gti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:albi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:gx:u0:agbi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xeq\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xneq\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xlt\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xlte\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xgt\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:g1:a0:xgte\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:lt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:lt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:gt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:gt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:gte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:gte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:lte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:lte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:neq\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_9:neq\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:a_1\ : bit;
 SIGNAL MODIN10_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:a_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:a_0\ : bit;
 SIGNAL MODIN10_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:s_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:s_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:runmode_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:trig_reg\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_6\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_5\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:fifo_full\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:status_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:fifo_nempty\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:cs_addr_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:cs_addr_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:cs_addr_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:zeros_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:zeros_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:nc0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:nc3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:nc4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:carry\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_right\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_left\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:msb\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cfb\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ce1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cl1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:z1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ff1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:ov_msb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:co_msb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmsb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:so_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F2:Net_102\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:Net_266\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:Net_260\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:Net_55\ : bit;
-SIGNAL Net_872 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:Net_53\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:Clk_Ctl_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_7\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_6\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_5\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:control_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_ten\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_cmode_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_cmode_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_tmode_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_tmode_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_ic_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:ctrl_ic_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:fifo_load_polarized\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:run_mode\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:hwEnable_reg\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_tc\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:trigger_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:per_zero\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:tc_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:tc_reg_i\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:hwEnable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capture_out_reg_i\ : bit;
-SIGNAL Net_871 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_1\ : bit;
-SIGNAL cmp_vv_vv_MODGEN_11 : bit;
-SIGNAL add_vv_vv_MODGEN_12_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_0\ : bit;
-SIGNAL add_vv_vv_MODGEN_12_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load_int\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newa_1\ : bit;
-SIGNAL MODIN11_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newa_0\ : bit;
-SIGNAL MODIN11_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newb_1\ : bit;
-SIGNAL MODIN12_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newb_0\ : bit;
-SIGNAL MODIN12_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:dataa_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:dataa_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:datab_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:datab_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:a_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:xnor_array_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:xnor_array_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:aeqb_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eqi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:albi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:agbi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:albi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:agbi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xeq\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xneq\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xlt\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xlte\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xgt\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xgte\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:lt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:lt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:gt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:gt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:gte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:gte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:lte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:lte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:neq\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_11:neq\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:a_1\ : bit;
-SIGNAL MODIN13_1 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:a_0\ : bit;
-SIGNAL MODIN13_0 : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:s_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:s_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:runmode_enable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:trig_reg\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_6\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_5\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:fifo_full\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:status_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:fifo_nempty\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:cs_addr_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:cs_addr_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:cs_addr_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:zeros_3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:zeros_2\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:nc0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:nc3\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:nc4\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:carry\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_right\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_left\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:msb\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cfb\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff0_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ce1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cl1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:z1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ff1_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:ov_msb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:co_msb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmsb_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:so_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_F1:Net_102\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:Net_266\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:s_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:s_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sIntCapCount:MODULE_10:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:runmode_enable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:trig_disable\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:trig_reg\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_6\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_5\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_4\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_2\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:fifo_full\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:status_3\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:fifo_nempty\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:cs_addr_2\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:cs_addr_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:cs_addr_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:zeros_3\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:zeros_2\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:nc0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:nc3\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:nc4\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z0_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:carry\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_right\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_left\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:msb\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cfb\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce0_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl0_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z0_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff0_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ce1_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cl1_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:z1_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ff1_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:ov_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:co_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmsb_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:so_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_F:Net_102\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:Net_266\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:Net_260\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:Net_55\ : bit;
 SIGNAL Net_875 : bit;
@@ -2884,72 +2617,72 @@ SIGNAL \Timer_ULTRASONIC_L:TimerUDB:hwEnable\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:capture_out_reg_i\ : bit;
 SIGNAL Net_874 : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:int_capt_count_1\ : bit;
-SIGNAL cmp_vv_vv_MODGEN_13 : bit;
-SIGNAL add_vv_vv_MODGEN_14_1 : bit;
+SIGNAL cmp_vv_vv_MODGEN_11 : bit;
+SIGNAL add_vv_vv_MODGEN_12_1 : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:int_capt_count_0\ : bit;
-SIGNAL add_vv_vv_MODGEN_14_0 : bit;
+SIGNAL add_vv_vv_MODGEN_12_0 : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:capt_int_temp\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:capt_fifo_load_int\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newa_1\ : bit;
-SIGNAL MODIN14_1 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newa_0\ : bit;
-SIGNAL MODIN14_0 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newb_1\ : bit;
-SIGNAL MODIN15_1 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newb_0\ : bit;
-SIGNAL MODIN15_0 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:dataa_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:dataa_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:datab_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:datab_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:a_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:xnor_array_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:xnor_array_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:aeqb_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eqi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:albi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:agbi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:albi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:agbi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xeq\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xneq\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xlt\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xlte\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xgt\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xgte\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:lt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:lt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:gt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:gt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:gte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:gte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:lte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:lte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:neq\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_13:neq\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:a_1\ : bit;
-SIGNAL MODIN16_1 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:a_0\ : bit;
-SIGNAL MODIN16_0 : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:s_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:s_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newa_1\ : bit;
+SIGNAL MODIN11_1 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newa_0\ : bit;
+SIGNAL MODIN11_0 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newb_1\ : bit;
+SIGNAL MODIN12_1 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:newb_0\ : bit;
+SIGNAL MODIN12_0 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:dataa_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:dataa_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:datab_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:datab_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:a_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:xnor_array_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:xnor_array_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:aeqb_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eq_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eq_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:eqi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:albi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:agbi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:lti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:gti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:albi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:gx:u0:agbi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xeq\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xneq\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xlt\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xlte\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xgt\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:g1:a0:xgte\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:lt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:lt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:gt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:gt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:gte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:gte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:lte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:lte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:neq\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_11:neq\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:a_1\ : bit;
+SIGNAL MODIN13_1 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:a_0\ : bit;
+SIGNAL MODIN13_0 : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:s_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:s_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_L:TimerUDB:sIntCapCount:MODULE_12:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:runmode_enable\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:trig_disable\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:trig_reg\ : bit;
@@ -3140,72 +2873,72 @@ SIGNAL \Timer_ULTRASONIC_R:TimerUDB:hwEnable\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:capture_out_reg_i\ : bit;
 SIGNAL Net_877 : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:int_capt_count_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:cmp_vv_vv_MODGEN_15\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:add_vv_vv_MODGEN_16_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:cmp_vv_vv_MODGEN_13\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:add_vv_vv_MODGEN_14_1\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:int_capt_count_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:add_vv_vv_MODGEN_16_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:add_vv_vv_MODGEN_14_0\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:capt_int_temp\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:capt_fifo_load_int\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:newa_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN17_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:newa_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN17_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:newb_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN18_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:newb_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN18_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:dataa_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:dataa_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:datab_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:datab_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:a_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:xnor_array_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:xnor_array_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:aeqb_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:eq_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:eq_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:eqi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:albi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:agbi_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:lt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:gt_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:lt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:gt_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:lti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:gti_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:albi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:gx:u0:agbi_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xeq\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xneq\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xlt\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xlte\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xgt\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:g1:a0:xgte\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:lt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:lt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:gt\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:gt\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:gte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:gte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:lte\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:lte\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:neq\ : bit;
-ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_15:neq\:SIGNAL IS 2;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:a_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN19_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:a_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN19_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:b_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:b_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:s_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:s_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_16:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newa_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN14_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newa_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN14_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newb_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN15_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:newb_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN15_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:dataa_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:dataa_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:datab_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:datab_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:a_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:xnor_array_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:xnor_array_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:aeqb_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eq_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eq_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:eqi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:albi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:agbi_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gt_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gt_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:lti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:gti_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:albi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:gx:u0:agbi_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xeq\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xneq\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xlt\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xlte\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xgt\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:g1:a0:xgte\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:lt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:lt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:gt\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:gt\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:gte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:gte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:lte\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:lte\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:neq\ : bit;
+ATTRIBUTE port_state_att of \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_13:neq\:SIGNAL IS 2;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:a_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN16_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:a_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODIN16_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:b_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:b_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:s_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:s_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \Timer_ULTRASONIC_R:TimerUDB:sIntCapCount:MODULE_14:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:runmode_enable\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:trig_disable\ : bit;
 SIGNAL \Timer_ULTRASONIC_R:TimerUDB:trig_reg\ : bit;
@@ -3403,9 +3136,9 @@ SIGNAL \PWM_Lift:PWMUDB:final_kill\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:km_tc\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:db_tc\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:dith_count_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_1\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:dith_count_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_0\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:dith_count_1\\R\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:dith_count_1\\S\ : bit;
 SIGNAL \PWM_Lift:PWMUDB:dith_count_0\\R\ : bit;
@@ -3580,202 +3313,202 @@ SIGNAL \PWM_Lift:Net_96\ : bit;
 SIGNAL Net_1065 : bit;
 SIGNAL Net_1066 : bit;
 SIGNAL \PWM_Lift:PWMUDB:pwm_temp\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:b_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODIN20_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:a_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODIN20_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:b_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_17_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:s_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:b_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODIN17_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:a_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODIN17_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:b_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:add_vi_vv_MODGEN_15_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:s_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_31\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_30\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_29\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_28\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_27\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_26\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_25\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:b_24\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_23\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_22\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_21\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_20\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_19\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_18\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_17\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:b_16\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_15\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_14\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_13\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_12\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_11\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_10\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_9\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:b_8\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_7\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_6\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_5\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_4\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_3\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL Net_2730 : bit;
 SIGNAL Net_1067 : bit;
 SIGNAL Net_1064 : bit;
@@ -3894,24 +3627,15 @@ SIGNAL \PWM_M2:PWMUDB:pwm_i_reg\\D\ : bit;
 SIGNAL \PWM_M2:PWMUDB:pwm1_i_reg\\D\ : bit;
 SIGNAL \PWM_M2:PWMUDB:pwm2_i_reg\\D\ : bit;
 SIGNAL \PWM_M2:PWMUDB:tc_i_reg\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capture_last\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:hwEnable_reg\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:tc_reg_i\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capture_out_reg_i\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_1\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_0\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:runmode_enable\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capture_last\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:hwEnable_reg\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:tc_reg_i\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capture_out_reg_i\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_1\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_0\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:runmode_enable\\D\ : bit;
-SIGNAL \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capture_last\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:hwEnable_reg\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:tc_reg_i\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capture_out_reg_i\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:int_capt_count_1\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:int_capt_count_0\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:runmode_enable\\D\ : bit;
+SIGNAL \Timer_ULTRASONIC_F:TimerUDB:trig_disable\\D\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:hwEnable_reg\\D\ : bit;
 SIGNAL \Timer_ULTRASONIC_L:TimerUDB:tc_reg_i\\D\ : bit;
@@ -4257,71 +3981,38 @@ Net_723 <= ((Net_469 and Net_481));
 
 \PWM_M2:PWMUDB:pwm_i\ <= ((\PWM_M2:PWMUDB:runmode_enable\ and \PWM_M2:PWMUDB:cmp1_less\));
 
-\Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load\ <= ((not Net_218 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\));
+\Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load\ <= ((not Net_160 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\));
 
-\Timer_ULTRASONIC_F2:TimerUDB:status_tc\ <= ((\Timer_ULTRASONIC_F2:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F2:TimerUDB:per_zero\));
+\Timer_ULTRASONIC_F:TimerUDB:status_tc\ <= ((\Timer_ULTRASONIC_F:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F:TimerUDB:per_zero\));
 
-\Timer_ULTRASONIC_F2:TimerUDB:hwEnable\ <= ((Net_218 and \Timer_ULTRASONIC_F2:TimerUDB:control_7\));
+\Timer_ULTRASONIC_F:TimerUDB:hwEnable\ <= ((Net_160 and \Timer_ULTRASONIC_F:TimerUDB:control_7\));
 
-\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_1\\D\ <= ((not Net_218 and not Net_216 and not MODIN8_1 and not MODIN9_0 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_0)
-	OR (not Net_218 and not Net_216 and not MODIN8_1 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_0 and MODIN9_1)
-	OR (not Net_216 and not MODIN8_0 and MODIN8_1 and MODIN9_0)
-	OR (not Net_216 and not MODIN8_0 and not MODIN9_1 and MODIN8_1)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_1)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and MODIN8_1)
-	OR (not Net_216 and Net_218 and MODIN8_1));
+\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_1\\D\ <= ((not Net_160 and not Net_1596 and not MODIN8_1 and not MODIN9_0 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_0)
+	OR (not Net_160 and not Net_1596 and not MODIN8_1 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_0 and MODIN9_1)
+	OR (not Net_1596 and not MODIN8_0 and MODIN8_1 and MODIN9_0)
+	OR (not Net_1596 and not MODIN8_0 and not MODIN9_1 and MODIN8_1)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_1)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and MODIN8_1)
+	OR (not Net_1596 and Net_160 and MODIN8_1));
 
-\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_0\\D\ <= ((not Net_218 and not Net_216 and not MODIN8_0 and not MODIN9_1 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_1)
-	OR (not Net_218 and not Net_216 and not MODIN8_1 and not MODIN8_0 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN9_1)
-	OR (not Net_218 and not Net_216 and not MODIN8_0 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN9_0)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_0)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and MODIN8_0)
-	OR (not Net_216 and Net_218 and MODIN8_0));
+\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_0\\D\ <= ((not Net_160 and not Net_1596 and not MODIN8_0 and not MODIN9_1 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_1)
+	OR (not Net_160 and not Net_1596 and not MODIN8_1 and not MODIN8_0 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN9_1)
+	OR (not Net_160 and not Net_1596 and not MODIN8_0 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN9_0)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_0)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and MODIN8_0)
+	OR (not Net_1596 and Net_160 and MODIN8_0));
 
-\Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\\D\ <= ((not Net_218 and not Net_216 and not MODIN8_1 and not MODIN8_0 and not MODIN9_1 and not MODIN9_0 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\)
-	OR (not Net_218 and not Net_216 and not MODIN8_0 and not MODIN9_0 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_1 and MODIN9_1)
-	OR (not Net_218 and not Net_216 and not MODIN8_1 and not MODIN9_1 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_0 and MODIN9_0)
-	OR (not Net_218 and not Net_216 and \Timer_ULTRASONIC_F2:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and MODIN8_1 and MODIN8_0 and MODIN9_1 and MODIN9_0));
+\Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\\D\ <= ((not Net_160 and not Net_1596 and not MODIN8_1 and not MODIN8_0 and not MODIN9_1 and not MODIN9_0 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\)
+	OR (not Net_160 and not Net_1596 and not MODIN8_0 and not MODIN9_0 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_1 and MODIN9_1)
+	OR (not Net_160 and not Net_1596 and not MODIN8_1 and not MODIN9_1 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_0 and MODIN9_0)
+	OR (not Net_160 and not Net_1596 and \Timer_ULTRASONIC_F:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and MODIN8_1 and MODIN8_0 and MODIN9_1 and MODIN9_0));
 
-\Timer_ULTRASONIC_F2:TimerUDB:runmode_enable\\D\ <= ((not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:per_zero\ and not \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\ and Net_218 and \Timer_ULTRASONIC_F2:TimerUDB:control_7\)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:run_mode\ and not \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\ and Net_218 and \Timer_ULTRASONIC_F2:TimerUDB:control_7\)
-	OR (not Net_216 and not \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and not \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\ and Net_218 and \Timer_ULTRASONIC_F2:TimerUDB:control_7\));
+\Timer_ULTRASONIC_F:TimerUDB:runmode_enable\\D\ <= ((not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:per_zero\ and not \Timer_ULTRASONIC_F:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F:TimerUDB:control_7\)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:run_mode\ and not \Timer_ULTRASONIC_F:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F:TimerUDB:control_7\)
+	OR (not Net_1596 and not \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and not \Timer_ULTRASONIC_F:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F:TimerUDB:control_7\));
 
-\Timer_ULTRASONIC_F2:TimerUDB:trig_disable\\D\ <= ((not Net_216 and \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\ and \Timer_ULTRASONIC_F2:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F2:TimerUDB:per_zero\)
-	OR (not Net_216 and \Timer_ULTRASONIC_F2:TimerUDB:trig_disable\));
-
-\Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load\ <= ((not Net_160 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\));
-
-\Timer_ULTRASONIC_F1:TimerUDB:status_tc\ <= ((\Timer_ULTRASONIC_F1:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F1:TimerUDB:per_zero\));
-
-\Timer_ULTRASONIC_F1:TimerUDB:hwEnable\ <= ((Net_160 and \Timer_ULTRASONIC_F1:TimerUDB:control_7\));
-
-\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_1\\D\ <= ((not Net_160 and not Net_1596 and not MODIN11_1 and not MODIN12_0 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_0)
-	OR (not Net_160 and not Net_1596 and not MODIN11_1 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_0 and MODIN12_1)
-	OR (not Net_1596 and not MODIN11_0 and MODIN11_1 and MODIN12_0)
-	OR (not Net_1596 and not MODIN11_0 and not MODIN12_1 and MODIN11_1)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_1)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and MODIN11_1)
-	OR (not Net_1596 and Net_160 and MODIN11_1));
-
-\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_0\\D\ <= ((not Net_160 and not Net_1596 and not MODIN11_0 and not MODIN12_1 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_1)
-	OR (not Net_160 and not Net_1596 and not MODIN11_1 and not MODIN11_0 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN12_1)
-	OR (not Net_160 and not Net_1596 and not MODIN11_0 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN12_0)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_0)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and MODIN11_0)
-	OR (not Net_1596 and Net_160 and MODIN11_0));
-
-\Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\\D\ <= ((not Net_160 and not Net_1596 and not MODIN11_1 and not MODIN11_0 and not MODIN12_1 and not MODIN12_0 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\)
-	OR (not Net_160 and not Net_1596 and not MODIN11_0 and not MODIN12_0 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_1 and MODIN12_1)
-	OR (not Net_160 and not Net_1596 and not MODIN11_1 and not MODIN12_1 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_0 and MODIN12_0)
-	OR (not Net_160 and not Net_1596 and \Timer_ULTRASONIC_F1:TimerUDB:capture_last\ and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and MODIN11_1 and MODIN11_0 and MODIN12_1 and MODIN12_0));
-
-\Timer_ULTRASONIC_F1:TimerUDB:runmode_enable\\D\ <= ((not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:per_zero\ and not \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F1:TimerUDB:control_7\)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:run_mode\ and not \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F1:TimerUDB:control_7\)
-	OR (not Net_1596 and not \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and not \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\ and Net_160 and \Timer_ULTRASONIC_F1:TimerUDB:control_7\));
-
-\Timer_ULTRASONIC_F1:TimerUDB:trig_disable\\D\ <= ((not Net_1596 and \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\ and \Timer_ULTRASONIC_F1:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F1:TimerUDB:per_zero\)
-	OR (not Net_1596 and \Timer_ULTRASONIC_F1:TimerUDB:trig_disable\));
+\Timer_ULTRASONIC_F:TimerUDB:trig_disable\\D\ <= ((not Net_1596 and \Timer_ULTRASONIC_F:TimerUDB:timer_enable\ and \Timer_ULTRASONIC_F:TimerUDB:run_mode\ and \Timer_ULTRASONIC_F:TimerUDB:per_zero\)
+	OR (not Net_1596 and \Timer_ULTRASONIC_F:TimerUDB:trig_disable\));
 
 \Timer_ULTRASONIC_L:TimerUDB:capt_fifo_load\ <= ((not Net_251 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\));
 
@@ -4329,25 +4020,25 @@ Net_723 <= ((Net_469 and Net_481));
 
 \Timer_ULTRASONIC_L:TimerUDB:hwEnable\ <= ((Net_251 and \Timer_ULTRASONIC_L:TimerUDB:control_7\));
 
-\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_1\\D\ <= ((not Net_251 and not Net_249 and not MODIN14_1 and not MODIN15_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_0)
-	OR (not Net_251 and not Net_249 and not MODIN14_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_0 and MODIN15_1)
-	OR (not Net_249 and not MODIN14_0 and MODIN14_1 and MODIN15_0)
-	OR (not Net_249 and not MODIN14_0 and not MODIN15_1 and MODIN14_1)
-	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_1)
-	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and MODIN14_1)
-	OR (not Net_249 and Net_251 and MODIN14_1));
+\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_1\\D\ <= ((not Net_251 and not Net_249 and not MODIN11_1 and not MODIN12_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_0)
+	OR (not Net_251 and not Net_249 and not MODIN11_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_0 and MODIN12_1)
+	OR (not Net_249 and not MODIN11_0 and MODIN11_1 and MODIN12_0)
+	OR (not Net_249 and not MODIN11_0 and not MODIN12_1 and MODIN11_1)
+	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_1)
+	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and MODIN11_1)
+	OR (not Net_249 and Net_251 and MODIN11_1));
 
-\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_0\\D\ <= ((not Net_251 and not Net_249 and not MODIN14_0 and not MODIN15_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_1)
-	OR (not Net_251 and not Net_249 and not MODIN14_1 and not MODIN14_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN15_1)
-	OR (not Net_251 and not Net_249 and not MODIN14_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN15_0)
-	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_0)
-	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and MODIN14_0)
-	OR (not Net_249 and Net_251 and MODIN14_0));
+\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_0\\D\ <= ((not Net_251 and not Net_249 and not MODIN11_0 and not MODIN12_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_1)
+	OR (not Net_251 and not Net_249 and not MODIN11_1 and not MODIN11_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN12_1)
+	OR (not Net_251 and not Net_249 and not MODIN11_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN12_0)
+	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_0)
+	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and MODIN11_0)
+	OR (not Net_249 and Net_251 and MODIN11_0));
 
-\Timer_ULTRASONIC_L:TimerUDB:capt_int_temp\\D\ <= ((not Net_251 and not Net_249 and not MODIN14_1 and not MODIN14_0 and not MODIN15_1 and not MODIN15_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\)
-	OR (not Net_251 and not Net_249 and not MODIN14_0 and not MODIN15_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_1 and MODIN15_1)
-	OR (not Net_251 and not Net_249 and not MODIN14_1 and not MODIN15_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_0 and MODIN15_0)
-	OR (not Net_251 and not Net_249 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN14_1 and MODIN14_0 and MODIN15_1 and MODIN15_0));
+\Timer_ULTRASONIC_L:TimerUDB:capt_int_temp\\D\ <= ((not Net_251 and not Net_249 and not MODIN11_1 and not MODIN11_0 and not MODIN12_1 and not MODIN12_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\)
+	OR (not Net_251 and not Net_249 and not MODIN11_0 and not MODIN12_0 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_1 and MODIN12_1)
+	OR (not Net_251 and not Net_249 and not MODIN11_1 and not MODIN12_1 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_0 and MODIN12_0)
+	OR (not Net_251 and not Net_249 and \Timer_ULTRASONIC_L:TimerUDB:capture_last\ and \Timer_ULTRASONIC_L:TimerUDB:timer_enable\ and MODIN11_1 and MODIN11_0 and MODIN12_1 and MODIN12_0));
 
 \Timer_ULTRASONIC_L:TimerUDB:runmode_enable\\D\ <= ((not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:per_zero\ and not \Timer_ULTRASONIC_L:TimerUDB:trig_disable\ and Net_251 and \Timer_ULTRASONIC_L:TimerUDB:control_7\)
 	OR (not Net_249 and not \Timer_ULTRASONIC_L:TimerUDB:run_mode\ and not \Timer_ULTRASONIC_L:TimerUDB:trig_disable\ and Net_251 and \Timer_ULTRASONIC_L:TimerUDB:control_7\)
@@ -6089,155 +5780,11 @@ Trigger_L:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Reset_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Trigger_L_net_0);
-isr_F2:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_217);
-Echo_F2:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"4a9acf1a-01c6-4771-baca-971a4cab4fa0",
-		drive_mode=>"001",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
-		input_sync=>"0",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"I",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"00",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__Reset_net_0),
-		y=>(zero),
-		fb=>Net_218,
-		analog=>(open),
-		io=>(tmpIO_0__Echo_F2_net_0),
-		siovref=>(tmpSIOVREF__Echo_F2_net_0),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>tmpOE__Reset_net_0,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>tmpOE__Reset_net_0,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Echo_F2_net_0);
-Trigger_F2:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"c869f063-7321-4149-be7c-0a75aaa44429",
-		drive_mode=>"110",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
-		input_sync=>"0",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"I",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"00",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(tmpOE__Reset_net_0),
-		y=>(zero),
-		fb=>Net_216,
-		analog=>(open),
-		io=>(tmpIO_0__Trigger_F2_net_0),
-		siovref=>(tmpSIOVREF__Trigger_F2_net_0),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>tmpOE__Reset_net_0,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>tmpOE__Reset_net_0,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Trigger_F2_net_0);
-isr_F1:cy_isr_v1_0
+isr_F:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_161);
-Echo_F1:cy_psoc3_pins_v1_10
+Echo_F:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"3febbc43-8edc-4dfc-ac8c-ca5404633130",
 		drive_mode=>"001",
 		ibuf_enabled=>"1",
@@ -6297,8 +5844,8 @@ Echo_F1:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>Net_160,
 		analog=>(open),
-		io=>(tmpIO_0__Echo_F1_net_0),
-		siovref=>(tmpSIOVREF__Echo_F1_net_0),
+		io=>(tmpIO_0__Echo_F_net_0),
+		siovref=>(tmpSIOVREF__Echo_F_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__Reset_net_0,
@@ -6306,8 +5853,8 @@ Echo_F1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__Reset_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Echo_F1_net_0);
-Trigger_F1:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Echo_F_net_0);
+Trigger_F:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"62be3111-d769-4e4c-97e2-30a7495d8164",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -6367,8 +5914,8 @@ Trigger_F1:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>Net_1596,
 		analog=>(open),
-		io=>(tmpIO_0__Trigger_F1_net_0),
-		siovref=>(tmpSIOVREF__Trigger_F1_net_0),
+		io=>(tmpIO_0__Trigger_F_net_0),
+		siovref=>(tmpSIOVREF__Trigger_F_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__Reset_net_0,
@@ -6376,7 +5923,7 @@ Trigger_F1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__Reset_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Trigger_F1_net_0);
+		interrupt=>tmpINTERRUPT_0__Trigger_F_net_0);
 Grip_Servo:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"d3be4d3d-fd9f-4e41-afdb-210a381054d5",
 		drive_mode=>"110",
@@ -8031,237 +7578,36 @@ Clock_ultrasonic:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1600,
 		dig_domain_out=>open);
-\Timer_ULTRASONIC_F2:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
+\Timer_ULTRASONIC_F:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>Net_1600,
 		enable=>tmpOE__Reset_net_0,
-		clock_out=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\);
-\Timer_ULTRASONIC_F2:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
+		clock_out=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\);
+\Timer_ULTRASONIC_F:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>Net_1600,
 		enable=>tmpOE__Reset_net_0,
-		clock_out=>\Timer_ULTRASONIC_F2:TimerUDB:Clk_Ctl_i\);
-\Timer_ULTRASONIC_F2:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
+		clock_out=>\Timer_ULTRASONIC_F:TimerUDB:Clk_Ctl_i\);
+\Timer_ULTRASONIC_F:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
 		cy_ctrl_mode_1=>"00000000",
 		cy_ctrl_mode_0=>"11111111",
 		cy_ext_reset=>'0')
 	PORT MAP(reset=>zero,
-		clock=>\Timer_ULTRASONIC_F2:TimerUDB:Clk_Ctl_i\,
-		control=>(\Timer_ULTRASONIC_F2:TimerUDB:control_7\, \Timer_ULTRASONIC_F2:TimerUDB:control_6\, \Timer_ULTRASONIC_F2:TimerUDB:control_5\, \Timer_ULTRASONIC_F2:TimerUDB:control_4\,
-			\Timer_ULTRASONIC_F2:TimerUDB:control_3\, \Timer_ULTRASONIC_F2:TimerUDB:control_2\, MODIN9_1, MODIN9_0));
-\Timer_ULTRASONIC_F2:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
-	GENERIC MAP(cy_force_order=>'1',
-		cy_md_select=>"0000011",
-		cy_int_mask=>"1111111")
-	PORT MAP(reset=>Net_216,
-		clock=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		status=>(zero, zero, zero, \Timer_ULTRASONIC_F2:TimerUDB:status_3\,
-			\Timer_ULTRASONIC_F2:TimerUDB:status_2\, \Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\, \Timer_ULTRASONIC_F2:TimerUDB:status_tc\),
-		interrupt=>Net_217);
-\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:u0\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
-		d0_init=>"00000000",
-		d1_init=>"00000000",
-		a0_init=>"00000000",
-		a1_init=>"00000000",
-		ce0_sync=>'1',
-		cl0_sync=>'1',
-		z0_sync=>'1',
-		ff0_sync=>'1',
-		ce1_sync=>'1',
-		cl1_sync=>'1',
-		z1_sync=>'1',
-		ff1_sync=>'1',
-		ov_msb_sync=>'1',
-		co_msb_sync=>'1',
-		cmsb_sync=>'1',
-		so_sync=>'1',
-		f0_bus_sync=>'1',
-		f0_blk_sync=>'1',
-		f1_bus_sync=>'1',
-		f1_blk_sync=>'1')
-	PORT MAP(reset=>zero,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(Net_216, \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F2:TimerUDB:per_zero\),
-		route_si=>zero,
-		route_ci=>zero,
-		f0_load=>\Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load\,
-		f1_load=>zero,
-		d0_load=>zero,
-		d1_load=>zero,
-		ce0=>open,
-		cl0=>open,
-		z0=>\Timer_ULTRASONIC_F2:TimerUDB:nc0\,
-		ff0=>open,
-		ce1=>open,
-		cl1=>open,
-		z1=>open,
-		ff1=>open,
-		ov_msb=>open,
-		co_msb=>open,
-		cmsb=>open,
-		so=>open,
-		f0_bus_stat=>\Timer_ULTRASONIC_F2:TimerUDB:nc3\,
-		f0_blk_stat=>\Timer_ULTRASONIC_F2:TimerUDB:nc4\,
-		f1_bus_stat=>open,
-		f1_blk_stat=>open,
-		ce0_reg=>open,
-		cl0_reg=>open,
-		z0_reg=>open,
-		ff0_reg=>open,
-		ce1_reg=>open,
-		cl1_reg=>open,
-		z1_reg=>open,
-		ff1_reg=>open,
-		ov_msb_reg=>open,
-		co_msb_reg=>open,
-		cmsb_reg=>open,
-		so_reg=>open,
-		f0_bus_stat_reg=>open,
-		f0_blk_stat_reg=>open,
-		f1_bus_stat_reg=>open,
-		f1_blk_stat_reg=>open,
-		ci=>zero,
-		co=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:carry\,
-		sir=>zero,
-		sor=>open,
-		sil=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_right\,
-		sol=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_left\,
-		msbi=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:msb\,
-		msbo=>open,
-		cei=>(zero, zero),
-		ceo=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_0\),
-		cli=>(zero, zero),
-		clo=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_0\),
-		zi=>(zero, zero),
-		zo=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_0\),
-		fi=>(zero, zero),
-		fo=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_0\),
-		capi=>(zero, zero),
-		capo=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_0\),
-		cfbi=>zero,
-		cfbo=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cfb\,
-		pi=>(zero, zero, zero, zero,
-			zero, zero, zero, zero),
-		po=>open);
-\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:u1\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
-		d0_init=>"00000000",
-		d1_init=>"00000000",
-		a0_init=>"00000000",
-		a1_init=>"00000000",
-		ce0_sync=>'1',
-		cl0_sync=>'1',
-		z0_sync=>'1',
-		ff0_sync=>'1',
-		ce1_sync=>'1',
-		cl1_sync=>'1',
-		z1_sync=>'1',
-		ff1_sync=>'1',
-		ov_msb_sync=>'1',
-		co_msb_sync=>'1',
-		cmsb_sync=>'1',
-		so_sync=>'1',
-		f0_bus_sync=>'1',
-		f0_blk_sync=>'1',
-		f1_bus_sync=>'1',
-		f1_blk_sync=>'1')
-	PORT MAP(reset=>zero,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(Net_216, \Timer_ULTRASONIC_F2:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F2:TimerUDB:per_zero\),
-		route_si=>zero,
-		route_ci=>zero,
-		f0_load=>\Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load\,
-		f1_load=>zero,
-		d0_load=>zero,
-		d1_load=>zero,
-		ce0=>open,
-		cl0=>open,
-		z0=>\Timer_ULTRASONIC_F2:TimerUDB:per_zero\,
-		ff0=>open,
-		ce1=>open,
-		cl1=>open,
-		z1=>open,
-		ff1=>open,
-		ov_msb=>open,
-		co_msb=>open,
-		cmsb=>open,
-		so=>open,
-		f0_bus_stat=>\Timer_ULTRASONIC_F2:TimerUDB:status_3\,
-		f0_blk_stat=>\Timer_ULTRASONIC_F2:TimerUDB:status_2\,
-		f1_bus_stat=>open,
-		f1_blk_stat=>open,
-		ce0_reg=>open,
-		cl0_reg=>open,
-		z0_reg=>open,
-		ff0_reg=>open,
-		ce1_reg=>open,
-		cl1_reg=>open,
-		z1_reg=>open,
-		ff1_reg=>open,
-		ov_msb_reg=>open,
-		co_msb_reg=>open,
-		cmsb_reg=>open,
-		so_reg=>open,
-		f0_bus_stat_reg=>open,
-		f0_blk_stat_reg=>open,
-		f1_bus_stat_reg=>open,
-		f1_blk_stat_reg=>open,
-		ci=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:carry\,
-		co=>open,
-		sir=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_left\,
-		sor=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:sh_right\,
-		sil=>zero,
-		sol=>open,
-		msbi=>zero,
-		msbo=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:msb\,
-		cei=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_eq_0\),
-		ceo=>open,
-		cli=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_lt_0\),
-		clo=>open,
-		zi=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_zero_0\),
-		zo=>open,
-		fi=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cmp_ff_0\),
-		fo=>open,
-		capi=>(\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cap_0\),
-		capo=>open,
-		cfbi=>\Timer_ULTRASONIC_F2:TimerUDB:sT16:timerdp:cfb\,
-		cfbo=>open,
-		pi=>(zero, zero, zero, zero,
-			zero, zero, zero, zero),
-		po=>open);
-\Timer_ULTRASONIC_F1:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
-	GENERIC MAP(sync_mode=>'1')
-	PORT MAP(clock_in=>Net_1600,
-		enable=>tmpOE__Reset_net_0,
-		clock_out=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\);
-\Timer_ULTRASONIC_F1:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
-	GENERIC MAP(sync_mode=>'1')
-	PORT MAP(clock_in=>Net_1600,
-		enable=>tmpOE__Reset_net_0,
-		clock_out=>\Timer_ULTRASONIC_F1:TimerUDB:Clk_Ctl_i\);
-\Timer_ULTRASONIC_F1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
-	GENERIC MAP(cy_init_value=>"00000000",
-		cy_force_order=>'1',
-		cy_ctrl_mode_1=>"00000000",
-		cy_ctrl_mode_0=>"11111111",
-		cy_ext_reset=>'0')
-	PORT MAP(reset=>zero,
-		clock=>\Timer_ULTRASONIC_F1:TimerUDB:Clk_Ctl_i\,
-		control=>(\Timer_ULTRASONIC_F1:TimerUDB:control_7\, \Timer_ULTRASONIC_F1:TimerUDB:control_6\, \Timer_ULTRASONIC_F1:TimerUDB:control_5\, \Timer_ULTRASONIC_F1:TimerUDB:control_4\,
-			\Timer_ULTRASONIC_F1:TimerUDB:control_3\, \Timer_ULTRASONIC_F1:TimerUDB:control_2\, MODIN12_1, MODIN12_0));
-\Timer_ULTRASONIC_F1:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
+		clock=>\Timer_ULTRASONIC_F:TimerUDB:Clk_Ctl_i\,
+		control=>(\Timer_ULTRASONIC_F:TimerUDB:control_7\, \Timer_ULTRASONIC_F:TimerUDB:control_6\, \Timer_ULTRASONIC_F:TimerUDB:control_5\, \Timer_ULTRASONIC_F:TimerUDB:control_4\,
+			\Timer_ULTRASONIC_F:TimerUDB:control_3\, \Timer_ULTRASONIC_F:TimerUDB:control_2\, MODIN9_1, MODIN9_0));
+\Timer_ULTRASONIC_F:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"0000011",
 		cy_int_mask=>"1111111")
 	PORT MAP(reset=>Net_1596,
-		clock=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		status=>(zero, zero, zero, \Timer_ULTRASONIC_F1:TimerUDB:status_3\,
-			\Timer_ULTRASONIC_F1:TimerUDB:status_2\, \Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\, \Timer_ULTRASONIC_F1:TimerUDB:status_tc\),
+		clock=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		status=>(zero, zero, zero, \Timer_ULTRASONIC_F:TimerUDB:status_3\,
+			\Timer_ULTRASONIC_F:TimerUDB:status_2\, \Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\, \Timer_ULTRASONIC_F:TimerUDB:status_tc\),
 		interrupt=>Net_161);
-\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:u0\:cy_psoc3_dp
+\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
 		d0_init=>"00000000",
 		d1_init=>"00000000",
@@ -8284,17 +7630,17 @@ Clock_ultrasonic:cy_clock_v1_0
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(Net_1596, \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F1:TimerUDB:per_zero\),
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(Net_1596, \Timer_ULTRASONIC_F:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
-		f0_load=>\Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load\,
+		f0_load=>\Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load\,
 		f1_load=>zero,
 		d0_load=>zero,
 		d1_load=>zero,
 		ce0=>open,
 		cl0=>open,
-		z0=>\Timer_ULTRASONIC_F1:TimerUDB:nc0\,
+		z0=>\Timer_ULTRASONIC_F:TimerUDB:nc0\,
 		ff0=>open,
 		ce1=>open,
 		cl1=>open,
@@ -8304,8 +7650,8 @@ Clock_ultrasonic:cy_clock_v1_0
 		co_msb=>open,
 		cmsb=>open,
 		so=>open,
-		f0_bus_stat=>\Timer_ULTRASONIC_F1:TimerUDB:nc3\,
-		f0_blk_stat=>\Timer_ULTRASONIC_F1:TimerUDB:nc4\,
+		f0_bus_stat=>\Timer_ULTRASONIC_F:TimerUDB:nc3\,
+		f0_blk_stat=>\Timer_ULTRASONIC_F:TimerUDB:nc4\,
 		f1_bus_stat=>open,
 		f1_blk_stat=>open,
 		ce0_reg=>open,
@@ -8325,29 +7671,29 @@ Clock_ultrasonic:cy_clock_v1_0
 		f1_bus_stat_reg=>open,
 		f1_blk_stat_reg=>open,
 		ci=>zero,
-		co=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:carry\,
+		co=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:carry\,
 		sir=>zero,
 		sor=>open,
-		sil=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_right\,
-		sol=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_left\,
-		msbi=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:msb\,
+		sil=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_right\,
+		sol=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_left\,
+		msbi=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:msb\,
 		msbo=>open,
 		cei=>(zero, zero),
-		ceo=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_0\),
+		ceo=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_0\),
 		cli=>(zero, zero),
-		clo=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_0\),
+		clo=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_0\),
 		zi=>(zero, zero),
-		zo=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_0\),
+		zo=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_0\),
 		fi=>(zero, zero),
-		fo=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_0\),
+		fo=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_0\),
 		capi=>(zero, zero),
-		capo=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_0\),
+		capo=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_0\),
 		cfbi=>zero,
-		cfbo=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cfb\,
+		cfbo=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cfb\,
 		pi=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
 		po=>open);
-\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:u1\:cy_psoc3_dp
+\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:u1\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
 		d0_init=>"00000000",
 		d1_init=>"00000000",
@@ -8370,17 +7716,17 @@ Clock_ultrasonic:cy_clock_v1_0
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		cs_addr=>(Net_1596, \Timer_ULTRASONIC_F1:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F1:TimerUDB:per_zero\),
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(Net_1596, \Timer_ULTRASONIC_F:TimerUDB:timer_enable\, \Timer_ULTRASONIC_F:TimerUDB:per_zero\),
 		route_si=>zero,
 		route_ci=>zero,
-		f0_load=>\Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load\,
+		f0_load=>\Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load\,
 		f1_load=>zero,
 		d0_load=>zero,
 		d1_load=>zero,
 		ce0=>open,
 		cl0=>open,
-		z0=>\Timer_ULTRASONIC_F1:TimerUDB:per_zero\,
+		z0=>\Timer_ULTRASONIC_F:TimerUDB:per_zero\,
 		ff0=>open,
 		ce1=>open,
 		cl1=>open,
@@ -8390,8 +7736,8 @@ Clock_ultrasonic:cy_clock_v1_0
 		co_msb=>open,
 		cmsb=>open,
 		so=>open,
-		f0_bus_stat=>\Timer_ULTRASONIC_F1:TimerUDB:status_3\,
-		f0_blk_stat=>\Timer_ULTRASONIC_F1:TimerUDB:status_2\,
+		f0_bus_stat=>\Timer_ULTRASONIC_F:TimerUDB:status_3\,
+		f0_blk_stat=>\Timer_ULTRASONIC_F:TimerUDB:status_2\,
 		f1_bus_stat=>open,
 		f1_blk_stat=>open,
 		ce0_reg=>open,
@@ -8410,25 +7756,25 @@ Clock_ultrasonic:cy_clock_v1_0
 		f0_blk_stat_reg=>open,
 		f1_bus_stat_reg=>open,
 		f1_blk_stat_reg=>open,
-		ci=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:carry\,
+		ci=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:carry\,
 		co=>open,
-		sir=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_left\,
-		sor=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:sh_right\,
+		sir=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_left\,
+		sor=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:sh_right\,
 		sil=>zero,
 		sol=>open,
 		msbi=>zero,
-		msbo=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:msb\,
-		cei=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_eq_0\),
+		msbo=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:msb\,
+		cei=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_eq_0\),
 		ceo=>open,
-		cli=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_lt_0\),
+		cli=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_lt_0\),
 		clo=>open,
-		zi=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_zero_0\),
+		zi=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_zero_0\),
 		zo=>open,
-		fi=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cmp_ff_0\),
+		fi=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cmp_ff_0\),
 		fo=>open,
-		capi=>(\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cap_0\),
+		capi=>(\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_1\, \Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cap_0\),
 		capo=>open,
-		cfbi=>\Timer_ULTRASONIC_F1:TimerUDB:sT16:timerdp:cfb\,
+		cfbi=>\Timer_ULTRASONIC_F:TimerUDB:sT16:timerdp:cfb\,
 		cfbo=>open,
 		pi=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
@@ -8452,7 +7798,7 @@ Clock_ultrasonic:cy_clock_v1_0
 	PORT MAP(reset=>zero,
 		clock=>\Timer_ULTRASONIC_L:TimerUDB:Clk_Ctl_i\,
 		control=>(\Timer_ULTRASONIC_L:TimerUDB:control_7\, \Timer_ULTRASONIC_L:TimerUDB:control_6\, \Timer_ULTRASONIC_L:TimerUDB:control_5\, \Timer_ULTRASONIC_L:TimerUDB:control_4\,
-			\Timer_ULTRASONIC_L:TimerUDB:control_3\, \Timer_ULTRASONIC_L:TimerUDB:control_2\, MODIN15_1, MODIN15_0));
+			\Timer_ULTRASONIC_L:TimerUDB:control_3\, \Timer_ULTRASONIC_L:TimerUDB:control_2\, MODIN12_1, MODIN12_0));
 \Timer_ULTRASONIC_L:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
 	GENERIC MAP(cy_force_order=>'1',
 		cy_md_select=>"0000011",
@@ -9031,15 +8377,15 @@ Clock_ultrasonic:cy_clock_v1_0
 		pi=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
 		po=>open);
-\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
+\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_24\);
-\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
+		y=>\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_24\);
+\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:gs(16):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_16\);
-\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
+		y=>\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_16\);
+\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
-		y=>\PWM_Lift:PWMUDB:MODULE_17:g2:a0:g1:z1:s0:g1:u0:c_8\);
+		y=>\PWM_Lift:PWMUDB:MODULE_15:g2:a0:g1:z1:s0:g1:u0:c_8\);
 Lift_Servo:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"ca02e0ad-b00f-4d9a-a52e-df6d8b887476",
 		drive_mode=>"110",
@@ -9586,78 +8932,42 @@ Net_967:cy_dff
 	PORT MAP(d=>\PWM_M2:PWMUDB:status_2\,
 		clk=>\PWM_M2:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM_M2:PWMUDB:tc_i_reg\);
-\Timer_ULTRASONIC_F2:TimerUDB:capture_last\:cy_dff
-	PORT MAP(d=>Net_218,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:capture_last\);
-\Timer_ULTRASONIC_F2:TimerUDB:hwEnable_reg\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:hwEnable\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:run_mode\);
-\Timer_ULTRASONIC_F2:TimerUDB:tc_reg_i\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:status_tc\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:tc_reg_i\);
-\Timer_ULTRASONIC_F2:TimerUDB:capture_out_reg_i\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:capt_fifo_load\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:capture_out_reg_i\);
-\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_1\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_1\\D\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN8_1);
-\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_0\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:int_capt_count_0\\D\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN8_0);
-\Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\\D\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:capt_int_temp\);
-\Timer_ULTRASONIC_F2:TimerUDB:runmode_enable\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:runmode_enable\\D\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:timer_enable\);
-\Timer_ULTRASONIC_F2:TimerUDB:trig_disable\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F2:TimerUDB:trig_disable\\D\,
-		clk=>\Timer_ULTRASONIC_F2:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F2:TimerUDB:trig_disable\);
-\Timer_ULTRASONIC_F1:TimerUDB:capture_last\:cy_dff
+\Timer_ULTRASONIC_F:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>Net_160,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:capture_last\);
-\Timer_ULTRASONIC_F1:TimerUDB:hwEnable_reg\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:hwEnable\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:run_mode\);
-\Timer_ULTRASONIC_F1:TimerUDB:tc_reg_i\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:status_tc\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:tc_reg_i\);
-\Timer_ULTRASONIC_F1:TimerUDB:capture_out_reg_i\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:capt_fifo_load\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:capture_out_reg_i\);
-\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_1\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_1\\D\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN11_1);
-\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_0\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:int_capt_count_0\\D\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN11_0);
-\Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\\D\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:capt_int_temp\);
-\Timer_ULTRASONIC_F1:TimerUDB:runmode_enable\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:runmode_enable\\D\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:timer_enable\);
-\Timer_ULTRASONIC_F1:TimerUDB:trig_disable\:cy_dff
-	PORT MAP(d=>\Timer_ULTRASONIC_F1:TimerUDB:trig_disable\\D\,
-		clk=>\Timer_ULTRASONIC_F1:TimerUDB:ClockOutFromEnBlock\,
-		q=>\Timer_ULTRASONIC_F1:TimerUDB:trig_disable\);
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:capture_last\);
+\Timer_ULTRASONIC_F:TimerUDB:hwEnable_reg\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:hwEnable\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:run_mode\);
+\Timer_ULTRASONIC_F:TimerUDB:tc_reg_i\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:status_tc\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:tc_reg_i\);
+\Timer_ULTRASONIC_F:TimerUDB:capture_out_reg_i\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:capt_fifo_load\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:capture_out_reg_i\);
+\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_1\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_1\\D\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>MODIN8_1);
+\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_0\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:int_capt_count_0\\D\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>MODIN8_0);
+\Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\\D\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:capt_int_temp\);
+\Timer_ULTRASONIC_F:TimerUDB:runmode_enable\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:runmode_enable\\D\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:timer_enable\);
+\Timer_ULTRASONIC_F:TimerUDB:trig_disable\:cy_dff
+	PORT MAP(d=>\Timer_ULTRASONIC_F:TimerUDB:trig_disable\\D\,
+		clk=>\Timer_ULTRASONIC_F:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Timer_ULTRASONIC_F:TimerUDB:trig_disable\);
 \Timer_ULTRASONIC_L:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>Net_251,
 		clk=>\Timer_ULTRASONIC_L:TimerUDB:ClockOutFromEnBlock\,
@@ -9677,11 +8987,11 @@ Net_967:cy_dff
 \Timer_ULTRASONIC_L:TimerUDB:int_capt_count_1\:cy_dff
 	PORT MAP(d=>\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_1\\D\,
 		clk=>\Timer_ULTRASONIC_L:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN14_1);
+		q=>MODIN11_1);
 \Timer_ULTRASONIC_L:TimerUDB:int_capt_count_0\:cy_dff
 	PORT MAP(d=>\Timer_ULTRASONIC_L:TimerUDB:int_capt_count_0\\D\,
 		clk=>\Timer_ULTRASONIC_L:TimerUDB:ClockOutFromEnBlock\,
-		q=>MODIN14_0);
+		q=>MODIN11_0);
 \Timer_ULTRASONIC_L:TimerUDB:capt_int_temp\:cy_dff
 	PORT MAP(d=>\Timer_ULTRASONIC_L:TimerUDB:capt_int_temp\\D\,
 		clk=>\Timer_ULTRASONIC_L:TimerUDB:ClockOutFromEnBlock\,

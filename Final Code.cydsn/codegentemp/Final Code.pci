@@ -1,5 +1,5 @@
 # Final Code
-# 2017-10-12 08:19:43Z
+# 2017-10-13 09:32:30Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -21,10 +21,8 @@ set_io "M1_Forward(0)" iocell 3 4
 set_io "M1_Backward(0)" iocell 3 5
 set_io "Echo_L(0)" iocell 0 4
 set_io "Trigger_L(0)" iocell 2 5
-set_io "Echo_F2(0)" iocell 0 1
-set_io "Trigger_F2(0)" iocell 2 0
-set_io "Echo_F1(0)" iocell 0 2
-set_io "Trigger_F1(0)" iocell 2 7
+set_io "Echo_F(0)" iocell 0 2
+set_io "Trigger_F(0)" iocell 2 7
 set_io "Grip_Servo(0)" iocell 1 4
 set_io "Rx_1(0)" iocell 12 6
 set_io "Tx_1(0)" iocell 12 7
@@ -39,5 +37,5 @@ set_io "Right_bumper(0)" iocell 1 6
 set_io "Lift_Servo(0)" iocell 1 5
 set_location "autoVrefComparator_0" comparatorcell -1 -1 2
 set_location "\ADC:DSM\" dsmodcell -1 -1 0
-set_location "\TIA:SC\" sccell -1 -1 0
+set_location "\TIA:SC\" sccell -1 -1 2
 set_location "\IDAC8:viDAC8\" vidaccell -1 -1 2

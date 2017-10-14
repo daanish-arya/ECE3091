@@ -72,20 +72,21 @@
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Clock_PWM</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Clock_ultrasonic</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\cy_boot</v>
-<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_F1</v>
-<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_F2</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_F</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_L</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_R</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Flag</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\Grip_Servo</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\IDAC8</v>
-<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_F1</v>
-<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_F2</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_F</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_L</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_R</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\LED</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Blue</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Green</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Red</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Left_bumper</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Lift_Servo</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -131,16 +132,12 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F2.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Flag.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Grip_Servo.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F2.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
@@ -187,16 +184,10 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Right_bumper.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F1_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F2.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F2_PM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_L_PM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_R_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_F2.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
@@ -240,16 +231,12 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F2.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Flag.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Grip_Servo.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F2.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
@@ -259,6 +246,11 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Left_bumper.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Lift_Servo.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_Backward.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_Direction.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_Direction_PM.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M1_Forward.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Backward.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Direction.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -338,6 +330,13 @@
 <name v=".\Final Code.cydsn\main.c" />
 <name v=".\Final Code.cydsn\Final Code.cydwr" />
 <name v=".\Final Code.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Final Code.cydsn\colour.c" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\Clock_1.c" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\UART.c" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\UART_IntClock.c" />
+<name v=".\Final Code.cydsn\wheels.c" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\QuadDec_Right.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -345,7 +344,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="371, 690" SelectedTabbedMdiWindow="3b380933-cff5-4f9f-a327-59c26a32e9ad"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="416d1905-f2bc-44c6-afe1-f869ef1c6b90" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\main.c" Guid="3b380933-cff5-4f9f-a327-59c26a32e9ad" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Final Code.cydwr" Guid="c2e5a8f1-3fc3-46dc-a6e0-c7914f1c54a0" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\TopDesign\TopDesign.cysch" Guid="522fa602-2adf-431a-b6eb-96befef81e65" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1202, 698" SelectedTabbedMdiWindow="3b380933-cff5-4f9f-a327-59c26a32e9ad"><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\main.c" Guid="3b380933-cff5-4f9f-a327-59c26a32e9ad" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Final Code.cydwr" Guid="c2e5a8f1-3fc3-46dc-a6e0-c7914f1c54a0" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\TopDesign\TopDesign.cysch" Guid="522fa602-2adf-431a-b6eb-96befef81e65" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\colour.c" Guid="a7fb8919-99d3-4828-a6a0-3b4db7890bb5" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\Clock_1.c" Guid="e399096c-0e3b-4b2d-aa1e-37d03f95c7c6" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\UART.c" Guid="270e24c2-3ef2-44fa-89de-b9387d693cd1" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="9ec0c08e-2e0f-4b87-b5fa-c8fd940e1b89" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\UART_IntClock.c" Guid="fdc6f095-4443-4e16-80bc-ddd02e482bda" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\wheels.c" Guid="3a108719-fdc6-4cb3-b5d4-9364b686037f" /><DocumentWindow Key="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\QuadDec_Right.c" Guid="0d824b13-aa45-4cd1-8d02-4a894762432c" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="416d1905-f2bc-44c6-afe1-f869ef1c6b90" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

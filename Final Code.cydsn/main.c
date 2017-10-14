@@ -17,6 +17,7 @@
 #include "project.h"
 #include "stdio.h"
 #include "math.h"
+#include "time.h"
 #include "colour.h"
 #include "stdlib.h"
 #include "wheels.h"
@@ -35,6 +36,9 @@ int Line_Up_Puck(int colour);
 void Pick_Up_Puck();
 void Backtrack(int obstacle_location);
 void Stack();
+void UltraSonic_F();
+void UltraSonic_L();
+void UltraSonic_R();
 
 // Defining Variables
 char string[100];
@@ -49,23 +53,18 @@ int32 RightCount = 0;
 int ratio;
 int orientation;
 int location[2];
-float F1Coord = 0;
-float F2Coord = 0;
+float FCoord = 0;
 float LeftCoord = 0;
 float RightCoord = 0;
-
+time_t t;
+srand((unsigned) time(&t)); // Initialize random number generator
+    
 
 // Declare Ultrasonic Interrupts
-CY_ISR(TimerF1_ISR_Handler) {
-  Timer_ULTRASONIC_F1_ReadStatusRegister();
-   uint16  TimerCount = Timer_ULTRASONIC_F1_ReadCounter();
-  F1Coord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
-}
-
-CY_ISR(TimerF2_ISR_Handler) {
-  Timer_ULTRASONIC_F2_ReadStatusRegister();
-  uint16  TimerCount = Timer_ULTRASONIC_F2_ReadCounter();
-  F2Coord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
+CY_ISR(TimerF_ISR_Handler) {
+  Timer_ULTRASONIC_F_ReadStatusRegister();
+   uint16  TimerCount = Timer_ULTRASONIC_F_ReadCounter();
+  FCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
 }
 
 CY_ISR(TimerL_ISR_Handler) {
@@ -93,8 +92,7 @@ int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     
-    
-    
+   
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
         Clock_1_Start();
 //        QuadDec_Left_Start();
@@ -325,6 +323,7 @@ int Line_Up_Puck(int colour) {
     // To be done once robot is in position
     int correct_puck = 0;
     int puck_colour = 0;
+    int wall_right = 0;
     
     while (1) {
         puck_colour = LED();
@@ -334,6 +333,22 @@ int Line_Up_Puck(int colour) {
         else {
             // Turn a few degrees in either direction
             // Move straight
+            // Do ultrasonic shit, if right wall is close then turn left 
+            // and if left wall is close turn right
+            int wall_proximity;
+            int turning_direction;
+            MoveStraight(20, 3.5, 1);
+            if (obstacle_location) {
+                UltraSonic_R();
+                turning_direction = (RightCoord < 4.0);
+                Turn(40, 20, ~turning_direction);
+            }
+            else {
+                UltraSonic_L();
+                turning_direction = (LeftCoord < 4.0);
+                Turn(40, 20, turning_direction);
+            }
+            MoveStraight(20, 3.5, 0);
             continue;
         }
         
@@ -359,6 +374,54 @@ void Stack() {
     // Read number of already stacked pucks
     // Raise platform to appropriate height
     // Drop it on top
+}
+
+void UltraSonic_F()
+{
+    int Delay = 60;
+    
+//        isr_F1_StartEx(TimerF1_ISR_Handler);
+//        Timer_ULTRASONIC_F1_Start();
+    
+    while (Echo_F_Read() == 0) {
+        Trigger_F_Write(1);
+        CyDelayUs(10);
+        Trigger_F_Write(0);  
+    }
+    
+    CyDelay(Delay);
+}
+
+void UltraSonic_L()
+{
+    int Delay = 60;
+    
+//        isr_F1_StartEx(TimerF1_ISR_Handler);
+//        Timer_ULTRASONIC_F1_Start();
+    
+    while (Echo_L_Read() == 0) {
+        Trigger_L_Write(1);
+        CyDelayUs(10);
+        Trigger_L_Write(0);  
+    }
+    
+    CyDelay(Delay);
+}
+
+void UltraSonic_R()
+{
+    int Delay = 60;
+    
+//        isr_F1_StartEx(TimerF1_ISR_Handler);
+//        Timer_ULTRASONIC_F1_Start();
+    
+    while (Echo_R_Read() == 0) {
+        Trigger_R_Write(1);
+        CyDelayUs(10);
+        Trigger_R_Write(0);  
+    }
+    
+    CyDelay(Delay);
 }
 
 // Code to print Distance, diff and stuff

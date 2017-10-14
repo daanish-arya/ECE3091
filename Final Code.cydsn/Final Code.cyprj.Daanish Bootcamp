@@ -2369,6 +2369,11 @@
 <name_val_pair name="Generated_Source\PSoC5\QuadDec_Left_Cnt16.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\QuadDec_Left_Cnt16_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="colour.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\isr_F.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Echo_F.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Trigger_F.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Timer_ULTRASONIC_F.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Timer_ULTRASONIC_F_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Daanish Bootcamp\AppData\Local\Cypress Semiconductor\PSoC Creator\4.1&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Final Code.cyprj&quot; -d CY8C5888LTI-LP097 -s &quot;C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -3019,6 +3024,17 @@
 <v>Generated_Source\PSoC5\QuadDec_Left_Cnt16.c</v>
 <v>Generated_Source\PSoC5\QuadDec_Left_Cnt16.h</v>
 <v>Generated_Source\PSoC5\QuadDec_Left_Cnt16_PM.c</v>
+<v>Generated_Source\PSoC5\isr_F.c</v>
+<v>Generated_Source\PSoC5\isr_F.h</v>
+<v>Generated_Source\PSoC5\Echo_F_aliases.h</v>
+<v>Generated_Source\PSoC5\Echo_F.c</v>
+<v>Generated_Source\PSoC5\Echo_F.h</v>
+<v>Generated_Source\PSoC5\Trigger_F_aliases.h</v>
+<v>Generated_Source\PSoC5\Trigger_F.c</v>
+<v>Generated_Source\PSoC5\Trigger_F.h</v>
+<v>Generated_Source\PSoC5\Timer_ULTRASONIC_F.c</v>
+<v>Generated_Source\PSoC5\Timer_ULTRASONIC_F.h</v>
+<v>Generated_Source\PSoC5\Timer_ULTRASONIC_F_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -3028,7 +3044,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131522699984245675" />
+<deps_time v="131523607668103508" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 <pdl_path v="" />

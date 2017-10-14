@@ -1,6 +1,6 @@
 // ======================================================================
 // Final Code.v generated from TopDesign.cysch
-// 10/12/2017 at 19:19
+// 10/13/2017 at 20:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1413,7 +1413,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v"
 `endif
 
-// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_F2, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_F2, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_F2, )
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_F, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_F, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_F, )
 module Timer_v2_70_11 (
     reset,
     interrupt,
@@ -1486,7 +1486,7 @@ module Timer_v2_70_11 (
 
 endmodule
 
-// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_F1, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_F1, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_F1, )
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_L, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_L, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_L, )
 module Timer_v2_70_12 (
     reset,
     interrupt,
@@ -1559,7 +1559,7 @@ module Timer_v2_70_12 (
 
 endmodule
 
-// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_L, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_L, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_L, )
+// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_R, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_R, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_R, )
 module Timer_v2_70_13 (
     reset,
     interrupt,
@@ -1632,81 +1632,8 @@ module Timer_v2_70_13 (
 
 endmodule
 
-// Timer_v2_70(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=true, CaptureMode=2, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=2, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=true, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=1, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=65535, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=1, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=1, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_70, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_ULTRASONIC_R, CY_INSTANCE_SHORT_NAME=Timer_ULTRASONIC_R, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=70, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=Timer_ULTRASONIC_R, )
-module Timer_v2_70_14 (
-    reset,
-    interrupt,
-    enable,
-    trigger,
-    capture,
-    capture_out,
-    tc,
-    clock);
-    input       reset;
-    output      interrupt;
-    input       enable;
-    input       trigger;
-    input       capture;
-    output      capture_out;
-    output      tc;
-    input       clock;
-
-    parameter CaptureCount = 2;
-    parameter CaptureCounterEnabled = 0;
-    parameter DeviceFamily = "PSoC5";
-    parameter InterruptOnCapture = 1;
-    parameter InterruptOnTC = 0;
-    parameter Resolution = 16;
-    parameter SiliconRevision = "0";
-
-          wire  Net_261;
-          wire  Net_260;
-          wire  Net_266;
-          wire  Net_102;
-          wire  Net_55;
-          wire  Net_57;
-          wire  Net_53;
-          wire  Net_51;
-
-    ZeroTerminal ZeroTerminal_1 (
-        .z(Net_260));
-
-	// VirtualMux_2 (cy_virtualmux_v1_0)
-	assign interrupt = Net_55;
-
-	// VirtualMux_3 (cy_virtualmux_v1_0)
-	assign tc = Net_53;
-
-    B_Timer_v2_70 TimerUDB (
-        .reset(reset),
-        .interrupt(Net_55),
-        .enable(enable),
-        .trigger(trigger),
-        .capture_in(capture),
-        .capture_out(capture_out),
-        .tc(Net_53),
-        .clock(clock));
-    defparam TimerUDB.Capture_Count = 2;
-    defparam TimerUDB.CaptureCounterEnabled = 0;
-    defparam TimerUDB.CaptureMode = 2;
-    defparam TimerUDB.EnableMode = 2;
-    defparam TimerUDB.InterruptOnCapture = 1;
-    defparam TimerUDB.Resolution = 16;
-    defparam TimerUDB.RunMode = 1;
-    defparam TimerUDB.TriggerMode = 0;
-
-    OneTerminal OneTerminal_1 (
-        .o(Net_102));
-
-	// VirtualMux_1 (cy_virtualmux_v1_0)
-	assign Net_266 = enable;
-
-
-
-endmodule
-
 // PWM_v3_30(CaptureMode=0, Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, Compare1_16=true, Compare1_8=false, Compare2_16=false, Compare2_8=false, CompareStatusEdgeSense=true, CompareType1=1, CompareType1Software=0, CompareType2=1, CompareType2Software=0, CompareValue1=1475, CompareValue2=1475, CONTROL3=0, ControlReg=true, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeadBand=0, DeadBand2_4=0, DeadBand256=0, DeadBandUsed=0, DeadTime=1, DitherOffset=0, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InterruptOnCMP1=false, InterruptOnCMP2=false, InterruptOnKill=false, InterruptOnTC=false, IntOnCMP1=0, IntOnCMP2=0, IntOnKill=0, IntOnTC=0, KillMode=0, KillModeMinTime=0, MinimumKillTime=1, OneCompare=true, Period=20000, PWMMode=0, PWMModeCenterAligned=0, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=sSTSReg_rstSts, RunMode=0, Status=true, TermMode_capture=0, TermMode_clock=0, TermMode_cmp_sel=0, TermMode_enable=0, TermMode_interrupt=0, TermMode_kill=0, TermMode_ph1=0, TermMode_ph2=0, TermMode_pwm=0, TermMode_pwm1=0, TermMode_pwm2=0, TermMode_reset=0, TermMode_tc=0, TermMode_trigger=0, TermVisibility_capture=false, TermVisibility_clock=true, TermVisibility_cmp_sel=false, TermVisibility_enable=false, TermVisibility_interrupt=true, TermVisibility_kill=false, TermVisibility_ph1=false, TermVisibility_ph2=false, TermVisibility_pwm=true, TermVisibility_pwm1=false, TermVisibility_pwm2=false, TermVisibility_reset=true, TermVisibility_tc=true, TermVisibility_trigger=false, TriggerMode=0, UDB16=true, UDB8=false, UseControl=true, UseInterrupt=true, UseStatus=true, VerilogSectionReplacementString=sP16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=PWM_v3_30, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=PWM_Lift, CY_INSTANCE_SHORT_NAME=PWM_Lift, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=30, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=PWM_Lift, )
-module PWM_v3_30_15 (
+module PWM_v3_30_14 (
     reset,
     clock,
     tc,
@@ -1823,9 +1750,6 @@ module top ;
           wire  Net_872;
           wire  Net_871;
           wire  Net_870;
-          wire  Net_869;
-          wire  Net_868;
-          wire  Net_867;
           wire  Net_903;
           wire  Net_1062;
           wire  Net_1061;
@@ -1923,7 +1847,6 @@ module top ;
     electrical  Net_736;
     electrical  Net_954;
           wire  Net_1596;
-          wire  Net_217;
           wire  Net_161;
           wire  Net_1600;
           wire  Net_259;
@@ -1932,8 +1855,6 @@ module top ;
           wire  Net_250;
           wire  Net_249;
           wire  Net_251;
-          wire  Net_216;
-          wire  Net_218;
           wire  Net_160;
           wire  Net_483;
           wire  Net_569;
@@ -3071,169 +2992,14 @@ module top ;
 
 	cy_isr_v1_0
 		#(.int_type(2'b10))
-		isr_F2
-		 (.int_signal(Net_217));
-
-
-	wire [0:0] tmpOE__Echo_F2_net;
-	wire [0:0] tmpIO_0__Echo_F2_net;
-	wire [0:0] tmpINTERRUPT_0__Echo_F2_net;
-	electrical [0:0] tmpSIOVREF__Echo_F2_net;
-
-	cy_psoc3_pins_v1_10
-		#(.id("4a9acf1a-01c6-4771-baca-971a4cab4fa0"),
-		  .drive_mode(3'b001),
-		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
-		  .input_clk_en(0),
-		  .input_sync(1'b0),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("I"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b00),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		Echo_F2
-		 (.oe(tmpOE__Echo_F2_net),
-		  .y({1'b0}),
-		  .fb({Net_218}),
-		  .io({tmpIO_0__Echo_F2_net[0:0]}),
-		  .siovref(tmpSIOVREF__Echo_F2_net),
-		  .interrupt({tmpINTERRUPT_0__Echo_F2_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
-
-	assign tmpOE__Echo_F2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-	wire [0:0] tmpOE__Trigger_F2_net;
-	wire [0:0] tmpIO_0__Trigger_F2_net;
-	wire [0:0] tmpINTERRUPT_0__Trigger_F2_net;
-	electrical [0:0] tmpSIOVREF__Trigger_F2_net;
-
-	cy_psoc3_pins_v1_10
-		#(.id("c869f063-7321-4149-be7c-0a75aaa44429"),
-		  .drive_mode(3'b110),
-		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
-		  .input_clk_en(0),
-		  .input_sync(1'b0),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("I"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b00),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		Trigger_F2
-		 (.oe(tmpOE__Trigger_F2_net),
-		  .y({1'b0}),
-		  .fb({Net_216}),
-		  .io({tmpIO_0__Trigger_F2_net[0:0]}),
-		  .siovref(tmpSIOVREF__Trigger_F2_net),
-		  .interrupt({tmpINTERRUPT_0__Trigger_F2_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
-
-	assign tmpOE__Trigger_F2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
-
-
-	cy_isr_v1_0
-		#(.int_type(2'b10))
-		isr_F1
+		isr_F
 		 (.int_signal(Net_161));
 
 
-	wire [0:0] tmpOE__Echo_F1_net;
-	wire [0:0] tmpIO_0__Echo_F1_net;
-	wire [0:0] tmpINTERRUPT_0__Echo_F1_net;
-	electrical [0:0] tmpSIOVREF__Echo_F1_net;
+	wire [0:0] tmpOE__Echo_F_net;
+	wire [0:0] tmpIO_0__Echo_F_net;
+	wire [0:0] tmpINTERRUPT_0__Echo_F_net;
+	electrical [0:0] tmpSIOVREF__Echo_F_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("3febbc43-8edc-4dfc-ac8c-ca5404633130"),
@@ -3288,13 +3054,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Echo_F1
-		 (.oe(tmpOE__Echo_F1_net),
+		Echo_F
+		 (.oe(tmpOE__Echo_F_net),
 		  .y({1'b0}),
 		  .fb({Net_160}),
-		  .io({tmpIO_0__Echo_F1_net[0:0]}),
-		  .siovref(tmpSIOVREF__Echo_F1_net),
-		  .interrupt({tmpINTERRUPT_0__Echo_F1_net[0:0]}),
+		  .io({tmpIO_0__Echo_F_net[0:0]}),
+		  .siovref(tmpSIOVREF__Echo_F_net),
+		  .interrupt({tmpINTERRUPT_0__Echo_F_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -3302,12 +3068,12 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Echo_F1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Echo_F_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Trigger_F1_net;
-	wire [0:0] tmpIO_0__Trigger_F1_net;
-	wire [0:0] tmpINTERRUPT_0__Trigger_F1_net;
-	electrical [0:0] tmpSIOVREF__Trigger_F1_net;
+	wire [0:0] tmpOE__Trigger_F_net;
+	wire [0:0] tmpIO_0__Trigger_F_net;
+	wire [0:0] tmpINTERRUPT_0__Trigger_F_net;
+	electrical [0:0] tmpSIOVREF__Trigger_F_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("62be3111-d769-4e4c-97e2-30a7495d8164"),
@@ -3362,13 +3128,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Trigger_F1
-		 (.oe(tmpOE__Trigger_F1_net),
+		Trigger_F
+		 (.oe(tmpOE__Trigger_F_net),
 		  .y({1'b0}),
 		  .fb({Net_1596}),
-		  .io({tmpIO_0__Trigger_F1_net[0:0]}),
-		  .siovref(tmpSIOVREF__Trigger_F1_net),
-		  .interrupt({tmpINTERRUPT_0__Trigger_F1_net[0:0]}),
+		  .io({tmpIO_0__Trigger_F_net[0:0]}),
+		  .siovref(tmpSIOVREF__Trigger_F_net),
+		  .interrupt({tmpINTERRUPT_0__Trigger_F_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -3376,7 +3142,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Trigger_F1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Trigger_F_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__Grip_Servo_net;
 	wire [0:0] tmpFB_0__Grip_Servo_net;
@@ -4408,24 +4174,7 @@ module top ;
 		 (.clock_out(Net_1600));
 
 
-    Timer_v2_70_11 Timer_ULTRASONIC_F2 (
-        .reset(Net_216),
-        .interrupt(Net_217),
-        .enable(Net_218),
-        .trigger(1'b1),
-        .capture(Net_218),
-        .capture_out(Net_868),
-        .tc(Net_869),
-        .clock(Net_1600));
-    defparam Timer_ULTRASONIC_F2.CaptureCount = 2;
-    defparam Timer_ULTRASONIC_F2.CaptureCounterEnabled = 0;
-    defparam Timer_ULTRASONIC_F2.DeviceFamily = "PSoC5";
-    defparam Timer_ULTRASONIC_F2.InterruptOnCapture = 1;
-    defparam Timer_ULTRASONIC_F2.InterruptOnTC = 0;
-    defparam Timer_ULTRASONIC_F2.Resolution = 16;
-    defparam Timer_ULTRASONIC_F2.SiliconRevision = "0";
-
-    Timer_v2_70_12 Timer_ULTRASONIC_F1 (
+    Timer_v2_70_11 Timer_ULTRASONIC_F (
         .reset(Net_1596),
         .interrupt(Net_161),
         .enable(Net_160),
@@ -4434,15 +4183,15 @@ module top ;
         .capture_out(Net_871),
         .tc(Net_872),
         .clock(Net_1600));
-    defparam Timer_ULTRASONIC_F1.CaptureCount = 2;
-    defparam Timer_ULTRASONIC_F1.CaptureCounterEnabled = 0;
-    defparam Timer_ULTRASONIC_F1.DeviceFamily = "PSoC5";
-    defparam Timer_ULTRASONIC_F1.InterruptOnCapture = 1;
-    defparam Timer_ULTRASONIC_F1.InterruptOnTC = 0;
-    defparam Timer_ULTRASONIC_F1.Resolution = 16;
-    defparam Timer_ULTRASONIC_F1.SiliconRevision = "0";
+    defparam Timer_ULTRASONIC_F.CaptureCount = 2;
+    defparam Timer_ULTRASONIC_F.CaptureCounterEnabled = 0;
+    defparam Timer_ULTRASONIC_F.DeviceFamily = "PSoC5";
+    defparam Timer_ULTRASONIC_F.InterruptOnCapture = 1;
+    defparam Timer_ULTRASONIC_F.InterruptOnTC = 0;
+    defparam Timer_ULTRASONIC_F.Resolution = 16;
+    defparam Timer_ULTRASONIC_F.SiliconRevision = "0";
 
-    Timer_v2_70_13 Timer_ULTRASONIC_L (
+    Timer_v2_70_12 Timer_ULTRASONIC_L (
         .reset(Net_249),
         .interrupt(Net_250),
         .enable(Net_251),
@@ -4459,7 +4208,7 @@ module top ;
     defparam Timer_ULTRASONIC_L.Resolution = 16;
     defparam Timer_ULTRASONIC_L.SiliconRevision = "0";
 
-    Timer_v2_70_14 Timer_ULTRASONIC_R (
+    Timer_v2_70_13 Timer_ULTRASONIC_R (
         .reset(Net_258),
         .interrupt(Net_259),
         .enable(Net_260),
@@ -4476,7 +4225,7 @@ module top ;
     defparam Timer_ULTRASONIC_R.Resolution = 16;
     defparam Timer_ULTRASONIC_R.SiliconRevision = "0";
 
-    PWM_v3_30_15 PWM_Lift (
+    PWM_v3_30_14 PWM_Lift (
         .reset(1'b0),
         .clock(Net_2689),
         .tc(Net_1064),

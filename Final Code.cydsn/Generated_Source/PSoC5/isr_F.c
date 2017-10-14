@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: isr_F2.c  
+* File Name: isr_F.c  
 * Version 1.70
 *
 *  Description:
@@ -18,15 +18,15 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <isr_F2.h>
+#include <isr_F.h>
 #include "cyapicallbacks.h"
 
-#if !defined(isr_F2__REMOVED) /* Check for removal by optimization */
+#if !defined(isr_F__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START isr_F2_intc` */
+/* `#START isr_F_intc` */
 
 /* `#END` */
 
@@ -42,7 +42,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: isr_F2_Start
+* Function Name: isr_F_Start
 ********************************************************************************
 *
 * Summary:
@@ -58,24 +58,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void isr_F2_Start(void)
+void isr_F_Start(void)
 {
     /* For all we know the interrupt is active. */
-    isr_F2_Disable();
+    isr_F_Disable();
 
-    /* Set the ISR to point to the isr_F2 Interrupt. */
-    isr_F2_SetVector(&isr_F2_Interrupt);
+    /* Set the ISR to point to the isr_F Interrupt. */
+    isr_F_SetVector(&isr_F_Interrupt);
 
     /* Set the priority. */
-    isr_F2_SetPriority((uint8)isr_F2_INTC_PRIOR_NUMBER);
+    isr_F_SetPriority((uint8)isr_F_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    isr_F2_Enable();
+    isr_F_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_StartEx
+* Function Name: isr_F_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -101,24 +101,24 @@ void isr_F2_Start(void)
 *   None
 *
 *******************************************************************************/
-void isr_F2_StartEx(cyisraddress address)
+void isr_F_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    isr_F2_Disable();
+    isr_F_Disable();
 
-    /* Set the ISR to point to the isr_F2 Interrupt. */
-    isr_F2_SetVector(address);
+    /* Set the ISR to point to the isr_F Interrupt. */
+    isr_F_SetVector(address);
 
     /* Set the priority. */
-    isr_F2_SetPriority((uint8)isr_F2_INTC_PRIOR_NUMBER);
+    isr_F_SetPriority((uint8)isr_F_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    isr_F2_Enable();
+    isr_F_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_Stop
+* Function Name: isr_F_Stop
 ********************************************************************************
 *
 * Summary:
@@ -131,22 +131,22 @@ void isr_F2_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void isr_F2_Stop(void)
+void isr_F_Stop(void)
 {
     /* Disable this interrupt. */
-    isr_F2_Disable();
+    isr_F_Disable();
 
     /* Set the ISR to point to the passive one. */
-    isr_F2_SetVector(&IntDefaultHandler);
+    isr_F_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_Interrupt
+* Function Name: isr_F_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for isr_F2.
+*   The default Interrupt Service Routine for isr_F.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -157,27 +157,27 @@ void isr_F2_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(isr_F2_Interrupt)
+CY_ISR(isr_F_Interrupt)
 {
-    #ifdef isr_F2_INTERRUPT_INTERRUPT_CALLBACK
-        isr_F2_Interrupt_InterruptCallback();
-    #endif /* isr_F2_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef isr_F_INTERRUPT_INTERRUPT_CALLBACK
+        isr_F_Interrupt_InterruptCallback();
+    #endif /* isr_F_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START isr_F2_Interrupt` */
+    /* `#START isr_F_Interrupt` */
 
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_SetVector
+* Function Name: isr_F_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling isr_F2_Start
+*   Change the ISR vector for the Interrupt. Note calling isr_F_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use isr_F2_StartEx instead.
+*   before the component has been started use isr_F_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -197,18 +197,18 @@ CY_ISR(isr_F2_Interrupt)
 *   None
 *
 *******************************************************************************/
-void isr_F2_SetVector(cyisraddress address)
+void isr_F_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_F2__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_F__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_GetVector
+* Function Name: isr_F_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -221,26 +221,26 @@ void isr_F2_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress isr_F2_GetVector(void)
+cyisraddress isr_F_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_F2__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_F__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_SetPriority
+* Function Name: isr_F_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling isr_F2_Start or isr_F2_StartEx will 
+*   Note calling isr_F_Start or isr_F_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after isr_F2_Start or isr_F2_StartEx has been called. 
+*   after isr_F_Start or isr_F_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -255,14 +255,14 @@ cyisraddress isr_F2_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void isr_F2_SetPriority(uint8 priority)
+void isr_F_SetPriority(uint8 priority)
 {
-    *isr_F2_INTC_PRIOR = priority << 5;
+    *isr_F_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_GetPriority
+* Function Name: isr_F_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -277,19 +277,19 @@ void isr_F2_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 isr_F2_GetPriority(void)
+uint8 isr_F_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *isr_F2_INTC_PRIOR >> 5;
+    priority = *isr_F_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_Enable
+* Function Name: isr_F_Enable
 ********************************************************************************
 *
 * Summary:
@@ -304,15 +304,15 @@ uint8 isr_F2_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void isr_F2_Enable(void)
+void isr_F_Enable(void)
 {
     /* Enable the general interrupt. */
-    *isr_F2_INTC_SET_EN = isr_F2__INTC_MASK;
+    *isr_F_INTC_SET_EN = isr_F__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_GetState
+* Function Name: isr_F_GetState
 ********************************************************************************
 *
 * Summary:
@@ -325,15 +325,15 @@ void isr_F2_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 isr_F2_GetState(void)
+uint8 isr_F_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*isr_F2_INTC_SET_EN & (uint32)isr_F2__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*isr_F_INTC_SET_EN & (uint32)isr_F__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_Disable
+* Function Name: isr_F_Disable
 ********************************************************************************
 *
 * Summary:
@@ -346,15 +346,15 @@ uint8 isr_F2_GetState(void)
 *   None
 *
 *******************************************************************************/
-void isr_F2_Disable(void)
+void isr_F_Disable(void)
 {
     /* Disable the general interrupt. */
-    *isr_F2_INTC_CLR_EN = isr_F2__INTC_MASK;
+    *isr_F_INTC_CLR_EN = isr_F__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_SetPending
+* Function Name: isr_F_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -373,14 +373,14 @@ void isr_F2_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void isr_F2_SetPending(void)
+void isr_F_SetPending(void)
 {
-    *isr_F2_INTC_SET_PD = isr_F2__INTC_MASK;
+    *isr_F_INTC_SET_PD = isr_F__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: isr_F2_ClearPending
+* Function Name: isr_F_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -398,9 +398,9 @@ void isr_F2_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void isr_F2_ClearPending(void)
+void isr_F_ClearPending(void)
 {
-    *isr_F2_INTC_CLR_PD = isr_F2__INTC_MASK;
+    *isr_F_INTC_CLR_PD = isr_F__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

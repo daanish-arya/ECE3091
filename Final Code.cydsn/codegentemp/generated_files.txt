@@ -77,22 +77,14 @@
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_L_aliases.h" value="HEADER;;;;;Trigger_L" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_L.c" value="SOURCE_C;CortexM3;;;;Trigger_L" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_L.h" value="HEADER;;;;;Trigger_L" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F2.c" value="SOURCE_C;CortexM3;;;;isr_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F2.h" value="HEADER;;;;;isr_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F2_aliases.h" value="HEADER;;;;;Echo_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F2.c" value="SOURCE_C;CortexM3;;;;Echo_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F2.h" value="HEADER;;;;;Echo_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F2_aliases.h" value="HEADER;;;;;Trigger_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F2.c" value="SOURCE_C;CortexM3;;;;Trigger_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F2.h" value="HEADER;;;;;Trigger_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F1.c" value="SOURCE_C;CortexM3;;;;isr_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F1.h" value="HEADER;;;;;isr_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F1_aliases.h" value="HEADER;;;;;Echo_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F1.c" value="SOURCE_C;CortexM3;;;;Echo_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F1.h" value="HEADER;;;;;Echo_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F1_aliases.h" value="HEADER;;;;;Trigger_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F1.c" value="SOURCE_C;CortexM3;;;;Trigger_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F1.h" value="HEADER;;;;;Trigger_F1" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F.c" value="SOURCE_C;CortexM3;;;;isr_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\isr_F.h" value="HEADER;;;;;isr_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F_aliases.h" value="HEADER;;;;;Echo_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F.c" value="SOURCE_C;CortexM3;;;;Echo_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Echo_F.h" value="HEADER;;;;;Echo_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F_aliases.h" value="HEADER;;;;;Trigger_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F.c" value="SOURCE_C;CortexM3;;;;Trigger_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Trigger_F.h" value="HEADER;;;;;Trigger_F" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Grip_Servo_aliases.h" value="HEADER;;;;;Grip_Servo" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Grip_Servo.c" value="SOURCE_C;CortexM3;;;;Grip_Servo" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Grip_Servo.h" value="HEADER;;;;;Grip_Servo" />
@@ -153,12 +145,9 @@
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Right_bumper.h" value="HEADER;;;;;Right_bumper" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Clock_ultrasonic.c" value="SOURCE_C;CortexM3;;;;Clock_ultrasonic" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Clock_ultrasonic.h" value="HEADER;;;;;Clock_ultrasonic" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F2.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F2.h" value="HEADER;;;;;Timer_ULTRASONIC_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F2_PM.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F2" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F1.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F1.h" value="HEADER;;;;;Timer_ULTRASONIC_F1" />
-  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F1_PM.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F1" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F.h" value="HEADER;;;;;Timer_ULTRASONIC_F" />
+  <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_F_PM.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_F" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_L.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_L" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_L.h" value="HEADER;;;;;Timer_ULTRASONIC_L" />
   <file name="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\codegentemp\Timer_ULTRASONIC_L_PM.c" value="SOURCE_C;CortexM3;;;;Timer_ULTRASONIC_L" />

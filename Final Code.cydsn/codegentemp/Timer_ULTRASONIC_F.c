@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Timer_ULTRASONIC_F1.c
+* File Name: Timer_ULTRASONIC_F.c
 * Version 2.70
 *
 * Description:
@@ -21,13 +21,13 @@
 * the software package with which this file was provided.
 ********************************************************************************/
 
-#include "Timer_ULTRASONIC_F1.h"
+#include "Timer_ULTRASONIC_F.h"
 
-uint8 Timer_ULTRASONIC_F1_initVar = 0u;
+uint8 Timer_ULTRASONIC_F_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_Init
+* Function Name: Timer_ULTRASONIC_F_Init
 ********************************************************************************
 *
 * Summary:
@@ -40,131 +40,131 @@ uint8 Timer_ULTRASONIC_F1_initVar = 0u;
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_Init(void) 
+void Timer_ULTRASONIC_F_Init(void) 
 {
-    #if(!Timer_ULTRASONIC_F1_UsingFixedFunction)
+    #if(!Timer_ULTRASONIC_F_UsingFixedFunction)
             /* Interrupt State Backup for Critical Region*/
-            uint8 Timer_ULTRASONIC_F1_interruptState;
+            uint8 Timer_ULTRASONIC_F_interruptState;
     #endif /* Interrupt state back up for Fixed Function only */
 
-    #if (Timer_ULTRASONIC_F1_UsingFixedFunction)
+    #if (Timer_ULTRASONIC_F_UsingFixedFunction)
         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
-        Timer_ULTRASONIC_F1_CONTROL &= Timer_ULTRASONIC_F1_CTRL_ENABLE;
+        Timer_ULTRASONIC_F_CONTROL &= Timer_ULTRASONIC_F_CTRL_ENABLE;
 
         /* Clear the mode bits for continuous run mode */
         #if (CY_PSOC5A)
-            Timer_ULTRASONIC_F1_CONTROL2 &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_MODE_MASK));
+            Timer_ULTRASONIC_F_CONTROL2 &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_MODE_MASK));
         #endif /* Clear bits in CONTROL2 only in PSOC5A */
 
         #if (CY_PSOC3 || CY_PSOC5LP)
-            Timer_ULTRASONIC_F1_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_MODE_MASK));
+            Timer_ULTRASONIC_F_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_MODE_MASK));
         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
 
         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
-        #if (Timer_ULTRASONIC_F1_RunModeUsed != 0x0u)
+        #if (Timer_ULTRASONIC_F_RunModeUsed != 0x0u)
             /* Set 3rd bit of Control register to enable one shot mode */
-            Timer_ULTRASONIC_F1_CONTROL |= 0x04u;
+            Timer_ULTRASONIC_F_CONTROL |= 0x04u;
         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
 
-        #if (Timer_ULTRASONIC_F1_RunModeUsed == 2)
+        #if (Timer_ULTRASONIC_F_RunModeUsed == 2)
             #if (CY_PSOC5A)
                 /* Set last 2 bits of control2 register if one shot(halt on
                 interrupt) is enabled*/
-                Timer_ULTRASONIC_F1_CONTROL2 |= 0x03u;
+                Timer_ULTRASONIC_F_CONTROL2 |= 0x03u;
             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
 
             #if (CY_PSOC3 || CY_PSOC5LP)
                 /* Set last 2 bits of control3 register if one shot(halt on
                 interrupt) is enabled*/
-                Timer_ULTRASONIC_F1_CONTROL3 |= 0x03u;
+                Timer_ULTRASONIC_F_CONTROL3 |= 0x03u;
             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
 
         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
 
-        #if (Timer_ULTRASONIC_F1_UsingHWEnable != 0)
+        #if (Timer_ULTRASONIC_F_UsingHWEnable != 0)
             #if (CY_PSOC5A)
                 /* Set the default Run Mode of the Timer to Continuous */
-                Timer_ULTRASONIC_F1_CONTROL2 |= Timer_ULTRASONIC_F1_CTRL_MODE_PULSEWIDTH;
+                Timer_ULTRASONIC_F_CONTROL2 |= Timer_ULTRASONIC_F_CTRL_MODE_PULSEWIDTH;
             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
 
             #if (CY_PSOC3 || CY_PSOC5LP)
                 /* Clear and Set ROD and COD bits of CFG2 register */
-                Timer_ULTRASONIC_F1_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_RCOD_MASK));
-                Timer_ULTRASONIC_F1_CONTROL3 |= Timer_ULTRASONIC_F1_CTRL_RCOD;
+                Timer_ULTRASONIC_F_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_RCOD_MASK));
+                Timer_ULTRASONIC_F_CONTROL3 |= Timer_ULTRASONIC_F_CTRL_RCOD;
 
                 /* Clear and Enable the HW enable bit in CFG2 register */
-                Timer_ULTRASONIC_F1_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_ENBL_MASK));
-                Timer_ULTRASONIC_F1_CONTROL3 |= Timer_ULTRASONIC_F1_CTRL_ENBL;
+                Timer_ULTRASONIC_F_CONTROL3 &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_ENBL_MASK));
+                Timer_ULTRASONIC_F_CONTROL3 |= Timer_ULTRASONIC_F_CTRL_ENBL;
 
                 /* Set the default Run Mode of the Timer to Continuous */
-                Timer_ULTRASONIC_F1_CONTROL3 |= Timer_ULTRASONIC_F1_CTRL_MODE_CONTINUOUS;
+                Timer_ULTRASONIC_F_CONTROL3 |= Timer_ULTRASONIC_F_CTRL_MODE_CONTINUOUS;
             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
 
         #endif /* Configure Run Mode with hardware enable */
 
         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
-        Timer_ULTRASONIC_F1_RT1 &= ((uint8)(~Timer_ULTRASONIC_F1_RT1_MASK));
-        Timer_ULTRASONIC_F1_RT1 |= Timer_ULTRASONIC_F1_SYNC;
+        Timer_ULTRASONIC_F_RT1 &= ((uint8)(~Timer_ULTRASONIC_F_RT1_MASK));
+        Timer_ULTRASONIC_F_RT1 |= Timer_ULTRASONIC_F_SYNC;
 
         /*Enable DSI Sync all all inputs of the Timer*/
-        Timer_ULTRASONIC_F1_RT1 &= ((uint8)(~Timer_ULTRASONIC_F1_SYNCDSI_MASK));
-        Timer_ULTRASONIC_F1_RT1 |= Timer_ULTRASONIC_F1_SYNCDSI_EN;
+        Timer_ULTRASONIC_F_RT1 &= ((uint8)(~Timer_ULTRASONIC_F_SYNCDSI_MASK));
+        Timer_ULTRASONIC_F_RT1 |= Timer_ULTRASONIC_F_SYNCDSI_EN;
 
         /* Set the IRQ to use the status register interrupts */
-        Timer_ULTRASONIC_F1_CONTROL2 |= Timer_ULTRASONIC_F1_CTRL2_IRQ_SEL;
+        Timer_ULTRASONIC_F_CONTROL2 |= Timer_ULTRASONIC_F_CTRL2_IRQ_SEL;
     #endif /* Configuring registers of fixed function implementation */
 
     /* Set Initial values from Configuration */
-    Timer_ULTRASONIC_F1_WritePeriod(Timer_ULTRASONIC_F1_INIT_PERIOD);
-    Timer_ULTRASONIC_F1_WriteCounter(Timer_ULTRASONIC_F1_INIT_PERIOD);
+    Timer_ULTRASONIC_F_WritePeriod(Timer_ULTRASONIC_F_INIT_PERIOD);
+    Timer_ULTRASONIC_F_WriteCounter(Timer_ULTRASONIC_F_INIT_PERIOD);
 
-    #if (Timer_ULTRASONIC_F1_UsingHWCaptureCounter)/* Capture counter is enabled */
-        Timer_ULTRASONIC_F1_CAPTURE_COUNT_CTRL |= Timer_ULTRASONIC_F1_CNTR_ENABLE;
-        Timer_ULTRASONIC_F1_SetCaptureCount(Timer_ULTRASONIC_F1_INIT_CAPTURE_COUNT);
+    #if (Timer_ULTRASONIC_F_UsingHWCaptureCounter)/* Capture counter is enabled */
+        Timer_ULTRASONIC_F_CAPTURE_COUNT_CTRL |= Timer_ULTRASONIC_F_CNTR_ENABLE;
+        Timer_ULTRASONIC_F_SetCaptureCount(Timer_ULTRASONIC_F_INIT_CAPTURE_COUNT);
     #endif /* Configure capture counter value */
 
-    #if (!Timer_ULTRASONIC_F1_UsingFixedFunction)
-        #if (Timer_ULTRASONIC_F1_SoftwareCaptureMode)
-            Timer_ULTRASONIC_F1_SetCaptureMode(Timer_ULTRASONIC_F1_INIT_CAPTURE_MODE);
+    #if (!Timer_ULTRASONIC_F_UsingFixedFunction)
+        #if (Timer_ULTRASONIC_F_SoftwareCaptureMode)
+            Timer_ULTRASONIC_F_SetCaptureMode(Timer_ULTRASONIC_F_INIT_CAPTURE_MODE);
         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
 
-        #if (Timer_ULTRASONIC_F1_SoftwareTriggerMode)
-            #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)
-                if (0u == (Timer_ULTRASONIC_F1_CONTROL & Timer_ULTRASONIC_F1__B_TIMER__TM_SOFTWARE))
+        #if (Timer_ULTRASONIC_F_SoftwareTriggerMode)
+            #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)
+                if (0u == (Timer_ULTRASONIC_F_CONTROL & Timer_ULTRASONIC_F__B_TIMER__TM_SOFTWARE))
                 {
-                    Timer_ULTRASONIC_F1_SetTriggerMode(Timer_ULTRASONIC_F1_INIT_TRIGGER_MODE);
+                    Timer_ULTRASONIC_F_SetTriggerMode(Timer_ULTRASONIC_F_INIT_TRIGGER_MODE);
                 }
-            #endif /* (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) */
+            #endif /* (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) */
         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
 
         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critical*/
         /* Enter Critical Region*/
-        Timer_ULTRASONIC_F1_interruptState = CyEnterCriticalSection();
+        Timer_ULTRASONIC_F_interruptState = CyEnterCriticalSection();
 
         /* Use the interrupt output of the status register for IRQ output */
-        Timer_ULTRASONIC_F1_STATUS_AUX_CTRL |= Timer_ULTRASONIC_F1_STATUS_ACTL_INT_EN_MASK;
+        Timer_ULTRASONIC_F_STATUS_AUX_CTRL |= Timer_ULTRASONIC_F_STATUS_ACTL_INT_EN_MASK;
 
         /* Exit Critical Region*/
-        CyExitCriticalSection(Timer_ULTRASONIC_F1_interruptState);
+        CyExitCriticalSection(Timer_ULTRASONIC_F_interruptState);
 
-        #if (Timer_ULTRASONIC_F1_EnableTriggerMode)
-            Timer_ULTRASONIC_F1_EnableTrigger();
+        #if (Timer_ULTRASONIC_F_EnableTriggerMode)
+            Timer_ULTRASONIC_F_EnableTrigger();
         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
 		
 		
-        #if (Timer_ULTRASONIC_F1_InterruptOnCaptureCount && !Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)
-            Timer_ULTRASONIC_F1_SetInterruptCount(Timer_ULTRASONIC_F1_INIT_INT_CAPTURE_COUNT);
+        #if (Timer_ULTRASONIC_F_InterruptOnCaptureCount && !Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)
+            Timer_ULTRASONIC_F_SetInterruptCount(Timer_ULTRASONIC_F_INIT_INT_CAPTURE_COUNT);
         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*/
 
-        Timer_ULTRASONIC_F1_ClearFIFO();
+        Timer_ULTRASONIC_F_ClearFIFO();
     #endif /* Configure additional features of UDB implementation */
 
-    Timer_ULTRASONIC_F1_SetInterruptMode(Timer_ULTRASONIC_F1_INIT_INTERRUPT_MODE);
+    Timer_ULTRASONIC_F_SetInterruptMode(Timer_ULTRASONIC_F_INIT_INTERRUPT_MODE);
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_Enable
+* Function Name: Timer_ULTRASONIC_F_Enable
 ********************************************************************************
 *
 * Summary:
@@ -177,23 +177,23 @@ void Timer_ULTRASONIC_F1_Init(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_Enable(void) 
+void Timer_ULTRASONIC_F_Enable(void) 
 {
     /* Globally Enable the Fixed Function Block chosen */
-    #if (Timer_ULTRASONIC_F1_UsingFixedFunction)
-        Timer_ULTRASONIC_F1_GLOBAL_ENABLE |= Timer_ULTRASONIC_F1_BLOCK_EN_MASK;
-        Timer_ULTRASONIC_F1_GLOBAL_STBY_ENABLE |= Timer_ULTRASONIC_F1_BLOCK_STBY_EN_MASK;
+    #if (Timer_ULTRASONIC_F_UsingFixedFunction)
+        Timer_ULTRASONIC_F_GLOBAL_ENABLE |= Timer_ULTRASONIC_F_BLOCK_EN_MASK;
+        Timer_ULTRASONIC_F_GLOBAL_STBY_ENABLE |= Timer_ULTRASONIC_F_BLOCK_STBY_EN_MASK;
     #endif /* Set Enable bit for enabling Fixed function timer*/
 
     /* Remove assignment if control register is removed */
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED || Timer_ULTRASONIC_F1_UsingFixedFunction)
-        Timer_ULTRASONIC_F1_CONTROL |= Timer_ULTRASONIC_F1_CTRL_ENABLE;
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED || Timer_ULTRASONIC_F_UsingFixedFunction)
+        Timer_ULTRASONIC_F_CONTROL |= Timer_ULTRASONIC_F_CTRL_ENABLE;
     #endif /* Remove assignment if control register is removed */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_Start
+* Function Name: Timer_ULTRASONIC_F_Start
 ********************************************************************************
 *
 * Summary:
@@ -208,26 +208,26 @@ void Timer_ULTRASONIC_F1_Enable(void)
 *  void
 *
 * Global variables:
-*  Timer_ULTRASONIC_F1_initVar: Is modified when this function is called for the
+*  Timer_ULTRASONIC_F_initVar: Is modified when this function is called for the
 *   first time. Is used to ensure that initialization happens only once.
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_Start(void) 
+void Timer_ULTRASONIC_F_Start(void) 
 {
-    if(Timer_ULTRASONIC_F1_initVar == 0u)
+    if(Timer_ULTRASONIC_F_initVar == 0u)
     {
-        Timer_ULTRASONIC_F1_Init();
+        Timer_ULTRASONIC_F_Init();
 
-        Timer_ULTRASONIC_F1_initVar = 1u;   /* Clear this bit for Initialization */
+        Timer_ULTRASONIC_F_initVar = 1u;   /* Clear this bit for Initialization */
     }
 
     /* Enable the Timer */
-    Timer_ULTRASONIC_F1_Enable();
+    Timer_ULTRASONIC_F_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_Stop
+* Function Name: Timer_ULTRASONIC_F_Stop
 ********************************************************************************
 *
 * Summary:
@@ -244,23 +244,23 @@ void Timer_ULTRASONIC_F1_Start(void)
 *               has no effect on the operation of the timer.
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_Stop(void) 
+void Timer_ULTRASONIC_F_Stop(void) 
 {
     /* Disable Timer */
-    #if(!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED || Timer_ULTRASONIC_F1_UsingFixedFunction)
-        Timer_ULTRASONIC_F1_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_ENABLE));
+    #if(!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED || Timer_ULTRASONIC_F_UsingFixedFunction)
+        Timer_ULTRASONIC_F_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_ENABLE));
     #endif /* Remove assignment if control register is removed */
 
     /* Globally disable the Fixed Function Block chosen */
-    #if (Timer_ULTRASONIC_F1_UsingFixedFunction)
-        Timer_ULTRASONIC_F1_GLOBAL_ENABLE &= ((uint8)(~Timer_ULTRASONIC_F1_BLOCK_EN_MASK));
-        Timer_ULTRASONIC_F1_GLOBAL_STBY_ENABLE &= ((uint8)(~Timer_ULTRASONIC_F1_BLOCK_STBY_EN_MASK));
+    #if (Timer_ULTRASONIC_F_UsingFixedFunction)
+        Timer_ULTRASONIC_F_GLOBAL_ENABLE &= ((uint8)(~Timer_ULTRASONIC_F_BLOCK_EN_MASK));
+        Timer_ULTRASONIC_F_GLOBAL_STBY_ENABLE &= ((uint8)(~Timer_ULTRASONIC_F_BLOCK_STBY_EN_MASK));
     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SetInterruptMode
+* Function Name: Timer_ULTRASONIC_F_SetInterruptMode
 ********************************************************************************
 *
 * Summary:
@@ -276,14 +276,14 @@ void Timer_ULTRASONIC_F1_Stop(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SetInterruptMode(uint8 interruptMode) 
+void Timer_ULTRASONIC_F_SetInterruptMode(uint8 interruptMode) 
 {
-    Timer_ULTRASONIC_F1_STATUS_MASK = interruptMode;
+    Timer_ULTRASONIC_F_STATUS_MASK = interruptMode;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SoftwareCapture
+* Function Name: Timer_ULTRASONIC_F_SoftwareCapture
 ********************************************************************************
 *
 * Summary:
@@ -299,20 +299,20 @@ void Timer_ULTRASONIC_F1_SetInterruptMode(uint8 interruptMode)
 *  An existing hardware capture could be overwritten.
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SoftwareCapture(void) 
+void Timer_ULTRASONIC_F_SoftwareCapture(void) 
 {
     /* Generate a software capture by reading the counter register */
-    #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
-        (void)CY_GET_REG16(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR);
+    #if(Timer_ULTRASONIC_F_UsingFixedFunction)
+        (void)CY_GET_REG16(Timer_ULTRASONIC_F_COUNTER_LSB_PTR);
     #else
-        (void)CY_GET_REG8(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR_8BIT);
-    #endif/* (Timer_ULTRASONIC_F1_UsingFixedFunction) */
+        (void)CY_GET_REG8(Timer_ULTRASONIC_F_COUNTER_LSB_PTR_8BIT);
+    #endif/* (Timer_ULTRASONIC_F_UsingFixedFunction) */
     /* Capture Data is now in the FIFO */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadStatusRegister
+* Function Name: Timer_ULTRASONIC_F_ReadStatusRegister
 ********************************************************************************
 *
 * Summary:
@@ -330,17 +330,17 @@ void Timer_ULTRASONIC_F1_SoftwareCapture(void)
 *  Status register bits may be clear on read.
 *
 *******************************************************************************/
-uint8   Timer_ULTRASONIC_F1_ReadStatusRegister(void) 
+uint8   Timer_ULTRASONIC_F_ReadStatusRegister(void) 
 {
-    return (Timer_ULTRASONIC_F1_STATUS);
+    return (Timer_ULTRASONIC_F_STATUS);
 }
 
 
-#if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+#if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadControlRegister
+* Function Name: Timer_ULTRASONIC_F_ReadControlRegister
 ********************************************************************************
 *
 * Summary:
@@ -353,18 +353,18 @@ uint8   Timer_ULTRASONIC_F1_ReadStatusRegister(void)
 *  The contents of the control register
 *
 *******************************************************************************/
-uint8 Timer_ULTRASONIC_F1_ReadControlRegister(void) 
+uint8 Timer_ULTRASONIC_F_ReadControlRegister(void) 
 {
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) 
-        return ((uint8)Timer_ULTRASONIC_F1_CONTROL);
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) 
+        return ((uint8)Timer_ULTRASONIC_F_CONTROL);
     #else
         return (0);
-    #endif /* (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) */
+    #endif /* (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_WriteControlRegister
+* Function Name: Timer_ULTRASONIC_F_WriteControlRegister
 ********************************************************************************
 *
 * Summary:
@@ -376,20 +376,20 @@ uint8 Timer_ULTRASONIC_F1_ReadControlRegister(void)
 * Return:
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_WriteControlRegister(uint8 control) 
+void Timer_ULTRASONIC_F_WriteControlRegister(uint8 control) 
 {
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) 
-        Timer_ULTRASONIC_F1_CONTROL = control;
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) 
+        Timer_ULTRASONIC_F_CONTROL = control;
     #else
         control = 0u;
-    #endif /* (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) */
+    #endif /* (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) */
 }
 
 #endif /* Remove API if control register is unused */
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadPeriod
+* Function Name: Timer_ULTRASONIC_F_ReadPeriod
 ********************************************************************************
 *
 * Summary:
@@ -402,18 +402,18 @@ void Timer_ULTRASONIC_F1_WriteControlRegister(uint8 control)
 *  The present value of the counter.
 *
 *******************************************************************************/
-uint16 Timer_ULTRASONIC_F1_ReadPeriod(void) 
+uint16 Timer_ULTRASONIC_F_ReadPeriod(void) 
 {
-   #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
-       return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F1_PERIOD_LSB_PTR));
+   #if(Timer_ULTRASONIC_F_UsingFixedFunction)
+       return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F_PERIOD_LSB_PTR));
    #else
-       return (CY_GET_REG16(Timer_ULTRASONIC_F1_PERIOD_LSB_PTR));
-   #endif /* (Timer_ULTRASONIC_F1_UsingFixedFunction) */
+       return (CY_GET_REG16(Timer_ULTRASONIC_F_PERIOD_LSB_PTR));
+   #endif /* (Timer_ULTRASONIC_F_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_WritePeriod
+* Function Name: Timer_ULTRASONIC_F_WritePeriod
 ********************************************************************************
 *
 * Summary:
@@ -428,19 +428,19 @@ uint16 Timer_ULTRASONIC_F1_ReadPeriod(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_WritePeriod(uint16 period) 
+void Timer_ULTRASONIC_F_WritePeriod(uint16 period) 
 {
-    #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
+    #if(Timer_ULTRASONIC_F_UsingFixedFunction)
         uint16 period_temp = (uint16)period;
-        CY_SET_REG16(Timer_ULTRASONIC_F1_PERIOD_LSB_PTR, period_temp);
+        CY_SET_REG16(Timer_ULTRASONIC_F_PERIOD_LSB_PTR, period_temp);
     #else
-        CY_SET_REG16(Timer_ULTRASONIC_F1_PERIOD_LSB_PTR, period);
+        CY_SET_REG16(Timer_ULTRASONIC_F_PERIOD_LSB_PTR, period);
     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed function implementation */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadCapture
+* Function Name: Timer_ULTRASONIC_F_ReadCapture
 ********************************************************************************
 *
 * Summary:
@@ -453,18 +453,18 @@ void Timer_ULTRASONIC_F1_WritePeriod(uint16 period)
 *  Present Capture value.
 *
 *******************************************************************************/
-uint16 Timer_ULTRASONIC_F1_ReadCapture(void) 
+uint16 Timer_ULTRASONIC_F_ReadCapture(void) 
 {
-   #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
-       return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F1_CAPTURE_LSB_PTR));
+   #if(Timer_ULTRASONIC_F_UsingFixedFunction)
+       return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F_CAPTURE_LSB_PTR));
    #else
-       return (CY_GET_REG16(Timer_ULTRASONIC_F1_CAPTURE_LSB_PTR));
-   #endif /* (Timer_ULTRASONIC_F1_UsingFixedFunction) */
+       return (CY_GET_REG16(Timer_ULTRASONIC_F_CAPTURE_LSB_PTR));
+   #endif /* (Timer_ULTRASONIC_F_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_WriteCounter
+* Function Name: Timer_ULTRASONIC_F_WriteCounter
 ********************************************************************************
 *
 * Summary:
@@ -477,22 +477,22 @@ uint16 Timer_ULTRASONIC_F1_ReadCapture(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_WriteCounter(uint16 counter) 
+void Timer_ULTRASONIC_F_WriteCounter(uint16 counter) 
 {
-   #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
+   #if(Timer_ULTRASONIC_F_UsingFixedFunction)
         /* This functionality is removed until a FixedFunction HW update to
          * allow this register to be written
          */
-        CY_SET_REG16(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR, (uint16)counter);
+        CY_SET_REG16(Timer_ULTRASONIC_F_COUNTER_LSB_PTR, (uint16)counter);
         
     #else
-        CY_SET_REG16(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR, counter);
+        CY_SET_REG16(Timer_ULTRASONIC_F_COUNTER_LSB_PTR, counter);
     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fixed function Timer */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadCounter
+* Function Name: Timer_ULTRASONIC_F_ReadCounter
 ********************************************************************************
 *
 * Summary:
@@ -505,27 +505,27 @@ void Timer_ULTRASONIC_F1_WriteCounter(uint16 counter)
 *  Present compare value.
 *
 *******************************************************************************/
-uint16 Timer_ULTRASONIC_F1_ReadCounter(void) 
+uint16 Timer_ULTRASONIC_F_ReadCounter(void) 
 {
     /* Force capture by reading Accumulator */
     /* Must first do a software capture to be able to read the counter */
     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
-    #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
-        (void)CY_GET_REG16(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR);
+    #if(Timer_ULTRASONIC_F_UsingFixedFunction)
+        (void)CY_GET_REG16(Timer_ULTRASONIC_F_COUNTER_LSB_PTR);
     #else
-        (void)CY_GET_REG8(Timer_ULTRASONIC_F1_COUNTER_LSB_PTR_8BIT);
-    #endif/* (Timer_ULTRASONIC_F1_UsingFixedFunction) */
+        (void)CY_GET_REG8(Timer_ULTRASONIC_F_COUNTER_LSB_PTR_8BIT);
+    #endif/* (Timer_ULTRASONIC_F_UsingFixedFunction) */
 
     /* Read the data from the FIFO (or capture register for Fixed Function)*/
-    #if(Timer_ULTRASONIC_F1_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F1_CAPTURE_LSB_PTR));
+    #if(Timer_ULTRASONIC_F_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Timer_ULTRASONIC_F_CAPTURE_LSB_PTR));
     #else
-        return (CY_GET_REG16(Timer_ULTRASONIC_F1_CAPTURE_LSB_PTR));
-    #endif /* (Timer_ULTRASONIC_F1_UsingFixedFunction) */
+        return (CY_GET_REG16(Timer_ULTRASONIC_F_CAPTURE_LSB_PTR));
+    #endif /* (Timer_ULTRASONIC_F_UsingFixedFunction) */
 }
 
 
-#if(!Timer_ULTRASONIC_F1_UsingFixedFunction) /* UDB Specific Functions */
+#if(!Timer_ULTRASONIC_F_UsingFixedFunction) /* UDB Specific Functions */
 
     
 /*******************************************************************************
@@ -534,11 +534,11 @@ uint16 Timer_ULTRASONIC_F1_ReadCounter(void)
  ******************************************************************************/
 
 
-#if (Timer_ULTRASONIC_F1_SoftwareCaptureMode)
+#if (Timer_ULTRASONIC_F_SoftwareCaptureMode)
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SetCaptureMode
+* Function Name: Timer_ULTRASONIC_F_SetCaptureMode
 ********************************************************************************
 *
 * Summary:
@@ -547,44 +547,44 @@ uint16 Timer_ULTRASONIC_F1_ReadCounter(void)
 * Parameters:
 *  captureMode: This parameter sets the capture mode of the UDB capture feature
 *  The parameter values are defined using the
-*  #define Timer_ULTRASONIC_F1__B_TIMER__CM_NONE 0
-#define Timer_ULTRASONIC_F1__B_TIMER__CM_RISINGEDGE 1
-#define Timer_ULTRASONIC_F1__B_TIMER__CM_FALLINGEDGE 2
-#define Timer_ULTRASONIC_F1__B_TIMER__CM_EITHEREDGE 3
-#define Timer_ULTRASONIC_F1__B_TIMER__CM_SOFTWARE 4
+*  #define Timer_ULTRASONIC_F__B_TIMER__CM_NONE 0
+#define Timer_ULTRASONIC_F__B_TIMER__CM_RISINGEDGE 1
+#define Timer_ULTRASONIC_F__B_TIMER__CM_FALLINGEDGE 2
+#define Timer_ULTRASONIC_F__B_TIMER__CM_EITHEREDGE 3
+#define Timer_ULTRASONIC_F__B_TIMER__CM_SOFTWARE 4
  identifiers
 *  The following are the possible values of the parameter
-*  Timer_ULTRASONIC_F1__B_TIMER__CM_NONE        - Set Capture mode to None
-*  Timer_ULTRASONIC_F1__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
-*  Timer_ULTRASONIC_F1__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
-*  Timer_ULTRASONIC_F1__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
+*  Timer_ULTRASONIC_F__B_TIMER__CM_NONE        - Set Capture mode to None
+*  Timer_ULTRASONIC_F__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
+*  Timer_ULTRASONIC_F__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
+*  Timer_ULTRASONIC_F__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
 *
 * Return:
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SetCaptureMode(uint8 captureMode) 
+void Timer_ULTRASONIC_F_SetCaptureMode(uint8 captureMode) 
 {
     /* This must only set to two bits of the control register associated */
-    captureMode = ((uint8)((uint8)captureMode << Timer_ULTRASONIC_F1_CTRL_CAP_MODE_SHIFT));
-    captureMode &= (Timer_ULTRASONIC_F1_CTRL_CAP_MODE_MASK);
+    captureMode = ((uint8)((uint8)captureMode << Timer_ULTRASONIC_F_CTRL_CAP_MODE_SHIFT));
+    captureMode &= (Timer_ULTRASONIC_F_CTRL_CAP_MODE_MASK);
 
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)
         /* Clear the Current Setting */
-        Timer_ULTRASONIC_F1_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_CAP_MODE_MASK));
+        Timer_ULTRASONIC_F_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_CAP_MODE_MASK));
 
         /* Write The New Setting */
-        Timer_ULTRASONIC_F1_CONTROL |= captureMode;
-    #endif /* (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) */
+        Timer_ULTRASONIC_F_CONTROL |= captureMode;
+    #endif /* (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) */
 }
 #endif /* Remove API if Capture Mode is not Software Controlled */
 
 
-#if (Timer_ULTRASONIC_F1_SoftwareTriggerMode)
+#if (Timer_ULTRASONIC_F_SoftwareTriggerMode)
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SetTriggerMode
+* Function Name: Timer_ULTRASONIC_F_SetTriggerMode
 ********************************************************************************
 *
 * Summary:
@@ -592,37 +592,37 @@ void Timer_ULTRASONIC_F1_SetCaptureMode(uint8 captureMode)
 *
 * Parameters:
 *  triggerMode: Pass one of the pre-defined Trigger Modes (except Software)
-    #define Timer_ULTRASONIC_F1__B_TIMER__TM_NONE 0x00u
-    #define Timer_ULTRASONIC_F1__B_TIMER__TM_RISINGEDGE 0x04u
-    #define Timer_ULTRASONIC_F1__B_TIMER__TM_FALLINGEDGE 0x08u
-    #define Timer_ULTRASONIC_F1__B_TIMER__TM_EITHEREDGE 0x0Cu
-    #define Timer_ULTRASONIC_F1__B_TIMER__TM_SOFTWARE 0x10u
+    #define Timer_ULTRASONIC_F__B_TIMER__TM_NONE 0x00u
+    #define Timer_ULTRASONIC_F__B_TIMER__TM_RISINGEDGE 0x04u
+    #define Timer_ULTRASONIC_F__B_TIMER__TM_FALLINGEDGE 0x08u
+    #define Timer_ULTRASONIC_F__B_TIMER__TM_EITHEREDGE 0x0Cu
+    #define Timer_ULTRASONIC_F__B_TIMER__TM_SOFTWARE 0x10u
 *
 * Return:
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SetTriggerMode(uint8 triggerMode) 
+void Timer_ULTRASONIC_F_SetTriggerMode(uint8 triggerMode) 
 {
     /* This must only set to two bits of the control register associated */
-    triggerMode &= Timer_ULTRASONIC_F1_CTRL_TRIG_MODE_MASK;
+    triggerMode &= Timer_ULTRASONIC_F_CTRL_TRIG_MODE_MASK;
 
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed */
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed */
     
         /* Clear the Current Setting */
-        Timer_ULTRASONIC_F1_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_TRIG_MODE_MASK));
+        Timer_ULTRASONIC_F_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_TRIG_MODE_MASK));
 
         /* Write The New Setting */
-        Timer_ULTRASONIC_F1_CONTROL |= (triggerMode | Timer_ULTRASONIC_F1__B_TIMER__TM_SOFTWARE);
+        Timer_ULTRASONIC_F_CONTROL |= (triggerMode | Timer_ULTRASONIC_F__B_TIMER__TM_SOFTWARE);
     #endif /* Remove code section if control register is not used */
 }
 #endif /* Remove API if Trigger Mode is not Software Controlled */
 
-#if (Timer_ULTRASONIC_F1_EnableTriggerMode)
+#if (Timer_ULTRASONIC_F_EnableTriggerMode)
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_EnableTrigger
+* Function Name: Timer_ULTRASONIC_F_EnableTrigger
 ********************************************************************************
 *
 * Summary:
@@ -635,16 +635,16 @@ void Timer_ULTRASONIC_F1_SetTriggerMode(uint8 triggerMode)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_EnableTrigger(void) 
+void Timer_ULTRASONIC_F_EnableTrigger(void) 
 {
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed */
-        Timer_ULTRASONIC_F1_CONTROL |= Timer_ULTRASONIC_F1_CTRL_TRIG_EN;
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is removed */
+        Timer_ULTRASONIC_F_CONTROL |= Timer_ULTRASONIC_F_CTRL_TRIG_EN;
     #endif /* Remove code section if control register is not used */
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_DisableTrigger
+* Function Name: Timer_ULTRASONIC_F_DisableTrigger
 ********************************************************************************
 *
 * Summary:
@@ -657,19 +657,19 @@ void Timer_ULTRASONIC_F1_EnableTrigger(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_DisableTrigger(void) 
+void Timer_ULTRASONIC_F_DisableTrigger(void) 
 {
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is removed */
-        Timer_ULTRASONIC_F1_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_TRIG_EN));
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register is removed */
+        Timer_ULTRASONIC_F_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_TRIG_EN));
     #endif /* Remove code section if control register is not used */
 }
 #endif /* Remove API is Trigger Mode is set to None */
 
-#if(Timer_ULTRASONIC_F1_InterruptOnCaptureCount)
+#if(Timer_ULTRASONIC_F_InterruptOnCaptureCount)
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SetInterruptCount
+* Function Name: Timer_ULTRASONIC_F_SetInterruptCount
 ********************************************************************************
 *
 * Summary:
@@ -685,26 +685,26 @@ void Timer_ULTRASONIC_F1_DisableTrigger(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SetInterruptCount(uint8 interruptCount) 
+void Timer_ULTRASONIC_F_SetInterruptCount(uint8 interruptCount) 
 {
     /* This must only set to two bits of the control register associated */
-    interruptCount &= Timer_ULTRASONIC_F1_CTRL_INTCNT_MASK;
+    interruptCount &= Timer_ULTRASONIC_F_CTRL_INTCNT_MASK;
 
-    #if (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED)
+    #if (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED)
         /* Clear the Current Setting */
-        Timer_ULTRASONIC_F1_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F1_CTRL_INTCNT_MASK));
+        Timer_ULTRASONIC_F_CONTROL &= ((uint8)(~Timer_ULTRASONIC_F_CTRL_INTCNT_MASK));
         /* Write The New Setting */
-        Timer_ULTRASONIC_F1_CONTROL |= interruptCount;
-    #endif /* (!Timer_ULTRASONIC_F1_UDB_CONTROL_REG_REMOVED) */
+        Timer_ULTRASONIC_F_CONTROL |= interruptCount;
+    #endif /* (!Timer_ULTRASONIC_F_UDB_CONTROL_REG_REMOVED) */
 }
-#endif /* Timer_ULTRASONIC_F1_InterruptOnCaptureCount */
+#endif /* Timer_ULTRASONIC_F_InterruptOnCaptureCount */
 
 
-#if (Timer_ULTRASONIC_F1_UsingHWCaptureCounter)
+#if (Timer_ULTRASONIC_F_UsingHWCaptureCounter)
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_SetCaptureCount
+* Function Name: Timer_ULTRASONIC_F_SetCaptureCount
 ********************************************************************************
 *
 * Summary:
@@ -719,14 +719,14 @@ void Timer_ULTRASONIC_F1_SetInterruptCount(uint8 interruptCount)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_SetCaptureCount(uint8 captureCount) 
+void Timer_ULTRASONIC_F_SetCaptureCount(uint8 captureCount) 
 {
-    Timer_ULTRASONIC_F1_CAP_COUNT = captureCount;
+    Timer_ULTRASONIC_F_CAP_COUNT = captureCount;
 }
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ReadCaptureCount
+* Function Name: Timer_ULTRASONIC_F_ReadCaptureCount
 ********************************************************************************
 *
 * Summary:
@@ -739,15 +739,15 @@ void Timer_ULTRASONIC_F1_SetCaptureCount(uint8 captureCount)
 *  Returns the Capture Count Setting
 *
 *******************************************************************************/
-uint8 Timer_ULTRASONIC_F1_ReadCaptureCount(void) 
+uint8 Timer_ULTRASONIC_F_ReadCaptureCount(void) 
 {
-    return ((uint8)Timer_ULTRASONIC_F1_CAP_COUNT);
+    return ((uint8)Timer_ULTRASONIC_F_CAP_COUNT);
 }
-#endif /* Timer_ULTRASONIC_F1_UsingHWCaptureCounter */
+#endif /* Timer_ULTRASONIC_F_UsingHWCaptureCounter */
 
 
 /*******************************************************************************
-* Function Name: Timer_ULTRASONIC_F1_ClearFIFO
+* Function Name: Timer_ULTRASONIC_F_ClearFIFO
 ********************************************************************************
 *
 * Summary:
@@ -760,11 +760,11 @@ uint8 Timer_ULTRASONIC_F1_ReadCaptureCount(void)
 *  void
 *
 *******************************************************************************/
-void Timer_ULTRASONIC_F1_ClearFIFO(void) 
+void Timer_ULTRASONIC_F_ClearFIFO(void) 
 {
-    while(0u != (Timer_ULTRASONIC_F1_ReadStatusRegister() & Timer_ULTRASONIC_F1_STATUS_FIFONEMP))
+    while(0u != (Timer_ULTRASONIC_F_ReadStatusRegister() & Timer_ULTRASONIC_F_STATUS_FIFONEMP))
     {
-        (void)Timer_ULTRASONIC_F1_ReadCapture();
+        (void)Timer_ULTRASONIC_F_ReadCapture();
     }
 }
 
