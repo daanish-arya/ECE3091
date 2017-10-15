@@ -1,0 +1,1310 @@
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"servos_stepper.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Grip_Open,"ax",%progbits
+  20              		.align	2
+  21              		.global	Grip_Open
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Grip_Open, %function
+  25              	Grip_Open:
+  26              	.LFB63:
+  27              		.file 1 "servos_stepper.c"
+   1:servos_stepper.c **** /* ========================================
+   2:servos_stepper.c ****  *
+   3:servos_stepper.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:servos_stepper.c ****  * All Rights Reserved
+   5:servos_stepper.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:servos_stepper.c ****  *
+   7:servos_stepper.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:servos_stepper.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:servos_stepper.c ****  *
+  10:servos_stepper.c ****  * ========================================
+  11:servos_stepper.c **** */
+  12:servos_stepper.c **** 
+  13:servos_stepper.c **** #include <project.h>
+  14:servos_stepper.c **** 
+  15:servos_stepper.c **** int Grip_Open()
+  16:servos_stepper.c ****     {
+  28              		.loc 1 16 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  17:servos_stepper.c ****         PWM_Grip_WriteCompare(1050);
+  36              		.loc 1 17 0
+  37 0002 40F21A40 		movw	r0, #1050
+  38 0006 FFF7FEFF 		bl	PWM_Grip_WriteCompare
+  39              	.LVL0:
+  18:servos_stepper.c ****         CyDelay(1000);
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 2
+
+
+  40              		.loc 1 18 0
+  41 000a 4FF47A70 		mov	r0, #1000
+  42 000e FFF7FEFF 		bl	CyDelay
+  43              	.LVL1:
+  19:servos_stepper.c ****         
+  20:servos_stepper.c ****         return 0;
+  21:servos_stepper.c ****     } 
+  44              		.loc 1 21 0
+  45 0012 0020     		movs	r0, #0
+  46 0014 08BD     		pop	{r3, pc}
+  47              		.cfi_endproc
+  48              	.LFE63:
+  49              		.size	Grip_Open, .-Grip_Open
+  50 0016 00BF     		.section	.text.Grip_Close,"ax",%progbits
+  51              		.align	2
+  52              		.global	Grip_Close
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	Grip_Close, %function
+  56              	Grip_Close:
+  57              	.LFB64:
+  22:servos_stepper.c **** 
+  23:servos_stepper.c **** int Grip_Close()
+  24:servos_stepper.c ****     {
+  58              		.loc 1 24 0
+  59              		.cfi_startproc
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62 0000 08B5     		push	{r3, lr}
+  63              		.cfi_def_cfa_offset 8
+  64              		.cfi_offset 3, -8
+  65              		.cfi_offset 14, -4
+  25:servos_stepper.c ****         PWM_Grip_WriteCompare(1290);
+  66              		.loc 1 25 0
+  67 0002 40F20A50 		movw	r0, #1290
+  68 0006 FFF7FEFF 		bl	PWM_Grip_WriteCompare
+  69              	.LVL2:
+  26:servos_stepper.c ****         CyDelay(1000);
+  70              		.loc 1 26 0
+  71 000a 4FF47A70 		mov	r0, #1000
+  72 000e FFF7FEFF 		bl	CyDelay
+  73              	.LVL3:
+  27:servos_stepper.c ****         
+  28:servos_stepper.c ****         return 0;
+  29:servos_stepper.c ****     }    
+  74              		.loc 1 29 0
+  75 0012 0020     		movs	r0, #0
+  76 0014 08BD     		pop	{r3, pc}
+  77              		.cfi_endproc
+  78              	.LFE64:
+  79              		.size	Grip_Close, .-Grip_Close
+  80 0016 00BF     		.section	.text.Lift_Up,"ax",%progbits
+  81              		.align	2
+  82              		.global	Lift_Up
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	Lift_Up, %function
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 3
+
+
+  86              	Lift_Up:
+  87              	.LFB65:
+  30:servos_stepper.c ****     
+  31:servos_stepper.c ****     
+  32:servos_stepper.c **** int Lift_Up(int pucks)
+  33:servos_stepper.c **** {
+  88              		.loc 1 33 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              	.LVL4:
+  93 0000 10B5     		push	{r4, lr}
+  94              		.cfi_def_cfa_offset 8
+  95              		.cfi_offset 4, -8
+  96              		.cfi_offset 14, -4
+  97              	.LVL5:
+  34:servos_stepper.c ****     int i = 0;
+  35:servos_stepper.c ****     
+  36:servos_stepper.c ****     switch(pucks)
+  98              		.loc 1 36 0
+  99 0002 0138     		subs	r0, r0, #1
+ 100              	.LVL6:
+ 101 0004 0428     		cmp	r0, #4
+ 102 0006 4ED8     		bhi	.L6
+ 103 0008 DFE800F0 		tbb	[pc, r0]
+ 104              	.L8:
+ 105 000c 09       		.byte	(.L18-.L8)/2
+ 106 000d 18       		.byte	(.L19-.L8)/2
+ 107 000e 27       		.byte	(.L20-.L8)/2
+ 108 000f 36       		.byte	(.L21-.L8)/2
+ 109 0010 45       		.byte	(.L22-.L8)/2
+ 110              	.LVL7:
+ 111 0011 00       		.p2align 1
+ 112              	.L13:
+  37:servos_stepper.c ****     {
+  38:servos_stepper.c ****          case 1:
+  39:servos_stepper.c ****         {
+  40:servos_stepper.c ****              for(i=0; i<1000000; i++)
+  41:servos_stepper.c ****                 {
+  42:servos_stepper.c ****                  PWM_Lift_WriteCompare(1650);
+ 113              		.loc 1 42 0 discriminator 3
+ 114 0012 40F27260 		movw	r0, #1650
+ 115 0016 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 116              	.LVL8:
+  40:servos_stepper.c ****                 {
+ 117              		.loc 1 40 0 discriminator 3
+ 118 001a 0134     		adds	r4, r4, #1
+ 119              	.LVL9:
+ 120 001c 00E0     		b	.L7
+ 121              	.LVL10:
+ 122              	.L18:
+  36:servos_stepper.c ****     {
+ 123              		.loc 1 36 0
+ 124 001e 0024     		movs	r4, #0
+ 125              	.LVL11:
+ 126              	.L7:
+  40:servos_stepper.c ****                 {
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 4
+
+
+ 127              		.loc 1 40 0 discriminator 1
+ 128 0020 224B     		ldr	r3, .L24
+ 129 0022 9C42     		cmp	r4, r3
+ 130 0024 F5DD     		ble	.L13
+  43:servos_stepper.c ****                 }
+  44:servos_stepper.c ****     
+  45:servos_stepper.c ****             PWM_Lift_WriteCompare(1475);
+ 131              		.loc 1 45 0
+ 132 0026 40F2C350 		movw	r0, #1475
+ 133 002a FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 134              	.LVL12:
+  46:servos_stepper.c ****             break;
+ 135              		.loc 1 46 0
+ 136 002e 3AE0     		b	.L6
+ 137              	.L14:
+  47:servos_stepper.c ****         }
+  48:servos_stepper.c ****          case 2:
+  49:servos_stepper.c ****         {
+  50:servos_stepper.c ****              for(i=0; i<1800000; i++)
+  51:servos_stepper.c ****                 {
+  52:servos_stepper.c ****                  PWM_Lift_WriteCompare(1600);
+ 138              		.loc 1 52 0 discriminator 3
+ 139 0030 4FF4C860 		mov	r0, #1600
+ 140 0034 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 141              	.LVL13:
+  50:servos_stepper.c ****                 {
+ 142              		.loc 1 50 0 discriminator 3
+ 143 0038 0134     		adds	r4, r4, #1
+ 144              	.LVL14:
+ 145 003a 00E0     		b	.L9
+ 146              	.LVL15:
+ 147              	.L19:
+  36:servos_stepper.c ****     {
+ 148              		.loc 1 36 0
+ 149 003c 0024     		movs	r4, #0
+ 150              	.LVL16:
+ 151              	.L9:
+  50:servos_stepper.c ****                 {
+ 152              		.loc 1 50 0 discriminator 1
+ 153 003e 1C4B     		ldr	r3, .L24+4
+ 154 0040 9C42     		cmp	r4, r3
+ 155 0042 F5DD     		ble	.L14
+  53:servos_stepper.c ****                 }
+  54:servos_stepper.c ****     
+  55:servos_stepper.c ****             PWM_Lift_WriteCompare(1475);
+ 156              		.loc 1 55 0
+ 157 0044 40F2C350 		movw	r0, #1475
+ 158 0048 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 159              	.LVL17:
+  56:servos_stepper.c ****             break;
+ 160              		.loc 1 56 0
+ 161 004c 2BE0     		b	.L6
+ 162              	.L15:
+  57:servos_stepper.c ****         }
+  58:servos_stepper.c ****          case 3:
+  59:servos_stepper.c ****         {
+  60:servos_stepper.c ****              for(i=0; i<2300000; i++)
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 5
+
+
+  61:servos_stepper.c ****                 {
+  62:servos_stepper.c ****                  PWM_Lift_WriteCompare(1600);
+ 163              		.loc 1 62 0 discriminator 3
+ 164 004e 4FF4C860 		mov	r0, #1600
+ 165 0052 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 166              	.LVL18:
+  60:servos_stepper.c ****                 {
+ 167              		.loc 1 60 0 discriminator 3
+ 168 0056 0134     		adds	r4, r4, #1
+ 169              	.LVL19:
+ 170 0058 00E0     		b	.L10
+ 171              	.LVL20:
+ 172              	.L20:
+  36:servos_stepper.c ****     {
+ 173              		.loc 1 36 0
+ 174 005a 0024     		movs	r4, #0
+ 175              	.LVL21:
+ 176              	.L10:
+  60:servos_stepper.c ****                 {
+ 177              		.loc 1 60 0 discriminator 1
+ 178 005c 154B     		ldr	r3, .L24+8
+ 179 005e 9C42     		cmp	r4, r3
+ 180 0060 F5DD     		ble	.L15
+  63:servos_stepper.c ****                 }
+  64:servos_stepper.c ****     
+  65:servos_stepper.c ****             PWM_Lift_WriteCompare(1475);
+ 181              		.loc 1 65 0
+ 182 0062 40F2C350 		movw	r0, #1475
+ 183 0066 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 184              	.LVL22:
+  66:servos_stepper.c ****             break;
+ 185              		.loc 1 66 0
+ 186 006a 1CE0     		b	.L6
+ 187              	.L16:
+  67:servos_stepper.c ****         }
+  68:servos_stepper.c ****          case 4:
+  69:servos_stepper.c ****         {
+  70:servos_stepper.c ****              for(i=0; i<2900000; i++)
+  71:servos_stepper.c ****                 {
+  72:servos_stepper.c ****                  PWM_Lift_WriteCompare(1600);
+ 188              		.loc 1 72 0 discriminator 3
+ 189 006c 4FF4C860 		mov	r0, #1600
+ 190 0070 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 191              	.LVL23:
+  70:servos_stepper.c ****                 {
+ 192              		.loc 1 70 0 discriminator 3
+ 193 0074 0134     		adds	r4, r4, #1
+ 194              	.LVL24:
+ 195 0076 00E0     		b	.L11
+ 196              	.LVL25:
+ 197              	.L21:
+  36:servos_stepper.c ****     {
+ 198              		.loc 1 36 0
+ 199 0078 0024     		movs	r4, #0
+ 200              	.LVL26:
+ 201              	.L11:
+  70:servos_stepper.c ****                 {
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 6
+
+
+ 202              		.loc 1 70 0 discriminator 1
+ 203 007a 0F4B     		ldr	r3, .L24+12
+ 204 007c 9C42     		cmp	r4, r3
+ 205 007e F5DD     		ble	.L16
+  73:servos_stepper.c ****                 }
+  74:servos_stepper.c ****     
+  75:servos_stepper.c ****             PWM_Lift_WriteCompare(1475);
+ 206              		.loc 1 75 0
+ 207 0080 40F2C350 		movw	r0, #1475
+ 208 0084 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 209              	.LVL27:
+  76:servos_stepper.c ****             break;
+ 210              		.loc 1 76 0
+ 211 0088 0DE0     		b	.L6
+ 212              	.L17:
+  77:servos_stepper.c ****         }
+  78:servos_stepper.c ****         case 5:
+  79:servos_stepper.c ****         {
+  80:servos_stepper.c ****              for(i=0; i<3500000; i++)
+  81:servos_stepper.c ****                 {
+  82:servos_stepper.c ****                  PWM_Lift_WriteCompare(1600);
+ 213              		.loc 1 82 0 discriminator 3
+ 214 008a 4FF4C860 		mov	r0, #1600
+ 215 008e FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 216              	.LVL28:
+  80:servos_stepper.c ****                 {
+ 217              		.loc 1 80 0 discriminator 3
+ 218 0092 0134     		adds	r4, r4, #1
+ 219              	.LVL29:
+ 220 0094 00E0     		b	.L12
+ 221              	.LVL30:
+ 222              	.L22:
+  36:servos_stepper.c ****     {
+ 223              		.loc 1 36 0
+ 224 0096 0024     		movs	r4, #0
+ 225              	.LVL31:
+ 226              	.L12:
+  80:servos_stepper.c ****                 {
+ 227              		.loc 1 80 0 discriminator 1
+ 228 0098 084B     		ldr	r3, .L24+16
+ 229 009a 9C42     		cmp	r4, r3
+ 230 009c F5DD     		ble	.L17
+  83:servos_stepper.c ****                 }
+  84:servos_stepper.c ****     
+  85:servos_stepper.c ****             PWM_Lift_WriteCompare(1475);
+ 231              		.loc 1 85 0
+ 232 009e 40F2C350 		movw	r0, #1475
+ 233 00a2 FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 234              	.LVL32:
+ 235              	.L6:
+  86:servos_stepper.c ****             break;
+  87:servos_stepper.c ****         }
+  88:servos_stepper.c ****     }
+  89:servos_stepper.c ****     
+  90:servos_stepper.c ****    
+  91:servos_stepper.c ****     return 0;
+  92:servos_stepper.c **** }
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 7
+
+
+ 236              		.loc 1 92 0
+ 237 00a6 0020     		movs	r0, #0
+ 238 00a8 10BD     		pop	{r4, pc}
+ 239              	.L25:
+ 240 00aa 00BF     		.align	2
+ 241              	.L24:
+ 242 00ac 3F420F00 		.word	999999
+ 243 00b0 3F771B00 		.word	1799999
+ 244 00b4 5F182300 		.word	2299999
+ 245 00b8 1F402C00 		.word	2899999
+ 246 00bc DF673500 		.word	3499999
+ 247              		.cfi_endproc
+ 248              	.LFE65:
+ 249              		.size	Lift_Up, .-Lift_Up
+ 250              		.section	.text.Lift_Down,"ax",%progbits
+ 251              		.align	2
+ 252              		.global	Lift_Down
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.type	Lift_Down, %function
+ 256              	Lift_Down:
+ 257              	.LFB66:
+  93:servos_stepper.c **** 
+  94:servos_stepper.c **** int Lift_Down()
+  95:servos_stepper.c **** {
+ 258              		.loc 1 95 0
+ 259              		.cfi_startproc
+ 260              		@ args = 0, pretend = 0, frame = 0
+ 261              		@ frame_needed = 0, uses_anonymous_args = 0
+ 262 0000 10B5     		push	{r4, lr}
+ 263              		.cfi_def_cfa_offset 8
+ 264              		.cfi_offset 4, -8
+ 265              		.cfi_offset 14, -4
+ 266              	.LVL33:
+  96:servos_stepper.c ****     int i = 0;
+  97:servos_stepper.c ****     for(i=0; i<1200000; i++)
+ 267              		.loc 1 97 0
+ 268 0002 0024     		movs	r4, #0
+ 269 0004 04E0     		b	.L27
+ 270              	.LVL34:
+ 271              	.L28:
+  98:servos_stepper.c ****     {
+  99:servos_stepper.c ****         PWM_Lift_WriteCompare(1350);
+ 272              		.loc 1 99 0 discriminator 3
+ 273 0006 40F24650 		movw	r0, #1350
+ 274 000a FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 275              	.LVL35:
+  97:servos_stepper.c ****     {
+ 276              		.loc 1 97 0 discriminator 3
+ 277 000e 0134     		adds	r4, r4, #1
+ 278              	.LVL36:
+ 279              	.L27:
+  97:servos_stepper.c ****     {
+ 280              		.loc 1 97 0 is_stmt 0 discriminator 1
+ 281 0010 044B     		ldr	r3, .L30
+ 282 0012 9C42     		cmp	r4, r3
+ 283 0014 F7DD     		ble	.L28
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 8
+
+
+ 100:servos_stepper.c ****     }
+ 101:servos_stepper.c ****     
+ 102:servos_stepper.c ****     PWM_Lift_WriteCompare(1475);
+ 284              		.loc 1 102 0 is_stmt 1
+ 285 0016 40F2C350 		movw	r0, #1475
+ 286 001a FFF7FEFF 		bl	PWM_Lift_WriteCompare
+ 287              	.LVL37:
+ 103:servos_stepper.c ****     return 0;
+ 104:servos_stepper.c **** }
+ 288              		.loc 1 104 0
+ 289 001e 0020     		movs	r0, #0
+ 290 0020 10BD     		pop	{r4, pc}
+ 291              	.LVL38:
+ 292              	.L31:
+ 293 0022 00BF     		.align	2
+ 294              	.L30:
+ 295 0024 7F4F1200 		.word	1199999
+ 296              		.cfi_endproc
+ 297              	.LFE66:
+ 298              		.size	Lift_Down, .-Lift_Down
+ 299              		.text
+ 300              	.Letext0:
+ 301              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 302              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 303              		.file 4 "Generated_Source\\PSoC5/PWM_Grip.h"
+ 304              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 305              		.file 6 "Generated_Source\\PSoC5/PWM_Lift.h"
+ 306              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 307              		.section	.debug_info,"",%progbits
+ 308              	.Ldebug_info0:
+ 309 0000 A4020000 		.4byte	0x2a4
+ 310 0004 0400     		.2byte	0x4
+ 311 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 312 000a 04       		.byte	0x4
+ 313 000b 01       		.uleb128 0x1
+ 314 000c 3F000000 		.4byte	.LASF22
+ 315 0010 0C       		.byte	0xc
+ 316 0011 06010000 		.4byte	.LASF23
+ 317 0015 CA010000 		.4byte	.LASF24
+ 318 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 319 001d 00000000 		.4byte	0
+ 320 0021 00000000 		.4byte	.Ldebug_line0
+ 321 0025 02       		.uleb128 0x2
+ 322 0026 01       		.byte	0x1
+ 323 0027 06       		.byte	0x6
+ 324 0028 70010000 		.4byte	.LASF0
+ 325 002c 02       		.uleb128 0x2
+ 326 002d 01       		.byte	0x1
+ 327 002e 08       		.byte	0x8
+ 328 002f 2D010000 		.4byte	.LASF1
+ 329 0033 02       		.uleb128 0x2
+ 330 0034 02       		.byte	0x2
+ 331 0035 05       		.byte	0x5
+ 332 0036 98010000 		.4byte	.LASF2
+ 333 003a 02       		.uleb128 0x2
+ 334 003b 02       		.byte	0x2
+ 335 003c 07       		.byte	0x7
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 9
+
+
+ 336 003d 0E000000 		.4byte	.LASF3
+ 337 0041 03       		.uleb128 0x3
+ 338 0042 88010000 		.4byte	.LASF9
+ 339 0046 02       		.byte	0x2
+ 340 0047 3F       		.byte	0x3f
+ 341 0048 4C000000 		.4byte	0x4c
+ 342 004c 02       		.uleb128 0x2
+ 343 004d 04       		.byte	0x4
+ 344 004e 05       		.byte	0x5
+ 345 004f 4A010000 		.4byte	.LASF4
+ 346 0053 02       		.uleb128 0x2
+ 347 0054 04       		.byte	0x4
+ 348 0055 07       		.byte	0x7
+ 349 0056 DD000000 		.4byte	.LASF5
+ 350 005a 02       		.uleb128 0x2
+ 351 005b 08       		.byte	0x8
+ 352 005c 05       		.byte	0x5
+ 353 005d 00000000 		.4byte	.LASF6
+ 354 0061 02       		.uleb128 0x2
+ 355 0062 08       		.byte	0x8
+ 356 0063 07       		.byte	0x7
+ 357 0064 EF000000 		.4byte	.LASF7
+ 358 0068 04       		.uleb128 0x4
+ 359 0069 04       		.byte	0x4
+ 360 006a 05       		.byte	0x5
+ 361 006b 696E7400 		.ascii	"int\000"
+ 362 006f 02       		.uleb128 0x2
+ 363 0070 04       		.byte	0x4
+ 364 0071 07       		.byte	0x7
+ 365 0072 27000000 		.4byte	.LASF8
+ 366 0076 03       		.uleb128 0x3
+ 367 0077 D5000000 		.4byte	.LASF10
+ 368 007b 03       		.byte	0x3
+ 369 007c 2C       		.byte	0x2c
+ 370 007d 41000000 		.4byte	0x41
+ 371 0081 02       		.uleb128 0x2
+ 372 0082 04       		.byte	0x4
+ 373 0083 04       		.byte	0x4
+ 374 0084 92010000 		.4byte	.LASF11
+ 375 0088 02       		.uleb128 0x2
+ 376 0089 08       		.byte	0x8
+ 377 008a 04       		.byte	0x4
+ 378 008b 53010000 		.4byte	.LASF12
+ 379 008f 02       		.uleb128 0x2
+ 380 0090 01       		.byte	0x1
+ 381 0091 08       		.byte	0x8
+ 382 0092 45010000 		.4byte	.LASF13
+ 383 0096 02       		.uleb128 0x2
+ 384 0097 08       		.byte	0x8
+ 385 0098 04       		.byte	0x4
+ 386 0099 7C010000 		.4byte	.LASF14
+ 387 009d 02       		.uleb128 0x2
+ 388 009e 04       		.byte	0x4
+ 389 009f 07       		.byte	0x7
+ 390 00a0 5A010000 		.4byte	.LASF15
+ 391 00a4 05       		.uleb128 0x5
+ 392 00a5 3B010000 		.4byte	.LASF16
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 10
+
+
+ 393 00a9 01       		.byte	0x1
+ 394 00aa 0F       		.byte	0xf
+ 395 00ab 68000000 		.4byte	0x68
+ 396 00af 00000000 		.4byte	.LFB63
+ 397 00b3 16000000 		.4byte	.LFE63-.LFB63
+ 398 00b7 01       		.uleb128 0x1
+ 399 00b8 9C       		.byte	0x9c
+ 400 00b9 E4000000 		.4byte	0xe4
+ 401 00bd 06       		.uleb128 0x6
+ 402 00be 0A000000 		.4byte	.LVL0
+ 403 00c2 86020000 		.4byte	0x286
+ 404 00c6 D2000000 		.4byte	0xd2
+ 405 00ca 07       		.uleb128 0x7
+ 406 00cb 01       		.uleb128 0x1
+ 407 00cc 50       		.byte	0x50
+ 408 00cd 03       		.uleb128 0x3
+ 409 00ce 0A       		.byte	0xa
+ 410 00cf 1A04     		.2byte	0x41a
+ 411 00d1 00       		.byte	0
+ 412 00d2 08       		.uleb128 0x8
+ 413 00d3 12000000 		.4byte	.LVL1
+ 414 00d7 91020000 		.4byte	0x291
+ 415 00db 07       		.uleb128 0x7
+ 416 00dc 01       		.uleb128 0x1
+ 417 00dd 50       		.byte	0x50
+ 418 00de 03       		.uleb128 0x3
+ 419 00df 0A       		.byte	0xa
+ 420 00e0 E803     		.2byte	0x3e8
+ 421 00e2 00       		.byte	0
+ 422 00e3 00       		.byte	0
+ 423 00e4 05       		.uleb128 0x5
+ 424 00e5 34000000 		.4byte	.LASF17
+ 425 00e9 01       		.byte	0x1
+ 426 00ea 17       		.byte	0x17
+ 427 00eb 68000000 		.4byte	0x68
+ 428 00ef 00000000 		.4byte	.LFB64
+ 429 00f3 16000000 		.4byte	.LFE64-.LFB64
+ 430 00f7 01       		.uleb128 0x1
+ 431 00f8 9C       		.byte	0x9c
+ 432 00f9 24010000 		.4byte	0x124
+ 433 00fd 06       		.uleb128 0x6
+ 434 00fe 0A000000 		.4byte	.LVL2
+ 435 0102 86020000 		.4byte	0x286
+ 436 0106 12010000 		.4byte	0x112
+ 437 010a 07       		.uleb128 0x7
+ 438 010b 01       		.uleb128 0x1
+ 439 010c 50       		.byte	0x50
+ 440 010d 03       		.uleb128 0x3
+ 441 010e 0A       		.byte	0xa
+ 442 010f 0A05     		.2byte	0x50a
+ 443 0111 00       		.byte	0
+ 444 0112 08       		.uleb128 0x8
+ 445 0113 12000000 		.4byte	.LVL3
+ 446 0117 91020000 		.4byte	0x291
+ 447 011b 07       		.uleb128 0x7
+ 448 011c 01       		.uleb128 0x1
+ 449 011d 50       		.byte	0x50
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 11
+
+
+ 450 011e 03       		.uleb128 0x3
+ 451 011f 0A       		.byte	0xa
+ 452 0120 E803     		.2byte	0x3e8
+ 453 0122 00       		.byte	0
+ 454 0123 00       		.byte	0
+ 455 0124 09       		.uleb128 0x9
+ 456 0125 A2010000 		.4byte	.LASF25
+ 457 0129 01       		.byte	0x1
+ 458 012a 20       		.byte	0x20
+ 459 012b 68000000 		.4byte	0x68
+ 460 012f 00000000 		.4byte	.LFB65
+ 461 0133 C0000000 		.4byte	.LFE65-.LFB65
+ 462 0137 01       		.uleb128 0x1
+ 463 0138 9C       		.byte	0x9c
+ 464 0139 28020000 		.4byte	0x228
+ 465 013d 0A       		.uleb128 0xa
+ 466 013e 21000000 		.4byte	.LASF26
+ 467 0142 01       		.byte	0x1
+ 468 0143 20       		.byte	0x20
+ 469 0144 68000000 		.4byte	0x68
+ 470 0148 00000000 		.4byte	.LLST0
+ 471 014c 0B       		.uleb128 0xb
+ 472 014d 6900     		.ascii	"i\000"
+ 473 014f 01       		.byte	0x1
+ 474 0150 22       		.byte	0x22
+ 475 0151 68000000 		.4byte	0x68
+ 476 0155 2E000000 		.4byte	.LLST1
+ 477 0159 06       		.uleb128 0x6
+ 478 015a 1A000000 		.4byte	.LVL8
+ 479 015e 9C020000 		.4byte	0x29c
+ 480 0162 6E010000 		.4byte	0x16e
+ 481 0166 07       		.uleb128 0x7
+ 482 0167 01       		.uleb128 0x1
+ 483 0168 50       		.byte	0x50
+ 484 0169 03       		.uleb128 0x3
+ 485 016a 0A       		.byte	0xa
+ 486 016b 7206     		.2byte	0x672
+ 487 016d 00       		.byte	0
+ 488 016e 06       		.uleb128 0x6
+ 489 016f 2E000000 		.4byte	.LVL12
+ 490 0173 9C020000 		.4byte	0x29c
+ 491 0177 83010000 		.4byte	0x183
+ 492 017b 07       		.uleb128 0x7
+ 493 017c 01       		.uleb128 0x1
+ 494 017d 50       		.byte	0x50
+ 495 017e 03       		.uleb128 0x3
+ 496 017f 0A       		.byte	0xa
+ 497 0180 C305     		.2byte	0x5c3
+ 498 0182 00       		.byte	0
+ 499 0183 06       		.uleb128 0x6
+ 500 0184 38000000 		.4byte	.LVL13
+ 501 0188 9C020000 		.4byte	0x29c
+ 502 018c 98010000 		.4byte	0x198
+ 503 0190 07       		.uleb128 0x7
+ 504 0191 01       		.uleb128 0x1
+ 505 0192 50       		.byte	0x50
+ 506 0193 03       		.uleb128 0x3
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 12
+
+
+ 507 0194 0A       		.byte	0xa
+ 508 0195 4006     		.2byte	0x640
+ 509 0197 00       		.byte	0
+ 510 0198 06       		.uleb128 0x6
+ 511 0199 4C000000 		.4byte	.LVL17
+ 512 019d 9C020000 		.4byte	0x29c
+ 513 01a1 AD010000 		.4byte	0x1ad
+ 514 01a5 07       		.uleb128 0x7
+ 515 01a6 01       		.uleb128 0x1
+ 516 01a7 50       		.byte	0x50
+ 517 01a8 03       		.uleb128 0x3
+ 518 01a9 0A       		.byte	0xa
+ 519 01aa C305     		.2byte	0x5c3
+ 520 01ac 00       		.byte	0
+ 521 01ad 06       		.uleb128 0x6
+ 522 01ae 56000000 		.4byte	.LVL18
+ 523 01b2 9C020000 		.4byte	0x29c
+ 524 01b6 C2010000 		.4byte	0x1c2
+ 525 01ba 07       		.uleb128 0x7
+ 526 01bb 01       		.uleb128 0x1
+ 527 01bc 50       		.byte	0x50
+ 528 01bd 03       		.uleb128 0x3
+ 529 01be 0A       		.byte	0xa
+ 530 01bf 4006     		.2byte	0x640
+ 531 01c1 00       		.byte	0
+ 532 01c2 06       		.uleb128 0x6
+ 533 01c3 6A000000 		.4byte	.LVL22
+ 534 01c7 9C020000 		.4byte	0x29c
+ 535 01cb D7010000 		.4byte	0x1d7
+ 536 01cf 07       		.uleb128 0x7
+ 537 01d0 01       		.uleb128 0x1
+ 538 01d1 50       		.byte	0x50
+ 539 01d2 03       		.uleb128 0x3
+ 540 01d3 0A       		.byte	0xa
+ 541 01d4 C305     		.2byte	0x5c3
+ 542 01d6 00       		.byte	0
+ 543 01d7 06       		.uleb128 0x6
+ 544 01d8 74000000 		.4byte	.LVL23
+ 545 01dc 9C020000 		.4byte	0x29c
+ 546 01e0 EC010000 		.4byte	0x1ec
+ 547 01e4 07       		.uleb128 0x7
+ 548 01e5 01       		.uleb128 0x1
+ 549 01e6 50       		.byte	0x50
+ 550 01e7 03       		.uleb128 0x3
+ 551 01e8 0A       		.byte	0xa
+ 552 01e9 4006     		.2byte	0x640
+ 553 01eb 00       		.byte	0
+ 554 01ec 06       		.uleb128 0x6
+ 555 01ed 88000000 		.4byte	.LVL27
+ 556 01f1 9C020000 		.4byte	0x29c
+ 557 01f5 01020000 		.4byte	0x201
+ 558 01f9 07       		.uleb128 0x7
+ 559 01fa 01       		.uleb128 0x1
+ 560 01fb 50       		.byte	0x50
+ 561 01fc 03       		.uleb128 0x3
+ 562 01fd 0A       		.byte	0xa
+ 563 01fe C305     		.2byte	0x5c3
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 13
+
+
+ 564 0200 00       		.byte	0
+ 565 0201 06       		.uleb128 0x6
+ 566 0202 92000000 		.4byte	.LVL28
+ 567 0206 9C020000 		.4byte	0x29c
+ 568 020a 16020000 		.4byte	0x216
+ 569 020e 07       		.uleb128 0x7
+ 570 020f 01       		.uleb128 0x1
+ 571 0210 50       		.byte	0x50
+ 572 0211 03       		.uleb128 0x3
+ 573 0212 0A       		.byte	0xa
+ 574 0213 4006     		.2byte	0x640
+ 575 0215 00       		.byte	0
+ 576 0216 08       		.uleb128 0x8
+ 577 0217 A6000000 		.4byte	.LVL32
+ 578 021b 9C020000 		.4byte	0x29c
+ 579 021f 07       		.uleb128 0x7
+ 580 0220 01       		.uleb128 0x1
+ 581 0221 50       		.byte	0x50
+ 582 0222 03       		.uleb128 0x3
+ 583 0223 0A       		.byte	0xa
+ 584 0224 C305     		.2byte	0x5c3
+ 585 0226 00       		.byte	0
+ 586 0227 00       		.byte	0
+ 587 0228 05       		.uleb128 0x5
+ 588 0229 C0010000 		.4byte	.LASF18
+ 589 022d 01       		.byte	0x1
+ 590 022e 5E       		.byte	0x5e
+ 591 022f 68000000 		.4byte	0x68
+ 592 0233 00000000 		.4byte	.LFB66
+ 593 0237 28000000 		.4byte	.LFE66-.LFB66
+ 594 023b 01       		.uleb128 0x1
+ 595 023c 9C       		.byte	0x9c
+ 596 023d 75020000 		.4byte	0x275
+ 597 0241 0B       		.uleb128 0xb
+ 598 0242 6900     		.ascii	"i\000"
+ 599 0244 01       		.byte	0x1
+ 600 0245 60       		.byte	0x60
+ 601 0246 68000000 		.4byte	0x68
+ 602 024a C0000000 		.4byte	.LLST2
+ 603 024e 06       		.uleb128 0x6
+ 604 024f 0E000000 		.4byte	.LVL35
+ 605 0253 9C020000 		.4byte	0x29c
+ 606 0257 63020000 		.4byte	0x263
+ 607 025b 07       		.uleb128 0x7
+ 608 025c 01       		.uleb128 0x1
+ 609 025d 50       		.byte	0x50
+ 610 025e 03       		.uleb128 0x3
+ 611 025f 0A       		.byte	0xa
+ 612 0260 4605     		.2byte	0x546
+ 613 0262 00       		.byte	0
+ 614 0263 08       		.uleb128 0x8
+ 615 0264 1E000000 		.4byte	.LVL37
+ 616 0268 9C020000 		.4byte	0x29c
+ 617 026c 07       		.uleb128 0x7
+ 618 026d 01       		.uleb128 0x1
+ 619 026e 50       		.byte	0x50
+ 620 026f 03       		.uleb128 0x3
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 14
+
+
+ 621 0270 0A       		.byte	0xa
+ 622 0271 C305     		.2byte	0x5c3
+ 623 0273 00       		.byte	0
+ 624 0274 00       		.byte	0
+ 625 0275 0C       		.uleb128 0xc
+ 626 0276 63010000 		.4byte	.LASF27
+ 627 027a 07       		.byte	0x7
+ 628 027b 1207     		.2byte	0x712
+ 629 027d 81020000 		.4byte	0x281
+ 630 0281 0D       		.uleb128 0xd
+ 631 0282 76000000 		.4byte	0x76
+ 632 0286 0E       		.uleb128 0xe
+ 633 0287 17010000 		.4byte	.LASF19
+ 634 028b 17010000 		.4byte	.LASF19
+ 635 028f 04       		.byte	0x4
+ 636 0290 C3       		.byte	0xc3
+ 637 0291 0E       		.uleb128 0xe
+ 638 0292 CD000000 		.4byte	.LASF20
+ 639 0296 CD000000 		.4byte	.LASF20
+ 640 029a 05       		.byte	0x5
+ 641 029b 76       		.byte	0x76
+ 642 029c 0E       		.uleb128 0xe
+ 643 029d AA010000 		.4byte	.LASF21
+ 644 02a1 AA010000 		.4byte	.LASF21
+ 645 02a5 06       		.byte	0x6
+ 646 02a6 C3       		.byte	0xc3
+ 647 02a7 00       		.byte	0
+ 648              		.section	.debug_abbrev,"",%progbits
+ 649              	.Ldebug_abbrev0:
+ 650 0000 01       		.uleb128 0x1
+ 651 0001 11       		.uleb128 0x11
+ 652 0002 01       		.byte	0x1
+ 653 0003 25       		.uleb128 0x25
+ 654 0004 0E       		.uleb128 0xe
+ 655 0005 13       		.uleb128 0x13
+ 656 0006 0B       		.uleb128 0xb
+ 657 0007 03       		.uleb128 0x3
+ 658 0008 0E       		.uleb128 0xe
+ 659 0009 1B       		.uleb128 0x1b
+ 660 000a 0E       		.uleb128 0xe
+ 661 000b 55       		.uleb128 0x55
+ 662 000c 17       		.uleb128 0x17
+ 663 000d 11       		.uleb128 0x11
+ 664 000e 01       		.uleb128 0x1
+ 665 000f 10       		.uleb128 0x10
+ 666 0010 17       		.uleb128 0x17
+ 667 0011 00       		.byte	0
+ 668 0012 00       		.byte	0
+ 669 0013 02       		.uleb128 0x2
+ 670 0014 24       		.uleb128 0x24
+ 671 0015 00       		.byte	0
+ 672 0016 0B       		.uleb128 0xb
+ 673 0017 0B       		.uleb128 0xb
+ 674 0018 3E       		.uleb128 0x3e
+ 675 0019 0B       		.uleb128 0xb
+ 676 001a 03       		.uleb128 0x3
+ 677 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 15
+
+
+ 678 001c 00       		.byte	0
+ 679 001d 00       		.byte	0
+ 680 001e 03       		.uleb128 0x3
+ 681 001f 16       		.uleb128 0x16
+ 682 0020 00       		.byte	0
+ 683 0021 03       		.uleb128 0x3
+ 684 0022 0E       		.uleb128 0xe
+ 685 0023 3A       		.uleb128 0x3a
+ 686 0024 0B       		.uleb128 0xb
+ 687 0025 3B       		.uleb128 0x3b
+ 688 0026 0B       		.uleb128 0xb
+ 689 0027 49       		.uleb128 0x49
+ 690 0028 13       		.uleb128 0x13
+ 691 0029 00       		.byte	0
+ 692 002a 00       		.byte	0
+ 693 002b 04       		.uleb128 0x4
+ 694 002c 24       		.uleb128 0x24
+ 695 002d 00       		.byte	0
+ 696 002e 0B       		.uleb128 0xb
+ 697 002f 0B       		.uleb128 0xb
+ 698 0030 3E       		.uleb128 0x3e
+ 699 0031 0B       		.uleb128 0xb
+ 700 0032 03       		.uleb128 0x3
+ 701 0033 08       		.uleb128 0x8
+ 702 0034 00       		.byte	0
+ 703 0035 00       		.byte	0
+ 704 0036 05       		.uleb128 0x5
+ 705 0037 2E       		.uleb128 0x2e
+ 706 0038 01       		.byte	0x1
+ 707 0039 3F       		.uleb128 0x3f
+ 708 003a 19       		.uleb128 0x19
+ 709 003b 03       		.uleb128 0x3
+ 710 003c 0E       		.uleb128 0xe
+ 711 003d 3A       		.uleb128 0x3a
+ 712 003e 0B       		.uleb128 0xb
+ 713 003f 3B       		.uleb128 0x3b
+ 714 0040 0B       		.uleb128 0xb
+ 715 0041 49       		.uleb128 0x49
+ 716 0042 13       		.uleb128 0x13
+ 717 0043 11       		.uleb128 0x11
+ 718 0044 01       		.uleb128 0x1
+ 719 0045 12       		.uleb128 0x12
+ 720 0046 06       		.uleb128 0x6
+ 721 0047 40       		.uleb128 0x40
+ 722 0048 18       		.uleb128 0x18
+ 723 0049 9742     		.uleb128 0x2117
+ 724 004b 19       		.uleb128 0x19
+ 725 004c 01       		.uleb128 0x1
+ 726 004d 13       		.uleb128 0x13
+ 727 004e 00       		.byte	0
+ 728 004f 00       		.byte	0
+ 729 0050 06       		.uleb128 0x6
+ 730 0051 898201   		.uleb128 0x4109
+ 731 0054 01       		.byte	0x1
+ 732 0055 11       		.uleb128 0x11
+ 733 0056 01       		.uleb128 0x1
+ 734 0057 31       		.uleb128 0x31
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 16
+
+
+ 735 0058 13       		.uleb128 0x13
+ 736 0059 01       		.uleb128 0x1
+ 737 005a 13       		.uleb128 0x13
+ 738 005b 00       		.byte	0
+ 739 005c 00       		.byte	0
+ 740 005d 07       		.uleb128 0x7
+ 741 005e 8A8201   		.uleb128 0x410a
+ 742 0061 00       		.byte	0
+ 743 0062 02       		.uleb128 0x2
+ 744 0063 18       		.uleb128 0x18
+ 745 0064 9142     		.uleb128 0x2111
+ 746 0066 18       		.uleb128 0x18
+ 747 0067 00       		.byte	0
+ 748 0068 00       		.byte	0
+ 749 0069 08       		.uleb128 0x8
+ 750 006a 898201   		.uleb128 0x4109
+ 751 006d 01       		.byte	0x1
+ 752 006e 11       		.uleb128 0x11
+ 753 006f 01       		.uleb128 0x1
+ 754 0070 31       		.uleb128 0x31
+ 755 0071 13       		.uleb128 0x13
+ 756 0072 00       		.byte	0
+ 757 0073 00       		.byte	0
+ 758 0074 09       		.uleb128 0x9
+ 759 0075 2E       		.uleb128 0x2e
+ 760 0076 01       		.byte	0x1
+ 761 0077 3F       		.uleb128 0x3f
+ 762 0078 19       		.uleb128 0x19
+ 763 0079 03       		.uleb128 0x3
+ 764 007a 0E       		.uleb128 0xe
+ 765 007b 3A       		.uleb128 0x3a
+ 766 007c 0B       		.uleb128 0xb
+ 767 007d 3B       		.uleb128 0x3b
+ 768 007e 0B       		.uleb128 0xb
+ 769 007f 27       		.uleb128 0x27
+ 770 0080 19       		.uleb128 0x19
+ 771 0081 49       		.uleb128 0x49
+ 772 0082 13       		.uleb128 0x13
+ 773 0083 11       		.uleb128 0x11
+ 774 0084 01       		.uleb128 0x1
+ 775 0085 12       		.uleb128 0x12
+ 776 0086 06       		.uleb128 0x6
+ 777 0087 40       		.uleb128 0x40
+ 778 0088 18       		.uleb128 0x18
+ 779 0089 9742     		.uleb128 0x2117
+ 780 008b 19       		.uleb128 0x19
+ 781 008c 01       		.uleb128 0x1
+ 782 008d 13       		.uleb128 0x13
+ 783 008e 00       		.byte	0
+ 784 008f 00       		.byte	0
+ 785 0090 0A       		.uleb128 0xa
+ 786 0091 05       		.uleb128 0x5
+ 787 0092 00       		.byte	0
+ 788 0093 03       		.uleb128 0x3
+ 789 0094 0E       		.uleb128 0xe
+ 790 0095 3A       		.uleb128 0x3a
+ 791 0096 0B       		.uleb128 0xb
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 17
+
+
+ 792 0097 3B       		.uleb128 0x3b
+ 793 0098 0B       		.uleb128 0xb
+ 794 0099 49       		.uleb128 0x49
+ 795 009a 13       		.uleb128 0x13
+ 796 009b 02       		.uleb128 0x2
+ 797 009c 17       		.uleb128 0x17
+ 798 009d 00       		.byte	0
+ 799 009e 00       		.byte	0
+ 800 009f 0B       		.uleb128 0xb
+ 801 00a0 34       		.uleb128 0x34
+ 802 00a1 00       		.byte	0
+ 803 00a2 03       		.uleb128 0x3
+ 804 00a3 08       		.uleb128 0x8
+ 805 00a4 3A       		.uleb128 0x3a
+ 806 00a5 0B       		.uleb128 0xb
+ 807 00a6 3B       		.uleb128 0x3b
+ 808 00a7 0B       		.uleb128 0xb
+ 809 00a8 49       		.uleb128 0x49
+ 810 00a9 13       		.uleb128 0x13
+ 811 00aa 02       		.uleb128 0x2
+ 812 00ab 17       		.uleb128 0x17
+ 813 00ac 00       		.byte	0
+ 814 00ad 00       		.byte	0
+ 815 00ae 0C       		.uleb128 0xc
+ 816 00af 34       		.uleb128 0x34
+ 817 00b0 00       		.byte	0
+ 818 00b1 03       		.uleb128 0x3
+ 819 00b2 0E       		.uleb128 0xe
+ 820 00b3 3A       		.uleb128 0x3a
+ 821 00b4 0B       		.uleb128 0xb
+ 822 00b5 3B       		.uleb128 0x3b
+ 823 00b6 05       		.uleb128 0x5
+ 824 00b7 49       		.uleb128 0x49
+ 825 00b8 13       		.uleb128 0x13
+ 826 00b9 3F       		.uleb128 0x3f
+ 827 00ba 19       		.uleb128 0x19
+ 828 00bb 3C       		.uleb128 0x3c
+ 829 00bc 19       		.uleb128 0x19
+ 830 00bd 00       		.byte	0
+ 831 00be 00       		.byte	0
+ 832 00bf 0D       		.uleb128 0xd
+ 833 00c0 35       		.uleb128 0x35
+ 834 00c1 00       		.byte	0
+ 835 00c2 49       		.uleb128 0x49
+ 836 00c3 13       		.uleb128 0x13
+ 837 00c4 00       		.byte	0
+ 838 00c5 00       		.byte	0
+ 839 00c6 0E       		.uleb128 0xe
+ 840 00c7 2E       		.uleb128 0x2e
+ 841 00c8 00       		.byte	0
+ 842 00c9 3F       		.uleb128 0x3f
+ 843 00ca 19       		.uleb128 0x19
+ 844 00cb 3C       		.uleb128 0x3c
+ 845 00cc 19       		.uleb128 0x19
+ 846 00cd 6E       		.uleb128 0x6e
+ 847 00ce 0E       		.uleb128 0xe
+ 848 00cf 03       		.uleb128 0x3
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 18
+
+
+ 849 00d0 0E       		.uleb128 0xe
+ 850 00d1 3A       		.uleb128 0x3a
+ 851 00d2 0B       		.uleb128 0xb
+ 852 00d3 3B       		.uleb128 0x3b
+ 853 00d4 0B       		.uleb128 0xb
+ 854 00d5 00       		.byte	0
+ 855 00d6 00       		.byte	0
+ 856 00d7 00       		.byte	0
+ 857              		.section	.debug_loc,"",%progbits
+ 858              	.Ldebug_loc0:
+ 859              	.LLST0:
+ 860 0000 00000000 		.4byte	.LVL4
+ 861 0004 04000000 		.4byte	.LVL6
+ 862 0008 0100     		.2byte	0x1
+ 863 000a 50       		.byte	0x50
+ 864 000b 04000000 		.4byte	.LVL6
+ 865 000f 11000000 		.4byte	.LVL7
+ 866 0013 0300     		.2byte	0x3
+ 867 0015 70       		.byte	0x70
+ 868 0016 01       		.sleb128 1
+ 869 0017 9F       		.byte	0x9f
+ 870 0018 11000000 		.4byte	.LVL7
+ 871 001c C0000000 		.4byte	.LFE65
+ 872 0020 0400     		.2byte	0x4
+ 873 0022 F3       		.byte	0xf3
+ 874 0023 01       		.uleb128 0x1
+ 875 0024 50       		.byte	0x50
+ 876 0025 9F       		.byte	0x9f
+ 877 0026 00000000 		.4byte	0
+ 878 002a 00000000 		.4byte	0
+ 879              	.LLST1:
+ 880 002e 02000000 		.4byte	.LVL5
+ 881 0032 11000000 		.4byte	.LVL7
+ 882 0036 0200     		.2byte	0x2
+ 883 0038 30       		.byte	0x30
+ 884 0039 9F       		.byte	0x9f
+ 885 003a 11000000 		.4byte	.LVL7
+ 886 003e 1E000000 		.4byte	.LVL10
+ 887 0042 0100     		.2byte	0x1
+ 888 0044 54       		.byte	0x54
+ 889 0045 1E000000 		.4byte	.LVL10
+ 890 0049 20000000 		.4byte	.LVL11
+ 891 004d 0200     		.2byte	0x2
+ 892 004f 30       		.byte	0x30
+ 893 0050 9F       		.byte	0x9f
+ 894 0051 20000000 		.4byte	.LVL11
+ 895 0055 3C000000 		.4byte	.LVL15
+ 896 0059 0100     		.2byte	0x1
+ 897 005b 54       		.byte	0x54
+ 898 005c 3C000000 		.4byte	.LVL15
+ 899 0060 3E000000 		.4byte	.LVL16
+ 900 0064 0200     		.2byte	0x2
+ 901 0066 30       		.byte	0x30
+ 902 0067 9F       		.byte	0x9f
+ 903 0068 3E000000 		.4byte	.LVL16
+ 904 006c 5A000000 		.4byte	.LVL20
+ 905 0070 0100     		.2byte	0x1
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 19
+
+
+ 906 0072 54       		.byte	0x54
+ 907 0073 5A000000 		.4byte	.LVL20
+ 908 0077 5C000000 		.4byte	.LVL21
+ 909 007b 0200     		.2byte	0x2
+ 910 007d 30       		.byte	0x30
+ 911 007e 9F       		.byte	0x9f
+ 912 007f 5C000000 		.4byte	.LVL21
+ 913 0083 78000000 		.4byte	.LVL25
+ 914 0087 0100     		.2byte	0x1
+ 915 0089 54       		.byte	0x54
+ 916 008a 78000000 		.4byte	.LVL25
+ 917 008e 7A000000 		.4byte	.LVL26
+ 918 0092 0200     		.2byte	0x2
+ 919 0094 30       		.byte	0x30
+ 920 0095 9F       		.byte	0x9f
+ 921 0096 7A000000 		.4byte	.LVL26
+ 922 009a 96000000 		.4byte	.LVL30
+ 923 009e 0100     		.2byte	0x1
+ 924 00a0 54       		.byte	0x54
+ 925 00a1 96000000 		.4byte	.LVL30
+ 926 00a5 98000000 		.4byte	.LVL31
+ 927 00a9 0200     		.2byte	0x2
+ 928 00ab 30       		.byte	0x30
+ 929 00ac 9F       		.byte	0x9f
+ 930 00ad 98000000 		.4byte	.LVL31
+ 931 00b1 A6000000 		.4byte	.LVL32
+ 932 00b5 0100     		.2byte	0x1
+ 933 00b7 54       		.byte	0x54
+ 934 00b8 00000000 		.4byte	0
+ 935 00bc 00000000 		.4byte	0
+ 936              	.LLST2:
+ 937 00c0 02000000 		.4byte	.LVL33
+ 938 00c4 06000000 		.4byte	.LVL34
+ 939 00c8 0200     		.2byte	0x2
+ 940 00ca 30       		.byte	0x30
+ 941 00cb 9F       		.byte	0x9f
+ 942 00cc 06000000 		.4byte	.LVL34
+ 943 00d0 22000000 		.4byte	.LVL38
+ 944 00d4 0100     		.2byte	0x1
+ 945 00d6 54       		.byte	0x54
+ 946 00d7 00000000 		.4byte	0
+ 947 00db 00000000 		.4byte	0
+ 948              		.section	.debug_aranges,"",%progbits
+ 949 0000 34000000 		.4byte	0x34
+ 950 0004 0200     		.2byte	0x2
+ 951 0006 00000000 		.4byte	.Ldebug_info0
+ 952 000a 04       		.byte	0x4
+ 953 000b 00       		.byte	0
+ 954 000c 0000     		.2byte	0
+ 955 000e 0000     		.2byte	0
+ 956 0010 00000000 		.4byte	.LFB63
+ 957 0014 16000000 		.4byte	.LFE63-.LFB63
+ 958 0018 00000000 		.4byte	.LFB64
+ 959 001c 16000000 		.4byte	.LFE64-.LFB64
+ 960 0020 00000000 		.4byte	.LFB65
+ 961 0024 C0000000 		.4byte	.LFE65-.LFB65
+ 962 0028 00000000 		.4byte	.LFB66
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 20
+
+
+ 963 002c 28000000 		.4byte	.LFE66-.LFB66
+ 964 0030 00000000 		.4byte	0
+ 965 0034 00000000 		.4byte	0
+ 966              		.section	.debug_ranges,"",%progbits
+ 967              	.Ldebug_ranges0:
+ 968 0000 00000000 		.4byte	.LFB63
+ 969 0004 16000000 		.4byte	.LFE63
+ 970 0008 00000000 		.4byte	.LFB64
+ 971 000c 16000000 		.4byte	.LFE64
+ 972 0010 00000000 		.4byte	.LFB65
+ 973 0014 C0000000 		.4byte	.LFE65
+ 974 0018 00000000 		.4byte	.LFB66
+ 975 001c 28000000 		.4byte	.LFE66
+ 976 0020 00000000 		.4byte	0
+ 977 0024 00000000 		.4byte	0
+ 978              		.section	.debug_line,"",%progbits
+ 979              	.Ldebug_line0:
+ 980 0000 38020000 		.section	.debug_str,"MS",%progbits,1
+ 980      02007001 
+ 980      00000201 
+ 980      FB0E0D00 
+ 980      01010101 
+ 981              	.LASF6:
+ 982 0000 6C6F6E67 		.ascii	"long long int\000"
+ 982      206C6F6E 
+ 982      6720696E 
+ 982      7400
+ 983              	.LASF3:
+ 984 000e 73686F72 		.ascii	"short unsigned int\000"
+ 984      7420756E 
+ 984      7369676E 
+ 984      65642069 
+ 984      6E7400
+ 985              	.LASF26:
+ 986 0021 7075636B 		.ascii	"pucks\000"
+ 986      7300
+ 987              	.LASF8:
+ 988 0027 756E7369 		.ascii	"unsigned int\000"
+ 988      676E6564 
+ 988      20696E74 
+ 988      00
+ 989              	.LASF17:
+ 990 0034 47726970 		.ascii	"Grip_Close\000"
+ 990      5F436C6F 
+ 990      736500
+ 991              	.LASF22:
+ 992 003f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 992      43313120 
+ 992      352E342E 
+ 992      31203230 
+ 992      31363036 
+ 993 0072 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 993      20726576 
+ 993      6973696F 
+ 993      6E203233 
+ 993      37373135 
+ 994 00a5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 21
+
+
+ 994      66756E63 
+ 994      74696F6E 
+ 994      2D736563 
+ 994      74696F6E 
+ 995              	.LASF20:
+ 996 00cd 43794465 		.ascii	"CyDelay\000"
+ 996      6C617900 
+ 997              	.LASF10:
+ 998 00d5 696E7433 		.ascii	"int32_t\000"
+ 998      325F7400 
+ 999              	.LASF5:
+ 1000 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1000      20756E73 
+ 1000      69676E65 
+ 1000      6420696E 
+ 1000      7400
+ 1001              	.LASF7:
+ 1002 00ef 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1002      206C6F6E 
+ 1002      6720756E 
+ 1002      7369676E 
+ 1002      65642069 
+ 1003              	.LASF23:
+ 1004 0106 73657276 		.ascii	"servos_stepper.c\000"
+ 1004      6F735F73 
+ 1004      74657070 
+ 1004      65722E63 
+ 1004      00
+ 1005              	.LASF19:
+ 1006 0117 50574D5F 		.ascii	"PWM_Grip_WriteCompare\000"
+ 1006      47726970 
+ 1006      5F577269 
+ 1006      7465436F 
+ 1006      6D706172 
+ 1007              	.LASF1:
+ 1008 012d 756E7369 		.ascii	"unsigned char\000"
+ 1008      676E6564 
+ 1008      20636861 
+ 1008      7200
+ 1009              	.LASF16:
+ 1010 013b 47726970 		.ascii	"Grip_Open\000"
+ 1010      5F4F7065 
+ 1010      6E00
+ 1011              	.LASF13:
+ 1012 0145 63686172 		.ascii	"char\000"
+ 1012      00
+ 1013              	.LASF4:
+ 1014 014a 6C6F6E67 		.ascii	"long int\000"
+ 1014      20696E74 
+ 1014      00
+ 1015              	.LASF12:
+ 1016 0153 646F7562 		.ascii	"double\000"
+ 1016      6C6500
+ 1017              	.LASF15:
+ 1018 015a 73697A65 		.ascii	"sizetype\000"
+ 1018      74797065 
+ 1018      00
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccyDs7qg.s 			page 22
+
+
+ 1019              	.LASF27:
+ 1020 0163 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1020      52784275 
+ 1020      66666572 
+ 1020      00
+ 1021              	.LASF0:
+ 1022 0170 7369676E 		.ascii	"signed char\000"
+ 1022      65642063 
+ 1022      68617200 
+ 1023              	.LASF14:
+ 1024 017c 6C6F6E67 		.ascii	"long double\000"
+ 1024      20646F75 
+ 1024      626C6500 
+ 1025              	.LASF9:
+ 1026 0188 5F5F696E 		.ascii	"__int32_t\000"
+ 1026      7433325F 
+ 1026      7400
+ 1027              	.LASF11:
+ 1028 0192 666C6F61 		.ascii	"float\000"
+ 1028      7400
+ 1029              	.LASF2:
+ 1030 0198 73686F72 		.ascii	"short int\000"
+ 1030      7420696E 
+ 1030      7400
+ 1031              	.LASF25:
+ 1032 01a2 4C696674 		.ascii	"Lift_Up\000"
+ 1032      5F557000 
+ 1033              	.LASF21:
+ 1034 01aa 50574D5F 		.ascii	"PWM_Lift_WriteCompare\000"
+ 1034      4C696674 
+ 1034      5F577269 
+ 1034      7465436F 
+ 1034      6D706172 
+ 1035              	.LASF18:
+ 1036 01c0 4C696674 		.ascii	"Lift_Down\000"
+ 1036      5F446F77 
+ 1036      6E00
+ 1037              	.LASF24:
+ 1038 01ca 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
+ 1038      73657273 
+ 1038      5C646161 
+ 1038      6E695C44 
+ 1038      6F63756D 
+ 1039 01f7 20436F64 		.ascii	" Code.cydsn\000"
+ 1039      652E6379 
+ 1039      64736E00 
+ 1040              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

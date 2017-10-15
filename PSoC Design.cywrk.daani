@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Design\Final Code\Source Files\wheels.c">
 <ExpandedNodeIds>
 <v>PSoC Design</v>
 <v>PSoC Design\Final Code</v>
@@ -29,9 +29,18 @@
 <v>PSoC Design\Final Code\Final Code.cydwr\Flash Security</v>
 <v>PSoC Design\Final Code\Final Code.cydwr\EEPROM</v>
 <v>PSoC Design\Final Code\Header Files</v>
+<v>PSoC Design\Final Code\Header Files\colour.h</v>
 <v>PSoC Design\Final Code\Header Files\cyapicallbacks.h</v>
+<v>PSoC Design\Final Code\Header Files\servos_stepper.h</v>
+<v>PSoC Design\Final Code\Header Files\ultrasonics.h</v>
+<v>PSoC Design\Final Code\Header Files\wheels.h</v>
 <v>PSoC Design\Final Code\Source Files</v>
+<v>PSoC Design\Final Code\Source Files\colour.c</v>
 <v>PSoC Design\Final Code\Source Files\main.c</v>
+<v>PSoC Design\Final Code\Source Files\servos_stepper.c</v>
+<v>PSoC Design\Final Code\Source Files\ultrasonics.c</v>
+<v>PSoC Design\Final Code\Source Files\wheels.c</v>
+<v>PSoC Design\Final Code\Generated_Source</v>
 <v>PSoC Design\Final Code\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -49,10 +58,43 @@
 <v>PSoC Design\Final Code\Final Code.cydwr\Flash Security</v>
 <v>PSoC Design\Final Code\Final Code.cydwr\EEPROM</v>
 <v>PSoC Design\Final Code\Header Files</v>
+<v>PSoC Design\Final Code\Header Files\colour.h</v>
 <v>PSoC Design\Final Code\Header Files\cyapicallbacks.h</v>
+<v>PSoC Design\Final Code\Header Files\servos_stepper.h</v>
+<v>PSoC Design\Final Code\Header Files\ultrasonics.h</v>
+<v>PSoC Design\Final Code\Header Files\wheels.h</v>
 <v>PSoC Design\Final Code\Source Files</v>
+<v>PSoC Design\Final Code\Source Files\colour.c</v>
 <v>PSoC Design\Final Code\Source Files\main.c</v>
+<v>PSoC Design\Final Code\Source Files\servos_stepper.c</v>
+<v>PSoC Design\Final Code\Source Files\ultrasonics.c</v>
+<v>PSoC Design\Final Code\Source Files\wheels.c</v>
 <v>PSoC Design\Final Code\Generated_Source</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\ADC</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\ADC_Ext_CP_Clk</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\ADC_IRQ</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\ADC_theACLK</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Buzzer</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Clock_1</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Clock_PWM</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Clock_ultrasonic</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\cy_boot</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_F</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_L</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Echo_R</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Flag</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Grip_Servo</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\IDAC8</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_F</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_L</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\isr_R</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\LED</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Blue</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Green</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\LED_Red</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Left_bumper</v>
+<v>PSoC Design\Final Code\Generated_Source\PSoC5\Lift_Servo</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -88,6 +130,7 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_ultrasonic.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\colour.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -97,16 +140,14 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F2.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Flag.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Grip_Servo.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F2.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
@@ -151,18 +192,16 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadDec_Right_PM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Reset.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Right_bumper.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\servos_stepper.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F1_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F2.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F2_PM.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_F_PM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_L_PM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_ULTRASONIC_R_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_F2.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_F.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
@@ -170,6 +209,8 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\ultrasonics.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\wheels.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Final Code.elf</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Final Code.hex</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Final Code.map</v>
@@ -195,6 +236,7 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_ultrasonic.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\colour.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -204,16 +246,14 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F2.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_F.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Flag.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\Grip_Servo.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_PM.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F1.lst</v>
-<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F2.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_F.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_L.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_R.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
@@ -229,6 +269,7 @@
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Backward.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Direction.lst</v>
 <v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Direction_PM.lst</v>
+<v>PSoC Design\Final Code\CortexM3\ARM_GCC_541\Debug\Listing Files\M2_Forward.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -305,9 +346,12 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Final Code.cydsn\Final Code.cydwr" />
 <name v=".\Final Code.cydsn\main.c" />
-<name v=".\Final Code.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Final Code.cydsn\wheels.c" />
+<name v=".\Final Code.cydsn\ultrasonics.c" />
+<name v=".\Final Code.cydsn\ultrasonics.h" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\M2_Direction.c" />
+<name v=".\Final Code.cydsn\Generated_Source\PSoC5\UART.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -315,7 +359,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="576, 774" SelectedTabbedMdiWindow="addaed2a-5b6a-4cb9-89e3-774e2361d2d6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="661c2d18-0a01-4ef0-b2ad-2515b0742638" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Final Code.cydwr" Guid="dfb4a458-ab90-44de-b5dd-b61fa18f956f" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\main.c" Guid="addaed2a-5b6a-4cb9-89e3-774e2361d2d6" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\TopDesign\TopDesign.cysch" Guid="c56d6952-e0d8-42c9-8fd4-3a3e84b97a6d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="624, 774" SelectedTabbedMdiWindow="addaed2a-5b6a-4cb9-89e3-774e2361d2d6"><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\main.c" Guid="addaed2a-5b6a-4cb9-89e3-774e2361d2d6" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\wheels.c" Guid="7283dd52-9d3a-4637-8356-27c427e1fed9" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\ultrasonics.c" Guid="bbdffb8b-d305-4f5a-9f67-37950140e958" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\ultrasonics.h" Guid="4abe0f22-367c-4ac4-96fb-66bf8f2810a6" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\M2_Direction.c" Guid="f0e02eb3-49e6-4b22-b61b-79cd51224001" /><DocumentWindow Key="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Generated_Source\PSoC5\UART.c" Guid="566da2c0-d4d0-4dd4-9e4c-1b68656206cb" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="661c2d18-0a01-4ef0-b2ad-2515b0742638" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

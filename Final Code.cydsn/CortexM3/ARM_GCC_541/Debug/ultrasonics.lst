@@ -1,0 +1,1480 @@
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ultrasonics.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_dsub
+  21              		.global	__aeabi_ddiv
+  22              		.global	__aeabi_d2f
+  23              		.section	.text.TimerF_ISR_Handler,"ax",%progbits
+  24              		.align	2
+  25              		.global	TimerF_ISR_Handler
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	TimerF_ISR_Handler, %function
+  29              	TimerF_ISR_Handler:
+  30              	.LFB63:
+  31              		.file 1 "ultrasonics.c"
+   1:ultrasonics.c **** /* ========================================
+   2:ultrasonics.c ****  *
+   3:ultrasonics.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:ultrasonics.c ****  * All Rights Reserved
+   5:ultrasonics.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:ultrasonics.c ****  *
+   7:ultrasonics.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:ultrasonics.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:ultrasonics.c ****  *
+  10:ultrasonics.c ****  * ========================================
+  11:ultrasonics.c **** */
+  12:ultrasonics.c **** #include <project.h>
+  13:ultrasonics.c **** 
+  14:ultrasonics.c **** 
+  15:ultrasonics.c **** float FCoord = 0;
+  16:ultrasonics.c **** float LeftCoord = 0;
+  17:ultrasonics.c **** float RightCoord = 0;
+  18:ultrasonics.c **** 
+  19:ultrasonics.c **** CY_ISR(TimerF_ISR_Handler) {
+  32              		.loc 1 19 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36 0000 08B5     		push	{r3, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 2
+
+
+  39              		.cfi_offset 14, -4
+  20:ultrasonics.c ****   Timer_ULTRASONIC_F_ReadStatusRegister();
+  40              		.loc 1 20 0
+  41 0002 FFF7FEFF 		bl	Timer_ULTRASONIC_F_ReadStatusRegister
+  42              	.LVL0:
+  21:ultrasonics.c ****    uint16  TimerCount = Timer_ULTRASONIC_F_ReadCounter();
+  43              		.loc 1 21 0
+  44 0006 FFF7FEFF 		bl	Timer_ULTRASONIC_F_ReadCounter
+  45              	.LVL1:
+  22:ultrasonics.c ****   FCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
+  46              		.loc 1 22 0
+  47 000a FFF7FEFF 		bl	__aeabi_i2d
+  48              	.LVL2:
+  49 000e 0246     		mov	r2, r0
+  50 0010 0B46     		mov	r3, r1
+  51 0012 07A1     		adr	r1, .L3
+  52 0014 D1E90001 		ldrd	r0, [r1]
+  53 0018 FFF7FEFF 		bl	__aeabi_dsub
+  54              	.LVL3:
+  55 001c 0022     		movs	r2, #0
+  56 001e 064B     		ldr	r3, .L3+8
+  57 0020 FFF7FEFF 		bl	__aeabi_ddiv
+  58              	.LVL4:
+  59 0024 FFF7FEFF 		bl	__aeabi_d2f
+  60              	.LVL5:
+  61 0028 044B     		ldr	r3, .L3+12
+  62 002a 1860     		str	r0, [r3]	@ float
+  63 002c 08BD     		pop	{r3, pc}
+  64              	.L4:
+  65 002e 00BF     		.align	3
+  66              	.L3:
+  67 0030 00000000 		.word	0
+  68 0034 E0FFEF40 		.word	1089470432
+  69 0038 00004D40 		.word	1078788096
+  70 003c 00000000 		.word	.LANCHOR0
+  71              		.cfi_endproc
+  72              	.LFE63:
+  73              		.size	TimerF_ISR_Handler, .-TimerF_ISR_Handler
+  74              		.section	.text.TimerL_ISR_Handler,"ax",%progbits
+  75              		.align	2
+  76              		.global	TimerL_ISR_Handler
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	TimerL_ISR_Handler, %function
+  80              	TimerL_ISR_Handler:
+  81              	.LFB64:
+  23:ultrasonics.c **** }
+  24:ultrasonics.c **** 
+  25:ultrasonics.c **** CY_ISR(TimerL_ISR_Handler) {
+  82              		.loc 1 25 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 08B5     		push	{r3, lr}
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 3, -8
+  89              		.cfi_offset 14, -4
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 3
+
+
+  26:ultrasonics.c ****   Timer_ULTRASONIC_L_ReadStatusRegister();
+  90              		.loc 1 26 0
+  91 0002 FFF7FEFF 		bl	Timer_ULTRASONIC_L_ReadStatusRegister
+  92              	.LVL6:
+  27:ultrasonics.c ****   uint16  TimerCount = Timer_ULTRASONIC_L_ReadCounter();
+  93              		.loc 1 27 0
+  94 0006 FFF7FEFF 		bl	Timer_ULTRASONIC_L_ReadCounter
+  95              	.LVL7:
+  28:ultrasonics.c ****   LeftCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
+  96              		.loc 1 28 0
+  97 000a FFF7FEFF 		bl	__aeabi_i2d
+  98              	.LVL8:
+  99 000e 0246     		mov	r2, r0
+ 100 0010 0B46     		mov	r3, r1
+ 101 0012 07A1     		adr	r1, .L7
+ 102 0014 D1E90001 		ldrd	r0, [r1]
+ 103 0018 FFF7FEFF 		bl	__aeabi_dsub
+ 104              	.LVL9:
+ 105 001c 0022     		movs	r2, #0
+ 106 001e 064B     		ldr	r3, .L7+8
+ 107 0020 FFF7FEFF 		bl	__aeabi_ddiv
+ 108              	.LVL10:
+ 109 0024 FFF7FEFF 		bl	__aeabi_d2f
+ 110              	.LVL11:
+ 111 0028 044B     		ldr	r3, .L7+12
+ 112 002a 5860     		str	r0, [r3, #4]	@ float
+ 113 002c 08BD     		pop	{r3, pc}
+ 114              	.L8:
+ 115 002e 00BF     		.align	3
+ 116              	.L7:
+ 117 0030 00000000 		.word	0
+ 118 0034 E0FFEF40 		.word	1089470432
+ 119 0038 00004D40 		.word	1078788096
+ 120 003c 00000000 		.word	.LANCHOR0
+ 121              		.cfi_endproc
+ 122              	.LFE64:
+ 123              		.size	TimerL_ISR_Handler, .-TimerL_ISR_Handler
+ 124              		.section	.text.TimerR_ISR_Handler,"ax",%progbits
+ 125              		.align	2
+ 126              		.global	TimerR_ISR_Handler
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.type	TimerR_ISR_Handler, %function
+ 130              	TimerR_ISR_Handler:
+ 131              	.LFB65:
+  29:ultrasonics.c **** }
+  30:ultrasonics.c **** 
+  31:ultrasonics.c **** CY_ISR(TimerR_ISR_Handler) {
+ 132              		.loc 1 31 0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 08B5     		push	{r3, lr}
+ 137              		.cfi_def_cfa_offset 8
+ 138              		.cfi_offset 3, -8
+ 139              		.cfi_offset 14, -4
+  32:ultrasonics.c ****   Timer_ULTRASONIC_R_ReadStatusRegister();
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 4
+
+
+ 140              		.loc 1 32 0
+ 141 0002 FFF7FEFF 		bl	Timer_ULTRASONIC_R_ReadStatusRegister
+ 142              	.LVL12:
+  33:ultrasonics.c ****   uint16 TimerCount = Timer_ULTRASONIC_R_ReadCounter();
+ 143              		.loc 1 33 0
+ 144 0006 FFF7FEFF 		bl	Timer_ULTRASONIC_R_ReadCounter
+ 145              	.LVL13:
+  34:ultrasonics.c ****   RightCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
+ 146              		.loc 1 34 0
+ 147 000a FFF7FEFF 		bl	__aeabi_i2d
+ 148              	.LVL14:
+ 149 000e 0246     		mov	r2, r0
+ 150 0010 0B46     		mov	r3, r1
+ 151 0012 07A1     		adr	r1, .L11
+ 152 0014 D1E90001 		ldrd	r0, [r1]
+ 153 0018 FFF7FEFF 		bl	__aeabi_dsub
+ 154              	.LVL15:
+ 155 001c 0022     		movs	r2, #0
+ 156 001e 064B     		ldr	r3, .L11+8
+ 157 0020 FFF7FEFF 		bl	__aeabi_ddiv
+ 158              	.LVL16:
+ 159 0024 FFF7FEFF 		bl	__aeabi_d2f
+ 160              	.LVL17:
+ 161 0028 044B     		ldr	r3, .L11+12
+ 162 002a 9860     		str	r0, [r3, #8]	@ float
+ 163 002c 08BD     		pop	{r3, pc}
+ 164              	.L12:
+ 165 002e 00BF     		.align	3
+ 166              	.L11:
+ 167 0030 00000000 		.word	0
+ 168 0034 E0FFEF40 		.word	1089470432
+ 169 0038 00004D40 		.word	1078788096
+ 170 003c 00000000 		.word	.LANCHOR0
+ 171              		.cfi_endproc
+ 172              	.LFE65:
+ 173              		.size	TimerR_ISR_Handler, .-TimerR_ISR_Handler
+ 174              		.section	.text.UltraSonic_F,"ax",%progbits
+ 175              		.align	2
+ 176              		.global	UltraSonic_F
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.type	UltraSonic_F, %function
+ 180              	UltraSonic_F:
+ 181              	.LFB66:
+  35:ultrasonics.c **** }
+  36:ultrasonics.c **** 
+  37:ultrasonics.c **** void UltraSonic_F()
+  38:ultrasonics.c **** {
+ 182              		.loc 1 38 0
+ 183              		.cfi_startproc
+ 184              		@ args = 0, pretend = 0, frame = 0
+ 185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 186 0000 08B5     		push	{r3, lr}
+ 187              		.cfi_def_cfa_offset 8
+ 188              		.cfi_offset 3, -8
+ 189              		.cfi_offset 14, -4
+ 190              	.LVL18:
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 5
+
+
+  39:ultrasonics.c ****     int Delay = 60;
+  40:ultrasonics.c ****     
+  41:ultrasonics.c **** //        isr_F1_StartEx(TimerF1_ISR_Handler);
+  42:ultrasonics.c **** //        Timer_ULTRASONIC_F1_Start();
+  43:ultrasonics.c ****     
+  44:ultrasonics.c ****     while (Echo_F_Read() == 0) {
+ 191              		.loc 1 44 0
+ 192 0002 08E0     		b	.L14
+ 193              	.L15:
+  45:ultrasonics.c ****         Trigger_F_Write(1);
+ 194              		.loc 1 45 0
+ 195 0004 0120     		movs	r0, #1
+ 196 0006 FFF7FEFF 		bl	Trigger_F_Write
+ 197              	.LVL19:
+  46:ultrasonics.c ****         CyDelayUs(10);
+ 198              		.loc 1 46 0
+ 199 000a 0A20     		movs	r0, #10
+ 200 000c FFF7FEFF 		bl	CyDelayUs
+ 201              	.LVL20:
+  47:ultrasonics.c ****         Trigger_F_Write(0);  
+ 202              		.loc 1 47 0
+ 203 0010 0020     		movs	r0, #0
+ 204 0012 FFF7FEFF 		bl	Trigger_F_Write
+ 205              	.LVL21:
+ 206              	.L14:
+  44:ultrasonics.c ****         Trigger_F_Write(1);
+ 207              		.loc 1 44 0
+ 208 0016 FFF7FEFF 		bl	Echo_F_Read
+ 209              	.LVL22:
+ 210 001a 0028     		cmp	r0, #0
+ 211 001c F2D0     		beq	.L15
+  48:ultrasonics.c ****     }
+  49:ultrasonics.c ****     
+  50:ultrasonics.c ****     CyDelay(Delay);
+ 212              		.loc 1 50 0
+ 213 001e 3C20     		movs	r0, #60
+ 214 0020 FFF7FEFF 		bl	CyDelay
+ 215              	.LVL23:
+ 216 0024 08BD     		pop	{r3, pc}
+ 217              		.cfi_endproc
+ 218              	.LFE66:
+ 219              		.size	UltraSonic_F, .-UltraSonic_F
+ 220 0026 00BF     		.section	.text.UltraSonic_L,"ax",%progbits
+ 221              		.align	2
+ 222              		.global	UltraSonic_L
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.type	UltraSonic_L, %function
+ 226              	UltraSonic_L:
+ 227              	.LFB67:
+  51:ultrasonics.c **** }
+  52:ultrasonics.c **** 
+  53:ultrasonics.c **** void UltraSonic_L()
+  54:ultrasonics.c **** {
+ 228              		.loc 1 54 0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 6
+
+
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232 0000 08B5     		push	{r3, lr}
+ 233              		.cfi_def_cfa_offset 8
+ 234              		.cfi_offset 3, -8
+ 235              		.cfi_offset 14, -4
+ 236              	.LVL24:
+  55:ultrasonics.c ****     int Delay = 60;
+  56:ultrasonics.c ****     
+  57:ultrasonics.c **** //        isr_F1_StartEx(TimerF1_ISR_Handler);
+  58:ultrasonics.c **** //        Timer_ULTRASONIC_F1_Start();
+  59:ultrasonics.c ****     
+  60:ultrasonics.c ****     while (Echo_L_Read() == 0) {
+ 237              		.loc 1 60 0
+ 238 0002 08E0     		b	.L18
+ 239              	.L19:
+  61:ultrasonics.c ****         Trigger_L_Write(1);
+ 240              		.loc 1 61 0
+ 241 0004 0120     		movs	r0, #1
+ 242 0006 FFF7FEFF 		bl	Trigger_L_Write
+ 243              	.LVL25:
+  62:ultrasonics.c ****         CyDelayUs(10);
+ 244              		.loc 1 62 0
+ 245 000a 0A20     		movs	r0, #10
+ 246 000c FFF7FEFF 		bl	CyDelayUs
+ 247              	.LVL26:
+  63:ultrasonics.c ****         Trigger_L_Write(0);  
+ 248              		.loc 1 63 0
+ 249 0010 0020     		movs	r0, #0
+ 250 0012 FFF7FEFF 		bl	Trigger_L_Write
+ 251              	.LVL27:
+ 252              	.L18:
+  60:ultrasonics.c ****         Trigger_L_Write(1);
+ 253              		.loc 1 60 0
+ 254 0016 FFF7FEFF 		bl	Echo_L_Read
+ 255              	.LVL28:
+ 256 001a 0028     		cmp	r0, #0
+ 257 001c F2D0     		beq	.L19
+  64:ultrasonics.c ****     }
+  65:ultrasonics.c ****     
+  66:ultrasonics.c ****     CyDelay(Delay);
+ 258              		.loc 1 66 0
+ 259 001e 3C20     		movs	r0, #60
+ 260 0020 FFF7FEFF 		bl	CyDelay
+ 261              	.LVL29:
+ 262 0024 08BD     		pop	{r3, pc}
+ 263              		.cfi_endproc
+ 264              	.LFE67:
+ 265              		.size	UltraSonic_L, .-UltraSonic_L
+ 266 0026 00BF     		.section	.text.UltraSonic_R,"ax",%progbits
+ 267              		.align	2
+ 268              		.global	UltraSonic_R
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	UltraSonic_R, %function
+ 272              	UltraSonic_R:
+ 273              	.LFB68:
+  67:ultrasonics.c **** }
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 7
+
+
+  68:ultrasonics.c **** 
+  69:ultrasonics.c **** void UltraSonic_R()
+  70:ultrasonics.c **** {
+ 274              		.loc 1 70 0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278 0000 08B5     		push	{r3, lr}
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 3, -8
+ 281              		.cfi_offset 14, -4
+ 282              	.LVL30:
+  71:ultrasonics.c ****     int Delay = 60;
+  72:ultrasonics.c ****     
+  73:ultrasonics.c **** //        isr_F1_StartEx(TimerF1_ISR_Handler);
+  74:ultrasonics.c **** //        Timer_ULTRASONIC_F1_Start();
+  75:ultrasonics.c ****     
+  76:ultrasonics.c ****     while (Echo_R_Read() == 0) {
+ 283              		.loc 1 76 0
+ 284 0002 08E0     		b	.L22
+ 285              	.L23:
+  77:ultrasonics.c ****         Trigger_R_Write(1);
+ 286              		.loc 1 77 0
+ 287 0004 0120     		movs	r0, #1
+ 288 0006 FFF7FEFF 		bl	Trigger_R_Write
+ 289              	.LVL31:
+  78:ultrasonics.c ****         CyDelayUs(10);
+ 290              		.loc 1 78 0
+ 291 000a 0A20     		movs	r0, #10
+ 292 000c FFF7FEFF 		bl	CyDelayUs
+ 293              	.LVL32:
+  79:ultrasonics.c ****         Trigger_R_Write(0);  
+ 294              		.loc 1 79 0
+ 295 0010 0020     		movs	r0, #0
+ 296 0012 FFF7FEFF 		bl	Trigger_R_Write
+ 297              	.LVL33:
+ 298              	.L22:
+  76:ultrasonics.c ****         Trigger_R_Write(1);
+ 299              		.loc 1 76 0
+ 300 0016 FFF7FEFF 		bl	Echo_R_Read
+ 301              	.LVL34:
+ 302 001a 0028     		cmp	r0, #0
+ 303 001c F2D0     		beq	.L23
+  80:ultrasonics.c ****     }
+  81:ultrasonics.c ****     
+  82:ultrasonics.c ****     CyDelay(Delay);
+ 304              		.loc 1 82 0
+ 305 001e 3C20     		movs	r0, #60
+ 306 0020 FFF7FEFF 		bl	CyDelay
+ 307              	.LVL35:
+ 308 0024 08BD     		pop	{r3, pc}
+ 309              		.cfi_endproc
+ 310              	.LFE68:
+ 311              		.size	UltraSonic_R, .-UltraSonic_R
+ 312              		.global	RightCoord
+ 313              		.global	LeftCoord
+ 314              		.global	FCoord
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 8
+
+
+ 315 0026 00BF     		.bss
+ 316              		.align	2
+ 317              		.set	.LANCHOR0,. + 0
+ 318              		.type	FCoord, %object
+ 319              		.size	FCoord, 4
+ 320              	FCoord:
+ 321 0000 00000000 		.space	4
+ 322              		.type	LeftCoord, %object
+ 323              		.size	LeftCoord, 4
+ 324              	LeftCoord:
+ 325 0004 00000000 		.space	4
+ 326              		.type	RightCoord, %object
+ 327              		.size	RightCoord, 4
+ 328              	RightCoord:
+ 329 0008 00000000 		.space	4
+ 330              		.text
+ 331              	.Letext0:
+ 332              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 333              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 334              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 335              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 336              		.file 6 "Generated_Source\\PSoC5/Timer_ULTRASONIC_F.h"
+ 337              		.file 7 "Generated_Source\\PSoC5/Timer_ULTRASONIC_L.h"
+ 338              		.file 8 "Generated_Source\\PSoC5/Timer_ULTRASONIC_R.h"
+ 339              		.file 9 "Generated_Source\\PSoC5/Trigger_F.h"
+ 340              		.file 10 "Generated_Source\\PSoC5/CyLib.h"
+ 341              		.file 11 "Generated_Source\\PSoC5/Echo_F.h"
+ 342              		.file 12 "Generated_Source\\PSoC5/Trigger_L.h"
+ 343              		.file 13 "Generated_Source\\PSoC5/Echo_L.h"
+ 344              		.file 14 "Generated_Source\\PSoC5/Trigger_R.h"
+ 345              		.file 15 "Generated_Source\\PSoC5/Echo_R.h"
+ 346              		.section	.debug_info,"",%progbits
+ 347              	.Ldebug_info0:
+ 348 0000 8C030000 		.4byte	0x38c
+ 349 0004 0400     		.2byte	0x4
+ 350 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 351 000a 04       		.byte	0x4
+ 352 000b 01       		.uleb128 0x1
+ 353 000c AE000000 		.4byte	.LASF43
+ 354 0010 0C       		.byte	0xc
+ 355 0011 39000000 		.4byte	.LASF44
+ 356 0015 F8010000 		.4byte	.LASF45
+ 357 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 358 001d 00000000 		.4byte	0
+ 359 0021 00000000 		.4byte	.Ldebug_line0
+ 360 0025 02       		.uleb128 0x2
+ 361 0026 01       		.byte	0x1
+ 362 0027 06       		.byte	0x6
+ 363 0028 47030000 		.4byte	.LASF0
+ 364 002c 02       		.uleb128 0x2
+ 365 002d 01       		.byte	0x1
+ 366 002e 08       		.byte	0x8
+ 367 002f A0000000 		.4byte	.LASF1
+ 368 0033 02       		.uleb128 0x2
+ 369 0034 02       		.byte	0x2
+ 370 0035 05       		.byte	0x5
+ 371 0036 07030000 		.4byte	.LASF2
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 9
+
+
+ 372 003a 02       		.uleb128 0x2
+ 373 003b 02       		.byte	0x2
+ 374 003c 07       		.byte	0x7
+ 375 003d B3010000 		.4byte	.LASF3
+ 376 0041 03       		.uleb128 0x3
+ 377 0042 26000000 		.4byte	.LASF9
+ 378 0046 02       		.byte	0x2
+ 379 0047 3F       		.byte	0x3f
+ 380 0048 4C000000 		.4byte	0x4c
+ 381 004c 02       		.uleb128 0x2
+ 382 004d 04       		.byte	0x4
+ 383 004e 05       		.byte	0x5
+ 384 004f 30000000 		.4byte	.LASF4
+ 385 0053 02       		.uleb128 0x2
+ 386 0054 04       		.byte	0x4
+ 387 0055 07       		.byte	0x7
+ 388 0056 A1010000 		.4byte	.LASF5
+ 389 005a 02       		.uleb128 0x2
+ 390 005b 08       		.byte	0x8
+ 391 005c 05       		.byte	0x5
+ 392 005d F4020000 		.4byte	.LASF6
+ 393 0061 02       		.uleb128 0x2
+ 394 0062 08       		.byte	0x8
+ 395 0063 07       		.byte	0x7
+ 396 0064 93020000 		.4byte	.LASF7
+ 397 0068 04       		.uleb128 0x4
+ 398 0069 04       		.byte	0x4
+ 399 006a 05       		.byte	0x5
+ 400 006b 696E7400 		.ascii	"int\000"
+ 401 006f 02       		.uleb128 0x2
+ 402 0070 04       		.byte	0x4
+ 403 0071 07       		.byte	0x7
+ 404 0072 60020000 		.4byte	.LASF8
+ 405 0076 03       		.uleb128 0x3
+ 406 0077 E3020000 		.4byte	.LASF10
+ 407 007b 03       		.byte	0x3
+ 408 007c 2C       		.byte	0x2c
+ 409 007d 41000000 		.4byte	0x41
+ 410 0081 05       		.uleb128 0x5
+ 411 0082 F1010000 		.4byte	.LASF11
+ 412 0086 04       		.byte	0x4
+ 413 0087 9301     		.2byte	0x193
+ 414 0089 3A000000 		.4byte	0x3a
+ 415 008d 02       		.uleb128 0x2
+ 416 008e 04       		.byte	0x4
+ 417 008f 04       		.byte	0x4
+ 418 0090 9A000000 		.4byte	.LASF12
+ 419 0094 02       		.uleb128 0x2
+ 420 0095 08       		.byte	0x8
+ 421 0096 04       		.byte	0x4
+ 422 0097 EA010000 		.4byte	.LASF13
+ 423 009b 02       		.uleb128 0x2
+ 424 009c 01       		.byte	0x1
+ 425 009d 08       		.byte	0x8
+ 426 009e 02030000 		.4byte	.LASF14
+ 427 00a2 02       		.uleb128 0x2
+ 428 00a3 08       		.byte	0x8
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 10
+
+
+ 429 00a4 04       		.byte	0x4
+ 430 00a5 2B030000 		.4byte	.LASF15
+ 431 00a9 02       		.uleb128 0x2
+ 432 00aa 04       		.byte	0x4
+ 433 00ab 07       		.byte	0x7
+ 434 00ac EB020000 		.4byte	.LASF16
+ 435 00b0 06       		.uleb128 0x6
+ 436 00b1 BD020000 		.4byte	.LASF17
+ 437 00b5 01       		.byte	0x1
+ 438 00b6 13       		.byte	0x13
+ 439 00b7 00000000 		.4byte	.LFB63
+ 440 00bb 40000000 		.4byte	.LFE63-.LFB63
+ 441 00bf 01       		.uleb128 0x1
+ 442 00c0 9C       		.byte	0x9c
+ 443 00c1 E7000000 		.4byte	0xe7
+ 444 00c5 07       		.uleb128 0x7
+ 445 00c6 51000000 		.4byte	.LASF19
+ 446 00ca 01       		.byte	0x1
+ 447 00cb 15       		.byte	0x15
+ 448 00cc 81000000 		.4byte	0x81
+ 449 00d0 00000000 		.4byte	.LLST0
+ 450 00d4 08       		.uleb128 0x8
+ 451 00d5 06000000 		.4byte	.LVL0
+ 452 00d9 F5020000 		.4byte	0x2f5
+ 453 00dd 08       		.uleb128 0x8
+ 454 00de 0A000000 		.4byte	.LVL1
+ 455 00e2 00030000 		.4byte	0x300
+ 456 00e6 00       		.byte	0
+ 457 00e7 06       		.uleb128 0x6
+ 458 00e8 4D020000 		.4byte	.LASF18
+ 459 00ec 01       		.byte	0x1
+ 460 00ed 19       		.byte	0x19
+ 461 00ee 00000000 		.4byte	.LFB64
+ 462 00f2 40000000 		.4byte	.LFE64-.LFB64
+ 463 00f6 01       		.uleb128 0x1
+ 464 00f7 9C       		.byte	0x9c
+ 465 00f8 1E010000 		.4byte	0x11e
+ 466 00fc 07       		.uleb128 0x7
+ 467 00fd 51000000 		.4byte	.LASF19
+ 468 0101 01       		.byte	0x1
+ 469 0102 1B       		.byte	0x1b
+ 470 0103 81000000 		.4byte	0x81
+ 471 0107 13000000 		.4byte	.LLST1
+ 472 010b 08       		.uleb128 0x8
+ 473 010c 06000000 		.4byte	.LVL6
+ 474 0110 0B030000 		.4byte	0x30b
+ 475 0114 08       		.uleb128 0x8
+ 476 0115 0A000000 		.4byte	.LVL7
+ 477 0119 16030000 		.4byte	0x316
+ 478 011d 00       		.byte	0
+ 479 011e 06       		.uleb128 0x6
+ 480 011f D0020000 		.4byte	.LASF20
+ 481 0123 01       		.byte	0x1
+ 482 0124 1F       		.byte	0x1f
+ 483 0125 00000000 		.4byte	.LFB65
+ 484 0129 40000000 		.4byte	.LFE65-.LFB65
+ 485 012d 01       		.uleb128 0x1
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 11
+
+
+ 486 012e 9C       		.byte	0x9c
+ 487 012f 55010000 		.4byte	0x155
+ 488 0133 07       		.uleb128 0x7
+ 489 0134 51000000 		.4byte	.LASF19
+ 490 0138 01       		.byte	0x1
+ 491 0139 21       		.byte	0x21
+ 492 013a 81000000 		.4byte	0x81
+ 493 013e 26000000 		.4byte	.LLST2
+ 494 0142 08       		.uleb128 0x8
+ 495 0143 06000000 		.4byte	.LVL12
+ 496 0147 21030000 		.4byte	0x321
+ 497 014b 08       		.uleb128 0x8
+ 498 014c 0A000000 		.4byte	.LVL13
+ 499 0150 2C030000 		.4byte	0x32c
+ 500 0154 00       		.byte	0
+ 501 0155 09       		.uleb128 0x9
+ 502 0156 11030000 		.4byte	.LASF22
+ 503 015a 01       		.byte	0x1
+ 504 015b 25       		.byte	0x25
+ 505 015c 00000000 		.4byte	.LFB66
+ 506 0160 26000000 		.4byte	.LFE66-.LFB66
+ 507 0164 01       		.uleb128 0x1
+ 508 0165 9C       		.byte	0x9c
+ 509 0166 C9010000 		.4byte	0x1c9
+ 510 016a 0A       		.uleb128 0xa
+ 511 016b 31020000 		.4byte	.LASF21
+ 512 016f 01       		.byte	0x1
+ 513 0170 27       		.byte	0x27
+ 514 0171 68000000 		.4byte	0x68
+ 515 0175 3C       		.byte	0x3c
+ 516 0176 0B       		.uleb128 0xb
+ 517 0177 0A000000 		.4byte	.LVL19
+ 518 017b 37030000 		.4byte	0x337
+ 519 017f 89010000 		.4byte	0x189
+ 520 0183 0C       		.uleb128 0xc
+ 521 0184 01       		.uleb128 0x1
+ 522 0185 50       		.byte	0x50
+ 523 0186 01       		.uleb128 0x1
+ 524 0187 31       		.byte	0x31
+ 525 0188 00       		.byte	0
+ 526 0189 0B       		.uleb128 0xb
+ 527 018a 10000000 		.4byte	.LVL20
+ 528 018e 42030000 		.4byte	0x342
+ 529 0192 9C010000 		.4byte	0x19c
+ 530 0196 0C       		.uleb128 0xc
+ 531 0197 01       		.uleb128 0x1
+ 532 0198 50       		.byte	0x50
+ 533 0199 01       		.uleb128 0x1
+ 534 019a 3A       		.byte	0x3a
+ 535 019b 00       		.byte	0
+ 536 019c 0B       		.uleb128 0xb
+ 537 019d 16000000 		.4byte	.LVL21
+ 538 01a1 37030000 		.4byte	0x337
+ 539 01a5 AF010000 		.4byte	0x1af
+ 540 01a9 0C       		.uleb128 0xc
+ 541 01aa 01       		.uleb128 0x1
+ 542 01ab 50       		.byte	0x50
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 12
+
+
+ 543 01ac 01       		.uleb128 0x1
+ 544 01ad 30       		.byte	0x30
+ 545 01ae 00       		.byte	0
+ 546 01af 08       		.uleb128 0x8
+ 547 01b0 1A000000 		.4byte	.LVL22
+ 548 01b4 4D030000 		.4byte	0x34d
+ 549 01b8 0D       		.uleb128 0xd
+ 550 01b9 24000000 		.4byte	.LVL23
+ 551 01bd 58030000 		.4byte	0x358
+ 552 01c1 0C       		.uleb128 0xc
+ 553 01c2 01       		.uleb128 0x1
+ 554 01c3 50       		.byte	0x50
+ 555 01c4 02       		.uleb128 0x2
+ 556 01c5 08       		.byte	0x8
+ 557 01c6 3C       		.byte	0x3c
+ 558 01c7 00       		.byte	0
+ 559 01c8 00       		.byte	0
+ 560 01c9 09       		.uleb128 0x9
+ 561 01ca 1E030000 		.4byte	.LASF23
+ 562 01ce 01       		.byte	0x1
+ 563 01cf 35       		.byte	0x35
+ 564 01d0 00000000 		.4byte	.LFB67
+ 565 01d4 26000000 		.4byte	.LFE67-.LFB67
+ 566 01d8 01       		.uleb128 0x1
+ 567 01d9 9C       		.byte	0x9c
+ 568 01da 3D020000 		.4byte	0x23d
+ 569 01de 0A       		.uleb128 0xa
+ 570 01df 31020000 		.4byte	.LASF21
+ 571 01e3 01       		.byte	0x1
+ 572 01e4 37       		.byte	0x37
+ 573 01e5 68000000 		.4byte	0x68
+ 574 01e9 3C       		.byte	0x3c
+ 575 01ea 0B       		.uleb128 0xb
+ 576 01eb 0A000000 		.4byte	.LVL25
+ 577 01ef 63030000 		.4byte	0x363
+ 578 01f3 FD010000 		.4byte	0x1fd
+ 579 01f7 0C       		.uleb128 0xc
+ 580 01f8 01       		.uleb128 0x1
+ 581 01f9 50       		.byte	0x50
+ 582 01fa 01       		.uleb128 0x1
+ 583 01fb 31       		.byte	0x31
+ 584 01fc 00       		.byte	0
+ 585 01fd 0B       		.uleb128 0xb
+ 586 01fe 10000000 		.4byte	.LVL26
+ 587 0202 42030000 		.4byte	0x342
+ 588 0206 10020000 		.4byte	0x210
+ 589 020a 0C       		.uleb128 0xc
+ 590 020b 01       		.uleb128 0x1
+ 591 020c 50       		.byte	0x50
+ 592 020d 01       		.uleb128 0x1
+ 593 020e 3A       		.byte	0x3a
+ 594 020f 00       		.byte	0
+ 595 0210 0B       		.uleb128 0xb
+ 596 0211 16000000 		.4byte	.LVL27
+ 597 0215 63030000 		.4byte	0x363
+ 598 0219 23020000 		.4byte	0x223
+ 599 021d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 13
+
+
+ 600 021e 01       		.uleb128 0x1
+ 601 021f 50       		.byte	0x50
+ 602 0220 01       		.uleb128 0x1
+ 603 0221 30       		.byte	0x30
+ 604 0222 00       		.byte	0
+ 605 0223 08       		.uleb128 0x8
+ 606 0224 1A000000 		.4byte	.LVL28
+ 607 0228 6E030000 		.4byte	0x36e
+ 608 022c 0D       		.uleb128 0xd
+ 609 022d 24000000 		.4byte	.LVL29
+ 610 0231 58030000 		.4byte	0x358
+ 611 0235 0C       		.uleb128 0xc
+ 612 0236 01       		.uleb128 0x1
+ 613 0237 50       		.byte	0x50
+ 614 0238 02       		.uleb128 0x2
+ 615 0239 08       		.byte	0x8
+ 616 023a 3C       		.byte	0x3c
+ 617 023b 00       		.byte	0
+ 618 023c 00       		.byte	0
+ 619 023d 09       		.uleb128 0x9
+ 620 023e 53030000 		.4byte	.LASF24
+ 621 0242 01       		.byte	0x1
+ 622 0243 45       		.byte	0x45
+ 623 0244 00000000 		.4byte	.LFB68
+ 624 0248 26000000 		.4byte	.LFE68-.LFB68
+ 625 024c 01       		.uleb128 0x1
+ 626 024d 9C       		.byte	0x9c
+ 627 024e B1020000 		.4byte	0x2b1
+ 628 0252 0A       		.uleb128 0xa
+ 629 0253 31020000 		.4byte	.LASF21
+ 630 0257 01       		.byte	0x1
+ 631 0258 47       		.byte	0x47
+ 632 0259 68000000 		.4byte	0x68
+ 633 025d 3C       		.byte	0x3c
+ 634 025e 0B       		.uleb128 0xb
+ 635 025f 0A000000 		.4byte	.LVL31
+ 636 0263 79030000 		.4byte	0x379
+ 637 0267 71020000 		.4byte	0x271
+ 638 026b 0C       		.uleb128 0xc
+ 639 026c 01       		.uleb128 0x1
+ 640 026d 50       		.byte	0x50
+ 641 026e 01       		.uleb128 0x1
+ 642 026f 31       		.byte	0x31
+ 643 0270 00       		.byte	0
+ 644 0271 0B       		.uleb128 0xb
+ 645 0272 10000000 		.4byte	.LVL32
+ 646 0276 42030000 		.4byte	0x342
+ 647 027a 84020000 		.4byte	0x284
+ 648 027e 0C       		.uleb128 0xc
+ 649 027f 01       		.uleb128 0x1
+ 650 0280 50       		.byte	0x50
+ 651 0281 01       		.uleb128 0x1
+ 652 0282 3A       		.byte	0x3a
+ 653 0283 00       		.byte	0
+ 654 0284 0B       		.uleb128 0xb
+ 655 0285 16000000 		.4byte	.LVL33
+ 656 0289 79030000 		.4byte	0x379
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 14
+
+
+ 657 028d 97020000 		.4byte	0x297
+ 658 0291 0C       		.uleb128 0xc
+ 659 0292 01       		.uleb128 0x1
+ 660 0293 50       		.byte	0x50
+ 661 0294 01       		.uleb128 0x1
+ 662 0295 30       		.byte	0x30
+ 663 0296 00       		.byte	0
+ 664 0297 08       		.uleb128 0x8
+ 665 0298 1A000000 		.4byte	.LVL34
+ 666 029c 84030000 		.4byte	0x384
+ 667 02a0 0D       		.uleb128 0xd
+ 668 02a1 24000000 		.4byte	.LVL35
+ 669 02a5 58030000 		.4byte	0x358
+ 670 02a9 0C       		.uleb128 0xc
+ 671 02aa 01       		.uleb128 0x1
+ 672 02ab 50       		.byte	0x50
+ 673 02ac 02       		.uleb128 0x2
+ 674 02ad 08       		.byte	0x8
+ 675 02ae 3C       		.byte	0x3c
+ 676 02af 00       		.byte	0
+ 677 02b0 00       		.byte	0
+ 678 02b1 0E       		.uleb128 0xe
+ 679 02b2 D2010000 		.4byte	.LASF25
+ 680 02b6 05       		.byte	0x5
+ 681 02b7 1207     		.2byte	0x712
+ 682 02b9 BD020000 		.4byte	0x2bd
+ 683 02bd 0F       		.uleb128 0xf
+ 684 02be 76000000 		.4byte	0x76
+ 685 02c2 10       		.uleb128 0x10
+ 686 02c3 AA020000 		.4byte	.LASF26
+ 687 02c7 01       		.byte	0x1
+ 688 02c8 0F       		.byte	0xf
+ 689 02c9 8D000000 		.4byte	0x8d
+ 690 02cd 05       		.uleb128 0x5
+ 691 02ce 03       		.byte	0x3
+ 692 02cf 00000000 		.4byte	FCoord
+ 693 02d3 10       		.uleb128 0x10
+ 694 02d4 47000000 		.4byte	.LASF27
+ 695 02d8 01       		.byte	0x1
+ 696 02d9 10       		.byte	0x10
+ 697 02da 8D000000 		.4byte	0x8d
+ 698 02de 05       		.uleb128 0x5
+ 699 02df 03       		.byte	0x3
+ 700 02e0 00000000 		.4byte	LeftCoord
+ 701 02e4 10       		.uleb128 0x10
+ 702 02e5 DF010000 		.4byte	.LASF28
+ 703 02e9 01       		.byte	0x1
+ 704 02ea 11       		.byte	0x11
+ 705 02eb 8D000000 		.4byte	0x8d
+ 706 02ef 05       		.uleb128 0x5
+ 707 02f0 03       		.byte	0x3
+ 708 02f1 00000000 		.4byte	RightCoord
+ 709 02f5 11       		.uleb128 0x11
+ 710 02f6 6D020000 		.4byte	.LASF29
+ 711 02fa 6D020000 		.4byte	.LASF29
+ 712 02fe 06       		.byte	0x6
+ 713 02ff 5E       		.byte	0x5e
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 15
+
+
+ 714 0300 11       		.uleb128 0x11
+ 715 0301 7B000000 		.4byte	.LASF30
+ 716 0305 7B000000 		.4byte	.LASF30
+ 717 0309 06       		.byte	0x6
+ 718 030a 69       		.byte	0x69
+ 719 030b 11       		.uleb128 0x11
+ 720 030c 00000000 		.4byte	.LASF31
+ 721 0310 00000000 		.4byte	.LASF31
+ 722 0314 07       		.byte	0x7
+ 723 0315 5E       		.byte	0x5e
+ 724 0316 11       		.uleb128 0x11
+ 725 0317 5C000000 		.4byte	.LASF32
+ 726 031b 5C000000 		.4byte	.LASF32
+ 727 031f 07       		.byte	0x7
+ 728 0320 69       		.byte	0x69
+ 729 0321 11       		.uleb128 0x11
+ 730 0322 5B010000 		.4byte	.LASF33
+ 731 0326 5B010000 		.4byte	.LASF33
+ 732 032a 08       		.byte	0x8
+ 733 032b 5E       		.byte	0x5e
+ 734 032c 11       		.uleb128 0x11
+ 735 032d 3C010000 		.4byte	.LASF34
+ 736 0331 3C010000 		.4byte	.LASF34
+ 737 0335 08       		.byte	0x8
+ 738 0336 69       		.byte	0x69
+ 739 0337 11       		.uleb128 0x11
+ 740 0338 81010000 		.4byte	.LASF35
+ 741 033c 81010000 		.4byte	.LASF35
+ 742 0340 09       		.byte	0x9
+ 743 0341 26       		.byte	0x26
+ 744 0342 11       		.uleb128 0x11
+ 745 0343 37020000 		.4byte	.LASF36
+ 746 0347 37020000 		.4byte	.LASF36
+ 747 034b 0A       		.byte	0xa
+ 748 034c 77       		.byte	0x77
+ 749 034d 11       		.uleb128 0x11
+ 750 034e B1020000 		.4byte	.LASF37
+ 751 0352 B1020000 		.4byte	.LASF37
+ 752 0356 0B       		.byte	0xb
+ 753 0357 29       		.byte	0x29
+ 754 0358 11       		.uleb128 0x11
+ 755 0359 60030000 		.4byte	.LASF38
+ 756 035d 60030000 		.4byte	.LASF38
+ 757 0361 0A       		.byte	0xa
+ 758 0362 76       		.byte	0x76
+ 759 0363 11       		.uleb128 0x11
+ 760 0364 37030000 		.4byte	.LASF39
+ 761 0368 37030000 		.4byte	.LASF39
+ 762 036c 0C       		.byte	0xc
+ 763 036d 26       		.byte	0x26
+ 764 036e 11       		.uleb128 0x11
+ 765 036f 41020000 		.4byte	.LASF40
+ 766 0373 41020000 		.4byte	.LASF40
+ 767 0377 0D       		.byte	0xd
+ 768 0378 29       		.byte	0x29
+ 769 0379 11       		.uleb128 0x11
+ 770 037a 91010000 		.4byte	.LASF41
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 16
+
+
+ 771 037e 91010000 		.4byte	.LASF41
+ 772 0382 0E       		.byte	0xe
+ 773 0383 26       		.byte	0x26
+ 774 0384 11       		.uleb128 0x11
+ 775 0385 C6010000 		.4byte	.LASF42
+ 776 0389 C6010000 		.4byte	.LASF42
+ 777 038d 0F       		.byte	0xf
+ 778 038e 29       		.byte	0x29
+ 779 038f 00       		.byte	0
+ 780              		.section	.debug_abbrev,"",%progbits
+ 781              	.Ldebug_abbrev0:
+ 782 0000 01       		.uleb128 0x1
+ 783 0001 11       		.uleb128 0x11
+ 784 0002 01       		.byte	0x1
+ 785 0003 25       		.uleb128 0x25
+ 786 0004 0E       		.uleb128 0xe
+ 787 0005 13       		.uleb128 0x13
+ 788 0006 0B       		.uleb128 0xb
+ 789 0007 03       		.uleb128 0x3
+ 790 0008 0E       		.uleb128 0xe
+ 791 0009 1B       		.uleb128 0x1b
+ 792 000a 0E       		.uleb128 0xe
+ 793 000b 55       		.uleb128 0x55
+ 794 000c 17       		.uleb128 0x17
+ 795 000d 11       		.uleb128 0x11
+ 796 000e 01       		.uleb128 0x1
+ 797 000f 10       		.uleb128 0x10
+ 798 0010 17       		.uleb128 0x17
+ 799 0011 00       		.byte	0
+ 800 0012 00       		.byte	0
+ 801 0013 02       		.uleb128 0x2
+ 802 0014 24       		.uleb128 0x24
+ 803 0015 00       		.byte	0
+ 804 0016 0B       		.uleb128 0xb
+ 805 0017 0B       		.uleb128 0xb
+ 806 0018 3E       		.uleb128 0x3e
+ 807 0019 0B       		.uleb128 0xb
+ 808 001a 03       		.uleb128 0x3
+ 809 001b 0E       		.uleb128 0xe
+ 810 001c 00       		.byte	0
+ 811 001d 00       		.byte	0
+ 812 001e 03       		.uleb128 0x3
+ 813 001f 16       		.uleb128 0x16
+ 814 0020 00       		.byte	0
+ 815 0021 03       		.uleb128 0x3
+ 816 0022 0E       		.uleb128 0xe
+ 817 0023 3A       		.uleb128 0x3a
+ 818 0024 0B       		.uleb128 0xb
+ 819 0025 3B       		.uleb128 0x3b
+ 820 0026 0B       		.uleb128 0xb
+ 821 0027 49       		.uleb128 0x49
+ 822 0028 13       		.uleb128 0x13
+ 823 0029 00       		.byte	0
+ 824 002a 00       		.byte	0
+ 825 002b 04       		.uleb128 0x4
+ 826 002c 24       		.uleb128 0x24
+ 827 002d 00       		.byte	0
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 17
+
+
+ 828 002e 0B       		.uleb128 0xb
+ 829 002f 0B       		.uleb128 0xb
+ 830 0030 3E       		.uleb128 0x3e
+ 831 0031 0B       		.uleb128 0xb
+ 832 0032 03       		.uleb128 0x3
+ 833 0033 08       		.uleb128 0x8
+ 834 0034 00       		.byte	0
+ 835 0035 00       		.byte	0
+ 836 0036 05       		.uleb128 0x5
+ 837 0037 16       		.uleb128 0x16
+ 838 0038 00       		.byte	0
+ 839 0039 03       		.uleb128 0x3
+ 840 003a 0E       		.uleb128 0xe
+ 841 003b 3A       		.uleb128 0x3a
+ 842 003c 0B       		.uleb128 0xb
+ 843 003d 3B       		.uleb128 0x3b
+ 844 003e 05       		.uleb128 0x5
+ 845 003f 49       		.uleb128 0x49
+ 846 0040 13       		.uleb128 0x13
+ 847 0041 00       		.byte	0
+ 848 0042 00       		.byte	0
+ 849 0043 06       		.uleb128 0x6
+ 850 0044 2E       		.uleb128 0x2e
+ 851 0045 01       		.byte	0x1
+ 852 0046 3F       		.uleb128 0x3f
+ 853 0047 19       		.uleb128 0x19
+ 854 0048 03       		.uleb128 0x3
+ 855 0049 0E       		.uleb128 0xe
+ 856 004a 3A       		.uleb128 0x3a
+ 857 004b 0B       		.uleb128 0xb
+ 858 004c 3B       		.uleb128 0x3b
+ 859 004d 0B       		.uleb128 0xb
+ 860 004e 27       		.uleb128 0x27
+ 861 004f 19       		.uleb128 0x19
+ 862 0050 11       		.uleb128 0x11
+ 863 0051 01       		.uleb128 0x1
+ 864 0052 12       		.uleb128 0x12
+ 865 0053 06       		.uleb128 0x6
+ 866 0054 40       		.uleb128 0x40
+ 867 0055 18       		.uleb128 0x18
+ 868 0056 9642     		.uleb128 0x2116
+ 869 0058 19       		.uleb128 0x19
+ 870 0059 01       		.uleb128 0x1
+ 871 005a 13       		.uleb128 0x13
+ 872 005b 00       		.byte	0
+ 873 005c 00       		.byte	0
+ 874 005d 07       		.uleb128 0x7
+ 875 005e 34       		.uleb128 0x34
+ 876 005f 00       		.byte	0
+ 877 0060 03       		.uleb128 0x3
+ 878 0061 0E       		.uleb128 0xe
+ 879 0062 3A       		.uleb128 0x3a
+ 880 0063 0B       		.uleb128 0xb
+ 881 0064 3B       		.uleb128 0x3b
+ 882 0065 0B       		.uleb128 0xb
+ 883 0066 49       		.uleb128 0x49
+ 884 0067 13       		.uleb128 0x13
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 18
+
+
+ 885 0068 02       		.uleb128 0x2
+ 886 0069 17       		.uleb128 0x17
+ 887 006a 00       		.byte	0
+ 888 006b 00       		.byte	0
+ 889 006c 08       		.uleb128 0x8
+ 890 006d 898201   		.uleb128 0x4109
+ 891 0070 00       		.byte	0
+ 892 0071 11       		.uleb128 0x11
+ 893 0072 01       		.uleb128 0x1
+ 894 0073 31       		.uleb128 0x31
+ 895 0074 13       		.uleb128 0x13
+ 896 0075 00       		.byte	0
+ 897 0076 00       		.byte	0
+ 898 0077 09       		.uleb128 0x9
+ 899 0078 2E       		.uleb128 0x2e
+ 900 0079 01       		.byte	0x1
+ 901 007a 3F       		.uleb128 0x3f
+ 902 007b 19       		.uleb128 0x19
+ 903 007c 03       		.uleb128 0x3
+ 904 007d 0E       		.uleb128 0xe
+ 905 007e 3A       		.uleb128 0x3a
+ 906 007f 0B       		.uleb128 0xb
+ 907 0080 3B       		.uleb128 0x3b
+ 908 0081 0B       		.uleb128 0xb
+ 909 0082 11       		.uleb128 0x11
+ 910 0083 01       		.uleb128 0x1
+ 911 0084 12       		.uleb128 0x12
+ 912 0085 06       		.uleb128 0x6
+ 913 0086 40       		.uleb128 0x40
+ 914 0087 18       		.uleb128 0x18
+ 915 0088 9742     		.uleb128 0x2117
+ 916 008a 19       		.uleb128 0x19
+ 917 008b 01       		.uleb128 0x1
+ 918 008c 13       		.uleb128 0x13
+ 919 008d 00       		.byte	0
+ 920 008e 00       		.byte	0
+ 921 008f 0A       		.uleb128 0xa
+ 922 0090 34       		.uleb128 0x34
+ 923 0091 00       		.byte	0
+ 924 0092 03       		.uleb128 0x3
+ 925 0093 0E       		.uleb128 0xe
+ 926 0094 3A       		.uleb128 0x3a
+ 927 0095 0B       		.uleb128 0xb
+ 928 0096 3B       		.uleb128 0x3b
+ 929 0097 0B       		.uleb128 0xb
+ 930 0098 49       		.uleb128 0x49
+ 931 0099 13       		.uleb128 0x13
+ 932 009a 1C       		.uleb128 0x1c
+ 933 009b 0B       		.uleb128 0xb
+ 934 009c 00       		.byte	0
+ 935 009d 00       		.byte	0
+ 936 009e 0B       		.uleb128 0xb
+ 937 009f 898201   		.uleb128 0x4109
+ 938 00a2 01       		.byte	0x1
+ 939 00a3 11       		.uleb128 0x11
+ 940 00a4 01       		.uleb128 0x1
+ 941 00a5 31       		.uleb128 0x31
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 19
+
+
+ 942 00a6 13       		.uleb128 0x13
+ 943 00a7 01       		.uleb128 0x1
+ 944 00a8 13       		.uleb128 0x13
+ 945 00a9 00       		.byte	0
+ 946 00aa 00       		.byte	0
+ 947 00ab 0C       		.uleb128 0xc
+ 948 00ac 8A8201   		.uleb128 0x410a
+ 949 00af 00       		.byte	0
+ 950 00b0 02       		.uleb128 0x2
+ 951 00b1 18       		.uleb128 0x18
+ 952 00b2 9142     		.uleb128 0x2111
+ 953 00b4 18       		.uleb128 0x18
+ 954 00b5 00       		.byte	0
+ 955 00b6 00       		.byte	0
+ 956 00b7 0D       		.uleb128 0xd
+ 957 00b8 898201   		.uleb128 0x4109
+ 958 00bb 01       		.byte	0x1
+ 959 00bc 11       		.uleb128 0x11
+ 960 00bd 01       		.uleb128 0x1
+ 961 00be 31       		.uleb128 0x31
+ 962 00bf 13       		.uleb128 0x13
+ 963 00c0 00       		.byte	0
+ 964 00c1 00       		.byte	0
+ 965 00c2 0E       		.uleb128 0xe
+ 966 00c3 34       		.uleb128 0x34
+ 967 00c4 00       		.byte	0
+ 968 00c5 03       		.uleb128 0x3
+ 969 00c6 0E       		.uleb128 0xe
+ 970 00c7 3A       		.uleb128 0x3a
+ 971 00c8 0B       		.uleb128 0xb
+ 972 00c9 3B       		.uleb128 0x3b
+ 973 00ca 05       		.uleb128 0x5
+ 974 00cb 49       		.uleb128 0x49
+ 975 00cc 13       		.uleb128 0x13
+ 976 00cd 3F       		.uleb128 0x3f
+ 977 00ce 19       		.uleb128 0x19
+ 978 00cf 3C       		.uleb128 0x3c
+ 979 00d0 19       		.uleb128 0x19
+ 980 00d1 00       		.byte	0
+ 981 00d2 00       		.byte	0
+ 982 00d3 0F       		.uleb128 0xf
+ 983 00d4 35       		.uleb128 0x35
+ 984 00d5 00       		.byte	0
+ 985 00d6 49       		.uleb128 0x49
+ 986 00d7 13       		.uleb128 0x13
+ 987 00d8 00       		.byte	0
+ 988 00d9 00       		.byte	0
+ 989 00da 10       		.uleb128 0x10
+ 990 00db 34       		.uleb128 0x34
+ 991 00dc 00       		.byte	0
+ 992 00dd 03       		.uleb128 0x3
+ 993 00de 0E       		.uleb128 0xe
+ 994 00df 3A       		.uleb128 0x3a
+ 995 00e0 0B       		.uleb128 0xb
+ 996 00e1 3B       		.uleb128 0x3b
+ 997 00e2 0B       		.uleb128 0xb
+ 998 00e3 49       		.uleb128 0x49
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 20
+
+
+ 999 00e4 13       		.uleb128 0x13
+ 1000 00e5 3F       		.uleb128 0x3f
+ 1001 00e6 19       		.uleb128 0x19
+ 1002 00e7 02       		.uleb128 0x2
+ 1003 00e8 18       		.uleb128 0x18
+ 1004 00e9 00       		.byte	0
+ 1005 00ea 00       		.byte	0
+ 1006 00eb 11       		.uleb128 0x11
+ 1007 00ec 2E       		.uleb128 0x2e
+ 1008 00ed 00       		.byte	0
+ 1009 00ee 3F       		.uleb128 0x3f
+ 1010 00ef 19       		.uleb128 0x19
+ 1011 00f0 3C       		.uleb128 0x3c
+ 1012 00f1 19       		.uleb128 0x19
+ 1013 00f2 6E       		.uleb128 0x6e
+ 1014 00f3 0E       		.uleb128 0xe
+ 1015 00f4 03       		.uleb128 0x3
+ 1016 00f5 0E       		.uleb128 0xe
+ 1017 00f6 3A       		.uleb128 0x3a
+ 1018 00f7 0B       		.uleb128 0xb
+ 1019 00f8 3B       		.uleb128 0x3b
+ 1020 00f9 0B       		.uleb128 0xb
+ 1021 00fa 00       		.byte	0
+ 1022 00fb 00       		.byte	0
+ 1023 00fc 00       		.byte	0
+ 1024              		.section	.debug_loc,"",%progbits
+ 1025              	.Ldebug_loc0:
+ 1026              	.LLST0:
+ 1027 0000 0A000000 		.4byte	.LVL1
+ 1028 0004 0D000000 		.4byte	.LVL2-1
+ 1029 0008 0100     		.2byte	0x1
+ 1030 000a 50       		.byte	0x50
+ 1031 000b 00000000 		.4byte	0
+ 1032 000f 00000000 		.4byte	0
+ 1033              	.LLST1:
+ 1034 0013 0A000000 		.4byte	.LVL7
+ 1035 0017 0D000000 		.4byte	.LVL8-1
+ 1036 001b 0100     		.2byte	0x1
+ 1037 001d 50       		.byte	0x50
+ 1038 001e 00000000 		.4byte	0
+ 1039 0022 00000000 		.4byte	0
+ 1040              	.LLST2:
+ 1041 0026 0A000000 		.4byte	.LVL13
+ 1042 002a 0D000000 		.4byte	.LVL14-1
+ 1043 002e 0100     		.2byte	0x1
+ 1044 0030 50       		.byte	0x50
+ 1045 0031 00000000 		.4byte	0
+ 1046 0035 00000000 		.4byte	0
+ 1047              		.section	.debug_aranges,"",%progbits
+ 1048 0000 44000000 		.4byte	0x44
+ 1049 0004 0200     		.2byte	0x2
+ 1050 0006 00000000 		.4byte	.Ldebug_info0
+ 1051 000a 04       		.byte	0x4
+ 1052 000b 00       		.byte	0
+ 1053 000c 0000     		.2byte	0
+ 1054 000e 0000     		.2byte	0
+ 1055 0010 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 21
+
+
+ 1056 0014 40000000 		.4byte	.LFE63-.LFB63
+ 1057 0018 00000000 		.4byte	.LFB64
+ 1058 001c 40000000 		.4byte	.LFE64-.LFB64
+ 1059 0020 00000000 		.4byte	.LFB65
+ 1060 0024 40000000 		.4byte	.LFE65-.LFB65
+ 1061 0028 00000000 		.4byte	.LFB66
+ 1062 002c 26000000 		.4byte	.LFE66-.LFB66
+ 1063 0030 00000000 		.4byte	.LFB67
+ 1064 0034 26000000 		.4byte	.LFE67-.LFB67
+ 1065 0038 00000000 		.4byte	.LFB68
+ 1066 003c 26000000 		.4byte	.LFE68-.LFB68
+ 1067 0040 00000000 		.4byte	0
+ 1068 0044 00000000 		.4byte	0
+ 1069              		.section	.debug_ranges,"",%progbits
+ 1070              	.Ldebug_ranges0:
+ 1071 0000 00000000 		.4byte	.LFB63
+ 1072 0004 40000000 		.4byte	.LFE63
+ 1073 0008 00000000 		.4byte	.LFB64
+ 1074 000c 40000000 		.4byte	.LFE64
+ 1075 0010 00000000 		.4byte	.LFB65
+ 1076 0014 40000000 		.4byte	.LFE65
+ 1077 0018 00000000 		.4byte	.LFB66
+ 1078 001c 26000000 		.4byte	.LFE66
+ 1079 0020 00000000 		.4byte	.LFB67
+ 1080 0024 26000000 		.4byte	.LFE67
+ 1081 0028 00000000 		.4byte	.LFB68
+ 1082 002c 26000000 		.4byte	.LFE68
+ 1083 0030 00000000 		.4byte	0
+ 1084 0034 00000000 		.4byte	0
+ 1085              		.section	.debug_line,"",%progbits
+ 1086              	.Ldebug_line0:
+ 1087 0000 73020000 		.section	.debug_str,"MS",%progbits,1
+ 1087      0200F701 
+ 1087      00000201 
+ 1087      FB0E0D00 
+ 1087      01010101 
+ 1088              	.LASF31:
+ 1089 0000 54696D65 		.ascii	"Timer_ULTRASONIC_L_ReadStatusRegister\000"
+ 1089      725F554C 
+ 1089      54524153 
+ 1089      4F4E4943 
+ 1089      5F4C5F52 
+ 1090              	.LASF9:
+ 1091 0026 5F5F696E 		.ascii	"__int32_t\000"
+ 1091      7433325F 
+ 1091      7400
+ 1092              	.LASF4:
+ 1093 0030 6C6F6E67 		.ascii	"long int\000"
+ 1093      20696E74 
+ 1093      00
+ 1094              	.LASF44:
+ 1095 0039 756C7472 		.ascii	"ultrasonics.c\000"
+ 1095      61736F6E 
+ 1095      6963732E 
+ 1095      6300
+ 1096              	.LASF27:
+ 1097 0047 4C656674 		.ascii	"LeftCoord\000"
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 22
+
+
+ 1097      436F6F72 
+ 1097      6400
+ 1098              	.LASF19:
+ 1099 0051 54696D65 		.ascii	"TimerCount\000"
+ 1099      72436F75 
+ 1099      6E7400
+ 1100              	.LASF32:
+ 1101 005c 54696D65 		.ascii	"Timer_ULTRASONIC_L_ReadCounter\000"
+ 1101      725F554C 
+ 1101      54524153 
+ 1101      4F4E4943 
+ 1101      5F4C5F52 
+ 1102              	.LASF30:
+ 1103 007b 54696D65 		.ascii	"Timer_ULTRASONIC_F_ReadCounter\000"
+ 1103      725F554C 
+ 1103      54524153 
+ 1103      4F4E4943 
+ 1103      5F465F52 
+ 1104              	.LASF12:
+ 1105 009a 666C6F61 		.ascii	"float\000"
+ 1105      7400
+ 1106              	.LASF1:
+ 1107 00a0 756E7369 		.ascii	"unsigned char\000"
+ 1107      676E6564 
+ 1107      20636861 
+ 1107      7200
+ 1108              	.LASF43:
+ 1109 00ae 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1109      43313120 
+ 1109      352E342E 
+ 1109      31203230 
+ 1109      31363036 
+ 1110 00e1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1110      20726576 
+ 1110      6973696F 
+ 1110      6E203233 
+ 1110      37373135 
+ 1111 0114 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1111      66756E63 
+ 1111      74696F6E 
+ 1111      2D736563 
+ 1111      74696F6E 
+ 1112              	.LASF34:
+ 1113 013c 54696D65 		.ascii	"Timer_ULTRASONIC_R_ReadCounter\000"
+ 1113      725F554C 
+ 1113      54524153 
+ 1113      4F4E4943 
+ 1113      5F525F52 
+ 1114              	.LASF33:
+ 1115 015b 54696D65 		.ascii	"Timer_ULTRASONIC_R_ReadStatusRegister\000"
+ 1115      725F554C 
+ 1115      54524153 
+ 1115      4F4E4943 
+ 1115      5F525F52 
+ 1116              	.LASF35:
+ 1117 0181 54726967 		.ascii	"Trigger_F_Write\000"
+ 1117      6765725F 
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 23
+
+
+ 1117      465F5772 
+ 1117      69746500 
+ 1118              	.LASF41:
+ 1119 0191 54726967 		.ascii	"Trigger_R_Write\000"
+ 1119      6765725F 
+ 1119      525F5772 
+ 1119      69746500 
+ 1120              	.LASF5:
+ 1121 01a1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1121      20756E73 
+ 1121      69676E65 
+ 1121      6420696E 
+ 1121      7400
+ 1122              	.LASF3:
+ 1123 01b3 73686F72 		.ascii	"short unsigned int\000"
+ 1123      7420756E 
+ 1123      7369676E 
+ 1123      65642069 
+ 1123      6E7400
+ 1124              	.LASF42:
+ 1125 01c6 4563686F 		.ascii	"Echo_R_Read\000"
+ 1125      5F525F52 
+ 1125      65616400 
+ 1126              	.LASF25:
+ 1127 01d2 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1127      52784275 
+ 1127      66666572 
+ 1127      00
+ 1128              	.LASF28:
+ 1129 01df 52696768 		.ascii	"RightCoord\000"
+ 1129      74436F6F 
+ 1129      726400
+ 1130              	.LASF13:
+ 1131 01ea 646F7562 		.ascii	"double\000"
+ 1131      6C6500
+ 1132              	.LASF11:
+ 1133 01f1 75696E74 		.ascii	"uint16\000"
+ 1133      313600
+ 1134              	.LASF45:
+ 1135 01f8 433A5C55 		.ascii	"C:\\Users\\daani\\Documents\\GitHub\\ECE3091\\Final"
+ 1135      73657273 
+ 1135      5C646161 
+ 1135      6E695C44 
+ 1135      6F63756D 
+ 1136 0225 20436F64 		.ascii	" Code.cydsn\000"
+ 1136      652E6379 
+ 1136      64736E00 
+ 1137              	.LASF21:
+ 1138 0231 44656C61 		.ascii	"Delay\000"
+ 1138      7900
+ 1139              	.LASF36:
+ 1140 0237 43794465 		.ascii	"CyDelayUs\000"
+ 1140      6C617955 
+ 1140      7300
+ 1141              	.LASF40:
+ 1142 0241 4563686F 		.ascii	"Echo_L_Read\000"
+ 1142      5F4C5F52 
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 24
+
+
+ 1142      65616400 
+ 1143              	.LASF18:
+ 1144 024d 54696D65 		.ascii	"TimerL_ISR_Handler\000"
+ 1144      724C5F49 
+ 1144      53525F48 
+ 1144      616E646C 
+ 1144      657200
+ 1145              	.LASF8:
+ 1146 0260 756E7369 		.ascii	"unsigned int\000"
+ 1146      676E6564 
+ 1146      20696E74 
+ 1146      00
+ 1147              	.LASF29:
+ 1148 026d 54696D65 		.ascii	"Timer_ULTRASONIC_F_ReadStatusRegister\000"
+ 1148      725F554C 
+ 1148      54524153 
+ 1148      4F4E4943 
+ 1148      5F465F52 
+ 1149              	.LASF7:
+ 1150 0293 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1150      206C6F6E 
+ 1150      6720756E 
+ 1150      7369676E 
+ 1150      65642069 
+ 1151              	.LASF26:
+ 1152 02aa 46436F6F 		.ascii	"FCoord\000"
+ 1152      726400
+ 1153              	.LASF37:
+ 1154 02b1 4563686F 		.ascii	"Echo_F_Read\000"
+ 1154      5F465F52 
+ 1154      65616400 
+ 1155              	.LASF17:
+ 1156 02bd 54696D65 		.ascii	"TimerF_ISR_Handler\000"
+ 1156      72465F49 
+ 1156      53525F48 
+ 1156      616E646C 
+ 1156      657200
+ 1157              	.LASF20:
+ 1158 02d0 54696D65 		.ascii	"TimerR_ISR_Handler\000"
+ 1158      72525F49 
+ 1158      53525F48 
+ 1158      616E646C 
+ 1158      657200
+ 1159              	.LASF10:
+ 1160 02e3 696E7433 		.ascii	"int32_t\000"
+ 1160      325F7400 
+ 1161              	.LASF16:
+ 1162 02eb 73697A65 		.ascii	"sizetype\000"
+ 1162      74797065 
+ 1162      00
+ 1163              	.LASF6:
+ 1164 02f4 6C6F6E67 		.ascii	"long long int\000"
+ 1164      206C6F6E 
+ 1164      6720696E 
+ 1164      7400
+ 1165              	.LASF14:
+ 1166 0302 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\daani\AppData\Local\Temp\ccVg9UTH.s 			page 25
+
+
+ 1166      00
+ 1167              	.LASF2:
+ 1168 0307 73686F72 		.ascii	"short int\000"
+ 1168      7420696E 
+ 1168      7400
+ 1169              	.LASF22:
+ 1170 0311 556C7472 		.ascii	"UltraSonic_F\000"
+ 1170      61536F6E 
+ 1170      69635F46 
+ 1170      00
+ 1171              	.LASF23:
+ 1172 031e 556C7472 		.ascii	"UltraSonic_L\000"
+ 1172      61536F6E 
+ 1172      69635F4C 
+ 1172      00
+ 1173              	.LASF15:
+ 1174 032b 6C6F6E67 		.ascii	"long double\000"
+ 1174      20646F75 
+ 1174      626C6500 
+ 1175              	.LASF39:
+ 1176 0337 54726967 		.ascii	"Trigger_L_Write\000"
+ 1176      6765725F 
+ 1176      4C5F5772 
+ 1176      69746500 
+ 1177              	.LASF0:
+ 1178 0347 7369676E 		.ascii	"signed char\000"
+ 1178      65642063 
+ 1178      68617200 
+ 1179              	.LASF24:
+ 1180 0353 556C7472 		.ascii	"UltraSonic_R\000"
+ 1180      61536F6E 
+ 1180      69635F52 
+ 1180      00
+ 1181              	.LASF38:
+ 1182 0360 43794465 		.ascii	"CyDelay\000"
+ 1182      6C617900 
+ 1183              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

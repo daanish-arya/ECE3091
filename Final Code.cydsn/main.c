@@ -21,24 +21,18 @@
 #include "colour.h"
 #include "stdlib.h"
 #include "wheels.h"
+#include "ultrasonics.h"
+#include "servos_stepper.h"
 
 
 
 // Function Prototypes
-void Finish_Tasks(void);
-void OnOff();
-float Ultrasonic_Sensor(int usonic);
-void Reset_Tasks();
-void UltraSonics();
 int * Read_Order();
 int Move_to_Pucks(int obstacle_location);
 int Line_Up_Puck(int colour);
 void Pick_Up_Puck();
 void Backtrack(int obstacle_location);
 void Stack();
-void UltraSonic_F();
-void UltraSonic_L();
-void UltraSonic_R();
 
 // Defining Variables
 char string[100];
@@ -53,40 +47,12 @@ int32 RightCount = 0;
 int ratio;
 int orientation;
 int location[2];
-float FCoord = 0;
-float LeftCoord = 0;
-float RightCoord = 0;
+
 time_t t;
-srand((unsigned) time(&t)); // Initialize random number generator
+//srand((unsigned) time(&t)); // Initialize random number generator
     
 
 // Declare Ultrasonic Interrupts
-CY_ISR(TimerF_ISR_Handler) {
-  Timer_ULTRASONIC_F_ReadStatusRegister();
-   uint16  TimerCount = Timer_ULTRASONIC_F_ReadCounter();
-  FCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
-}
-
-CY_ISR(TimerL_ISR_Handler) {
-  Timer_ULTRASONIC_L_ReadStatusRegister();
-  uint16  TimerCount = Timer_ULTRASONIC_L_ReadCounter();
-  LeftCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
-}
-
-CY_ISR(TimerR_ISR_Handler) {
-  Timer_ULTRASONIC_R_ReadStatusRegister();
-  uint16 TimerCount = Timer_ULTRASONIC_R_ReadCounter();
-  RightCoord = (65535.0 - TimerCount) / 58.0; //distance measured in cm
-}
-
-int * pattern(int yus[]) {
-    int ayus[5];
-    for (int i = 0; i < 5; i++) {
-        ayus[i] = yus[i];
-    }
-     
-    return yus; // Returns pointer to first element of array
-}
 
 int main(void)
 {
@@ -94,10 +60,11 @@ int main(void)
     
    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-        Clock_1_Start();
+    Clock_1_Start();
 //        QuadDec_Left_Start();
 //        QuadDec_Right_Start();        
-        UART_Start(); 
+    UART_Start(); 
+    
 //        IDAC8_Start();
 //        ADC_Start(); 
 //        TIA_Start();
@@ -118,177 +85,20 @@ int main(void)
 //		Timer_ULTRASONIC_L_Start();
 //		Timer_ULTRASONIC_R_Start();
 //      zero stepper
-    char lul[] = "2 plus 2 is 4 - 1 thats 3 quick maffs\n";
-    UART_PutString(lul);
+//    // Obstacle location defined using switch
+//    
+//    while (pucks_stacked < 5) {
+//        // Initialise stepper
+//        Move_to_Pucks(obstacle_location);
+//        Line_Up_Puck(given_pattern[pucks_stacked]);
+//        Pick_Up_Puck();
+//        Backtrack(obstacle_location);
+//        Stack();
+//        pucks_stacked++;
+//        Backtrack(obstacle_location);
+//        
+//    }
     
-    int array[] = {1, 2, 3, 5, 6};
-    char skrrt[30];
-//    pattern_pointer = Read_Order();
-    int * das_it;
-    das_it = pattern(array);
-    int i;
-    for (i = 0; i < 5; i++) {
-        given_pattern[i] = *(das_it + i);
-        sprintf(lul, "The ting go %d\n", given_pattern[i]);
-        UART_PutString(lul);
-        CyDelay(1000);
-    }
-    // Obstacle location defined using switch
-    
-    while (pucks_stacked < 5) {
-        // Initialise stepper
-        Move_to_Pucks(obstacle_location);
-        Line_Up_Puck(given_pattern[pucks_stacked]);
-        Pick_Up_Puck();
-        Backtrack(obstacle_location);
-        Stack();
-        pucks_stacked++;
-        Backtrack(obstacle_location);
-        
-    }
-}
-
-void Finish_Tasks(void) 
-{
-	i = 1000;
-}
-
-void OnOff()
-{
-    if (Flag_Read() == 1)
-    {
-        CyDelay(20);
-        if (Flag_Read() == 1)
-        {
-            flag = 1;
-            LED_Write(1);
-            i++;
-            if(i == 5)
-            {
-                i=4;   
-            }
-        }
-    }
-}
-
-void Reset_Tasks()
-{
-    if (Reset_Read() == 0)
-    {
-        CyDelay(20);
-        if (Reset_Read() == 0)
-        {
-            flag = 0;
-            LED_Write(1);
-            CyDelay(100);
-            LED_Write(0);
-            CyDelay(100);
-            LED_Write(1);
-            CyDelay(100);
-            LED_Write(0);
-            CyDelay(100);
-            LED_Write(1);
-            CyDelay(100);
-            LED_Write(0);
-            CyDelay(100);
-            Buzzer_Write(1);
-            CyDelay(100);
-            Buzzer_Write(0);
-            i = 0;
-        }
-    }
-}
-
-
-int Grip_Open()
-    {
-        PWM_Grip_WriteCompare(1050);
-        CyDelay(1000);
-        
-        return 0;
-    } 
-
-int Grip_Close()
-    {
-        PWM_Grip_WriteCompare(1290);
-        CyDelay(1000);
-        
-        return 0;
-    }    
-    
-    
-int Lift_Up(int pucks)
-{
-    int i = 0;
-    
-    switch(pucks)
-    {
-         case 1:
-        {
-             for(i=0; i<1000000; i++)
-                {
-                 PWM_Lift_WriteCompare(1650);
-                }
-    
-            PWM_Lift_WriteCompare(1475);
-            break;
-        }
-         case 2:
-        {
-             for(i=0; i<1800000; i++)
-                {
-                 PWM_Lift_WriteCompare(1600);
-                }
-    
-            PWM_Lift_WriteCompare(1475);
-            break;
-        }
-         case 3:
-        {
-             for(i=0; i<2300000; i++)
-                {
-                 PWM_Lift_WriteCompare(1600);
-                }
-    
-            PWM_Lift_WriteCompare(1475);
-            break;
-        }
-         case 4:
-        {
-             for(i=0; i<2900000; i++)
-                {
-                 PWM_Lift_WriteCompare(1600);
-                }
-    
-            PWM_Lift_WriteCompare(1475);
-            break;
-        }
-        case 5:
-        {
-             for(i=0; i<3500000; i++)
-                {
-                 PWM_Lift_WriteCompare(1600);
-                }
-    
-            PWM_Lift_WriteCompare(1475);
-            break;
-        }
-    }
-    
-   
-    return 0;
-}
-
-int Lift_Down()
-{
-    int i = 0;
-    for(i=0; i<1200000; i++)
-    {
-        PWM_Lift_WriteCompare(1350);
-    }
-    
-    PWM_Lift_WriteCompare(1475);
-    return 0;
 }
 
 int * Read_Order() {
@@ -376,53 +186,7 @@ void Stack() {
     // Drop it on top
 }
 
-void UltraSonic_F()
-{
-    int Delay = 60;
-    
-//        isr_F1_StartEx(TimerF1_ISR_Handler);
-//        Timer_ULTRASONIC_F1_Start();
-    
-    while (Echo_F_Read() == 0) {
-        Trigger_F_Write(1);
-        CyDelayUs(10);
-        Trigger_F_Write(0);  
-    }
-    
-    CyDelay(Delay);
-}
 
-void UltraSonic_L()
-{
-    int Delay = 60;
-    
-//        isr_F1_StartEx(TimerF1_ISR_Handler);
-//        Timer_ULTRASONIC_F1_Start();
-    
-    while (Echo_L_Read() == 0) {
-        Trigger_L_Write(1);
-        CyDelayUs(10);
-        Trigger_L_Write(0);  
-    }
-    
-    CyDelay(Delay);
-}
-
-void UltraSonic_R()
-{
-    int Delay = 60;
-    
-//        isr_F1_StartEx(TimerF1_ISR_Handler);
-//        Timer_ULTRASONIC_F1_Start();
-    
-    while (Echo_R_Read() == 0) {
-        Trigger_R_Write(1);
-        CyDelayUs(10);
-        Trigger_R_Write(0);  
-    }
-    
-    CyDelay(Delay);
-}
 
 // Code to print Distance, diff and stuff
 

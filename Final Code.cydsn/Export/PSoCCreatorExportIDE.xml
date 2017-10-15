@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Final Code" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" Version="5.60" Type="Normal">
+  <Project Name="Final Code" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" Version="5.60" Type="Normal">
     <CMSIS_SVD_File>Final Code.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,18 +34,22 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">wheels.c</File>
           <File BuildType="BUILD" Toolchain="">colour.c</File>
+          <File BuildType="BUILD" Toolchain="">ultrasonics.c</File>
+          <File BuildType="BUILD" Toolchain="">servos_stepper.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">wheels.h</File>
           <File BuildType="BUILD" Toolchain="">colour.h</File>
+          <File BuildType="BUILD" Toolchain="">ultrasonics.h</File>
+          <File BuildType="BUILD" Toolchain="">servos_stepper.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Generated_Source\PSoC5">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Generated_Source\PSoC5">
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cymetadata.c</File>
@@ -175,22 +179,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_L_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_L.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_L.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Grip_Servo_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Grip_Servo.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Grip_Servo.h</File>
@@ -236,12 +224,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Right_bumper.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_ultrasonic.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_ultrasonic.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F2_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_L.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_L.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_L_PM.c</File>
@@ -264,52 +246,63 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QuadDec_Left_Cnt16.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QuadDec_Left_Cnt16.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QuadDec_Left_Cnt16_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_F.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Echo_F.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Trigger_F.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_ULTRASONIC_F_PM.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\Daanish Bootcamp\Documents\PSoC Creator\PSoC Design\ECE3091\Final Code.cydsn" />
+        <Files Root="C:\Users\daani\Documents\GitHub\ECE3091\Final Code.cydsn" />
       </Folder>
     </Folders>
   </Project>

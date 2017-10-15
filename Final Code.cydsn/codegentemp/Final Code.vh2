@@ -2,7 +2,7 @@
 --	Conversion of Final Code.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Oct 13 20:32:27 2017
+--	Sat Oct 14 14:17:39 2017
 --
 
 USE cypress.cypress.all;
